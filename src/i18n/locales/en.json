@@ -1,0 +1,974 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Who We Are",
+    "segments": "Segments",
+    "transmission": "Transmissoras",
+    "wind": "Eólicas",
+    "esg": "ESG",
+    "investors": "Investors",
+    "contact": "Contact",
+    "cta": "Contact HRZ"
+  },
+  "language": {
+    "switchTo": "PT",
+    "label": "Traduzir para Português"
+  },
+  "home": {
+    "meta": {
+      "title": "HRZ Energia — Integrated Transmission and Generation Platform",
+      "description": "HRZ Energia operates 2,403 ckm of transmission lines and 136.5 MW of wind generation in Brazil. Integrated platform controlled by Actis.",
+      "ogTitle": "HRZ Energia — Integrated Energy Platform",
+      "ogDescription": "Renewable transmission and generation with availability above 99.8%. R$1bn+ in annual revenue. Controlled by Actis."
+    },
+    "stats": {
+      "revenue": "Combined annual revenue",
+      "ckm": "ckm of transmission lines",
+      "spes": "SPEs in portfolio",
+      "wind": "Renewable wind generation"
+    },
+    "pillars": {
+      "disciplined": {
+        "title": "Disciplined",
+        "text": "Integrated operations and optimized cost, with active governance at every stage."
+      },
+      "efficient": {
+        "title": "Efficient",
+        "text": "Transmission availability above 99.8%, exceeding ANEEL's regulatory benchmark."
+      },
+      "reliable": {
+        "title": "Reliable",
+        "text": "Critical SIN infrastructure delivered with world-class technical excellence."
+      },
+      "responsible": {
+        "title": "Responsible",
+        "text": "ESG intrinsic to the business model. 100% wind-powered generation."
+      }
+    },
+    "hero": {
+      "logoAlt": "HRZ Energia",
+      "headline1": "Rigorous management.",
+      "headline2": "Consistent returns.",
+      "ctaTransmission": "Transmission",
+      "ctaWind": "Babilônia Wind Farm"
+    },
+    "about": {
+      "eyebrow": "Who we are",
+      "heading1": "An integrated energy",
+      "heading2": "platform.",
+      "body1": "HRZ Energia operates transmission and renewable generation assets in Brazil, controlled by Actis, a global investment manager focused on sustainable infrastructure. Our model combines institutional discipline with operational excellence.",
+      "body2": "We are an integrated transmission and renewable generation platform delivering critical infrastructure to Brazil's National Interconnected System, with the discipline of an institutional investor and the expertise of world-class operators.",
+      "cta": "Read our full story"
+    },
+    "portfolio": {
+      "transmissionImgAlt": "High-voltage substation at dusk",
+      "transmissionEyebrow": "Transmission",
+      "transmissionHeading": "9 Concessions · 2,403 ckm · 5,228 MVA",
+      "transmissionBody": "500/230 kV OHTL with 29 interconnected substations, availability above 99.8%, and R$935m in RAP revenue in 2026.",
+      "windImgAlt": "Babilônia wind farm at dusk",
+      "windEyebrow": "Generation",
+      "windHeading": "Babilônia · 136.5 MW · 65 wind turbines",
+      "windBody": "Five parks acquired in 2019 in Bahia, with a 57% capacity factor and R$202m in annual revenue.",
+      "cta": "Explore our segments"
+    },
+    "footprint": {
+      "eyebrow": "National footprint",
+      "heading1": "Energy that crosses",
+      "heading2": "Brazil.",
+      "body": "Our two segments — transmission and wind generation — operate across multiple regions, from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul.",
+      "cta": "Explore the portfolio"
+    },
+    "esg": {
+      "eyebrow": "ESG",
+      "headingPre": "Energy that ",
+      "headingVerb1": "respects",
+      "headingMid": " and",
+      "headingVerb2": " regenerates.",
+      "body": "Sustainability is not an additional pillar — it is our operating model. From 100% wind generation to active governance, every decision is made with a long-term view of people, communities, and the environment.",
+      "cta": "Discover our ESG strategy",
+      "card1": {
+        "metric": "+500",
+        "label": "People impacted",
+        "text": "Active social programs alongside the communities where we operate, with engaged listening and local partnership."
+      },
+      "card2": {
+        "metric": "10",
+        "label": "Communities served",
+        "text": "Dialogue, presence, and opportunity creation in strategic territories within our operational footprint."
+      },
+      "card3": {
+        "metric": "5",
+        "label": "Active projects",
+        "text": "Initiatives in training, sustainability, income generation, and community infrastructure."
+      }
+    },
+    "value": {
+      "eyebrow": "Value creation",
+      "heading1": "More than transmitting,",
+      "heading2": "it's about always delivering.",
+      "body": "We have built a scalable, certifiable platform ready for monetization via IPO or strategic sale. Growth through disciplined brownfield asset acquisitions, with active Actis governance at every stage.",
+      "cta": "For investors",
+      "windImgAlt": "Wind turbines in a green field at dusk",
+      "phase1": {
+        "title": "Phase I · 2025–2027",
+        "text": "Structuring and ramp-up. Transmission + generation integration, EDIFY/SP-MG refinancing (R$428m), tax efficiency."
+      },
+      "phase2": {
+        "title": "Phase II · 2028–2030",
+        "text": "Consolidation and monetization. Endurance expansion (5 new states), auditable and investable platform."
+      }
+    },
+    "mapAlt": "Map of Brazil with HRZ Energia assets"
+  },
+  "about": {
+    "meta": {
+      "title": "About HRZ Energia",
+      "description": "Learn about HRZ Energia: an integrated transmission and renewable generation platform in Brazil, controlled by Actis.",
+      "ogTitle": "About HRZ Energia",
+      "ogDescription": "Institutional discipline, technical expertise, and active governance over critical SIN infrastructure."
+    },
+    "hero": {
+      "eyebrow": "Who we are",
+      "titleLine1": "Institutional discipline.",
+      "titleLine2": "Operational excellence.",
+      "subtitle": "HRZ Energia is an integrated energy platform controlled by Actis, a global investment manager focused on sustainable infrastructure."
+    },
+    "model": {
+      "eyebrow": "Our model",
+      "headingPre": "A synthesis of",
+      "headingWord1": "capital",
+      "headingMid": "and",
+      "headingWord2": "expertise",
+      "body1": "We operate <bold>transmission</bold> and <bold>renewable generation</bold> assets in Brazil, focused on <accent>operational excellence</accent>, robust governance, and long-term value creation.",
+      "body2": "Our model combines the <bold>discipline of an institutional investor</bold> with the technical expertise of world-class operators, delivering critical infrastructure to Brazil's power grid with <accent>availability above regulatory benchmarks</accent>.",
+      "body3": "We grow through <bold>disciplined acquisitions</bold> of brownfield assets, with active Actis governance at every stage, building an <accent>auditable, scalable, and investable</accent> platform."
+    },
+    "business": {
+      "eyebrow": "Business model",
+      "heading": "What an integrated transmission and generation platform is.",
+      "body": "HRZ combines two complementary segments under unified governance: high-voltage transmission, with predictable inflation-linked revenue (RAP), and renewable wind generation, with strategic exposure to Brazil's energy matrix. The integration delivers capital discipline, operational gains, and optimization across distinct risk-return profiles.",
+      "card1": {
+        "title": "Transmission",
+        "text": "Long-term regulated revenue (RAP) with low volatility, inflation-linked and dispatch-independent."
+      },
+      "card2": {
+        "title": "Wind generation",
+        "text": "Exposure to the renewable matrix with long-term PPAs, high capacity factor, and low operational footprint."
+      },
+      "card3": {
+        "title": "Unified governance",
+        "text": "Auditable and scalable platform with unified technical management and active Actis oversight at every decision."
+      }
+    },
+    "timeline": {
+      "eyebrow": "Corporate evolution",
+      "heading": "A platform built with discipline and scale.",
+      "items": [
+        {
+          "year": "2019",
+          "header": "Launch",
+          "headerStrong": "Generation",
+          "delta": "+05",
+          "unit": "Parks",
+          "title": "Renewable generation begins",
+          "detail": "Acquisition of the Babilônia Wind Complex in Bahia: 5 parks, 65 turbines, 136.5 MW of installed capacity with one of Brazil's highest capacity factors."
+        },
+        {
+          "year": "2022",
+          "header": "Launch",
+          "headerStrong": "Transmission",
+          "delta": "+03",
+          "unit": "Concessions",
+          "title": "Entry into transmission",
+          "detail": "Acquisition of the first three high-voltage transmission concessions, marking HRZ's entry into regulated assets with predictable revenue (RAP)."
+        },
+        {
+          "year": "2024",
+          "header": "Expansion",
+          "headerStrong": "Transmission",
+          "delta": "+03",
+          "unit": "Concessions",
+          "title": "Platform scale-up",
+          "detail": "Three more concessions added to the portfolio, consolidating presence across SIN regions and expanding the inflation-indexed RAP base."
+        },
+        {
+          "year": "2025",
+          "header": "Expansion",
+          "headerStrong": "Transmission",
+          "delta": "+02",
+          "unit": "Concessions",
+          "title": "National consolidation",
+          "detail": "Addition of two new concessions, reinforcing HRZ's position as an integrated, disciplined platform in the Brazilian transmission sector."
+        },
+        {
+          "year": "2026",
+          "header": "Expansion",
+          "headerStrong": "Transmission",
+          "delta": "+01",
+          "unit": "Concession",
+          "title": "Ninth concession and R$935m in RAP",
+          "detail": "With one more concession, Transmissoras reaches 9 SPEs, 2,403 ckm and R$935 million in RAP for 2026."
+        }
+      ]
+    },
+    "mission": {
+      "eyebrow": "Mission",
+      "text": "To develop and operate energy infrastructure assets with operational excellence and capital discipline, generating sustainable value for shareholders, partners, and society."
+    },
+    "vision": {
+      "eyebrow": "Vision",
+      "text": "To become the most efficient and disciplined energy infrastructure investment platform in the sector, combining operational performance, robust governance, and social and environmental responsibility."
+    },
+    "leadership": {
+      "eyebrow": "Leadership",
+      "heading": "Experience that drives sustainable results.",
+      "body": "A team of senior executives with a strong track record in energy, finance, strategy, operations, and governance, committed to excellence, innovation, and value generation.",
+      "portraitAlt": "Portrait of {{name}}",
+      "governance": {
+        "eyebrow": "Governance",
+        "body": "Controlled by Actis · active oversight by the Global Sustainability Committee, with quarterly reporting between London and São Paulo."
+      },
+      "items": [
+        {
+          "name": "Eduardo Brito",
+          "role": "CEO",
+          "bio": "Over 20 years in the energy sector. Leadership in strategy, M&A, and business transformation at global companies."
+        },
+        {
+          "name": "Fernando Oliveira",
+          "role": "CFO",
+          "bio": "Over 25 years in finance and executive leadership. Expertise in corporate finance, IPO, M&A, and capital management."
+        },
+        {
+          "name": "Juliana Scalzo",
+          "role": "CLO",
+          "bio": "Over 20 years in Corporate Law, Compliance, and M&A in the energy sector. Strategic regulatory advisory."
+        },
+        {
+          "name": "Ítalo Augusto David",
+          "role": "COO",
+          "bio": "Over 20 years in engineering and project management. Specialist in energy transmission and asset management in Brazil and abroad."
+        },
+        {
+          "name": "Tiago Cacozzi",
+          "role": "QHSE",
+          "bio": "Over 18 years in Quality, Safety, Health and Environment. Focus on risk management, prevention, and continuous improvement."
+        }
+      ]
+    },
+    "ethics": {
+      "ceoAlt": "Eduardo Brito CEO HRZ Energia",
+      "eyebrow": "Ethics · Message from senior management",
+      "quote": "\"Integrity is at the heart of everything we do.\"",
+      "body1": "At HRZ Energia, we believe that operational excellence and financial discipline only make sense when grounded in irreproachable ethical conduct. We operate critical infrastructure for Brazil's National Interconnected System, and that responsibility demands absolute transparency in every decision.",
+      "body2": "Our commitment to ethics is not merely regulatory — it is cultural. It extends to our employees, partners, suppliers, and the communities where we operate. Under the active governance of Actis and the Global Sustainability Committee, we maintain the highest international standards of conduct.",
+      "body3": "I invite everyone to review our institutional documents and to use the Whistleblower Channel whenever necessary — we guarantee confidentiality and impartial investigation of every report."
+    },
+    "docs": {
+      "eyebrow": "Institutional documents",
+      "heading": "Review our commitments.",
+      "accessDoc": "Access document",
+      "important": {
+        "eyebrow": "Important",
+        "body": "The Whistleblower Channel is operated independently, ensuring reporter anonymity and impartial investigation of all reports. All communications are treated with confidentiality by HRZ Energia's Ethics Committee."
+      },
+      "cta": "Contact the Ethics Committee",
+      "items": [
+        {
+          "title": "Anti-Corruption Policy",
+          "text": "Guidelines for the prevention, detection, and handling of corrupt practices across all HRZ operations."
+        },
+        {
+          "title": "Code of Ethics",
+          "text": "Principles and rules of conduct applicable to employees, suppliers, and partners."
+        },
+        {
+          "title": "Whistleblower Channel",
+          "text": "An independent and confidential channel for reporting violations of the Code of Ethics and Anti-Corruption Policy."
+        }
+      ]
+    }
+  },
+  "segments": {
+    "transmission": {
+      "meta": {
+        "title": "Transmission — HRZ Energia",
+        "description": "Transmission: 9 concessions integrated into the SIN, 2,403 ckm of 500/230 kV OHTL, 29 substations, and R$935 million in RAP for 2026.",
+        "ogTitle": "Transmission — HRZ Energia",
+        "ogDescription": "HRZ Energia's high-voltage transmission platform across 7 Brazilian states, controlled by Actis."
+      },
+      "hero": {
+        "eyebrow": "Transmission",
+        "titleLine1": "High-voltage energy",
+        "titleLine2": "with institutional predictability.",
+        "subtitle": "HRZ Energia's energy transmission platform, controlled by Actis, with 9 concessions integrated into the SIN across 7 Brazilian states."
+      },
+      "about": {
+        "eyebrow": "Who we are",
+        "heading1": "A group of concessions",
+        "heading2": "integrated into the SIN.",
+        "body1": "Transmissoras is HRZ Energia's energy transmission platform, controlled by the British investment fund Actis. We operate basic grid concessions of the National Interconnected System across seven Brazilian states, handling voltage levels between 230 kV and 500 kV.",
+        "body2": "We began operations in Brazil in October 2021 with the acquisition of three concessionaires in Maranhão and Espírito Santo. In February 2024, we expanded the portfolio with the SPMG concession, which transmits power from the Belo Monte plant to the Southeast, totaling approximately R$4.3 billion in infrastructure investment.",
+        "body3": "We operate in compliance with applicable contracts, regulations, and legislation, applying best engineering practices to deliver availability, reliability, and long-term sustainability."
+      },
+      "kpis": {
+        "eyebrow": "Operational footprint",
+        "heading": "Numbers that underpin the operation."
+      },
+      "footprint": {
+        "eyebrow": "National footprint",
+        "heading1": "Seven states.",
+        "heading2": "One system.",
+        "body": "We operate strategic lines and substations for SIN balance from Maranhão to the Southeast, transmitting renewable generation and connecting load centers across Brazil."
+      },
+      "concessionsSection": {
+        "eyebrow": "Concessions",
+        "heading": "Explore each platform asset.",
+        "hint": "Click on a concession to explore voltage, extension, owned and accessed substations."
+      },
+      "infoLabels": {
+        "voltage": "Voltage",
+        "lines": "Transmission lines",
+        "ownSubstations": "Owned substations",
+        "accessedSubstations": "Accessed substations",
+        "acquisition": "Acquisition"
+      },
+      "differentials": {
+        "eyebrow": "Differentials",
+        "heading": "Discipline, governance, and technical excellence."
+      },
+      "timelineSection": {
+        "eyebrow": "Timeline",
+        "heading": "From entry into Brazil to an integrated SIN."
+      },
+      "cta": {
+        "heading": "Want to understand the asset in depth?",
+        "body": "Access the investor area or speak directly with our team.",
+        "investors": "Investors",
+        "contact": "Contact HRZ"
+      },
+      "kpisItems": [
+        { "value": "9", "label": "Concessions / SPEs" },
+        { "value": "2,403", "label": "ckm of OHTL" },
+        { "value": "29", "label": "Substations" },
+        { "value": "5,228", "label": "Installed MVA" },
+        { "value": "R$935m", "label": "RAP 2026" },
+        { "value": "99.8%", "label": "Availability" }
+      ],
+      "concessionsItems": [
+        {
+          "id": "es",
+          "nome": "HRZ ES",
+          "estado": "Espírito Santo",
+          "tensao": "230 kV",
+          "linhas": "106 km",
+          "subestacoes": "SE São Mateus 2 — 150 MVA",
+          "acessadas": "SE Linhares",
+          "aquisicao": "2021"
+        },
+        {
+          "id": "ma1",
+          "nome": "HRZ MA I",
+          "estado": "Maranhão",
+          "tensao": "500 / 230 kV",
+          "linhas": "120.2 km (500 kV) + 4.8 km (230 kV)",
+          "subestacoes": "SE São Luís IV — 1,600 MVA",
+          "acessadas": "SE Miranda II · SE São Luís II",
+          "aquisicao": "2021"
+        },
+        {
+          "id": "ma2",
+          "nome": "HRZ MA II",
+          "estado": "Maranhão",
+          "tensao": "230 kV",
+          "linhas": "201.9 km",
+          "subestacoes": "SE Chapadinha 2 — 200 MVA",
+          "acessadas": "SE Coelho Neto",
+          "aquisicao": "2021"
+        },
+        {
+          "id": "spmg",
+          "nome": "HRZ SPMG",
+          "estado": "São Paulo · Minas Gerais",
+          "tensao": "500 kV",
+          "linhas": "743 km",
+          "subestacoes": "—",
+          "acessadas": "SE Cachoeira Paulista · SE Estreito",
+          "aquisicao": "2024 · Belo Monte offtake"
+        }
+      ],
+      "differentialsItems": [
+        {
+          "title": "Superior availability",
+          "text": "Operation consistently above 99.8%, within the sector's best benchmarks and ANEEL and ONS requirements."
+        },
+        {
+          "title": "Predictable revenue (RAP)",
+          "text": "Inflation-linked RAP with R$935 million projected for the 2026 cycle, providing long-term revenue visibility."
+        },
+        {
+          "title": "IFC sustainability",
+          "text": "Net Zero program, biodiversity studies, reforestation, and wildfire prevention aligned with IFC standards."
+        },
+        {
+          "title": "Institutional governance",
+          "text": "ESG, Operations, Finance, and Board committees with independent members. Active leadership in ABRATE agendas."
+        }
+      ],
+      "timelineItems": [
+        {
+          "ano": "2021",
+          "titulo": "Initial acquisition",
+          "texto": "Entry into Brazil with the purchase of three transmission concessionaires in Maranhão and Espírito Santo (lots 24, 11, and 7)."
+        },
+        {
+          "ano": "2024",
+          "titulo": "Southeast expansion",
+          "texto": "Acquisition of the SPMG concession, responsible for transmitting Belo Monte's power to the Southeast, totaling R$4.3bn in infrastructure."
+        },
+        {
+          "ano": "2026",
+          "titulo": "9 SPEs and R$935m in RAP",
+          "texto": "Consolidated platform with 9 SPEs, 2,403 ckm and 29 substations across 7 Brazilian states, integrated into the SIN."
+        }
+      ]
+    },
+    "wind": {
+      "meta": {
+        "title": "Babilônia Wind — HRZ Energia",
+        "description": "Babilônia Wind: 5 wind complexes in Bahia, 65 turbines, 136.5 MW of installed capacity and one of Brazil's highest capacity factors.",
+        "ogTitle": "Babilônia Wind — HRZ Energia",
+        "ogDescription": "Sustainable wind generation in the Brazilian semi-arid: five parks in Morro do Chapéu, Ourolândia, and Várzea Nova."
+      },
+      "hero": {
+        "eyebrow": "Babilônia Wind",
+        "titleLine1": "Sustainable and renewable",
+        "titleLine2": "energy generation.",
+        "subtitle": "Five wind complexes located in Morro do Chapéu, Ourolândia, and Várzea Nova in Bahia, totaling 65 turbines and 136.5 MW of installed capacity."
+      },
+      "overview": {
+        "eyebrow": "Overview",
+        "heading1": "Renewable sources driving",
+        "heading2": "development.",
+        "body1": "Sustainable and inexhaustible — these are some characteristics of wind energy, a clean and renewable source on the rise that creates jobs and helps minimize environmental impacts.",
+        "body2": "Babilônia operates five wind complexes in the Bahian semi-arid, in municipalities with favorable wind regimes, delivering one of Brazil's highest capacity factors. Operations are controlled by Actis and integrated into the HRZ Energia platform.",
+        "imgAlt": "Aerial view of the Babilônia wind farm"
+      },
+      "kpis": {
+        "eyebrow": "Operational highlights",
+        "heading": "Consistent generation. Positive impact."
+      },
+      "complexes": {
+        "eyebrow": "Wind complexes",
+        "heading": "Five parks in the Bahian semi-arid.",
+        "hint": "Click on a complex to explore location, highlights, and operational characteristics."
+      },
+      "esg": {
+        "eyebrow": "ESG commitment",
+        "heading": "Energy that respects people and territory."
+      },
+      "cta": {
+        "heading": "Visit the official Babilônia Wind website.",
+        "body": "Access the institutional portal or speak with our relationship team.",
+        "siteLink": "Babilônia Wind Site",
+        "contactLink": "Contact HRZ"
+      },
+      "kpisItems": [
+        { "value": "5", "label": "Wind complexes" },
+        { "value": "65", "label": "Wind turbines" },
+        { "value": "136.5 MW", "label": "Installed capacity" },
+        { "value": "57%", "label": "Capacity factor" },
+        { "value": "R$202m", "label": "Annual revenue" },
+        { "value": "2019", "label": "Acquired by Actis" }
+      ],
+      "complexesItems": [
+        {
+          "id": "morro",
+          "nome": "Morro do Chapéu Complex",
+          "municipio": "Morro do Chapéu — BA",
+          "descricao": "A cluster of parks on the Bahian semi-arid plateau, where consistent winds guarantee a high capacity factor throughout the year.",
+          "destaques": [
+            "Consistent winds above 8 m/s",
+            "Integrated O&M logistics",
+            "Favorable topography for generation"
+          ]
+        },
+        {
+          "id": "ourolandia",
+          "nome": "Ourolândia Complex",
+          "municipio": "Ourolândia — BA",
+          "descricao": "Parks positioned in a favored wind corridor, with state-of-the-art turbines and remote operation.",
+          "destaques": [
+            "High-power wind turbines",
+            "Real-time monitoring",
+            "Long-term PPA"
+          ]
+        },
+        {
+          "id": "varzea",
+          "nome": "Várzea Nova Complex",
+          "municipio": "Várzea Nova — BA",
+          "descricao": "A strategic complement to the Babilônia block, integrating operations with collector substations and the SIN's basic grid.",
+          "destaques": [
+            "SIN integration",
+            "Operational synergy",
+            "Local social and environmental commitment"
+          ]
+        }
+      ],
+      "pilaresItems": [
+        {
+          "title": "Clean and renewable energy",
+          "text": "100% wind generation, an inexhaustible source that avoids CO₂ emissions and strengthens Brazil's renewable matrix."
+        },
+        {
+          "title": "Semi-arid sustainability",
+          "text": "Biodiversity programs, land restoration, and coexistence with the caatinga biome aligned with IFC standards."
+        },
+        {
+          "title": "Community development",
+          "text": "Local job creation, environmental education, and social projects in the Bahian municipalities where we operate."
+        },
+        {
+          "title": "World-class operations",
+          "text": "Actis institutional governance, risk management, business ethics, and active stakeholder engagement."
+        }
+      ],
+      "regioes": ["Morro do Chapéu", "Ourolândia", "Várzea Nova"]
+    },
+    "portfolio": {
+      "meta": {
+        "title": "Portfolio — HRZ Energia",
+        "description": "14 SPVs in operation: 9 transmission assets (2,403 ckm · 5,228 MVA) and 5 SPVs from the Babilônia Wind Complex (136.5 MW).",
+        "ogTitle": "HRZ Transmission and Generation Portfolio",
+        "ogDescription": "Critical SIN assets across four states, with availability above 99.8%."
+      },
+      "hero": {
+        "eyebrow": "Asset portfolio",
+        "titleLine1": "14 SPVs.",
+        "titleLine2": "National scale.",
+        "subtitle": "An integrated platform with high-voltage transmission and renewable wind generation, distributed across brownfield assets acquired with discipline between 2019 and 2025."
+      },
+      "footprint": {
+        "eyebrow": "National footprint",
+        "heading1": "Strategic presence",
+        "heading2": "across Brazil.",
+        "body": "We operate critical assets in key states of the National Interconnected System, from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul.",
+        "stat1": { "value": "9", "label": "Transmission concessions" },
+        "stat2": { "value": "5", "label": "Wind parks" },
+        "stat3": { "value": "2,403 ckm", "label": "OHTL 500/230 kV" },
+        "stat4": { "value": "29", "label": "Substations" }
+      },
+      "transmission": {
+        "eyebrow": "Transmission",
+        "heading": "HRZ + Skyline.",
+        "subtitle": "9 SPVs acquired between 2021 and 2025 · 2,403 ckm of 500/230 kV OHTL · 5,228 MVA of installed capacity · 29 interconnected substations.",
+        "imgAlt": "Substation at dusk",
+        "stats": [
+          { "value": ">99.8%", "label": "Availability" },
+          { "value": "29", "label": "Substations" },
+          { "value": "2,403", "label": "ckm of lines" },
+          { "value": "R$935m", "label": "RAP 2026" }
+        ]
+      },
+      "generation": {
+        "eyebrow": "Generation",
+        "heading": "Babilônia Wind.",
+        "body": "5 parks acquired in 2019 with 65 turbines and 136.5 MW of installed capacity in Bahia. Consistent operation with a 57% capacity factor and long-term PPA.",
+        "imgAlt": "Babilônia wind farm",
+        "stats": [
+          { "value": "136.5 MW", "label": "Capacity" },
+          { "value": "65", "label": "Turbines" },
+          { "value": ">98%", "label": "Availability" },
+          { "value": "R$202m", "label": "Revenue" }
+        ]
+      },
+      "transmissionAssets": [
+        { "code": "MGTE", "name": "Horizon MG / SP", "info": "500 kV OHTL" },
+        { "code": "TMA I", "name": "Horizon Maranhão I", "info": "Line + substation" },
+        { "code": "TMA II", "name": "Horizon Maranhão II", "info": "Line + substation" },
+        { "code": "AVT", "name": "Água Vermelha", "info": "Substation" },
+        { "code": "TES", "name": "Horizon Espírito Santo", "info": "230 kV OHTL" },
+        { "code": "SP-MG", "name": "500 kV SP-MG OHTL", "info": "Transmission line" },
+        { "code": "ALSC", "name": "Aliança SC", "info": "Transmission line" },
+        { "code": "LSUL", "name": "Litoral Sul", "info": "Transmission line" },
+        { "code": "VYRD", "name": "Vineyards", "info": "3rd Transformer Lajeado 3 (under construction)" }
+      ]
+    }
+  },
+  "esg": {
+    "meta": {
+      "title": "ESG — HRZ Energia",
+      "description": "HRZ ESG strategy: governance, climate action and social responsibility. 100% wind generation, LTI=0 and oversight by Actis's Global Sustainability Committee.",
+      "ogTitle": "HRZ Energia ESG Strategy",
+      "ogDescription": "Governance, climate action and social responsibility with KPIs embedded in management."
+    },
+    "hero": {
+      "eyebrow": "ESG Strategy",
+      "titleLine1": "More than energy,",
+      "titleLine2": "we generate transformation.",
+      "subtitle": "We are present where it matters: close to communities, listening, collaborating, and creating positive impact."
+    },
+    "metrics": {
+      "people": "people impacted",
+      "communities": "communities served",
+      "projects": "active projects"
+    },
+    "social": {
+      "eyebrow": "Social Responsibility",
+      "heading": "Real impact in the communities where we operate."
+    },
+    "gallery": [
+      { "label": "Infrastructure" },
+      { "label": "Community" },
+      { "label": "Training & Education" },
+      { "label": "Income Generation" },
+      { "label": "Sustainability" },
+      { "label": "Together We Are Stronger" }
+    ],
+    "pillars": [
+      {
+        "title": "Environmental",
+        "items": [
+          "100% wind generation — 136.5 MW of renewable energy",
+          "Low-impact transmission with zero operational emissions",
+          "Climate contingency plans and 24/7 monitoring",
+          "Wildfire prevention programs along transmission rights-of-way"
+        ]
+      },
+      {
+        "title": "Social",
+        "items": [
+          "Zero lost-time incidents (LTI = 0) across all assets",
+          "Community engagement along transmission lines",
+          "Social outreach and local development programs",
+          "Supply chain with safety and conduct requirements"
+        ]
+      },
+      {
+        "title": "Governance",
+        "items": [
+          "Oversight by Actis's Global Sustainability Committee",
+          "ESG Committee with quarterly reporting London / São Paulo",
+          "Proactive communication with ANEEL and ONS",
+          "Compliance, risk management and decision transparency"
+        ]
+      }
+    ],
+    "values": {
+      "eyebrow": "Our Values",
+      "heading1": "More than projects,",
+      "heading2": "we build relationships.",
+      "tagline": "More than presence, we leave a legacy.",
+      "items": [
+        { "title": "Respect", "text": "We value people and diversity." },
+        { "title": "Integrity", "text": "We act with ethics, transparency and accountability." },
+        { "title": "Sustainability", "text": "We promote actions that generate lasting positive impact." },
+        { "title": "Collaboration", "text": "We believe in working together to transform realities." }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Operational highlights",
+      "heading": "Resilience, safety and continuous improvement.",
+      "items": [
+        {
+          "title": "Climate resilience",
+          "text": "All SP-MG 500 kV OHTL spacer-dampers replaced. 24/7 monitoring of meteorological conditions and wildfires. Full revision of contingency plans."
+        },
+        {
+          "title": "Facility safety",
+          "text": "Member of the ABRATE Committee. Coordination with federal security forces to prevent attacks. Community engagement and wildfire prevention."
+        },
+        {
+          "title": "Continuous improvement",
+          "text": "Active resolution of legacy liabilities inherited from previous owners. Rigorous operational management, traceability and field team supervision."
+        }
+      ]
+    }
+  },
+  "investors": {
+    "meta": {
+      "title": "Investors — HRZ Energia",
+      "description": "R$1bn+ inflation-linked RAP, AAA.br rating and completed refinancing. Platform ready for monetization via IPO or strategic sale.",
+      "ogTitle": "Investors — HRZ Energia",
+      "ogDescription": "Predictable revenue, disciplined capital and a clear value creation roadmap."
+    },
+    "hero": {
+      "eyebrow": "Investors",
+      "titleLine1": "Predictable revenue.",
+      "titleLine2": "Disciplined capital.",
+      "subtitle": "Scalable and certifiable platform ready for monetization via IPO or strategic sale. Active Actis governance at every stage."
+    },
+    "kpis": [
+      { "value": "R$1.0bn+", "label": "Total Revenue (RAP + Generation)" },
+      { "value": "AAA.br", "label": "Edify / SP-MG Rating" },
+      { "value": "13.5%", "label": "Refinanced cost of capital" },
+      { "value": "R$428m", "label": "Debenture issued" }
+    ],
+    "initiatives": {
+      "eyebrow": "Financial initiatives",
+      "heading": "In execution.",
+      "items": [
+        {
+          "title": "EDIFY / SP-MG Refinancing",
+          "text": "R$428m debenture issued. Replacement of ~R$550m of Holdco debt. Letters of Credit release cash reserves. AAA.br rating."
+        },
+        {
+          "title": "Corporate restructuring",
+          "text": "Skyline → Edify reverse merger and partial spin-off executed. ~15% tax efficiency on JCP. Clean pre-monetization structure."
+        },
+        {
+          "title": "Financial Completion · LC Release",
+          "text": "TMA I and TMA II completed: ~90% reduction in LC costs in 2025. MGTE and AVT in progress, delivery expected 2026."
+        }
+      ]
+    },
+    "phases": {
+      "phase1": {
+        "phase": "Phase I",
+        "range": "2025 – 2027",
+        "title": "Structuring and Ramp-Up",
+        "items": [
+          "Integration of transmission and generation teams",
+          "Debt structure optimization and tax efficiency",
+          "Creation of COO and EQS (Quality & ESG) position",
+          "Implementation of modular ERP and management systems",
+          "Curtailment mitigation strategy (BESS / Bitcoin Mining)",
+          "EDIFY / SP-MG R$428m debenture refinancing"
+        ]
+      },
+      "phase2": {
+        "phase": "Phase II",
+        "range": "2028 – 2030",
+        "title": "Consolidation and Monetization",
+        "items": [
+          "Operational maturity and consolidated governance",
+          "Auditable and investable platform (IPO or M&A)",
+          "Completion of Project Vineyards (3rd Transformer Lajeado 3)",
+          "Endurance expansion — 5 new states, Northern region",
+          "Responsible divestment with predefined returns",
+          "Value delivery to investors, communities and energy transition"
+        ]
+      }
+    },
+    "docs": {
+      "eyebrow": "Documents",
+      "heading": "Financial Statements & Corporate Documents.",
+      "body": "Audited financial statements, corporate acts, management reports and supplementary materials available on request for investors, counterparties and analysts.",
+      "mascoteAlt": "HRZ mascot pointing",
+      "requestCta": "Request documents",
+      "items": [
+        {
+          "title": "Financial Statements",
+          "text": "Annual audited financial statements and quarterly ITRs for HRZ Energia and its subsidiaries."
+        },
+        {
+          "title": "Corporate Documents",
+          "text": "Articles of association, board minutes, corporate acts and updated capital structure."
+        },
+        {
+          "title": "Investor Materials",
+          "text": "Institutional presentations, management reports and governance materials."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — HRZ Energia",
+      "description": "Contact HRZ Energia. Investors, partnerships, press and institutional inquiries.",
+      "ogTitle": "Contact — HRZ Energia",
+      "ogDescription": "Investors, partnerships and institutional inquiries."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "titleLine1": "Let's talk",
+      "titleLine2": "about energy.",
+      "subtitle": "We are available for investors, institutional partners and press."
+    },
+    "form": {
+      "eyebrow": "Direct message",
+      "heading": "Contact HRZ.",
+      "fieldName": "Name",
+      "fieldCompany": "Company",
+      "fieldEmail": "E-mail",
+      "fieldSubject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjectInvestor": "Investor",
+      "subjectPress": "Press",
+      "subjectPartner": "Partner",
+      "subjectCommunity": "Community",
+      "fieldMessage": "Message",
+      "submitBtn": "Send message"
+    },
+    "cards": {
+      "emailTitle": "Institutional e-mail",
+      "emailValue": "contato@hrzenergia.com.br",
+      "locationTitle": "Headquarters",
+      "locationValue": "São Paulo · Brazil",
+      "controllerTitle": "Parent company",
+      "controllerValue": "Actis · Global Sustainability Committee · London"
+    },
+    "investorsBox": {
+      "eyebrow": "For investors",
+      "body": "Detailed governance, operational performance and financial strategy materials available upon request."
+    },
+    "mascoteAlt": "HRZ mascot waving",
+    "careers": {
+      "eyebrow": "Careers",
+      "heading": "Join our team.",
+      "body": "We look for talent committed to Brazil's energy transition. Submit your resume and our HR team will reach out when opportunities matching your profile arise.",
+      "benefit1Title": "Integrated platform",
+      "benefit1Text": "Transmission and renewable generation under Actis governance.",
+      "benefit2Title": "Culture of excellence",
+      "benefit2Text": "IFC standards, operational safety and continuous development.",
+      "successTitle": "Application received!",
+      "successBody": "Thank you for your interest in joining HRZ Energia. Our HR team will review your resume and reach out if there is a match.",
+      "successCta": "Submit another application",
+      "formEyebrow": "Resume submission",
+      "formHeading": "Join HRZ.",
+      "fieldFullName": "Full name",
+      "fieldPhone": "Phone",
+      "fieldAreaLabel": "Desired area",
+      "fieldAreaPlaceholder": "Select an area",
+      "fieldCvLabel": "Resume (PDF, DOC or DOCX · max. 5 MB)",
+      "fieldCvPlaceholder": "Click to select your resume",
+      "fieldCvAttach": "Attach",
+      "fieldMessageLabel": "Message (optional)",
+      "fieldMessagePlaceholder": "Tell us a bit about your background and interests.",
+      "submitBtn": "Submit application",
+      "areas": [
+        "Operations & Maintenance",
+        "Engineering",
+        "Finance",
+        "Legal & Regulatory",
+        "ESG & Sustainability",
+        "Human Resources",
+        "Information Technology",
+        "QHSE",
+        "Communications & Relations",
+        "Internship · Young Apprentice"
+      ]
+    }
+  },
+  "companies": {
+    "meta": {
+      "title": "HRZ Energia Segments",
+      "description": "Transmissoras (9 concessions · 2,403 ckm · R$935m RAP) and Eólicas Babilônia (136.5 MW · 65 turbines). Integrated transmission and generation platform.",
+      "ogTitle": "HRZ Energia Segments",
+      "ogDescription": "Transmission and renewable generation on a single platform controlled by Actis."
+    },
+    "hero": {
+      "eyebrow": "Segments",
+      "titleLine1": "Two operational segments.",
+      "titleHighlight": "One integrated platform.",
+      "subtitle": "HRZ Energia integrates two complementary segments — high-voltage transmission and wind generation — under unified governance and institutional discipline."
+    },
+    "logic": {
+      "eyebrow": "The integrated logic",
+      "heading1": "Complementarity",
+      "heading2": "between revenue and asset.",
+      "body1": "Operating transmission and generation on the same platform creates unique competitive advantages: predictable inflation-linked revenue (RAP), strategic exposure to Brazil's renewable energy matrix, and capital optimization across two distinct risk-return profiles.",
+      "body2": "The integration enables unified technical management, sharing of high-voltage specialist teams, and efficiency gains in regulatory compliance with ANEEL and ONS — while preserving the operational autonomy of each business."
+    },
+    "cards": {
+      "transmission": {
+        "eyebrow": "Transmission",
+        "name": "Transmissoras",
+        "imgAlt": "High-voltage substation",
+        "description": "High-voltage transmission platform with 9 concessions integrated into the SIN, operating 500/230 kV OHTL and substations across 7 Brazilian states.",
+        "metricLabel1": "Concessions",
+        "metricLabel2": "ckm OHTL",
+        "metricLabel3": "RAP 2026",
+        "cta": "Explore Transmissoras"
+      },
+      "wind": {
+        "eyebrow": "Generation",
+        "name": "Eólicas Babilônia",
+        "imgAlt": "Babilônia wind farm",
+        "description": "Wind complex with 5 parks in Bahia, 65 turbines, and consistent operation with one of Brazil's highest capacity factors. Long-term PPA.",
+        "metricLabel1": "Capacity",
+        "metricLabel2": "Wind Turbines",
+        "metricLabel3": "Capacity Factor",
+        "cta": "Explore Eólicas Babilônia"
+      }
+    },
+    "footprint": {
+      "eyebrow": "National footprint",
+      "heading1": "Shared presence",
+      "heading2": "across Brazil.",
+      "body": "Our two segments — transmission and wind generation — operate across multiple regions, from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul, forming a unique strategic footprint of the HRZ Energia platform in the Brazilian power sector."
+    },
+    "corporate": {
+      "eyebrow": "Corporate Structure",
+      "heading": "Actis Control · HRZ Platform.",
+      "body": "HRZ Energia is controlled by Actis, a global investment manager focused on sustainable infrastructure, with active oversight by the Global Sustainability Committee in London.",
+      "exploreHint": "Click on cards to explore"
+    },
+    "orgNodes": {
+      "actis": {
+        "subtitle": "Parent Company · London",
+        "description": "Global investment manager focused on sustainable infrastructure, with active oversight by the Global Sustainability Committee.",
+        "details": [
+          { "label": "Headquarters", "value": "London, UK" },
+          { "label": "AUM", "value": "US$12.5bn" },
+          { "label": "Focus", "value": "Sustainable infrastructure" }
+        ]
+      },
+      "hrz": {
+        "subtitle": "Holding · São Paulo",
+        "description": "Brazilian holding company integrating transmission and renewable generation businesses under unified governance.",
+        "details": [
+          { "label": "Headquarters", "value": "São Paulo, BR" },
+          { "label": "Platform", "value": "Transmission + Generation" },
+          { "label": "Governance", "value": "Board with Actis" }
+        ]
+      },
+      "transmissoras": {
+        "subtitle": "9 SPEs · Transmission",
+        "description": "High-voltage transmission platform with 9 concessions integrated into the SIN across 7 Brazilian states.",
+        "details": [
+          { "label": "Concessions", "value": "9 SPEs" },
+          { "label": "Extension", "value": "2,403 ckm" },
+          { "label": "RAP 2026", "value": "R$935m" }
+        ]
+      },
+      "babilonia": {
+        "subtitle": "5 SPEs · Generation",
+        "description": "Wind complex in Bahia with 5 parks, 65 turbines, and one of Brazil's highest capacity factors.",
+        "details": [
+          { "label": "Capacity", "value": "136.5 MW" },
+          { "label": "Wind Turbines", "value": "65" },
+          { "label": "Capacity Factor", "value": "57%" }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "HRZ Energia",
+    "tagline": "An integrated energy platform controlled by Actis. We operate critical transmission and renewable generation assets in Brazil with discipline, governance, and technical excellence.",
+    "linkedinLabel": "LinkedIn HRZ Energia",
+    "companyCol": {
+      "title": "Company",
+      "about": "Who we are",
+      "segments": "Segments",
+      "transmission": "Transmission",
+      "wind": "Wind",
+      "esg": "ESG Strategy"
+    },
+    "investorsCol": {
+      "title": "Investors",
+      "overview": "Overview",
+      "performance": "Performance",
+      "governance": "Governance"
+    },
+    "contactCol": {
+      "title": "Contact",
+      "location": "São Paulo · Brazil",
+      "email": "contato@hrzenergia.com.br",
+      "cta": "Contact HRZ"
+    },
+    "copyright": "© {{year}} HRZ Energia. All rights reserved.",
+    "controlled": "Controlled by Actis · Global Sustainability Committee"
+  }
+}

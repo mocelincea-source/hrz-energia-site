@@ -1,0 +1,974 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Quem Somos",
+    "segments": "Segmentos",
+    "transmission": "Transmissoras",
+    "wind": "Eólicas",
+    "esg": "ESG",
+    "investors": "Investidores",
+    "contact": "Contato",
+    "cta": "Fale com a HRZ"
+  },
+  "language": {
+    "switchTo": "EN",
+    "label": "Translate to English"
+  },
+  "home": {
+    "meta": {
+      "title": "HRZ Energia Plataforma integrada de transmissão e geração",
+      "description": "A HRZ Energia opera 2.403 ckm de linhas de transmissão e 136,5 MW de geração eólica no Brasil. Plataforma integrada controlada pela Actis.",
+      "ogTitle": "HRZ Energia Plataforma integrada de energia",
+      "ogDescription": "Transmissão e geração renovável com disponibilidade acima de 99,8%. R$ 1bi+ de receita anual. Controlada pela Actis."
+    },
+    "stats": {
+      "revenue": "Receita anual combinada",
+      "ckm": "ckm de linhas de transmissão",
+      "spes": "SPEs no portfólio",
+      "wind": "Geração eólica renovável"
+    },
+    "pillars": {
+      "disciplined": {
+        "title": "Disciplinada",
+        "text": "Operações integradas e custo ótimo, com governança ativa em cada etapa."
+      },
+      "efficient": {
+        "title": "Eficiente",
+        "text": "Disponibilidade da transmissão acima de 99,8% superando o padrão regulatório da ANEEL."
+      },
+      "reliable": {
+        "title": "Confiável",
+        "text": "Infraestrutura crítica do SIN entregue com excelência técnica de classe mundial."
+      },
+      "responsible": {
+        "title": "Responsável",
+        "text": "ESG intrínseco ao modelo de negócio. Geração 100% eólica."
+      }
+    },
+    "hero": {
+      "logoAlt": "HRZ energia",
+      "headline1": "Rigor na gestão.",
+      "headline2": "Consistência no retorno.",
+      "ctaTransmission": "Transmissoras",
+      "ctaWind": "Eólicas Babilônia"
+    },
+    "about": {
+      "eyebrow": "Quem somos",
+      "heading1": "Uma plataforma integrada",
+      "heading2": "de energia.",
+      "body1": "A HRZ Energia opera ativos de transmissão e geração renovável no Brasil, controlada pela Actis gestora global de investimentos em infraestrutura sustentável. Nosso modelo combina disciplina institucional com excelência operacional.",
+      "body2": "Somos uma Plataforma integrada de transmissão e geração renovável que entrega infraestrutura crítica ao Sistema Interligado Nacional, com a disciplina de um investidor institucional e a especialização de operadores de classe mundial.",
+      "cta": "Ver a história completa"
+    },
+    "portfolio": {
+      "transmissionImgAlt": "Subestação de alta tensão ao entardecer",
+      "transmissionEyebrow": "Transmissão",
+      "transmissionHeading": "9 Concessões · 2.403 ckm · 5.228 MVA",
+      "transmissionBody": "OHTL 500/230 kV com 29 subestações interligadas, disponibilidade superior a 99,8% e R$ 935m de RAP em 2026.",
+      "windImgAlt": "Parque eólico Babilônia ao entardecer",
+      "windEyebrow": "Geração",
+      "windHeading": "Babilônia · 136,5 MW · 65 aerogeradores",
+      "windBody": "Cinco parques adquiridos em 2019 na Bahia, fator de capacidade de 57% e R$ 202m de receita anual.",
+      "cta": "Conheça nossos segmentos"
+    },
+    "footprint": {
+      "eyebrow": "Pegada nacional",
+      "heading1": "Energia que atravessa",
+      "heading2": "o Brasil.",
+      "body": "Nossos dois segmentos — transmissão e geração eólica — operam em diferentes regiões do país, do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul.",
+      "cta": "Explorar o portfólio"
+    },
+    "esg": {
+      "eyebrow": "ESG",
+      "headingPre": "Energia que ",
+      "headingVerb1": "respeita",
+      "headingMid": " e",
+      "headingVerb2": " regenera.",
+      "body": "Sustentabilidade não é um pilar adicional — é o nosso modelo operacional. Da geração 100% eólica à governança ativa, cada decisão é tomada com olhar de longo prazo sobre pessoas, comunidades e meio ambiente.",
+      "cta": "Conheça nossa estratégia ESG",
+      "card1": {
+        "metric": "+500",
+        "label": "Pessoas impactadas",
+        "text": "Programas sociais ativos junto às comunidades onde operamos, com escuta ativa e parceria local."
+      },
+      "card2": {
+        "metric": "10",
+        "label": "Comunidades atendidas",
+        "text": "Diálogo, presença e geração de oportunidades em territórios estratégicos do nosso footprint."
+      },
+      "card3": {
+        "metric": "5",
+        "label": "Projetos ativos",
+        "text": "Iniciativas de capacitação, sustentabilidade, geração de renda e infraestrutura comunitária."
+      }
+    },
+    "value": {
+      "eyebrow": "Criação de valor",
+      "heading1": "Mais do que transmitir,",
+      "heading2": "é fazer chegar, sempre.",
+      "body": "Construímos uma plataforma escalável e certificável pronta para monetização via IPO ou venda estratégica. Crescimento por aquisições disciplinadas de ativos brownfield, com governança ativa da Actis em cada etapa.",
+      "cta": "Para investidores",
+      "windImgAlt": "Aerogeradores em campo verde ao entardecer",
+      "phase1": {
+        "title": "Fase I · 2025–2027",
+        "text": "Estruturação e ramp-up. Integração transmissão + geração, refinanciamento EDIFY/SP-MG (R$ 428m), eficiência fiscal."
+      },
+      "phase2": {
+        "title": "Fase II · 2028–2030",
+        "text": "Consolidação e monetização. Expansão Endurance (5 novos estados), plataforma auditável e investível."
+      }
+    },
+    "mapAlt": "Mapa do Brasil com os ativos da HRZ Energia"
+  },
+  "about": {
+    "meta": {
+      "title": "Sobre HRZ Energia",
+      "description": "Conheça a HRZ Energia: plataforma integrada de transmissão e geração renovável no Brasil, controlada pela Actis.",
+      "ogTitle": "Sobre a HRZ Energia",
+      "ogDescription": "Disciplina institucional, especialização técnica e governança ativa em infraestrutura crítica do SIN."
+    },
+    "hero": {
+      "eyebrow": "Quem somos",
+      "titleLine1": "Disciplina institucional.",
+      "titleLine2": "Excelência operacional.",
+      "subtitle": "A HRZ Energia é uma plataforma integrada de energia controlada pela Actis, gestora global de investimentos em infraestrutura sustentável."
+    },
+    "model": {
+      "eyebrow": "Nosso modelo",
+      "headingPre": "Uma síntese de",
+      "headingWord1": "capital",
+      "headingMid": "e",
+      "headingWord2": "técnica",
+      "body1": "Operamos ativos de <bold>transmissão</bold> e <bold>geração renovável</bold> no Brasil, com foco em <accent>excelência operacional</accent>, governança robusta e criação de valor de longo prazo.",
+      "body2": "Nosso modelo combina a <bold>disciplina de um investidor institucional</bold> com a especialização técnica de operadores de classe mundial, entregando infraestrutura crítica ao sistema elétrico brasileiro com <accent>disponibilidade acima dos padrões regulatórios</accent>.",
+      "body3": "Crescemos por <bold>aquisições disciplinadas</bold> de ativos brownfield, com governança ativa da Actis em cada etapa preparando uma plataforma <accent>auditável, escalável e investível</accent>."
+    },
+    "business": {
+      "eyebrow": "Modelo de negócio",
+      "heading": "O que é uma plataforma integrada de transmissão e geração.",
+      "body": "A HRZ combina dois segmentos complementares sob governança única: transmissão de alta tensão, com receita previsível indexada à inflação (RAP), e geração eólica renovável, com exposição estratégica à matriz energética brasileira. A integração entrega disciplina de capital, ganhos operacionais e otimização entre perfis distintos de risco-retorno.",
+      "card1": {
+        "title": "Transmissão",
+        "text": "Receita regulada de longo prazo (RAP) com baixa volatilidade, indexada à inflação e independente de despacho."
+      },
+      "card2": {
+        "title": "Geração eólica",
+        "text": "Exposição à matriz renovável com PPAs de longo prazo, fator de capacidade elevado e baixa pegada operacional."
+      },
+      "card3": {
+        "title": "Governança única",
+        "text": "Plataforma auditável e escalável, com gestão técnica unificada e supervisão ativa da Actis em cada decisão."
+      }
+    },
+    "timeline": {
+      "eyebrow": "Evolução corporativa",
+      "heading": "Plataforma construída com disciplina e escala.",
+      "items": [
+        {
+          "year": "2019",
+          "header": "Início",
+          "headerStrong": "Geração",
+          "delta": "+05",
+          "unit": "Parques",
+          "title": "Nasce a geração renovável",
+          "detail": "Aquisição do Complexo Eólico Babilônia na Bahia: 5 parques, 65 aerogeradores, 136,5 MW de capacidade instalada com fator de capacidade entre os mais altos do Brasil."
+        },
+        {
+          "year": "2022",
+          "header": "Início",
+          "headerStrong": "Transmissão",
+          "delta": "+03",
+          "unit": "Concessões",
+          "title": "Entrada em transmissão",
+          "detail": "Aquisição das três primeiras concessões de transmissão de alta tensão, marcando a entrada da HRZ em ativos regulados com receita previsível (RAP)."
+        },
+        {
+          "year": "2024",
+          "header": "Expansão",
+          "headerStrong": "Transmissão",
+          "delta": "+03",
+          "unit": "Concessões",
+          "title": "Escala da plataforma",
+          "detail": "Mais três concessões somadas ao portfólio, consolidando a presença em diferentes regiões do SIN e ampliando a base de RAP indexada à inflação."
+        },
+        {
+          "year": "2025",
+          "header": "Expansão",
+          "headerStrong": "Transmissão",
+          "delta": "+02",
+          "unit": "Concessões",
+          "title": "Consolidação nacional",
+          "detail": "Adição de duas novas concessões, reforçando a posição da HRZ como plataforma integrada e disciplinada no setor de transmissão brasileiro."
+        },
+        {
+          "year": "2026",
+          "header": "Expansão",
+          "headerStrong": "Transmissão",
+          "delta": "+01",
+          "unit": "Concessão",
+          "title": "Nona concessão e R$ 935m de RAP",
+          "detail": "Com mais uma concessão, a Transmissoras alcança 9 SPEs, 2.403 ckm e R$ 935 milhões de RAP em 2026."
+        }
+      ]
+    },
+    "mission": {
+      "eyebrow": "Missão",
+      "text": "Desenvolver e operar ativos de infraestrutura de energia com excelência operacional e disciplina de capital, gerando valor sustentável para acionistas, parceiros e sociedade."
+    },
+    "vision": {
+      "eyebrow": "Visão",
+      "text": "Consolidar-se como a plataforma de investimentos em infraestrutura de energia mais eficiente e disciplinada do setor, combinando desempenho operacional, governança robusta e responsabilidade socioambiental."
+    },
+    "leadership": {
+      "eyebrow": "Liderança",
+      "heading": "Experiência que impulsiona resultados sustentáveis.",
+      "body": "Time de executivos seniores com sólida trajetória em energia, finanças, estratégia, operações e governança, comprometidos com a excelência, inovação e geração de valor.",
+      "portraitAlt": "Retrato de {{name}}",
+      "governance": {
+        "eyebrow": "Governança",
+        "body": "Controlada pela Actis · supervisão ativa pelo Global Sustainability Committee, com reporte trimestral entre Londres e São Paulo."
+      },
+      "items": [
+        {
+          "name": "Eduardo Brito",
+          "role": "CEO",
+          "bio": "Mais de 20 anos no setor de energia. Liderança em estratégia, M&A e transformação de negócios em empresas globais."
+        },
+        {
+          "name": "Fernando Oliveira",
+          "role": "CFO",
+          "bio": "Mais de 25 anos em finanças e liderança executiva. Expertise em finanças corporativas, IPO, M&A e gestão de capital."
+        },
+        {
+          "name": "Juliana Scalzo",
+          "role": "CLO",
+          "bio": "Mais de 20 anos em Direito Corporativo, Compliance e M&A no setor de energia. Atuação regulatória estratégica."
+        },
+        {
+          "name": "Ítalo Augusto David",
+          "role": "COO",
+          "bio": "Mais de 20 anos em engenharia e gestão de projetos. Especialista em transmissão de energia e gestão de ativos no Brasil e exterior."
+        },
+        {
+          "name": "Tiago Cacozzi",
+          "role": "QHSE",
+          "bio": "Mais de 18 anos em Qualidade, Segurança, Saúde e Meio Ambiente. Foco em gestão de riscos, prevenção e melhoria contínua."
+        }
+      ]
+    },
+    "ethics": {
+      "ceoAlt": "Eduardo Brito CEO HRZ Energia",
+      "eyebrow": "Ética · Mensagem da alta administração",
+      "quote": "\"A integridade está no centro de tudo o que fazemos.\"",
+      "body1": "Na HRZ Energia, acreditamos que excelência operacional e disciplina financeira só fazem sentido quando sustentadas por conduta ética irrepreensível. Operamos infraestrutura crítica ao Sistema Interligado Nacional e essa responsabilidade exige transparência absoluta em cada decisão.",
+      "body2": "Nosso compromisso com a ética não é apenas regulatório: é cultural. Estende-se aos nossos colaboradores, parceiros, fornecedores e às comunidades onde atuamos. Sob a governança ativa da Actis e do Global Sustainability Committee, mantemos os mais altos padrões internacionais de conduta.",
+      "body3": "Convido todos a conhecerem nossos documentos institucionais e a utilizarem o Canal de Denúncias sempre que necessário — garantimos confidencialidade e atuação imparcial em qualquer situação reportada."
+    },
+    "docs": {
+      "eyebrow": "Documentos institucionais",
+      "heading": "Conheça nossos compromissos.",
+      "accessDoc": "Acessar documento",
+      "important": {
+        "eyebrow": "Importante",
+        "body": "O Canal de Denúncias é operado de forma independente, garantindo o anonimato do denunciante e a apuração imparcial dos relatos. Todas as comunicações são tratadas com confidencialidade pelo Comitê de Ética da HRZ Energia."
+      },
+      "cta": "Falar com o Comitê de Ética",
+      "items": [
+        {
+          "title": "Política Anticorrupção",
+          "text": "Diretrizes para prevenção, detecção e tratamento de práticas de corrupção em todas as operações HRZ."
+        },
+        {
+          "title": "Código de Ética",
+          "text": "Princípios e regras de conduta aplicáveis a colaboradores, fornecedores e parceiros."
+        },
+        {
+          "title": "Canal de Denúncias",
+          "text": "Canal independente e confidencial para relato de violações ao Código de Ética e à Política Anticorrupção."
+        }
+      ]
+    }
+  },
+  "segments": {
+    "transmission": {
+      "meta": {
+        "title": "Transmissoras — HRZ Energia",
+        "description": "Transmissoras: 9 concessões integradas ao SIN, 2.403 ckm de OHTL 500/230 kV, 29 subestações e R$ 935 milhões de RAP em 2026.",
+        "ogTitle": "Transmissoras — HRZ Energia",
+        "ogDescription": "Plataforma de transmissão de alta tensão da HRZ Energia em 7 estados brasileiros, controlada pela Actis."
+      },
+      "hero": {
+        "eyebrow": "Transmissoras",
+        "titleLine1": "Energia de alta tensão",
+        "titleLine2": "com previsibilidade institucional.",
+        "subtitle": "Plataforma de transmissão de energia da HRZ Energia, controlada pela Actis, com 9 concessões integradas ao SIN em 7 estados brasileiros."
+      },
+      "about": {
+        "eyebrow": "Quem somos",
+        "heading1": "Grupo de concessões",
+        "heading2": "integradas ao SIN.",
+        "body1": "A Transmissoras é a plataforma de transmissão de energia da HRZ Energia, controlada pelo fundo de investimento britânico Actis. Operamos concessões da rede básica do Sistema Interligado Nacional em sete estados brasileiros, lidando com níveis de tensão entre 230 kV e 500 kV.",
+        "body2": "Iniciamos a operação no Brasil em outubro de 2021 com a aquisição de três concessionárias no Maranhão e no Espírito Santo. Em fevereiro de 2024, ampliamos o portfólio com a concessão SPMG, que escoa a energia da Usina de Belo Monte ao Sudeste do país, totalizando cerca de R$ 4,3 bilhões de investimentos em infraestrutura.",
+        "body3": "Atuamos em conformidade com contratos, regulação e legislação aplicáveis, aplicando as melhores práticas de engenharia para entregar disponibilidade, confiabilidade e sustentabilidade no longo prazo."
+      },
+      "kpis": {
+        "eyebrow": "Pegada operacional",
+        "heading": "Números que sustentam a operação."
+      },
+      "footprint": {
+        "eyebrow": "Pegada nacional",
+        "heading1": "Sete estados.",
+        "heading2": "Um só sistema.",
+        "body": "Operamos linhas e subestações estratégicas para o equilíbrio do SIN do Maranhão ao Sudeste, escoando geração renovável e conectando centros de carga em todo o Brasil."
+      },
+      "concessionsSection": {
+        "eyebrow": "Concessões",
+        "heading": "Conheça cada ativo da plataforma.",
+        "hint": "Clique em uma concessão para explorar tensão, extensão, subestações próprias e acessadas."
+      },
+      "infoLabels": {
+        "voltage": "Tensão",
+        "lines": "Linhas de transmissão",
+        "ownSubstations": "Subestações próprias",
+        "accessedSubstations": "Subestações acessadas",
+        "acquisition": "Aquisição"
+      },
+      "differentials": {
+        "eyebrow": "Diferenciais",
+        "heading": "Disciplina, governança e excelência técnica."
+      },
+      "timelineSection": {
+        "eyebrow": "Linha do tempo",
+        "heading": "Da entrada no Brasil ao SIN integrado."
+      },
+      "cta": {
+        "heading": "Quer entender o ativo em mais profundidade?",
+        "body": "Acesse a área de investidores ou fale diretamente com nosso time.",
+        "investors": "Investidores",
+        "contact": "Fale com a HRZ"
+      },
+      "kpisItems": [
+        { "value": "9", "label": "Concessões / SPEs" },
+        { "value": "2.403", "label": "ckm de OHTL" },
+        { "value": "29", "label": "Subestações" },
+        { "value": "5.228", "label": "MVA instalados" },
+        { "value": "R$ 935m", "label": "RAP 2026" },
+        { "value": "99,8%", "label": "Disponibilidade" }
+      ],
+      "concessionsItems": [
+        {
+          "id": "es",
+          "nome": "HRZ ES",
+          "estado": "Espírito Santo",
+          "tensao": "230 kV",
+          "linhas": "106 km",
+          "subestacoes": "SE São Mateus 2 — 150 MVA",
+          "acessadas": "SE Linhares",
+          "aquisicao": "2021"
+        },
+        {
+          "id": "ma1",
+          "nome": "HRZ MA I",
+          "estado": "Maranhão",
+          "tensao": "500 / 230 kV",
+          "linhas": "120,2 km (500 kV) + 4,8 km (230 kV)",
+          "subestacoes": "SE São Luís IV — 1.600 MVA",
+          "acessadas": "SE Miranda II · SE São Luís II",
+          "aquisicao": "2021"
+        },
+        {
+          "id": "ma2",
+          "nome": "HRZ MA II",
+          "estado": "Maranhão",
+          "tensao": "230 kV",
+          "linhas": "201,9 km",
+          "subestacoes": "SE Chapadinha 2 — 200 MVA",
+          "acessadas": "SE Coelho Neto",
+          "aquisicao": "2021"
+        },
+        {
+          "id": "spmg",
+          "nome": "HRZ SPMG",
+          "estado": "São Paulo · Minas Gerais",
+          "tensao": "500 kV",
+          "linhas": "743 km",
+          "subestacoes": "—",
+          "acessadas": "SE Cachoeira Paulista · SE Estreito",
+          "aquisicao": "2024 · escoamento de Belo Monte"
+        }
+      ],
+      "differentialsItems": [
+        {
+          "title": "Disponibilidade superior",
+          "text": "Operação consistentemente acima de 99,8%, dentro das melhores referências do setor e exigências da ANEEL e do ONS."
+        },
+        {
+          "title": "Receita previsível (RAP)",
+          "text": "RAP indexada à inflação, com R$ 935 milhões previstos para o ciclo 2026, gerando previsibilidade de longo prazo."
+        },
+        {
+          "title": "Sustentabilidade IFC",
+          "text": "Programa Net Zero, estudos de biodiversidade, reposição florestal e prevenção a queimadas alinhados a padrões IFC."
+        },
+        {
+          "title": "Governança institucional",
+          "text": "Comitês de ESG, Operações, Financeiro e Conselho com membros independentes. Liderança ativa em pautas da ABRATE."
+        }
+      ],
+      "timelineItems": [
+        {
+          "ano": "2021",
+          "titulo": "Aquisição inicial",
+          "texto": "Entrada no Brasil com a compra de três concessionárias de transmissão nos estados do Maranhão e Espírito Santo (lotes 24, 11 e 7)."
+        },
+        {
+          "ano": "2024",
+          "titulo": "Expansão para o Sudeste",
+          "texto": "Aquisição da concessão SPMG, responsável pelo escoamento da energia de Belo Monte ao Sudeste, totalizando R$ 4,3 bi em infraestrutura."
+        },
+        {
+          "ano": "2026",
+          "titulo": "9 SPEs e R$ 935m de RAP",
+          "texto": "Plataforma consolidada com 9 SPEs, 2.403 ckm e 29 subestações em 7 estados brasileiros, integradas ao SIN."
+        }
+      ]
+    },
+    "wind": {
+      "meta": {
+        "title": "Eólicas Babilônia — HRZ Energia",
+        "description": "Eólicas Babilônia: 5 complexos eólicos na Bahia, 65 aerogeradores, 136,5 MW de capacidade instalada e fator de capacidade entre os mais altos do Brasil.",
+        "ogTitle": "Eólicas Babilônia — HRZ Energia",
+        "ogDescription": "Geração eólica sustentável no semiárido baiano: cinco parques em Morro do Chapéu, Ourolândia e Várzea Nova."
+      },
+      "hero": {
+        "eyebrow": "Eólicas Babilônia",
+        "titleLine1": "Produção de energia",
+        "titleLine2": "sustentável e renovável.",
+        "subtitle": "Cinco complexos eólicos localizados em Morro do Chapéu, Ourolândia e Várzea Nova, na Bahia, somando 65 aerogeradores e 136,5 MW de capacidade instalada."
+      },
+      "overview": {
+        "eyebrow": "Visão geral",
+        "heading1": "Fontes renováveis promovendo",
+        "heading2": "o desenvolvimento.",
+        "body1": "Sustentável e inesgotável — essas são algumas características da energia eólica, fonte limpa e renovável em ampla ascensão que gera empregos e contribui para minimizar impactos ambientais no planeta.",
+        "body2": "A Babilônia opera cinco complexos eólicos no semiárido baiano, em municípios com regime de ventos privilegiado, entregando um fator de capacidade entre os mais altos do Brasil. A operação é controlada pela Actis e integrada à plataforma HRZ Energia.",
+        "imgAlt": "Vista aérea do parque eólico Babilônia"
+      },
+      "kpis": {
+        "eyebrow": "Destaques operacionais",
+        "heading": "Geração consistente. Impacto positivo."
+      },
+      "complexes": {
+        "eyebrow": "Complexos eólicos",
+        "heading": "Cinco parques no semiárido baiano.",
+        "hint": "Clique em um complexo para explorar localização, destaques e características de operação."
+      },
+      "esg": {
+        "eyebrow": "Compromisso ESG",
+        "heading": "Energia que respeita pessoas e território."
+      },
+      "cta": {
+        "heading": "Conheça o site oficial das Eólicas Babilônia.",
+        "body": "Acesse o portal institucional ou converse com nosso time de relacionamento.",
+        "siteLink": "Site Eólicas Babilônia",
+        "contactLink": "Fale com a HRZ"
+      },
+      "kpisItems": [
+        { "value": "5", "label": "Complexos eólicos" },
+        { "value": "65", "label": "Aerogeradores" },
+        { "value": "136,5 MW", "label": "Capacidade instalada" },
+        { "value": "57%", "label": "Fator de capacidade" },
+        { "value": "R$ 202m", "label": "Receita anual" },
+        { "value": "2019", "label": "Aquisição pela Actis" }
+      ],
+      "complexesItems": [
+        {
+          "id": "morro",
+          "nome": "Complexo Morro do Chapéu",
+          "municipio": "Morro do Chapéu — BA",
+          "descricao": "Conjunto de parques no platô do semiárido baiano, onde a constância dos ventos garante alto fator de capacidade durante todo o ano.",
+          "destaques": [
+            "Ventos consistentes acima de 8 m/s",
+            "Logística integrada de O&M",
+            "Topografia favorável à geração"
+          ]
+        },
+        {
+          "id": "ourolandia",
+          "nome": "Complexo Ourolândia",
+          "municipio": "Ourolândia — BA",
+          "descricao": "Parques posicionados em corredor de vento privilegiado, com aerogeradores de última geração e operação remota.",
+          "destaques": [
+            "Aerogeradores de alta potência",
+            "Monitoramento em tempo real",
+            "PPA de longo prazo"
+          ]
+        },
+        {
+          "id": "varzea",
+          "nome": "Complexo Várzea Nova",
+          "municipio": "Várzea Nova — BA",
+          "descricao": "Complemento estratégico ao bloco Babilônia, integrando a operação a subestações coletoras e à rede básica do SIN.",
+          "destaques": [
+            "Integração ao SIN",
+            "Sinergia operacional",
+            "Compromisso socioambiental local"
+          ]
+        }
+      ],
+      "pilaresItems": [
+        {
+          "title": "Energia limpa e renovável",
+          "text": "Geração 100% eólica, fonte inesgotável que evita emissões de CO₂ e fortalece a matriz renovável brasileira."
+        },
+        {
+          "title": "Sustentabilidade no semiárido",
+          "text": "Programas de biodiversidade, recuperação de áreas e convivência com a caatinga alinhados a padrões IFC."
+        },
+        {
+          "title": "Desenvolvimento das comunidades",
+          "text": "Geração de empregos locais, educação ambiental e projetos sociais nos municípios baianos onde atuamos."
+        },
+        {
+          "title": "Operação de classe mundial",
+          "text": "Governança institucional Actis, gestão de risco, ética nos negócios e ouvidoria ativa com stakeholders."
+        }
+      ],
+      "regioes": ["Morro do Chapéu", "Ourolândia", "Várzea Nova"]
+    },
+    "portfolio": {
+      "meta": {
+        "title": "Portfólio HRZ Energia",
+        "description": "14 SPVs em operação: 9 ativos de transmissão (2.403 ckm · 5.228 MVA) e 5 SPVs do Complexo Eólico Babilônia (136,5 MW).",
+        "ogTitle": "Portfólio HRZ Transmissão e Geração",
+        "ogDescription": "Ativos críticos do SIN em quatro estados, com disponibilidade superior a 99,8%."
+      },
+      "hero": {
+        "eyebrow": "Portfólio de ativos",
+        "titleLine1": "14 SPVs.",
+        "titleLine2": "Escala nacional.",
+        "subtitle": "Plataforma integrada com transmissão de alta tensão e geração eólica renovável, distribuída em ativos brownfield adquiridos com disciplina entre 2019 e 2025."
+      },
+      "footprint": {
+        "eyebrow": "Pegada nacional",
+        "heading1": "Presença estratégica",
+        "heading2": "em todo o Brasil.",
+        "body": "Operamos ativos críticos em estados-chave do Sistema Interligado Nacional do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul.",
+        "stat1": { "value": "9", "label": "Concessões de transmissão" },
+        "stat2": { "value": "5", "label": "Parques eólicos" },
+        "stat3": { "value": "2.403 ckm", "label": "OHTL 500/230 kV" },
+        "stat4": { "value": "29", "label": "Subestações" }
+      },
+      "transmission": {
+        "eyebrow": "Transmissão",
+        "heading": "HRZ + Skyline.",
+        "subtitle": "9 SPVs adquiridas entre 2021 e 2025 · 2.403 ckm de OHTL 500/230 kV · 5.228 MVA de capacidade instalada · 29 subestações interligadas.",
+        "imgAlt": "Subestação ao entardecer",
+        "stats": [
+          { "value": ">99,8%", "label": "Disponibilidade" },
+          { "value": "29", "label": "Subestações" },
+          { "value": "2.403", "label": "ckm de linhas" },
+          { "value": "R$ 935m", "label": "RAP 2026" }
+        ]
+      },
+      "generation": {
+        "eyebrow": "Geração",
+        "heading": "Eólicas Babilônia.",
+        "body": "5 parques adquiridos em 2019 com 65 aerogeradores e 136,5 MW de capacidade instalada na Bahia. Operação consistente com fator de capacidade de 57% e PPA de longo prazo.",
+        "imgAlt": "Parque eólico Babilônia",
+        "stats": [
+          { "value": "136,5 MW", "label": "Capacidade" },
+          { "value": "65", "label": "Aerogeradores" },
+          { "value": ">98%", "label": "Disponibilidade" },
+          { "value": "R$ 202m", "label": "Receita" }
+        ]
+      },
+      "transmissionAssets": [
+        { "code": "MGTE", "name": "Horizon MG / SP", "info": "OHTL 500 kV" },
+        { "code": "TMA I", "name": "Horizon Maranhão I", "info": "Linha + subestação" },
+        { "code": "TMA II", "name": "Horizon Maranhão II", "info": "Linha + subestação" },
+        { "code": "AVT", "name": "Água Vermelha", "info": "Subestação" },
+        { "code": "TES", "name": "Horizon Espírito Santo", "info": "OHTL 230 kV" },
+        { "code": "SP-MG", "name": "OHTL SP-MG 500 kV", "info": "Linha de transmissão" },
+        { "code": "ALSC", "name": "Aliança SC", "info": "Linha de transmissão" },
+        { "code": "LSUL", "name": "Litoral Sul", "info": "Linha de transmissão" },
+        { "code": "VYRD", "name": "Vineyards", "info": "3º Trafo Lajeado 3 (em obra)" }
+      ]
+    }
+  },
+  "esg": {
+    "meta": {
+      "title": "ESG — HRZ Energia",
+      "description": "Estratégia ESG da HRZ: governança, clima e responsabilidade social. Geração 100% eólica, LTI=0 e supervisão pelo Global Sustainability Committee da Actis.",
+      "ogTitle": "Estratégia ESG da HRZ Energia",
+      "ogDescription": "Governança, clima e responsabilidade social com KPIs integrados à gestão."
+    },
+    "hero": {
+      "eyebrow": "Estratégia ESG",
+      "titleLine1": "Mais que energia,",
+      "titleLine2": "geramos transformação.",
+      "subtitle": "Estamos presentes onde importa: perto das comunidades, ouvindo, colaborando e gerando impacto positivo."
+    },
+    "metrics": {
+      "people": "pessoas impactadas",
+      "communities": "comunidades atendidas",
+      "projects": "projetos ativos"
+    },
+    "social": {
+      "eyebrow": "Responsabilidade Social",
+      "heading": "Impacto real nas comunidades onde operamos."
+    },
+    "gallery": [
+      { "label": "Infraestrutura" },
+      { "label": "Comunidade" },
+      { "label": "Capacitação e Educação" },
+      { "label": "Geração de Renda" },
+      { "label": "Sustentabilidade" },
+      { "label": "Juntos Somos Mais Fortes" }
+    ],
+    "pillars": [
+      {
+        "title": "Ambiental",
+        "items": [
+          "Geração 100% eólica 136,5 MW de energia renovável",
+          "Transmissão de baixo impacto, sem emissões operacionais",
+          "Planos de contingência climática e monitoramento 24/7",
+          "Programas de prevenção de incêndios nas faixas de servidão"
+        ]
+      },
+      {
+        "title": "Social",
+        "items": [
+          "Zero acidentes com afastamento (LTI = 0) em todos os ativos",
+          "Engajamento com comunidades ao longo das linhas",
+          "Programas de outreach social e desenvolvimento local",
+          "Cadeia de fornecedores com requisitos de segurança e conduta"
+        ]
+      },
+      {
+        "title": "Governança",
+        "items": [
+          "Supervisão pelo Global Sustainability Committee da Actis",
+          "Comitê ESG com reporte trimestral Londres / São Paulo",
+          "Comunicação proativa com ANEEL e ONS",
+          "Compliance, risk management e transparência de decisão"
+        ]
+      }
+    ],
+    "values": {
+      "eyebrow": "Nossos Valores",
+      "heading1": "Mais que projetos,",
+      "heading2": "construímos relações.",
+      "tagline": "Mais que presença, deixamos legado.",
+      "items": [
+        { "title": "Respeito", "text": "Valorizamos as pessoas e a diversidade." },
+        { "title": "Integridade", "text": "Agimos com ética, transparência e responsabilidade." },
+        { "title": "Sustentabilidade", "text": "Promovemos ações que geram impacto positivo e duradouro." },
+        { "title": "Colaboração", "text": "Acreditamos no trabalho conjunto para transformar realidades." }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Destaques operacionais",
+      "heading": "Resiliência, segurança e melhoria contínua.",
+      "items": [
+        {
+          "title": "Resiliência climática",
+          "text": "Balancins da OHTL SP-MG 500 kV integralmente substituídos. Monitoramento 24/7 de condições meteorológicas e incêndios. Revisão completa de planos de contingência."
+        },
+        {
+          "title": "Segurança das instalações",
+          "text": "Membro do Comitê ABRATE. Coordenação com forças de segurança federais para prevenção de ataques. Engajamento comunitário e prevenção de incêndios."
+        },
+        {
+          "title": "Melhoria contínua",
+          "text": "Resolução ativa de passivos herdados de proprietários anteriores. Gestão operacional rigorosa, rastreabilidade e supervisão de equipes de campo."
+        }
+      ]
+    }
+  },
+  "investors": {
+    "meta": {
+      "title": "Investidores — HRZ Energia",
+      "description": "RAP de R$ 1bi+ indexada à inflação, rating AAA.br e refinanciamento concluído. Plataforma pronta para monetização via IPO ou venda estratégica.",
+      "ogTitle": "Investidores HRZ Energia",
+      "ogDescription": "Receita previsível, capital disciplinado e roadmap claro de criação de valor."
+    },
+    "hero": {
+      "eyebrow": "Investidores",
+      "titleLine1": "Receita previsível.",
+      "titleLine2": "Capital disciplinado.",
+      "subtitle": "Plataforma escalável e certificável, pronta para monetização via IPO ou venda estratégica. Governança ativa da Actis em cada etapa."
+    },
+    "kpis": [
+      { "value": "R$ 1,0bi+", "label": "Receita Total (RAP + Geração)" },
+      { "value": "AAA.br", "label": "Rating Edify / SP-MG" },
+      { "value": "13,5%", "label": "Custo de capital refinanciado" },
+      { "value": "R$ 428m", "label": "Debênture emitida" }
+    ],
+    "initiatives": {
+      "eyebrow": "Iniciativas financeiras",
+      "heading": "Em execução.",
+      "items": [
+        {
+          "title": "Refinanciamento EDIFY / SP-MG",
+          "text": "Debênture de R$ 428m emitida. Substituição de ~R$ 550m de dívida Holdco. Letters of Credit liberam reserva de caixa. Rating AAA.br."
+        },
+        {
+          "title": "Reestruturação corporativa",
+          "text": "Fusão reversa Skyline → Edify e spin-off parcial executados. Eficiência fiscal ~15% em JCP. Estrutura limpa pré-monetização."
+        },
+        {
+          "title": "Financial Completion · LC Release",
+          "text": "TMA I e TMA II concluídos: redução de ~90% nos custos de LC em 2025. MGTE e AVT em andamento, entrega prevista 2026."
+        }
+      ]
+    },
+    "phases": {
+      "phase1": {
+        "phase": "Fase I",
+        "range": "2025 – 2027",
+        "title": "Estruturação e Ramp-Up",
+        "items": [
+          "Integração das equipes de transmissão e geração",
+          "Otimização da estrutura de dívida e eficiência fiscal",
+          "Criação do COO e posição EQS (Qualidade & ESG)",
+          "Implementação de ERP modular e sistemas de gestão",
+          "Estratégia de mitigação de curtailment (BESS / Bitcoin Mining)",
+          "Refinanciamento EDIFY / SP-MG debênture R$ 428m"
+        ]
+      },
+      "phase2": {
+        "phase": "Fase II",
+        "range": "2028 – 2030",
+        "title": "Consolidação e Monetização",
+        "items": [
+          "Maturidade operacional e governança consolidada",
+          "Plataforma auditável e investível (IPO ou M&A)",
+          "Conclusão do Projeto Vineyards (3º Trafo Lajeado 3)",
+          "Expansão Endurance 5 novos estados, região Norte",
+          "Desinvestimento responsável com retornos predefinidos",
+          "Entrega de valor a investidores, comunidades e transição energética"
+        ]
+      }
+    },
+    "docs": {
+      "eyebrow": "Documentos",
+      "heading": "DFs e documentos societários.",
+      "body": "Demonstrações financeiras auditadas, atos societários, relatórios de gestão e materiais complementares disponíveis sob solicitação para investidores, contrapartes e analistas.",
+      "mascoteAlt": "Mascote HRZ apontando",
+      "requestCta": "Solicitar documentos",
+      "items": [
+        {
+          "title": "Demonstrações Financeiras",
+          "text": "DFs auditadas anuais e ITRs trimestrais da HRZ Energia e suas controladas."
+        },
+        {
+          "title": "Documentos Societários",
+          "text": "Estatuto, atas, atos societários e estrutura de capital atualizada."
+        },
+        {
+          "title": "Materiais para Investidores",
+          "text": "Apresentações institucionais, relatórios de gestão e materiais de governança."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contato — HRZ Energia",
+      "description": "Entre em contato com a HRZ Energia. Investidores, parcerias, imprensa e atendimento institucional.",
+      "ogTitle": "Contato HRZ Energia",
+      "ogDescription": "Investidores, parcerias e atendimento institucional."
+    },
+    "hero": {
+      "eyebrow": "Contato",
+      "titleLine1": "Vamos conversar",
+      "titleLine2": "sobre energia.",
+      "subtitle": "Estamos disponíveis para investidores, parceiros institucionais e imprensa."
+    },
+    "form": {
+      "eyebrow": "Mensagem direta",
+      "heading": "Fale com a HRZ.",
+      "fieldName": "Nome",
+      "fieldCompany": "Empresa",
+      "fieldEmail": "E-mail",
+      "fieldSubject": "Assunto",
+      "subjectPlaceholder": "Selecione um assunto",
+      "subjectInvestor": "Investidor",
+      "subjectPress": "Imprensa",
+      "subjectPartner": "Parceiro",
+      "subjectCommunity": "Comunidade",
+      "fieldMessage": "Mensagem",
+      "submitBtn": "Enviar mensagem"
+    },
+    "cards": {
+      "emailTitle": "E-mail institucional",
+      "emailValue": "contato@hrzenergia.com.br",
+      "locationTitle": "Sede",
+      "locationValue": "São Paulo · Brasil",
+      "controllerTitle": "Controladora",
+      "controllerValue": "Actis · Global Sustainability Committee · Londres"
+    },
+    "investorsBox": {
+      "eyebrow": "Para investidores",
+      "body": "Materiais detalhados de governança, desempenho operacional e estratégia financeira disponíveis sob solicitação."
+    },
+    "mascoteAlt": "Mascote HRZ acenando",
+    "careers": {
+      "eyebrow": "Carreiras",
+      "heading": "Trabalhe conosco.",
+      "body": "Procuramos talentos comprometidos com a transição energética do Brasil. Cadastre seu currículo e nosso time de Recursos Humanos entrará em contato quando houver oportunidades alinhadas ao seu perfil.",
+      "benefit1Title": "Plataforma integrada",
+      "benefit1Text": "Transmissão e geração renovável sob governança Actis.",
+      "benefit2Title": "Cultura de excelência",
+      "benefit2Text": "Padrões IFC, segurança operacional e desenvolvimento contínuo.",
+      "successTitle": "Candidatura recebida!",
+      "successBody": "Obrigado pelo interesse em fazer parte da HRZ Energia. Nosso time de RH analisará seu currículo e entrará em contato em caso de aderência.",
+      "successCta": "Enviar outra candidatura",
+      "formEyebrow": "Cadastro de currículo",
+      "formHeading": "Faça parte da HRZ.",
+      "fieldFullName": "Nome completo",
+      "fieldPhone": "Telefone",
+      "fieldAreaLabel": "Área desejada",
+      "fieldAreaPlaceholder": "Selecione uma área",
+      "fieldCvLabel": "Currículo (PDF, DOC ou DOCX · máx. 5 MB)",
+      "fieldCvPlaceholder": "Clique para selecionar seu currículo",
+      "fieldCvAttach": "Anexar",
+      "fieldMessageLabel": "Mensagem (opcional)",
+      "fieldMessagePlaceholder": "Conte um pouco sobre sua trajetória e interesses.",
+      "submitBtn": "Enviar candidatura",
+      "areas": [
+        "Operação e Manutenção",
+        "Engenharia",
+        "Financeiro",
+        "Jurídico e Regulatório",
+        "ESG e Sustentabilidade",
+        "Recursos Humanos",
+        "Tecnologia da Informação",
+        "QHSE",
+        "Comunicação e Relacionamento",
+        "Estágio · Jovem Aprendiz"
+      ]
+    }
+  },
+  "companies": {
+    "meta": {
+      "title": "Segmentos HRZ Energia",
+      "description": "Transmissoras (9 concessões · 2.403 ckm · R$ 935m RAP) e Eólicas Babilônia (136,5 MW · 65 aerogeradores). Plataforma integrada de transmissão e geração.",
+      "ogTitle": "Segmentos HRZ Energia",
+      "ogDescription": "Transmissão e geração renovável em uma única plataforma controlada pela Actis."
+    },
+    "hero": {
+      "eyebrow": "Segmentos",
+      "titleLine1": "Dois segmentos operacionais.",
+      "titleHighlight": "Uma só plataforma.",
+      "subtitle": "A HRZ Energia integra dois segmentos complementares — transmissão de alta tensão e geração eólica — sob governança única e disciplina institucional."
+    },
+    "logic": {
+      "eyebrow": "A lógica integrada",
+      "heading1": "Complementaridade",
+      "heading2": "entre receita e ativo.",
+      "body1": "Operar transmissão e geração em uma mesma plataforma cria vantagens competitivas únicas: receita previsível indexada à inflação (RAP), exposição estratégica à matriz renovável brasileira e otimização de capital entre dois perfis distintos de risco-retorno.",
+      "body2": "A integração permite gestão técnica unificada, compartilhamento de equipes especializadas em alta tensão e ganhos de eficiência em compliance regulatório com ANEEL e ONS preservando a autonomia operacional de cada negócio."
+    },
+    "cards": {
+      "transmission": {
+        "eyebrow": "Transmissão",
+        "name": "Transmissoras",
+        "imgAlt": "Subestação de alta tensão",
+        "description": "Plataforma de transmissão de alta tensão com 9 concessões integradas ao SIN, operando OHTL 500/230 kV e subestações em 7 estados brasileiros.",
+        "metricLabel1": "Concessões",
+        "metricLabel2": "ckm OHTL",
+        "metricLabel3": "RAP 2026",
+        "cta": "Conhecer Transmissoras"
+      },
+      "wind": {
+        "eyebrow": "Geração",
+        "name": "Eólicas Babilônia",
+        "imgAlt": "Parque eólico Babilônia",
+        "description": "Complexo eólico com 5 parques na Bahia, 65 aerogeradores e operação consistente com fator de capacidade entre os mais altos do Brasil. PPA de longo prazo.",
+        "metricLabel1": "Capacidade",
+        "metricLabel2": "Aerogeradores",
+        "metricLabel3": "Fator capacidade",
+        "cta": "Conhecer Eólicas Babilônia"
+      }
+    },
+    "footprint": {
+      "eyebrow": "Pegada nacional",
+      "heading1": "Presença compartilhada",
+      "heading2": "em todo o Brasil.",
+      "body": "Nossos dois segmentos — transmissão e geração eólica — operam em diferentes regiões do país, do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul, formando uma pegada estratégica única da plataforma HRZ Energia no setor elétrico brasileiro."
+    },
+    "corporate": {
+      "eyebrow": "Estrutura Societária",
+      "heading": "Controle Actis · Plataforma HRZ.",
+      "body": "A HRZ Energia é controlada pela Actis, gestora global de investimentos em infraestrutura sustentável, com supervisão ativa do Global Sustainability Committee em Londres.",
+      "exploreHint": "Clique nos cards para explorar"
+    },
+    "orgNodes": {
+      "actis": {
+        "subtitle": "Controladora · Londres",
+        "description": "Gestora global de investimentos em infraestrutura sustentável, com supervisão ativa pelo Global Sustainability Committee.",
+        "details": [
+          { "label": "Sede", "value": "Londres, UK" },
+          { "label": "AUM", "value": "US$ 12.5 bi" },
+          { "label": "Foco", "value": "Infraestrutura sustentável" }
+        ]
+      },
+      "hrz": {
+        "subtitle": "Holding · São Paulo",
+        "description": "Holding brasileira que integra os negócios de transmissão e geração renovável sob governança única.",
+        "details": [
+          { "label": "Sede", "value": "São Paulo, BR" },
+          { "label": "Plataforma", "value": "Transmissão + Geração" },
+          { "label": "Governança", "value": "Conselho com Actis" }
+        ]
+      },
+      "transmissoras": {
+        "subtitle": "9 SPEs · Transmissão",
+        "description": "Plataforma de transmissão de alta tensão com 9 concessões integradas ao SIN em 7 estados brasileiros.",
+        "details": [
+          { "label": "Concessões", "value": "9 SPEs" },
+          { "label": "Extensão", "value": "2.403 ckm" },
+          { "label": "RAP 2026", "value": "R$ 935m" }
+        ]
+      },
+      "babilonia": {
+        "subtitle": "5 SPEs · Geração",
+        "description": "Complexo eólico na Bahia com 5 parques, 65 aerogeradores e fator de capacidade entre os mais altos do Brasil.",
+        "details": [
+          { "label": "Capacidade", "value": "136,5 MW" },
+          { "label": "Aerogeradores", "value": "65" },
+          { "label": "Fator capacidade", "value": "57%" }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "logoAlt": "HRZ energia",
+    "tagline": "Plataforma integrada de energia controlada pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica.",
+    "linkedinLabel": "LinkedIn HRZ Energia",
+    "companyCol": {
+      "title": "Empresa",
+      "about": "Quem somos",
+      "segments": "Segmentos",
+      "transmission": "Transmissoras",
+      "wind": "Eólicas",
+      "esg": "Estratégia ESG"
+    },
+    "investorsCol": {
+      "title": "Investidores",
+      "overview": "Visão geral",
+      "performance": "Desempenho",
+      "governance": "Governança"
+    },
+    "contactCol": {
+      "title": "Contato",
+      "location": "São Paulo · Brasil",
+      "email": "contato@hrzenergia.com.br",
+      "cta": "Fale com a HRZ"
+    },
+    "copyright": "© {{year}} HRZ Energia. Todos os direitos reservados.",
+    "controlled": "Controlada pela Actis · Global Sustainability Committee"
+  }
+}
