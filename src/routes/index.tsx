@@ -12,7 +12,6 @@ import i18n from "@/i18n/config";
 import heroImg from "@/assets/hero-transmission.jpg";
 import windImg from "@/assets/wind-babilonia.jpg";
 import substationImg from "@/assets/substation.jpg";
-import raioOutline from "@/assets/raio-hrz-outline.png";
 import raioBrand from "@/assets/raio-hrz.png";
 import logoWhite from "@/assets/logo-hrz-white.png";
 import babiloniaImg from "@/assets/babilonia-aerial.jpg";
@@ -72,7 +71,9 @@ function HomePage() {
   return (
     <SiteShell headerVariant="dark">
       {/* HERO */}
-      <section className="relative isolate flex min-h-screen flex-col overflow-hidden bg-hrz-deep-radial text-white">
+      <section className="relative h-screen overflow-hidden text-white">
+
+        {/* Z-0 — Video de fundo */}
         <motion.video
           src={heroVideo}
           poster={heroImg}
@@ -81,100 +82,96 @@ function HomePage() {
           muted
           playsInline
           preload="auto"
-          initial={{ scale: 1.12, opacity: 0 }}
-          animate={{ scale: 1, opacity: 0.5 }}
-          transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-hrz-deep via-hrz-deep/85 to-transparent" />
-        <motion.img
-          src={raioOutline}
-          alt=""
-          aria-hidden
-          initial={{ opacity: 0, rotate: -6, scale: 1.1 }}
-          animate={{ opacity: 0.08, rotate: 0, scale: 1 }}
+          initial={{ scale: 1.08, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
-          className="pointer-events-none absolute -right-20 top-10 hidden h-[110%] w-auto md:block"
+          className="absolute inset-0 z-0 h-full w-full object-cover"
         />
 
-        <div className="container-hrz relative grid flex-1 items-center gap-10 pb-16 pt-28 lg:grid-cols-2 lg:gap-16 lg:pb-24 lg:pt-36">
-          {/* Coluna esquerda logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -30, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-center justify-center lg:justify-end lg:pr-6"
-          >
-            <img
-              src={logoWhite}
-              alt={t("home.hero.logoAlt")}
-              className="h-28 w-auto sm:h-32 lg:h-40"
-            />
-          </motion.div>
+        {/* Z-10 — Overlay escuro navy para contraste */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#060c1a]/80 via-[#0a1328]/70 to-[#040810]/92" />
 
-          {/* Coluna direita título + botões */}
-          <div className="flex flex-col items-start text-left">
-            <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-              <TextEffect per="word" as="span" preset="slide" className="block">
-                {t("home.hero.headline1")}
-              </TextEffect>
-              <TextEffect
-                per="word"
-                as="span"
-                preset="slide"
-                delay={0.4}
-                className="text-gradient-electric block whitespace-nowrap font-normal"
-              >
-                {t("home.hero.headline2")}
-              </TextEffect>
-            </h1>
+        {/* Z-20 — Conteúdo da página */}
+        <div className="relative z-20 flex h-full flex-col">
 
+          {/* Conteúdo central: Logo + Textos com Fade-Up */}
+          <div className="container-hrz flex flex-1 items-center pt-20">
             <motion.div
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-8 flex flex-wrap justify-start gap-4"
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16"
             >
-              <Link
-                to="/transmissoras"
-                className="group inline-flex items-center gap-2 rounded-full bg-hrz-electric px-7 py-3.5 text-sm font-semibold text-white transition hover:scale-[1.04] hover:bg-hrz-electric/90"
-              >
-                {t("home.hero.ctaTransmission")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </Link>
-              <Link
-                to="/eolicas"
-                className="group inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition hover:scale-[1.04] hover:border-white hover:bg-white/5"
-              >
-                {t("home.hero.ctaWind")} <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </Link>
+              {/* Coluna esquerda — Logo */}
+              <div className="flex items-center justify-center lg:justify-end lg:pr-6">
+                <img
+                  src={logoWhite}
+                  alt={t("home.hero.logoAlt")}
+                  className="h-28 w-auto sm:h-32 lg:h-40"
+                />
+              </div>
+
+              {/* Coluna direita — Título + Botões */}
+              <div className="flex flex-col items-start text-left">
+                <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
+                  <TextEffect per="word" as="span" preset="slide" className="block">
+                    {t("home.hero.headline1")}
+                  </TextEffect>
+                  <TextEffect
+                    per="word"
+                    as="span"
+                    preset="slide"
+                    delay={0.4}
+                    className="text-gradient-electric block whitespace-nowrap font-normal"
+                  >
+                    {t("home.hero.headline2")}
+                  </TextEffect>
+                </h1>
+
+                <div className="mt-8 flex flex-wrap justify-start gap-4">
+                  <Link
+                    to="/transmissoras"
+                    className="group inline-flex items-center gap-2 rounded-full bg-hrz-electric px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-hrz-electric/85 hover:shadow-[0_0_28px_rgba(41,168,229,0.40)]"
+                  >
+                    {t("home.hero.ctaTransmission")} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                  <Link
+                    to="/eolicas"
+                    className="group inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/55 hover:bg-white/[0.07]"
+                  >
+                    {t("home.hero.ctaWind")} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
-        </div>
 
-        {/* Stats strip */}
-        <div className="relative border-t border-white/10 bg-black/25 backdrop-blur">
-          <Stagger
-            className="container-hrz grid grid-cols-2 gap-y-6 py-5 lg:grid-cols-4"
-            fallbackDelay={5000}
-          >
-            {STATS.map((s) => (
-              <StaggerItem
-                key={s.label}
-                className="flex flex-col items-center border-l border-white/10 px-6 text-center first:border-l-0"
-              >
-                <p className="font-display text-4xl font-light tracking-tight text-hrz-electric sm:text-5xl">
-                  <Counter
-                    to={s.to}
-                    prefix={s.prefix}
-                    suffix={s.suffix}
-                    decimals={s.decimals}
-                    fallbackDelay={5000}
-                  />
-                </p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.label}</p>
-              </StaggerItem>
-            ))}
-          </Stagger>
+          {/* StatsBar — ancorada na base da tela */}
+          <div className="border-t border-white/10 bg-black/30 backdrop-blur-md">
+            <Stagger
+              className="container-hrz grid grid-cols-2 gap-y-6 py-5 lg:grid-cols-4"
+              fallbackDelay={5000}
+            >
+              {STATS.map((s) => (
+                <StaggerItem
+                  key={s.label}
+                  className="flex flex-col items-center border-l border-white/10 px-6 text-center first:border-l-0"
+                >
+                  <p className="font-display text-4xl font-light tracking-tight text-hrz-electric sm:text-5xl">
+                    <Counter
+                      to={s.to}
+                      prefix={s.prefix}
+                      suffix={s.suffix}
+                      decimals={s.decimals}
+                      fallbackDelay={5000}
+                    />
+                  </p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.label}</p>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+
         </div>
       </section>
 

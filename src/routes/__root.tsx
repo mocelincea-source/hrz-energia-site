@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import faviconUrl from "@/assets/favicon.svg?url";
 import "@/i18n/config";
 
 function NotFoundComponent() {
@@ -54,6 +55,7 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6aaf0079-c755-4fde-96d8-796dcee3f3af/id-preview-f08a9d7f--39102cf0-84b8-4116-8f02-e2d0591e7683.lovable.app-1777908231445.png" },
     ],
     links: [
+      { rel: "icon", type: "image/svg+xml", href: faviconUrl },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
         rel: "preconnect",
