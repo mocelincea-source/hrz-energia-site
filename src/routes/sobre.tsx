@@ -6,7 +6,7 @@ import { useTranslation, Trans } from "react-i18next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
 import { BoltDecor } from "@/components/site/BoltDecor";
-import { Reveal } from "@/components/site/motion";
+import { Reveal, Stagger, StaggerItem, easeOut } from "@/components/site/motion";
 import i18n from "@/i18n/config";
 import raioSolid from "@/assets/raio-solid-gradient.png";
 import eduardoImg from "@/assets/team/eduardo-brito.webp";
@@ -73,7 +73,7 @@ function SobrePage() {
       <section className="relative overflow-hidden py-24">
         <BoltDecor variant="outline" opacity={0.05} className="-left-24 top-10 h-[520px] w-auto" />
         <div className="container-hrz relative grid gap-16 lg:grid-cols-2">
-          <div>
+          <Reveal>
             <p className="eyebrow text-hrz-electric">{t("about.model.eyebrow")}</p>
             <h2 className="display-mega mt-3 text-4xl text-foreground sm:text-5xl">
               {t("about.model.headingPre")}{" "}
@@ -82,8 +82,8 @@ function SobrePage() {
               {t("about.model.headingMid")}{" "}
               <span className="text-hrz-electric">{t("about.model.headingWord2")}</span>.
             </h2>
-          </div>
-          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+          </Reveal>
+          <Reveal delay={0.12} className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
               <Trans
                 i18nKey="about.model.body1"
@@ -111,7 +111,7 @@ function SobrePage() {
                 }}
               />
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -119,18 +119,26 @@ function SobrePage() {
       <section className="relative overflow-hidden bg-secondary py-24">
         <BoltDecor variant="solid" opacity={0.04} className="-right-20 top-1/2 h-[500px] w-auto -translate-y-1/2" />
         <div className="container-hrz relative">
-          <p className="eyebrow text-hrz-electric">{t("about.business.eyebrow")}</p>
-          <h2 className="display-mega mt-3 max-w-3xl text-4xl text-foreground sm:text-5xl">
-            {t("about.business.heading")}
-          </h2>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            {t("about.business.body")}
-          </p>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <ModelCard title={t("about.business.card1.title")} text={t("about.business.card1.text")} />
-            <ModelCard title={t("about.business.card2.title")} text={t("about.business.card2.text")} />
-            <ModelCard title={t("about.business.card3.title")} text={t("about.business.card3.text")} />
-          </div>
+          <Reveal>
+            <p className="eyebrow text-hrz-electric">{t("about.business.eyebrow")}</p>
+            <h2 className="display-mega mt-3 max-w-3xl text-4xl text-foreground sm:text-5xl">
+              {t("about.business.heading")}
+            </h2>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              {t("about.business.body")}
+            </p>
+          </Reveal>
+          <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
+            <StaggerItem>
+              <ModelCard title={t("about.business.card1.title")} text={t("about.business.card1.text")} />
+            </StaggerItem>
+            <StaggerItem>
+              <ModelCard title={t("about.business.card2.title")} text={t("about.business.card2.text")} />
+            </StaggerItem>
+            <StaggerItem>
+              <ModelCard title={t("about.business.card3.title")} text={t("about.business.card3.text")} />
+            </StaggerItem>
+          </Stagger>
         </div>
       </section>
 
@@ -138,10 +146,12 @@ function SobrePage() {
       <section className="relative overflow-hidden bg-secondary py-24">
         <BoltDecor variant="outline" opacity={0.05} className="-left-16 bottom-10 h-[460px] w-auto" />
         <div className="container-hrz relative">
-          <p className="eyebrow text-hrz-electric">{t("about.timeline.eyebrow")}</p>
-          <h2 className="display-mega mt-3 max-w-3xl text-4xl text-foreground sm:text-5xl">
-            {t("about.timeline.heading")}
-          </h2>
+          <Reveal>
+            <p className="eyebrow text-hrz-electric">{t("about.timeline.eyebrow")}</p>
+            <h2 className="display-mega mt-3 max-w-3xl text-4xl text-foreground sm:text-5xl">
+              {t("about.timeline.heading")}
+            </h2>
+          </Reveal>
           <Timeline items={TIMELINE} />
         </div>
       </section>
@@ -171,42 +181,43 @@ function SobrePage() {
       <section className="relative overflow-hidden py-24">
         <BoltDecor variant="solid" opacity={0.04} className="-left-20 bottom-10 h-[460px] w-auto" />
         <div className="container-hrz relative">
-          <p className="eyebrow text-hrz-electric">{t("about.leadership.eyebrow")}</p>
-          <h2 className="display-mega mt-3 max-w-3xl text-4xl text-foreground sm:text-5xl">
-            {t("about.leadership.heading")}
-          </h2>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            {t("about.leadership.body")}
-          </p>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <Reveal>
+            <p className="eyebrow text-hrz-electric">{t("about.leadership.eyebrow")}</p>
+            <h2 className="display-mega mt-3 max-w-3xl text-4xl text-foreground sm:text-5xl">
+              {t("about.leadership.heading")}
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              {t("about.leadership.body")}
+            </p>
+          </Reveal>
+          <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {LEADERSHIP.map((l) => (
-              <div
-                key={l.name}
-                className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-hrz-electric"
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={l.img}
-                    alt={t("about.leadership.portraitAlt", { name: l.name })}
-                    loading="lazy"
-                    className="aspect-[3/4] w-full rounded-t-2xl rounded-b-none object-cover object-center"
-                  />
+              <StaggerItem key={l.name}>
+                <div className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-hrz-electric">
+                  <div className="overflow-hidden">
+                    <img
+                      src={l.img}
+                      alt={t("about.leadership.portraitAlt", { name: l.name })}
+                      loading="lazy"
+                      className="aspect-[3/4] w-full rounded-t-2xl rounded-b-none object-cover object-center"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <p className="font-display text-lg font-bold text-foreground">{l.name}</p>
+                    <p className="text-sm text-hrz-electric">{l.role}</p>
+                    <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{l.bio}</p>
+                  </div>
                 </div>
-                <div className="p-5">
-                  <p className="font-display text-lg font-bold text-foreground">{l.name}</p>
-                  <p className="text-sm text-hrz-electric">{l.role}</p>
-                  <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{l.bio}</p>
-                </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
 
-          <div className="mt-16 rounded-3xl bg-hrz-deep p-10 text-white lg:p-14">
+          <Reveal delay={0.1} className="mt-16 rounded-3xl bg-hrz-deep p-10 text-white lg:p-14">
             <p className="eyebrow text-hrz-electric">{t("about.leadership.governance.eyebrow")}</p>
             <p className="mt-4 max-w-3xl text-xl leading-relaxed text-white/85 lg:text-2xl">
               {t("about.leadership.governance.body")}
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -281,7 +292,7 @@ function Timeline({ items }: { items: TimelineItem[] }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.4, ease: easeOut }}
           className="mt-10 rounded-3xl border border-border bg-card p-8 lg:p-10"
         >
           <div className="flex items-center gap-4">
@@ -320,10 +331,10 @@ function MissionCard({
   const isDark = variant === "dark";
   return (
     <motion.div
-      initial={{ opacity: 0, y: 28 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.85, delay, ease: easeOut }}
       whileHover={{ y: -6 }}
       className={`group relative overflow-hidden rounded-3xl p-10 lg:p-12 ${
         isDark ? "bg-hrz-deep text-white" : "border border-border bg-card"

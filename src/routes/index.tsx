@@ -1,8 +1,28 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Zap, Wind, ShieldCheck, Activity, Building2, LineChart, Leaf, Users, HeartHandshake, Globe2 } from "lucide-react";
+import {
+  ArrowRight,
+  Zap,
+  Wind,
+  ShieldCheck,
+  Activity,
+  Building2,
+  LineChart,
+  Leaf,
+  Users,
+  HeartHandshake,
+  Globe2,
+} from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
-import { Reveal, Stagger, StaggerItem, Counter, HoverLift, Parallax } from "@/components/site/motion";
+import {
+  Reveal,
+  Stagger,
+  StaggerItem,
+  Counter,
+  HoverLift,
+  Parallax,
+  easeOut,
+} from "@/components/site/motion";
 import { motion } from "motion/react";
 import { TextEffect } from "@/components/core/text-effect";
 import { BoltDecor } from "@/components/site/BoltDecor";
@@ -72,7 +92,6 @@ function HomePage() {
     <SiteShell headerVariant="dark">
       {/* HERO */}
       <section className="relative h-screen overflow-hidden text-white">
-
         {/* Z-0 — Video de fundo */}
         <motion.video
           src={heroVideo}
@@ -82,9 +101,9 @@ function HomePage() {
           muted
           playsInline
           preload="auto"
-          initial={{ scale: 1.08, opacity: 0 }}
+          initial={{ scale: 1.05, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.5, delay: 1.6, ease: easeOut }}
           className="absolute inset-0 z-0 h-full w-full object-cover"
         />
 
@@ -93,13 +112,12 @@ function HomePage() {
 
         {/* Z-20 — Conteúdo da página */}
         <div className="relative z-20 flex h-full flex-col">
-
           {/* Conteúdo central: Logo + Textos com Fade-Up */}
           <div className="container-hrz flex flex-1 items-center pt-20">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 1.0, delay: 2.0, ease: easeOut }}
               className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16"
             >
               {/* Coluna esquerda — Logo */}
@@ -114,14 +132,14 @@ function HomePage() {
               {/* Coluna direita — Título + Botões */}
               <div className="flex flex-col items-start text-left">
                 <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-                  <TextEffect per="word" as="span" preset="slide" className="block">
+                  <TextEffect per="word" as="span" preset="slide" delay={2.05} className="block">
                     {t("home.hero.headline1")}
                   </TextEffect>
                   <TextEffect
                     per="word"
                     as="span"
                     preset="slide"
-                    delay={0.4}
+                    delay={2.45}
                     className="text-gradient-electric block whitespace-nowrap font-normal"
                   >
                     {t("home.hero.headline2")}
@@ -133,13 +151,21 @@ function HomePage() {
                     to="/transmissoras"
                     className="group inline-flex items-center gap-2 rounded-full bg-hrz-electric px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-hrz-electric/85 hover:shadow-[0_0_28px_rgba(41,168,229,0.40)]"
                   >
-                    {t("home.hero.ctaTransmission")} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    {t("home.hero.ctaTransmission")}{" "}
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
                   </Link>
                   <Link
                     to="/eolicas"
                     className="group inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:border-white/55 hover:bg-white/[0.07]"
                   >
-                    {t("home.hero.ctaWind")} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    {t("home.hero.ctaWind")}{" "}
+                    <ArrowRight
+                      size={16}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
                   </Link>
                 </div>
               </div>
@@ -147,15 +173,20 @@ function HomePage() {
           </div>
 
           {/* StatsBar — ancorada na base da tela */}
-          <div className="border-t border-white/10 bg-black/30 backdrop-blur-md">
-            <Stagger
-              className="container-hrz grid grid-cols-2 gap-y-6 py-5 lg:grid-cols-4"
-              fallbackDelay={5000}
-            >
-              {STATS.map((s) => (
-                <StaggerItem
+          <motion.div
+            className="border-t border-white/10 bg-black/30 backdrop-blur-md"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 2.3, ease: easeOut }}
+          >
+            <div className="container-hrz grid grid-cols-2 gap-y-6 py-5 lg:grid-cols-4">
+              {STATS.map((s, i) => (
+                <motion.div
                   key={s.label}
                   className="flex flex-col items-center border-l border-white/10 px-6 text-center first:border-l-0"
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 2.4 + i * 0.1, ease: easeOut }}
                 >
                   <p className="font-display text-4xl font-light tracking-tight text-hrz-electric sm:text-5xl">
                     <Counter
@@ -163,15 +194,14 @@ function HomePage() {
                       prefix={s.prefix}
                       suffix={s.suffix}
                       decimals={s.decimals}
-                      fallbackDelay={5000}
+                      fallbackDelay={2400 + i * 100}
                     />
                   </p>
                   <p className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.label}</p>
-                </StaggerItem>
+                </motion.div>
               ))}
-            </Stagger>
-          </div>
-
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -219,7 +249,9 @@ function HomePage() {
                   <div className="flex h-11 w-11 items-center justify-center rounded-full border border-foreground/15 text-foreground transition group-hover:border-hrz-electric group-hover:text-hrz-electric">
                     <p.icon size={20} strokeWidth={1.5} />
                   </div>
-                  <h3 className="mt-6 font-display text-xl font-light tracking-tight text-foreground">{p.title}</h3>
+                  <h3 className="mt-6 font-display text-xl font-light tracking-tight text-foreground">
+                    {p.title}
+                  </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.text}</p>
                 </HoverLift>
               </StaggerItem>
@@ -239,7 +271,7 @@ function HomePage() {
               initial={{ scale: 1.12 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.4, ease: easeOut }}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/90 to-hrz-deep/20" />
@@ -261,7 +293,7 @@ function HomePage() {
               initial={{ scale: 1.12 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.4, ease: easeOut }}
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-hrz-green-dark/90 to-hrz-green/20" />
@@ -270,9 +302,7 @@ function HomePage() {
               <h3 className="font-display mt-3 text-3xl font-bold lg:text-4xl">
                 {t("home.portfolio.windHeading")}
               </h3>
-              <p className="mt-3 max-w-md text-sm text-white/85">
-                {t("home.portfolio.windBody")}
-              </p>
+              <p className="mt-3 max-w-md text-sm text-white/85">{t("home.portfolio.windBody")}</p>
             </Reveal>
           </div>
         </div>
@@ -314,7 +344,10 @@ function HomePage() {
                     </p>
                     <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-hrz-electric">
                       {t("home.quickAccess.transmission.cta")}{" "}
-                      <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1" />
+                      <ArrowRight
+                        size={13}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
                     </span>
                   </div>
                 </Link>
@@ -338,7 +371,10 @@ function HomePage() {
                     </p>
                     <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-hrz-green">
                       {t("home.quickAccess.wind.cta")}{" "}
-                      <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1" />
+                      <ArrowRight
+                        size={13}
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      />
                     </span>
                   </div>
                 </Link>
@@ -370,10 +406,14 @@ function HomePage() {
           </Reveal>
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
             <Reveal className="rounded-2xl border border-border/60 bg-card p-8">
-              <p className="text-base leading-relaxed text-muted-foreground">{t("home.actis.body1")}</p>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                {t("home.actis.body1")}
+              </p>
             </Reveal>
             <Reveal delay={0.15} className="rounded-2xl border border-border/60 bg-card p-8">
-              <p className="text-base leading-relaxed text-muted-foreground">{t("home.actis.body2")}</p>
+              <p className="text-base leading-relaxed text-muted-foreground">
+                {t("home.actis.body2")}
+              </p>
             </Reveal>
           </div>
           <div className="mt-10 text-center">
@@ -404,7 +444,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 28, scale: 0.96 }}
             whileInView={{ opacity: 0.16, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.1, ease: easeOut }}
             className="h-[420px] w-auto drop-shadow-[0_24px_70px_rgba(41,168,229,0.22)]"
           />
         </div>
@@ -434,8 +474,14 @@ function HomePage() {
 
       {/* ESG SECTION */}
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-hrz-green-dark via-hrz-green to-hrz-green-vivid py-24 text-white lg:py-32">
-        <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-[520px] w-[520px] rounded-full bg-white/10 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-40 -left-20 h-[480px] w-[480px] rounded-full bg-hrz-green-vivid/30 blur-3xl" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-32 -top-32 h-[520px] w-[520px] rounded-full bg-white/10 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-40 -left-20 h-[480px] w-[480px] rounded-full bg-hrz-green-vivid/30 blur-3xl"
+        />
         <BoltDecor
           variant="solid"
           rotate={0}
@@ -445,9 +491,13 @@ function HomePage() {
         />
         <div className="container-hrz grid gap-16 lg:grid-cols-[1fr_1.3fr] lg:items-center">
           <Reveal>
-            <p className="text-xs font-medium tracking-[0.2em] text-white/90">{t("home.esg.eyebrow")}</p>
+            <p className="text-xs font-medium tracking-[0.2em] text-white/90">
+              {t("home.esg.eyebrow")}
+            </p>
             <h2 className="display-mega mt-4 text-4xl font-light text-white sm:text-5xl lg:text-6xl">
-              {t("home.esg.headingPre")}<span className="font-normal">{t("home.esg.headingVerb1")}</span>{t("home.esg.headingMid")}
+              {t("home.esg.headingPre")}
+              <span className="font-normal">{t("home.esg.headingVerb1")}</span>
+              {t("home.esg.headingMid")}
               <span className="font-normal">{t("home.esg.headingVerb2")}</span>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-white/80">
@@ -457,7 +507,8 @@ function HomePage() {
               to="/esg"
               className="group mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-hrz-green-dark transition hover:scale-[1.04] hover:bg-white/90"
             >
-              {t("home.esg.cta")} <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+              {t("home.esg.cta")}{" "}
+              <ArrowRight size={16} className="transition group-hover:translate-x-1" />
             </Link>
           </Reveal>
 
@@ -468,7 +519,7 @@ function HomePage() {
             viewport={{ once: true, margin: "0px 0px -15% 0px", amount: 0.2 }}
             variants={{
               hidden: {},
-              show: { transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
+              show: { transition: { staggerChildren: 0.13, delayChildren: 0.08 } },
             }}
           >
             <EsgCard
@@ -524,7 +575,8 @@ function HomePage() {
                 to="/investidores"
                 className="group mt-8 inline-flex items-center gap-2 rounded-full bg-hrz-deep px-7 py-3.5 text-sm font-semibold text-white transition hover:scale-[1.04] hover:bg-hrz-mid"
               >
-                {t("home.value.cta")} <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+                {t("home.value.cta")}{" "}
+                <ArrowRight size={16} className="transition group-hover:translate-x-1" />
               </Link>
             </Reveal>
 
@@ -532,7 +584,7 @@ function HomePage() {
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1, ease: easeOut }}
               className="relative overflow-hidden rounded-3xl"
             >
               <img
@@ -577,18 +629,18 @@ function EsgCard({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, x: 80 },
-        show: { opacity: 1, x: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
+        hidden: { opacity: 0, y: 30 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.85, ease: easeOut } },
       }}
     >
       <HoverLift className="group h-full rounded-2xl border border-white/20 bg-white/[0.06] p-7 backdrop-blur-sm transition duration-300 hover:border-white/40 hover:bg-white/10">
         <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white transition group-hover:border-white">
           <Icon size={20} strokeWidth={1.5} />
         </div>
-        <p className="mt-6 font-display text-4xl font-light tracking-tight text-white">
-          {metric}
+        <p className="mt-6 font-display text-4xl font-light tracking-tight text-white">{metric}</p>
+        <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
+          {label}
         </p>
-        <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">{label}</p>
         <p className="mt-4 text-sm leading-relaxed text-white/80">{text}</p>
       </HoverLift>
     </motion.div>
@@ -627,7 +679,11 @@ function ValueCard({
           <Icon size={20} strokeWidth={1.5} />
         </div>
         <h3 className="mt-6 font-display text-lg font-light tracking-tight">{title}</h3>
-        <p className={"mt-2 text-sm leading-relaxed " + (accent ? "text-white/75" : "text-muted-foreground")}>
+        <p
+          className={
+            "mt-2 text-sm leading-relaxed " + (accent ? "text-white/75" : "text-muted-foreground")
+          }
+        >
           {text}
         </p>
       </HoverLift>

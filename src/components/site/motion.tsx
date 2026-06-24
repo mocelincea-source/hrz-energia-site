@@ -10,13 +10,13 @@ import {
   type Variants,
 } from "motion/react";
 
-const easeOut = [0.22, 1, 0.36, 1] as const;
+export const easeOut = [0.16, 1, 0.3, 1] as const;
 
 /** Fade + slide up on enter (scroll reveal). */
 export function Reveal({
   children,
   delay = 0,
-  y = 24,
+  y = 30,
   className,
   as = "div",
 }: {
@@ -31,8 +31,8 @@ export function Reveal({
     <MotionTag
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -20% 0px", amount: 0.2 }}
-      transition={{ duration: 0.7, delay, ease: easeOut }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{ duration: 0.85, delay, ease: easeOut }}
       className={className}
     >
       {children}
@@ -45,8 +45,8 @@ export function Reveal({
 export function Stagger({
   children,
   className,
-  delayChildren = 0.05,
-  staggerChildren = 0.09,
+  delayChildren = 0.08,
+  staggerChildren = 0.11,
   fallbackDelay,
 }: {
   children: React.ReactNode;
@@ -56,7 +56,7 @@ export function Stagger({
   fallbackDelay?: number;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -20% 0px", amount: 0.2 });
+  const inView = useInView(ref, { once: true, amount: 0.15 });
   const [forced, setForced] = useState(false);
 
   useEffect(() => {
@@ -84,8 +84,8 @@ export function Stagger({
 }
 
 export const staggerItem: Variants = {
-  hidden: { opacity: 0, y: 22 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+  hidden: { opacity: 0, y: 28 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: easeOut } },
 };
 
 export function StaggerItem({
@@ -125,7 +125,7 @@ export function Counter({
   fallbackDelay?: number;
 }) {
   const ref = useRef<HTMLSpanElement | null>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -20% 0px", amount: 0.4 });
+  const inView = useInView(ref, { once: true, amount: 0.4 });
   const [forced, setForced] = useState(false);
   const [val, setVal] = useState(0);
 
@@ -178,8 +178,8 @@ export function HoverLift({
 }) {
   const rx = useMotionValue(0);
   const ry = useMotionValue(0);
-  const rotateX = useSpring(rx, { stiffness: 200, damping: 18 });
-  const rotateY = useSpring(ry, { stiffness: 200, damping: 18 });
+  const rotateX = useSpring(rx, { stiffness: 180, damping: 20 });
+  const rotateY = useSpring(ry, { stiffness: 180, damping: 20 });
 
   return (
     <motion.div
@@ -194,8 +194,8 @@ export function HoverLift({
         rx.set(0);
         ry.set(0);
       }}
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 300, damping: 22 }}
+      whileHover={{ y: -6 }}
+      transition={{ type: "spring", stiffness: 260, damping: 24 }}
       style={{ rotateX, rotateY, transformPerspective: 900 }}
       className={className}
     >
@@ -266,9 +266,9 @@ export function ScrollProgressBar({ className }: { className?: string }) {
 export function PageTransition({ children }: { children: React.ReactNode }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: easeOut }}
+      transition={{ duration: 0.65, ease: easeOut }}
     >
       {children}
     </motion.div>

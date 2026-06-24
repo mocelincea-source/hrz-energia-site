@@ -1,10 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 import logoBlue from "@/assets/logo-hrz-blue.png";
 import logoWhite from "@/assets/logo-hrz-white.png";
 import { LanguageToggle } from "./LanguageToggle";
+import { easeOut } from "./motion";
+
+/**
+ * Module-level flag — resets to false on every page load / F5 (JS re-evaluation),
+ * but stays true across client-side navigations (no module re-evaluation).
+ * This ensures the splash-coordinated logo animation only fires on hard load.
+ */
+let _headerHasRendered = false;
+
+/** Seconds: matches the moment the SplashOverlay fires onDone and starts its exit fade. */
+const LOGO_REVEAL_DELAY = 1.6;
 
 type NavItem = {
   to: string;
@@ -36,6 +48,17 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
   const { t } = useTranslation();
   const isDark = variant === "dark";
 
+  /**
+   * Capture whether this is a fresh page-load mount before the flag flips.
+   * useRef holds the value captured at this component's construction time,
+   * so re-renders don't change the snapshot.
+   */
+  const isPageLoad = useRef(!_headerHasRendered);
+
+  useEffect(() => {
+    _headerHasRendered = true;
+  }, []);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
@@ -55,16 +78,32 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
     <header className={`${base} ${isDark ? darkChrome : lightChrome}`}>
       <div className="container-hrz flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-2" aria-label="HRZ energia início">
-          <img
+          <motion.img
             src={isDark ? logoWhite : logoBlue}
             alt="HRZ energia"
             width={160}
             height={48}
             className="h-9 w-auto"
+            initial={isPageLoad.current ? { opacity: 0 } : false}
+            animate={{ opacity: 1 }}
+            transition={{
+              delay: isPageLoad.current ? LOGO_REVEAL_DELAY : 0,
+              duration: 0.65,
+              ease: easeOut,
+            }}
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <motion.nav
+          className="hidden items-center gap-8 lg:flex"
+          initial={isPageLoad.current ? { opacity: 0, y: -12 } : false}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: isPageLoad.current ? 1.8 : 0,
+            duration: 0.8,
+            ease: easeOut,
+          }}
+        >
           {NAV.map((item) => {
             const active =
               location.pathname === item.to ||
@@ -114,9 +153,18 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
           >
             {t("nav.cta")}
           </Link>
-        </nav>
+        </motion.nav>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <motion.div
+          className="flex items-center gap-2 lg:hidden"
+          initial={isPageLoad.current ? { opacity: 0, y: -12 } : false}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: isPageLoad.current ? 1.8 : 0,
+            duration: 0.8,
+            ease: easeOut,
+          }}
+        >
           <LanguageToggle variant={isDark ? "dark" : "light"} />
           <button
             type="button"
@@ -129,7 +177,7 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
-        </div>
+        </motion.div>
       </div>
 
       {open && (

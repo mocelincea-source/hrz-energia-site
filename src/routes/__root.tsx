@@ -1,5 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "motion/react";
+import { SplashOverlay } from "@/components/site/SplashOverlay";
 
 import appCss from "../styles.css?url";
 import faviconUrl from "@/assets/favicon.svg?url";
@@ -105,6 +107,7 @@ const BASE_URL = "https://www.hrzenergia.com.br";
 
 function RootComponent() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     const url = `${BASE_URL}${pathname}`;
@@ -117,5 +120,14 @@ function RootComponent() {
     meta.content = url;
   }, [pathname]);
 
-  return <Outlet />;
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        {showSplash && (
+          <SplashOverlay key="splash" onDone={() => setShowSplash(false)} />
+        )}
+      </AnimatePresence>
+      <Outlet />
+    </>
+  );
 }
