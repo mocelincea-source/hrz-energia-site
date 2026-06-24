@@ -24,6 +24,7 @@ const NAV: NavItem[] = [
     ],
   },
   { to: "/esg", labelKey: "nav.esg" },
+  { to: "/etica", labelKey: "nav.ethics" },
   { to: "/investidores", labelKey: "nav.investors" },
   { to: "/contato", labelKey: "nav.contact" },
 ];

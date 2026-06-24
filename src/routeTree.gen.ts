@@ -13,6 +13,7 @@ import { Route as TransmissorasRouteImport } from './routes/transmissoras'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as InvestidoresRouteImport } from './routes/investidores'
+import { Route as EticaRouteImport } from './routes/etica'
 import { Route as EsgRouteImport } from './routes/esg'
 import { Route as EolicasRouteImport } from './routes/eolicas'
 import { Route as EmpresasRouteImport } from './routes/empresas'
@@ -37,6 +38,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
 const InvestidoresRoute = InvestidoresRouteImport.update({
   id: '/investidores',
   path: '/investidores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EticaRoute = EticaRouteImport.update({
+  id: '/etica',
+  path: '/etica',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EsgRoute = EsgRouteImport.update({
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/empresas': typeof EmpresasRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
+  '/etica': typeof EticaRoute
   '/investidores': typeof InvestidoresRoute
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/empresas': typeof EmpresasRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
+  '/etica': typeof EticaRoute
   '/investidores': typeof InvestidoresRoute
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/empresas': typeof EmpresasRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
+  '/etica': typeof EticaRoute
   '/investidores': typeof InvestidoresRoute
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/empresas'
     | '/eolicas'
     | '/esg'
+    | '/etica'
     | '/investidores'
     | '/portfolio'
     | '/sobre'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/empresas'
     | '/eolicas'
     | '/esg'
+    | '/etica'
     | '/investidores'
     | '/portfolio'
     | '/sobre'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/empresas'
     | '/eolicas'
     | '/esg'
+    | '/etica'
     | '/investidores'
     | '/portfolio'
     | '/sobre'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   EmpresasRoute: typeof EmpresasRoute
   EolicasRoute: typeof EolicasRoute
   EsgRoute: typeof EsgRoute
+  EticaRoute: typeof EticaRoute
   InvestidoresRoute: typeof InvestidoresRoute
   PortfolioRoute: typeof PortfolioRoute
   SobreRoute: typeof SobreRoute
@@ -175,6 +188,13 @@ declare module '@tanstack/react-router' {
       path: '/investidores'
       fullPath: '/investidores'
       preLoaderRoute: typeof InvestidoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/etica': {
+      id: '/etica'
+      path: '/etica'
+      fullPath: '/etica'
+      preLoaderRoute: typeof EticaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/esg': {
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   EmpresasRoute: EmpresasRoute,
   EolicasRoute: EolicasRoute,
   EsgRoute: EsgRoute,
+  EticaRoute: EticaRoute,
   InvestidoresRoute: InvestidoresRoute,
   PortfolioRoute: PortfolioRoute,
   SobreRoute: SobreRoute,

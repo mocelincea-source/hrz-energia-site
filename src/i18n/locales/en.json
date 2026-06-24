@@ -7,6 +7,7 @@
     "wind": "Eólicas",
     "esg": "ESG",
     "investors": "Investors",
+    "ethics": "Ethics & Conduct",
     "contact": "Contact",
     "cta": "Contact HRZ"
   },
@@ -118,7 +119,15 @@
         "text": "Consolidation and monetization. Endurance expansion (5 new states), auditable and investable platform."
       }
     },
-    "mapAlt": "Map of Brazil with HRZ Energia assets"
+    "mapAlt": "Map of Brazil with HRZ Energia assets",
+    "actis": {
+      "eyebrow": "Our controller",
+      "heading1": "Controlled by",
+      "heading2": "Actis.",
+      "body1": "Actis is a global investment manager specializing in sustainable infrastructure, with a presence in emerging markets and a focus on energy assets, digital infrastructure, and long-term real estate.",
+      "body2": "HRZ is overseen by the Actis Global Sustainability Committee (GSC), with quarterly reporting between London and São Paulo — ensuring international standards of governance, ESG, and risk management across every platform asset.",
+      "cta": "Explore our corporate structure"
+    }
   },
   "about": {
     "meta": {
@@ -814,6 +823,19 @@
       "body": "Detailed governance, operational performance and financial strategy materials available upon request."
     },
     "mascoteAlt": "HRZ mascot waving",
+    "leadership": {
+      "eyebrow": "HRZ Leadership",
+      "heading": "Speak directly with our executives.",
+      "phoneLabel": "Phone",
+      "emailLabel": "E-mail",
+      "items": [
+        { "name": "Eduardo Brito",      "role": "CEO",  "phone": "+55 11 99881-5236", "email": "eduardo.brito@hrztransmissoras.com.br" },
+        { "name": "Fernando Oliveira",  "role": "CFO",  "phone": "+55 11 98702-0349", "email": "fernando.oliveira@hrztransmissoras.com.br" },
+        { "name": "Ítalo Augusto David","role": "COO",  "phone": "+55 11 93289-8090", "email": "italo.david@hrztransmissoras.com.br" },
+        { "name": "Tiago Cacozzi",      "role": "QHSE", "phone": "+55 11 97470-4633", "email": "tiago.cacozzi@hrztransmissoras.com.br" },
+        { "name": "Juliana Scalzo",     "role": "CLO",  "phone": "+55 11 96199-3569", "email": "juliana.scalzo@hrztransmissoras.com.br" }
+      ]
+    },
     "careers": {
       "eyebrow": "Careers",
       "heading": "Join our team.",
@@ -944,6 +966,20 @@
       }
     }
   },
+  "ethics": {
+    "meta": {
+      "title": "Ethics & Conduct — HRZ Energia",
+      "description": "Discover HRZ Energia's institutional documents, Code of Ethics, and Whistleblower Channel. Integrity as a non-negotiable principle.",
+      "ogTitle": "Ethics & Conduct — HRZ Energia",
+      "ogDescription": "Ethical conduct, transparency, and accountability in every decision at HRZ Energia."
+    },
+    "hero": {
+      "eyebrow": "Ethics & Conduct",
+      "titleLine1": "Integrity as a",
+      "titleLine2": "non-negotiable principle.",
+      "subtitle": "Ethical conduct, transparency, and accountability guide every decision at HRZ Energia — from every employee to senior management."
+    }
+  },
   "footer": {
     "logoAlt": "HRZ Energia",
     "tagline": "An integrated energy platform controlled by Actis. We operate critical transmission and renewable generation assets in Brazil with discipline, governance, and technical excellence.",
@@ -954,7 +990,8 @@
       "segments": "Segments",
       "transmission": "Transmission",
       "wind": "Wind",
-      "esg": "ESG Strategy"
+      "esg": "ESG Strategy",
+      "ethics": "Ethics & Conduct"
     },
     "investorsCol": {
       "title": "Investors",

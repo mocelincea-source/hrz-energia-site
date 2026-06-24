@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Zap, Wind, ShieldCheck, Activity, Building2, LineChart, Leaf, Users, HeartHandshake } from "lucide-react";
+import { ArrowRight, Zap, Wind, ShieldCheck, Activity, Building2, LineChart, Leaf, Users, HeartHandshake, Globe2 } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { Reveal, Stagger, StaggerItem, Counter, HoverLift, Parallax } from "@/components/site/motion";
 import { motion } from "motion/react";
@@ -283,6 +283,45 @@ function HomePage() {
           >
             {t("home.portfolio.cta")} <ArrowRight size={16} />
           </Link>
+        </div>
+      </section>
+
+      {/* ACTIS CONTROLLER */}
+      <section className="relative overflow-hidden py-24 lg:py-32">
+        <BoltDecor
+          variant="solid"
+          rotate={0}
+          opacity={0.04}
+          duration={10}
+          className="-right-16 top-10 h-[460px] w-auto"
+        />
+        <div className="container-hrz relative">
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-hrz-electric/30 bg-hrz-electric/10 text-hrz-electric mx-auto mb-6">
+              <Globe2 size={26} strokeWidth={1.5} />
+            </div>
+            <p className="eyebrow text-hrz-electric">{t("home.actis.eyebrow")}</p>
+            <h2 className="display-mega mt-4 text-4xl font-light text-foreground sm:text-5xl lg:text-6xl">
+              {t("home.actis.heading1")}{" "}
+              <span className="text-hrz-electric font-normal">{t("home.actis.heading2")}</span>
+            </h2>
+          </Reveal>
+          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
+            <Reveal className="rounded-2xl border border-border/60 bg-card p-8">
+              <p className="text-base leading-relaxed text-muted-foreground">{t("home.actis.body1")}</p>
+            </Reveal>
+            <Reveal delay={0.15} className="rounded-2xl border border-border/60 bg-card p-8">
+              <p className="text-base leading-relaxed text-muted-foreground">{t("home.actis.body2")}</p>
+            </Reveal>
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              to="/empresas"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric hover:gap-3 transition-all"
+            >
+              {t("home.actis.cta")} <ArrowRight size={16} />
+            </Link>
+          </div>
         </div>
       </section>
 

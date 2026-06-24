@@ -31,28 +31,36 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "tester-mcea" },
+      { title: "HRZ Energia — Plataforma integrada de transmissão e geração" },
       {
         name: "description",
         content:
           "Plataforma integrada de transmissão e geração renovável no Brasil. Controlada pela Actis.",
       },
       { name: "author", content: "HRZ Energia" },
-      { property: "og:title", content: "tester-mcea" },
+      {
+        property: "og:title",
+        content: "HRZ Energia — Plataforma integrada de transmissão e geração",
+      },
       {
         property: "og:description",
         content:
           "Plataforma integrada de transmissão e geração renovável no Brasil. Controlada pela Actis.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@HRZenergia" },
-      { name: "twitter:title", content: "tester-mcea" },
-      { name: "description", content: "HRZ Brand Refresh modernizes the HRZ website with updated brand identity and content." },
-      { property: "og:description", content: "HRZ Brand Refresh modernizes the HRZ website with updated brand identity and content." },
-      { name: "twitter:description", content: "HRZ Brand Refresh modernizes the HRZ website with updated brand identity and content." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6aaf0079-c755-4fde-96d8-796dcee3f3af/id-preview-f08a9d7f--39102cf0-84b8-4116-8f02-e2d0591e7683.lovable.app-1777908231445.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6aaf0079-c755-4fde-96d8-796dcee3f3af/id-preview-f08a9d7f--39102cf0-84b8-4116-8f02-e2d0591e7683.lovable.app-1777908231445.png" },
+      {
+        name: "twitter:title",
+        content: "HRZ Energia — Plataforma integrada de transmissão e geração",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Plataforma integrada de transmissão e geração renovável no Brasil. Controlada pela Actis.",
+      },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: faviconUrl },

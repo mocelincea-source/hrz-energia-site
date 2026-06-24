@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Zap, Wind, Building2, Globe2, Network } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -115,12 +115,14 @@ function EmpresasPage() {
                 <Metric value="2.403"   label={t("companies.cards.transmission.metricLabel2")} />
                 <Metric value="R$ 935m" label={t("companies.cards.transmission.metricLabel3")} />
               </div>
-              <Link
-                to="/transmissoras"
+              <a
+                href="https://www.hrztransmissoras.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-hrz-deep px-6 py-3 text-sm font-semibold text-white transition hover:bg-hrz-mid"
               >
                 {t("companies.cards.transmission.cta")} <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -150,12 +152,14 @@ function EmpresasPage() {
                 <Metric value="65"       label={t("companies.cards.wind.metricLabel2")} />
                 <Metric value="57%"      label={t("companies.cards.wind.metricLabel3")} />
               </div>
-              <Link
-                to="/eolicas"
+              <a
+                href="https://www.eolicasbabilonia.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-hrz-green px-6 py-3 text-sm font-semibold text-white transition hover:bg-hrz-green-dark"
               >
                 {t("companies.cards.wind.cta")} <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

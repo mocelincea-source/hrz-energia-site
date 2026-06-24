@@ -7,6 +7,7 @@
     "wind": "Eólicas",
     "esg": "ESG",
     "investors": "Investidores",
+    "ethics": "Ética e Conduta",
     "contact": "Contato",
     "cta": "Fale com a HRZ"
   },
@@ -118,7 +119,15 @@
         "text": "Consolidação e monetização. Expansão Endurance (5 novos estados), plataforma auditável e investível."
       }
     },
-    "mapAlt": "Mapa do Brasil com os ativos da HRZ Energia"
+    "mapAlt": "Mapa do Brasil com os ativos da HRZ Energia",
+    "actis": {
+      "eyebrow": "Quem controla",
+      "heading1": "Controlada pela",
+      "heading2": "Actis.",
+      "body1": "A Actis é uma gestora global de investimentos especializada em infraestrutura sustentável, com presença em mercados emergentes e foco em ativos de energia, infraestrutura digital e imobiliário de longo prazo.",
+      "body2": "A HRZ é supervisionada pelo Global Sustainability Committee (GSC) da Actis, com reporte trimestral entre Londres e São Paulo — garantindo padrão internacional de governança, ESG e gestão de risco em cada ativo da plataforma.",
+      "cta": "Conheça a estrutura societária"
+    }
   },
   "about": {
     "meta": {
@@ -262,7 +271,7 @@
       "quote": "\"A integridade está no centro de tudo o que fazemos.\"",
       "body1": "Na HRZ Energia, acreditamos que excelência operacional e disciplina financeira só fazem sentido quando sustentadas por conduta ética irrepreensível. Operamos infraestrutura crítica ao Sistema Interligado Nacional e essa responsabilidade exige transparência absoluta em cada decisão.",
       "body2": "Nosso compromisso com a ética não é apenas regulatório: é cultural. Estende-se aos nossos colaboradores, parceiros, fornecedores e às comunidades onde atuamos. Sob a governança ativa da Actis e do Global Sustainability Committee, mantemos os mais altos padrões internacionais de conduta.",
-      "body3": "Convido todos a conhecerem nossos documentos institucionais e a utilizarem o Canal de Denúncias sempre que necessário — garantimos confidencialidade e atuação imparcial em qualquer situação reportada."
+      "body3": "Convido todos a conhecerem nossos documentos institucionais e a utilizarem o Canal de Denúncias sempre que necessário garantimos confidencialidade e atuação imparcial em qualquer situação reportada."
     },
     "docs": {
       "eyebrow": "Documentos institucionais",
@@ -663,8 +672,14 @@
       "items": [
         { "title": "Respeito", "text": "Valorizamos as pessoas e a diversidade." },
         { "title": "Integridade", "text": "Agimos com ética, transparência e responsabilidade." },
-        { "title": "Sustentabilidade", "text": "Promovemos ações que geram impacto positivo e duradouro." },
-        { "title": "Colaboração", "text": "Acreditamos no trabalho conjunto para transformar realidades." }
+        {
+          "title": "Sustentabilidade",
+          "text": "Promovemos ações que geram impacto positivo e duradouro."
+        },
+        {
+          "title": "Colaboração",
+          "text": "Acreditamos no trabalho conjunto para transformar realidades."
+        }
       ]
     },
     "highlights": {
@@ -814,6 +829,44 @@
       "body": "Materiais detalhados de governança, desempenho operacional e estratégia financeira disponíveis sob solicitação."
     },
     "mascoteAlt": "Mascote HRZ acenando",
+    "leadership": {
+      "eyebrow": "Liderança HRZ",
+      "heading": "Fale diretamente com nossos executivos.",
+      "phoneLabel": "Telefone",
+      "emailLabel": "E-mail",
+      "items": [
+        {
+          "name": "Eduardo Brito",
+          "role": "CEO",
+          "phone": "+55 11 99881-5236",
+          "email": "eduardo.brito@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Fernando Oliveira",
+          "role": "CFO",
+          "phone": "+55 11 98702-0349",
+          "email": "fernando.oliveira@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Ítalo Augusto David",
+          "role": "COO",
+          "phone": "+55 11 93289-8090",
+          "email": "italo.david@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Tiago Cacozzi",
+          "role": "QHSE",
+          "phone": "+55 11 97470-4633",
+          "email": "tiago.cacozzi@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Juliana Scalzo",
+          "role": "CLO",
+          "phone": "+55 11 96199-3569",
+          "email": "juliana.scalzo@hrztransmissoras.com.br"
+        }
+      ]
+    },
     "careers": {
       "eyebrow": "Carreiras",
       "heading": "Trabalhe conosco.",
@@ -944,6 +997,20 @@
       }
     }
   },
+  "ethics": {
+    "meta": {
+      "title": "Ética e Conduta — HRZ Energia",
+      "description": "Conheça os documentos institucionais, o Código de Ética e o Canal de Denúncias da HRZ Energia. Integridade como princípio inegociável.",
+      "ogTitle": "Ética e Conduta — HRZ Energia",
+      "ogDescription": "Conduta ética, transparência e responsabilidade em cada decisão da HRZ Energia."
+    },
+    "hero": {
+      "eyebrow": "Ética e Conduta",
+      "titleLine1": "Integridade como",
+      "titleLine2": "princípio inegociável.",
+      "subtitle": "Conduta ética, transparência e responsabilidade orientam todas as decisões da HRZ Energia de cada colaborador à alta administração."
+    }
+  },
   "footer": {
     "logoAlt": "HRZ energia",
     "tagline": "Plataforma integrada de energia controlada pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica.",
@@ -954,7 +1021,8 @@
       "segments": "Segmentos",
       "transmission": "Transmissoras",
       "wind": "Eólicas",
-      "esg": "Estratégia ESG"
+      "esg": "Estratégia ESG",
+      "ethics": "Ética e Conduta"
     },
     "investorsCol": {
       "title": "Investidores",

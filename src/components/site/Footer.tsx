@@ -38,6 +38,7 @@ export function Footer() {
           <FooterLink to="/transmissoras">{t("footer.companyCol.transmission")}</FooterLink>
           <FooterLink to="/eolicas">{t("footer.companyCol.wind")}</FooterLink>
           <FooterLink to="/esg">{t("footer.companyCol.esg")}</FooterLink>
+          <FooterLink to="/etica">{t("footer.companyCol.ethics")}</FooterLink>
         </FooterCol>
 
         <FooterCol title={t("footer.investorsCol.title")}>
