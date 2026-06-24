@@ -17,7 +17,7 @@
   },
   "home": {
     "meta": {
-      "title": "HRZ Energia Plataforma integrada de transmissão e geração",
+      "title": "HRZ Energia — Plataforma integrada de transmissão e geração",
       "description": "A HRZ Energia opera 2.403 ckm de linhas de transmissão e 136,5 MW de geração eólica no Brasil. Plataforma integrada controlada pela Actis.",
       "ogTitle": "HRZ Energia Plataforma integrada de energia",
       "ogDescription": "Transmissão e geração renovável com disponibilidade acima de 99,8%. R$ 1bi+ de receita anual. Controlada pela Actis."
@@ -50,7 +50,7 @@
       "logoAlt": "HRZ energia",
       "headline1": "Rigor na gestão.",
       "headline2": "Consistência no retorno.",
-      "ctaTransmission": "Transmissoras",
+      "ctaTransmission": "HRZ Transmissoras",
       "ctaWind": "Eólicas Babilônia"
     },
     "about": {
@@ -71,6 +71,20 @@
       "windHeading": "Babilônia · 136,5 MW · 65 aerogeradores",
       "windBody": "Cinco parques adquiridos em 2019 na Bahia, fator de capacidade de 57% e R$ 202m de receita anual.",
       "cta": "Conheça nossos segmentos"
+    },
+    "quickAccess": {
+      "eyebrow": "Acesso rápido",
+      "heading": "As duas empresas do grupo.",
+      "transmission": {
+        "name": "HRZ Transmissoras",
+        "description": "9 concessões · 2.403 ckm de OHTL 500/230 kV · R$ 935m de RAP em 2026.",
+        "cta": "Ver Transmissoras"
+      },
+      "wind": {
+        "name": "Eólicas Babilônia",
+        "description": "136,5 MW · 65 aerogeradores · fator de capacidade de 57% na Bahia.",
+        "cta": "Ver Eólicas"
+      }
     },
     "footprint": {
       "eyebrow": "Pegada nacional",
@@ -131,7 +145,7 @@
   },
   "about": {
     "meta": {
-      "title": "Sobre HRZ Energia",
+      "title": "Sobre — HRZ Energia",
       "description": "Conheça a HRZ Energia: plataforma integrada de transmissão e geração renovável no Brasil, controlada pela Actis.",
       "ogTitle": "Sobre a HRZ Energia",
       "ogDescription": "Disciplina institucional, especialização técnica e governança ativa em infraestrutura crítica do SIN."
@@ -913,7 +927,7 @@
     },
     "hero": {
       "eyebrow": "Segmentos",
-      "titleLine1": "Dois segmentos operacionais.",
+      "titleLine1": "Duas frentes operacionais.",
       "titleHighlight": "Uma só plataforma.",
       "subtitle": "A HRZ Energia integra dois segmentos complementares — transmissão de alta tensão e geração eólica — sob governança única e disciplina institucional."
     },

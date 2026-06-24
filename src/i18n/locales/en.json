@@ -50,7 +50,7 @@
       "logoAlt": "HRZ Energia",
       "headline1": "Rigorous management.",
       "headline2": "Consistent returns.",
-      "ctaTransmission": "Transmission",
+      "ctaTransmission": "HRZ Transmissoras",
       "ctaWind": "Babilônia Wind Farm"
     },
     "about": {
@@ -71,6 +71,20 @@
       "windHeading": "Babilônia · 136.5 MW · 65 wind turbines",
       "windBody": "Five parks acquired in 2019 in Bahia, with a 57% capacity factor and R$202m in annual revenue.",
       "cta": "Explore our segments"
+    },
+    "quickAccess": {
+      "eyebrow": "Quick access",
+      "heading": "The two group companies.",
+      "transmission": {
+        "name": "HRZ Transmissoras",
+        "description": "9 concessions · 2,403 ckm of OHTL 500/230 kV · R$935m in RAP in 2026.",
+        "cta": "View Transmissoras"
+      },
+      "wind": {
+        "name": "Eólicas Babilônia",
+        "description": "136.5 MW · 65 wind turbines · 57% capacity factor in Bahia.",
+        "cta": "View Eólicas"
+      }
     },
     "footprint": {
       "eyebrow": "National footprint",
@@ -131,9 +145,9 @@
   },
   "about": {
     "meta": {
-      "title": "About HRZ Energia",
+      "title": "About — HRZ Energia",
       "description": "Learn about HRZ Energia: an integrated transmission and renewable generation platform in Brazil, controlled by Actis.",
-      "ogTitle": "About HRZ Energia",
+      "ogTitle": "About — HRZ Energia",
       "ogDescription": "Institutional discipline, technical expertise, and active governance over critical SIN infrastructure."
     },
     "hero": {
@@ -882,7 +896,7 @@
     },
     "hero": {
       "eyebrow": "Segments",
-      "titleLine1": "Two operational segments.",
+      "titleLine1": "Two operational fronts.",
       "titleHighlight": "One integrated platform.",
       "subtitle": "HRZ Energia integrates two complementary segments — high-voltage transmission and wind generation — under unified governance and institutional discipline."
     },

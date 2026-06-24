@@ -286,6 +286,68 @@ function HomePage() {
         </div>
       </section>
 
+      {/* ACESSO RÁPIDO */}
+      <section className="bg-secondary py-16 lg:py-20">
+        <div className="container-hrz">
+          <Reveal className="mb-10">
+            <p className="eyebrow text-hrz-electric">{t("home.quickAccess.eyebrow")}</p>
+            <h2 className="display-mega mt-3 text-3xl font-light text-foreground sm:text-4xl lg:text-5xl">
+              {t("home.quickAccess.heading")}
+            </h2>
+          </Reveal>
+          <Stagger className="grid gap-5 sm:grid-cols-2">
+            <StaggerItem>
+              <HoverLift className="h-full">
+                <Link
+                  to="/transmissoras"
+                  className="group flex h-full items-start gap-5 rounded-2xl border border-border/60 bg-card p-7 transition duration-300 hover:border-hrz-electric/40 hover:shadow-lg"
+                >
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-foreground/15 text-foreground transition group-hover:border-hrz-electric group-hover:text-hrz-electric">
+                    <Zap size={22} strokeWidth={1.5} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-display text-xl font-semibold tracking-tight text-foreground">
+                      {t("home.quickAccess.transmission.name")}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {t("home.quickAccess.transmission.description")}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-hrz-electric">
+                      {t("home.quickAccess.transmission.cta")}{" "}
+                      <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              </HoverLift>
+            </StaggerItem>
+            <StaggerItem>
+              <HoverLift className="h-full">
+                <Link
+                  to="/eolicas"
+                  className="group flex h-full items-start gap-5 rounded-2xl border border-border/60 bg-card p-7 transition duration-300 hover:border-hrz-green/40 hover:shadow-lg"
+                >
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-foreground/15 text-foreground transition group-hover:border-hrz-green group-hover:text-hrz-green">
+                    <Wind size={22} strokeWidth={1.5} />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-display text-xl font-semibold tracking-tight text-foreground">
+                      {t("home.quickAccess.wind.name")}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {t("home.quickAccess.wind.description")}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-hrz-green">
+                      {t("home.quickAccess.wind.cta")}{" "}
+                      <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
+              </HoverLift>
+            </StaggerItem>
+          </Stagger>
+        </div>
+      </section>
+
       {/* ACTIS CONTROLLER */}
       <section className="relative overflow-hidden py-24 lg:py-32">
         <BoltDecor
