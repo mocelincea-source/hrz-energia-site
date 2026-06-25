@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Zap, Wind, Building2, Globe2, Network } from "lucide-react";
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { ArrowRight, Zap, Wind } from "lucide-react";
+import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
@@ -25,34 +24,8 @@ export const Route = createFileRoute("/empresas")({
   component: EmpresasPage,
 });
 
-type OrgDetail = { label: string; value: string };
-
-type OrgNode = {
-  id: string;
-  title: string;
-  subtitle: string;
-  tone: "electric" | "white" | "card";
-  icon: typeof Globe2;
-  details: OrgDetail[];
-  description: string;
-};
-
-const ORG_NODE_CONFIGS: Pick<OrgNode, "id" | "title" | "tone" | "icon">[] = [
-  { id: "actis", title: "Actis LLP", tone: "electric", icon: Globe2 },
-  { id: "hrz", title: "HRZ Energia", tone: "white", icon: Building2 },
-  { id: "transmissoras", title: "Transmissoras", tone: "card", icon: Zap },
-  { id: "babilonia", title: "Eólicas Babilônia", tone: "card", icon: Wind },
-];
-
 function EmpresasPage() {
   const { t } = useTranslation();
-
-  const orgNodes: OrgNode[] = ORG_NODE_CONFIGS.map((cfg) => ({
-    ...cfg,
-    subtitle: t(`companies.orgNodes.${cfg.id}.subtitle`),
-    description: t(`companies.orgNodes.${cfg.id}.description`),
-    details: t(`companies.orgNodes.${cfg.id}.details`, { returnObjects: true }) as OrgDetail[],
-  }));
 
   return (
     <SiteShell headerVariant="dark">
@@ -119,14 +92,6 @@ function EmpresasPage() {
                 <Metric value="2.403" label={t("companies.cards.transmission.metricLabel2")} />
                 <Metric value="R$ 935m" label={t("companies.cards.transmission.metricLabel3")} />
               </div>
-              <a
-                href="https://www.hrztransmissoras.com.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-hrz-deep px-6 py-3 text-sm font-semibold text-white transition hover:bg-hrz-mid"
-              >
-                {t("companies.cards.transmission.cta")} <ArrowRight size={16} />
-              </a>
             </div>
           </div>
 
@@ -211,21 +176,6 @@ function EmpresasPage() {
           </Parallax>
         </div>
       </section>
-
-      {/* Estrutura Societária */}
-      <section className="bg-hrz-deep py-24 text-white">
-        <div className="container-hrz">
-          <p className="eyebrow text-hrz-electric">{t("companies.corporate.eyebrow")}</p>
-          <h2 className="display-mega mt-3 max-w-3xl text-4xl sm:text-5xl">
-            {t("companies.corporate.heading")}
-          </h2>
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/80">
-            {t("companies.corporate.body")}
-          </p>
-
-          <OrgChart nodes={orgNodes} exploreHint={t("companies.corporate.exploreHint")} />
-        </div>
-      </section>
     </SiteShell>
   );
 }
@@ -236,122 +186,5 @@ function Metric({ value, label }: { value: string; label: string }) {
       <p className="font-display text-xl font-extrabold text-hrz-deep">{value}</p>
       <p className="mt-1 text-[10px] uppercase tracking-wider text-muted-foreground">{label}</p>
     </div>
-  );
-}
-
-function OrgChart({ nodes, exploreHint }: { nodes: OrgNode[]; exploreHint: string }) {
-  const [activeId, setActiveId] = useState<string>("hrz");
-  const active = nodes.find((n) => n.id === activeId) ?? nodes[1];
-
-  const [actis, hrz, trans, bab] = nodes;
-
-  return (
-    <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
-      {/* Chart */}
-      <div className="relative flex flex-col items-center gap-5">
-        <OrgBox node={actis} active={activeId === actis.id} onClick={() => setActiveId(actis.id)} />
-        <AnimatedConnector />
-        <OrgBox node={hrz} active={activeId === hrz.id} onClick={() => setActiveId(hrz.id)} />
-        <AnimatedConnector />
-        <div className="relative grid w-full gap-6 sm:grid-cols-2">
-          {/* horizontal branch */}
-          <span
-            className="pointer-events-none absolute left-1/4 right-1/4 top-0 hidden h-px -translate-y-3 bg-white/25 sm:block"
-            aria-hidden
-          />
-          <OrgBox
-            node={trans}
-            active={activeId === trans.id}
-            onClick={() => setActiveId(trans.id)}
-          />
-          <OrgBox node={bab} active={activeId === bab.id} onClick={() => setActiveId(bab.id)} />
-        </div>
-      </div>
-
-      {/* Details panel */}
-      <div className="lg:pl-6">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active.id}
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-3xl border border-white/15 bg-white/5 p-8 backdrop-blur"
-          >
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-hrz-electric text-white">
-                <active.icon size={22} />
-              </div>
-              <div>
-                <p className="font-display text-2xl font-bold text-white">{active.title}</p>
-                <p className="text-xs uppercase tracking-wider text-hrz-electric">
-                  {active.subtitle}
-                </p>
-              </div>
-            </div>
-            <p className="mt-6 text-sm leading-relaxed text-white/80">{active.description}</p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              {active.details.map((d) => (
-                <div key={d.label} className="rounded-xl bg-white/5 p-4">
-                  <p className="text-[10px] uppercase tracking-wider text-white/60">{d.label}</p>
-                  <p className="mt-1 font-display text-base font-bold text-white">{d.value}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-wider text-white/50">
-              <Network size={12} /> {exploreHint}
-            </p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </div>
-  );
-}
-
-function OrgBox({
-  node,
-  active,
-  onClick,
-}: {
-  node: OrgNode;
-  active: boolean;
-  onClick: () => void;
-}) {
-  const base =
-    node.tone === "electric"
-      ? "bg-hrz-electric text-white"
-      : node.tone === "white"
-        ? "bg-white text-hrz-deep"
-        : "border border-white/15 bg-white/5 text-white";
-  const ring = active ? "ring-2 ring-hrz-electric ring-offset-2 ring-offset-hrz-deep" : "ring-0";
-  return (
-    <motion.button
-      type="button"
-      onClick={onClick}
-      whileHover={{ y: -3 }}
-      whileTap={{ scale: 0.98 }}
-      className={`w-full max-w-md rounded-2xl px-6 py-5 text-center transition ${base} ${ring}`}
-    >
-      <div className="flex items-center justify-center gap-2">
-        <node.icon size={16} className="opacity-80" />
-        <p className="font-display text-lg font-bold">{node.title}</p>
-      </div>
-      <p className="mt-1 text-xs uppercase tracking-wider opacity-80">{node.subtitle}</p>
-    </motion.button>
-  );
-}
-
-function AnimatedConnector() {
-  return (
-    <motion.span
-      initial={{ scaleY: 0 }}
-      whileInView={{ scaleY: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      style={{ transformOrigin: "top" }}
-      className="h-8 w-px bg-gradient-to-b from-hrz-electric to-white/20"
-      aria-hidden
-    />
   );
 }

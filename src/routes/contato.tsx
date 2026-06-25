@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Mail, MapPin, Building2, Briefcase, Upload, Linkedin, CheckCircle2, Phone, User } from "lucide-react";
+import { Mail, MapPin, Briefcase, Upload, Linkedin, CheckCircle2, Phone } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
 import i18n from "@/i18n/config";
@@ -106,11 +106,6 @@ function ContatoPage() {
               title={t("contact.cards.locationTitle")}
               text={t("contact.cards.locationValue")}
             />
-            <ContactCard
-              icon={Building2}
-              title={t("contact.cards.controllerTitle")}
-              text={t("contact.cards.controllerValue")}
-            />
             <a
               href="https://www.linkedin.com/company/hrz-energia/"
               target="_blank"
@@ -155,59 +150,56 @@ function ContatoPage() {
   );
 }
 
-type LeaderItem = { name: string; role: string; phone: string; email: string };
+type LeadershipChannel = { title: string; phone: string; email: string };
 
 function LiderancaSection() {
   const { t } = useTranslation();
-  const items = t("contact.leadership.items", { returnObjects: true }) as LeaderItem[];
+  const channel = t("contact.leadership.channel", { returnObjects: true }) as LeadershipChannel;
 
   return (
     <section className="relative overflow-hidden py-24">
       <BoltDecor variant="outline" opacity={0.05} className="-right-20 top-10 h-[460px] w-auto" />
       <div className="container-hrz relative">
-        <Reveal className="max-w-xl">
+        <Reveal className="mx-auto max-w-xl text-center">
           <p className="eyebrow text-hrz-electric">{t("contact.leadership.eyebrow")}</p>
           <h2 className="display-mega mt-3 text-4xl text-foreground sm:text-5xl">
             {t("contact.leadership.heading")}
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((exec) => (
-            <Reveal key={exec.email}>
-              <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-hrz-electric/40 hover:shadow-xl">
-                <span className="pointer-events-none absolute inset-y-0 left-0 w-[3px] origin-top scale-y-0 bg-gradient-to-b from-hrz-electric to-hrz-deep transition-transform duration-500 group-hover:scale-y-100" />
+        <Reveal className="mx-auto mt-10 max-w-md">
+          <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-hrz-electric/40 hover:shadow-xl">
+            <span className="pointer-events-none absolute inset-y-0 left-0 w-[3px] origin-top scale-y-0 bg-gradient-to-b from-hrz-electric to-hrz-deep transition-transform duration-500 group-hover:scale-y-100" />
 
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-hrz-deep to-hrz-electric text-white shadow-md ring-1 ring-hrz-electric/30">
-                    <User size={20} />
-                  </div>
-                  <div>
-                    <p className="font-display text-base font-bold text-foreground leading-tight">{exec.name}</p>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-hrz-electric">{exec.role}</p>
-                  </div>
-                </div>
-
-                <div className="mt-5 space-y-3">
-                  <a
-                    href={`tel:${exec.phone.replace(/\s/g, "")}`}
-                    className="flex items-center gap-3 text-sm text-muted-foreground transition hover:text-foreground"
-                  >
-                    <Phone size={14} className="shrink-0 text-hrz-electric" />
-                    {exec.phone}
-                  </a>
-                  <a
-                    href={`mailto:${exec.email}`}
-                    className="flex items-center gap-3 break-all text-sm text-muted-foreground transition hover:text-foreground"
-                  >
-                    <Mail size={14} className="shrink-0 text-hrz-electric" />
-                    {exec.email}
-                  </a>
-                </div>
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-hrz-deep to-hrz-electric text-white shadow-md ring-1 ring-hrz-electric/30">
+                <Phone size={20} />
               </div>
-            </Reveal>
-          ))}
-        </div>
+              <div>
+                <p className="font-display text-base font-bold leading-tight text-foreground">
+                  {channel.title}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-3">
+              <a
+                href={`tel:${channel.phone.replace(/\s/g, "")}`}
+                className="flex items-center gap-3 text-sm text-muted-foreground transition hover:text-foreground"
+              >
+                <Phone size={14} className="shrink-0 text-hrz-electric" />
+                {channel.phone}
+              </a>
+              <a
+                href={`mailto:${channel.email}`}
+                className="flex items-center gap-3 break-all text-sm text-muted-foreground transition hover:text-foreground"
+              >
+                <Mail size={14} className="shrink-0 text-hrz-electric" />
+                {channel.email}
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

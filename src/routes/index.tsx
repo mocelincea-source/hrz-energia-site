@@ -6,12 +6,11 @@ import {
   Wind,
   ShieldCheck,
   Activity,
-  Building2,
-  LineChart,
   Leaf,
   Users,
   HeartHandshake,
   Globe2,
+  ExternalLink,
 } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import {
@@ -425,25 +424,38 @@ function HomePage() {
             <p className="eyebrow text-hrz-electric">{t("home.actis.eyebrow")}</p>
             <h2 className="display-mega mt-4 text-4xl font-light text-foreground sm:text-5xl lg:text-6xl">
               {t("home.actis.heading1")}{" "}
-              <span className="text-hrz-electric font-normal">{t("home.actis.heading2")}</span>
+              <a
+                href="https://www.act.is/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-normal text-hrz-electric transition-opacity duration-300 hover:underline hover:opacity-80"
+              >
+                {t("home.actis.heading2")}
+              </a>
             </h2>
           </Reveal>
-          <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
-            <Reveal className="rounded-2xl border border-border/60 bg-card p-8">
-              <p className="text-base leading-relaxed text-muted-foreground">
-                {t("home.actis.body1")}
-              </p>
-            </Reveal>
-            <Reveal delay={0.15} className="rounded-2xl border border-border/60 bg-card p-8">
-              <p className="text-base leading-relaxed text-muted-foreground">
-                {t("home.actis.body2")}
-              </p>
-            </Reveal>
-          </div>
-          <div className="mt-10 text-center">
+          <Reveal className="mx-auto mt-12 max-w-2xl rounded-2xl border border-border/60 bg-card p-8 sm:p-10">
+            <p className="text-center text-base leading-relaxed text-muted-foreground">
+              {t("home.actis.body1")}
+            </p>
+          </Reveal>
+          <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-8">
+            <a
+              href="https://www.act.is/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-hrz-electric/35 bg-transparent px-6 py-3 text-sm font-semibold text-hrz-electric transition-all duration-300 hover:border-hrz-electric/55 hover:bg-hrz-electric/[0.06]"
+            >
+              {t("home.actis.websiteCta")}
+              <ExternalLink
+                size={15}
+                strokeWidth={1.75}
+                className="opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+              />
+            </a>
             <Link
               to="/empresas"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric transition-all hover:gap-3"
             >
               {t("home.actis.cta")} <ArrowRight size={16} />
             </Link>
@@ -619,20 +631,6 @@ function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-tr from-hrz-deep/25 via-transparent to-transparent" />
             </motion.div>
           </div>
-
-          <Stagger className="mt-14 grid gap-5 sm:grid-cols-2">
-            <ValueCard
-              icon={Building2}
-              title={t("home.value.phase1.title")}
-              text={t("home.value.phase1.text")}
-            />
-            <ValueCard
-              icon={LineChart}
-              title={t("home.value.phase2.title")}
-              text={t("home.value.phase2.text")}
-              accent
-            />
-          </Stagger>
         </div>
       </section>
     </SiteShell>
@@ -668,49 +666,5 @@ function EsgCard({
         <p className="mt-4 text-sm leading-relaxed text-white/80">{text}</p>
       </HoverLift>
     </motion.div>
-  );
-}
-
-function ValueCard({
-  icon: Icon,
-  title,
-  text,
-  accent = false,
-}: {
-  icon: typeof Building2;
-  title: string;
-  text: string;
-  accent?: boolean;
-}) {
-  return (
-    <StaggerItem>
-      <HoverLift
-        className={
-          "group h-full rounded-2xl border p-7 transition duration-300 " +
-          (accent
-            ? "border-white/15 bg-hrz-deep text-white hover:border-white/35"
-            : "border-border/60 bg-card text-foreground hover:border-foreground/25")
-        }
-      >
-        <div
-          className={
-            "flex h-11 w-11 items-center justify-center rounded-full border transition " +
-            (accent
-              ? "border-white/40 text-white group-hover:border-white"
-              : "border-foreground/15 text-foreground group-hover:border-hrz-electric group-hover:text-hrz-electric")
-          }
-        >
-          <Icon size={20} strokeWidth={1.5} />
-        </div>
-        <h3 className="mt-6 font-display text-lg font-light tracking-tight">{title}</h3>
-        <p
-          className={
-            "mt-2 text-sm leading-relaxed " + (accent ? "text-white/75" : "text-muted-foreground")
-          }
-        >
-          {text}
-        </p>
-      </HoverLift>
-    </StaggerItem>
   );
 }

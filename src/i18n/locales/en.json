@@ -7,6 +7,7 @@
     "wind": "Eólicas",
     "esg": "ESG",
     "investors": "Investors",
+    "portfolio": "Portfolio",
     "ethics": "Ethics & Conduct",
     "contact": "Contact",
     "cta": "Contact HRZ"
@@ -121,7 +122,7 @@
       "eyebrow": "Value creation",
       "heading1": "More than transmitting,",
       "heading2": "it's about always delivering.",
-      "body": "We have built a scalable, certifiable platform ready for monetization via IPO or strategic sale. Growth through disciplined brownfield asset acquisitions, with active Actis governance at every stage.",
+      "body": "We have built a scalable, certifiable platform. Growth through disciplined brownfield asset acquisitions, with active governance at every stage.",
       "cta": "For investors",
       "windImgAlt": "Wind turbines in a green field at dusk",
       "phase1": {
@@ -140,7 +141,8 @@
       "heading2": "Actis.",
       "body1": "Actis is a global investment manager specializing in sustainable infrastructure, with a presence in emerging markets and a focus on energy assets, digital infrastructure, and long-term real estate.",
       "body2": "HRZ is overseen by the Actis Global Sustainability Committee (GSC), with quarterly reporting between London and São Paulo — ensuring international standards of governance, ESG, and risk management across every platform asset.",
-      "cta": "Explore our corporate structure"
+      "cta": "Explore our corporate structure",
+      "websiteCta": "Visit the official Actis website"
     }
   },
   "about": {
@@ -164,7 +166,7 @@
       "headingWord2": "expertise",
       "body1": "We operate <bold>transmission</bold> and <bold>renewable generation</bold> assets in Brazil, focused on <accent>operational excellence</accent>, robust governance, and long-term value creation.",
       "body2": "Our model combines the <bold>discipline of an institutional investor</bold> with the technical expertise of world-class operators, delivering critical infrastructure to Brazil's power grid with <accent>availability above regulatory benchmarks</accent>.",
-      "body3": "We grow through <bold>disciplined acquisitions</bold> of brownfield assets, with active Actis governance at every stage, building an <accent>auditable, scalable, and investable</accent> platform."
+      "body3": "We grow through <bold>disciplined acquisitions</bold> of brownfield assets, with active governance at every stage."
     },
     "business": {
       "eyebrow": "Business model",
@@ -249,7 +251,7 @@
       "portraitAlt": "Portrait of {{name}}",
       "governance": {
         "eyebrow": "Governance",
-        "body": "Controlled by Actis · active oversight by the Global Sustainability Committee, with quarterly reporting between London and São Paulo."
+        "body": "Controlled by Actis."
       },
       "items": [
         {
@@ -570,18 +572,16 @@
       },
       "footprint": {
         "eyebrow": "National footprint",
-        "heading1": "Strategic presence",
-        "heading2": "across Brazil.",
-        "body": "We operate critical assets in key states of the National Interconnected System, from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul.",
+        "heading": "Strategic presence across Brazil",
+        "body": "We operate critical assets in key states of the National Interconnected System — from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul.",
         "stat1": { "value": "9", "label": "Transmission concessions" },
         "stat2": { "value": "5", "label": "Wind parks" },
         "stat3": { "value": "2,403 ckm", "label": "OHTL 500/230 kV" },
         "stat4": { "value": "29", "label": "Substations" }
       },
       "transmission": {
-        "eyebrow": "Transmission",
-        "heading": "HRZ + Skyline.",
-        "subtitle": "9 SPVs acquired between 2021 and 2025 · 2,403 ckm of 500/230 kV OHTL · 5,228 MVA of installed capacity · 29 interconnected substations.",
+        "heading": "Transmission",
+        "subtitle": "9 concessions acquired between 2021 and 2025 · 2,403 ckm of 500/230 kV OHTL · 5,228 MVA of installed capacity · 29 interconnected substations.",
         "imgAlt": "Substation at dusk",
         "stats": [
           { "value": ">99.8%", "label": "Availability" },
@@ -591,12 +591,11 @@
         ]
       },
       "generation": {
-        "eyebrow": "Generation",
-        "heading": "Babilônia Wind.",
+        "heading": "Generation — Babilônia Wind",
         "body": "5 parks acquired in 2019 with 65 turbines and 136.5 MW of installed capacity in Bahia. Consistent operation with a 57% capacity factor and long-term PPA.",
         "imgAlt": "Babilônia wind farm",
         "stats": [
-          { "value": "136.5 MW", "label": "Capacity" },
+          { "value": "136 MW", "label": "Capacity" },
           { "value": "65", "label": "Turbines" },
           { "value": ">98%", "label": "Availability" },
           { "value": "R$202m", "label": "Revenue" }
@@ -834,9 +833,7 @@
       "emailTitle": "Institutional e-mail",
       "emailValue": "contato@hrzenergia.com.br",
       "locationTitle": "Headquarters",
-      "locationValue": "São Paulo · Brazil",
-      "controllerTitle": "Parent company",
-      "controllerValue": "Actis · Global Sustainability Committee · London"
+      "locationValue": "São Paulo · Brazil"
     },
     "investorsBox": {
       "eyebrow": "For investors",
@@ -845,41 +842,12 @@
     "mascoteAlt": "HRZ mascot waving",
     "leadership": {
       "eyebrow": "HRZ Leadership",
-      "heading": "Speak directly with our executives.",
-      "phoneLabel": "Phone",
-      "emailLabel": "E-mail",
-      "items": [
-        {
-          "name": "Eduardo Brito",
-          "role": "CEO",
-          "phone": "+55 11 99881-5236",
-          "email": "eduardo.brito@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Fernando Oliveira",
-          "role": "CFO",
-          "phone": "+55 11 98702-0349",
-          "email": "fernando.oliveira@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Ítalo Augusto David",
-          "role": "COO",
-          "phone": "+55 11 93289-8090",
-          "email": "italo.david@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Tiago Cacozzi",
-          "role": "QHSE",
-          "phone": "+55 11 97470-4633",
-          "email": "tiago.cacozzi@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Juliana Scalzo",
-          "role": "CLO",
-          "phone": "+55 11 96199-3569",
-          "email": "juliana.scalzo@hrztransmissoras.com.br"
-        }
-      ]
+      "heading": "Speak directly with HRZ leadership.",
+      "channel": {
+        "title": "HRZ Contact",
+        "phone": "+55 11 99922-3631",
+        "email": "contato@hrztransmissoras.com.br"
+      }
     },
     "careers": {
       "eyebrow": "Careers",
@@ -941,7 +909,7 @@
     "cards": {
       "transmission": {
         "eyebrow": "Transmission",
-        "name": "Transmissoras",
+        "name": "Our Transmissoras",
         "imgAlt": "High-voltage substation",
         "description": "High-voltage transmission platform with 9 concessions integrated into the SIN, operating 500/230 kV OHTL and substations across 7 Brazilian states.",
         "metricLabel1": "Concessions",
@@ -964,7 +932,7 @@
       "eyebrow": "National footprint",
       "heading1": "Shared presence",
       "heading2": "across Brazil.",
-      "body": "Our two segments — transmission and wind generation — operate across multiple regions, from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul, forming a unique strategic footprint of the HRZ Energia platform in the Brazilian power sector."
+      "body": "Our two segments — transmission and wind generation — operate across multiple regions, from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul."
     },
     "corporate": {
       "eyebrow": "Corporate Structure",

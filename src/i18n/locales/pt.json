@@ -7,6 +7,7 @@
     "wind": "Eólicas",
     "esg": "ESG",
     "investors": "Investidores",
+    "portfolio": "Portfólio",
     "ethics": "Ética e Conduta",
     "contact": "Contato",
     "cta": "Fale com a HRZ"
@@ -121,7 +122,7 @@
       "eyebrow": "Criação de valor",
       "heading1": "Mais do que transmitir,",
       "heading2": "é fazer chegar, sempre.",
-      "body": "Construímos uma plataforma escalável e certificável pronta para monetização via IPO ou venda estratégica. Crescimento por aquisições disciplinadas de ativos brownfield, com governança ativa da Actis em cada etapa.",
+      "body": "Construímos uma plataforma escalável e certificável. Crescimento por aquisições disciplinadas de ativos brownfield, com governança ativa em cada etapa.",
       "cta": "Para investidores",
       "windImgAlt": "Aerogeradores em campo verde ao entardecer",
       "phase1": {
@@ -140,7 +141,8 @@
       "heading2": "Actis.",
       "body1": "A Actis é uma gestora global de investimentos especializada em infraestrutura sustentável, com presença em mercados emergentes e foco em ativos de energia, infraestrutura digital e imobiliário de longo prazo.",
       "body2": "A HRZ é supervisionada pelo Global Sustainability Committee (GSC) da Actis, com reporte trimestral entre Londres e São Paulo — garantindo padrão internacional de governança, ESG e gestão de risco em cada ativo da plataforma.",
-      "cta": "Conheça a estrutura societária"
+      "cta": "Conheça a estrutura societária",
+      "websiteCta": "Visitar o site oficial da Actis"
     }
   },
   "about": {
@@ -164,7 +166,7 @@
       "headingWord2": "técnica",
       "body1": "Operamos ativos de <bold>transmissão</bold> e <bold>geração renovável</bold> no Brasil, com foco em <accent>excelência operacional</accent>, governança robusta e criação de valor de longo prazo.",
       "body2": "Nosso modelo combina a <bold>disciplina de um investidor institucional</bold> com a especialização técnica de operadores de classe mundial, entregando infraestrutura crítica ao sistema elétrico brasileiro com <accent>disponibilidade acima dos padrões regulatórios</accent>.",
-      "body3": "Crescemos por <bold>aquisições disciplinadas</bold> de ativos brownfield, com governança ativa da Actis em cada etapa preparando uma plataforma <accent>auditável, escalável e investível</accent>."
+      "body3": "Crescemos por <bold>aquisições disciplinadas</bold> de ativos brownfield, com governança ativa em cada etapa."
     },
     "business": {
       "eyebrow": "Modelo de negócio",
@@ -180,7 +182,7 @@
       },
       "card3": {
         "title": "Governança única",
-        "text": "Plataforma auditável e escalável, com gestão técnica unificada e supervisão ativa da Actis em cada decisão."
+        "text": "Plataforma auditável e escalável, com gestão técnica unificada e supervisão ativa em cada decisão."
       }
     },
     "timeline": {
@@ -249,7 +251,7 @@
       "portraitAlt": "Retrato de {{name}}",
       "governance": {
         "eyebrow": "Governança",
-        "body": "Controlada pela Actis · supervisão ativa pelo Global Sustainability Committee, com reporte trimestral entre Londres e São Paulo."
+        "body": "Controlada pela Actis."
       },
       "items": [
         {
@@ -574,18 +576,16 @@
       },
       "footprint": {
         "eyebrow": "Pegada nacional",
-        "heading1": "Presença estratégica",
-        "heading2": "em todo o Brasil.",
-        "body": "Operamos ativos críticos em estados-chave do Sistema Interligado Nacional do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul.",
+        "heading": "Presença estratégica em todo o Brasil",
+        "body": "Operamos ativos críticos em estados-chave do Sistema Interligado Nacional — do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul.",
         "stat1": { "value": "9", "label": "Concessões de transmissão" },
         "stat2": { "value": "5", "label": "Parques eólicos" },
         "stat3": { "value": "2.403 ckm", "label": "OHTL 500/230 kV" },
         "stat4": { "value": "29", "label": "Subestações" }
       },
       "transmission": {
-        "eyebrow": "Transmissão",
-        "heading": "HRZ + Skyline.",
-        "subtitle": "9 SPVs adquiridas entre 2021 e 2025 · 2.403 ckm de OHTL 500/230 kV · 5.228 MVA de capacidade instalada · 29 subestações interligadas.",
+        "heading": "Transmissão",
+        "subtitle": "9 concessões adquiridas entre 2021 e 2025 · 2.403 ckm de OHTL 500/230 kV · 5.228 MVA de capacidade instalada · 29 subestações interligadas.",
         "imgAlt": "Subestação ao entardecer",
         "stats": [
           { "value": ">99,8%", "label": "Disponibilidade" },
@@ -595,15 +595,14 @@
         ]
       },
       "generation": {
-        "eyebrow": "Geração",
-        "heading": "Eólicas Babilônia.",
+        "heading": "Geração — Eólicas Babilônia",
         "body": "5 parques adquiridos em 2019 com 65 aerogeradores e 136,5 MW de capacidade instalada na Bahia. Operação consistente com fator de capacidade de 57% e PPA de longo prazo.",
         "imgAlt": "Parque eólico Babilônia",
         "stats": [
-          { "value": "136,5 MW", "label": "Capacidade" },
+          { "value": "136 MW", "label": "Capacidade" },
           { "value": "65", "label": "Aerogeradores" },
           { "value": ">98%", "label": "Disponibilidade" },
-          { "value": "R$ 202m", "label": "Receita" }
+          { "value": "R$ 202m", "label": "Renda" }
         ]
       },
       "transmissionAssets": [
@@ -834,9 +833,7 @@
       "emailTitle": "E-mail institucional",
       "emailValue": "contato@hrzenergia.com.br",
       "locationTitle": "Sede",
-      "locationValue": "São Paulo · Brasil",
-      "controllerTitle": "Controladora",
-      "controllerValue": "Actis · Global Sustainability Committee · Londres"
+      "locationValue": "São Paulo · Brasil"
     },
     "investorsBox": {
       "eyebrow": "Para investidores",
@@ -845,41 +842,12 @@
     "mascoteAlt": "Mascote HRZ acenando",
     "leadership": {
       "eyebrow": "Liderança HRZ",
-      "heading": "Fale diretamente com nossos executivos.",
-      "phoneLabel": "Telefone",
-      "emailLabel": "E-mail",
-      "items": [
-        {
-          "name": "Eduardo Brito",
-          "role": "CEO",
-          "phone": "+55 11 99881-5236",
-          "email": "eduardo.brito@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Fernando Oliveira",
-          "role": "CFO",
-          "phone": "+55 11 98702-0349",
-          "email": "fernando.oliveira@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Ítalo Augusto David",
-          "role": "COO",
-          "phone": "+55 11 93289-8090",
-          "email": "italo.david@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Tiago Cacozzi",
-          "role": "QHSE",
-          "phone": "+55 11 97470-4633",
-          "email": "tiago.cacozzi@hrztransmissoras.com.br"
-        },
-        {
-          "name": "Juliana Scalzo",
-          "role": "CLO",
-          "phone": "+55 11 96199-3569",
-          "email": "juliana.scalzo@hrztransmissoras.com.br"
-        }
-      ]
+      "heading": "Fale diretamente com a liderança da HRZ.",
+      "channel": {
+        "title": "Contato HRZ",
+        "phone": "+55 11 99922-3631",
+        "email": "contato@hrztransmissoras.com.br"
+      }
     },
     "careers": {
       "eyebrow": "Carreiras",
@@ -941,7 +909,7 @@
     "cards": {
       "transmission": {
         "eyebrow": "Transmissão",
-        "name": "Transmissoras",
+        "name": "Nossas Transmissoras",
         "imgAlt": "Subestação de alta tensão",
         "description": "Plataforma de transmissão de alta tensão com 9 concessões integradas ao SIN, operando OHTL 500/230 kV e subestações em 7 estados brasileiros.",
         "metricLabel1": "Concessões",
@@ -964,7 +932,7 @@
       "eyebrow": "Pegada nacional",
       "heading1": "Presença compartilhada",
       "heading2": "em todo o Brasil.",
-      "body": "Nossos dois segmentos — transmissão e geração eólica — operam em diferentes regiões do país, do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul, formando uma pegada estratégica única da plataforma HRZ Energia no setor elétrico brasileiro."
+      "body": "Nossos dois segmentos — transmissão e geração eólica — operam em diferentes regiões do país, do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul."
     },
     "corporate": {
       "eyebrow": "Estrutura Societária",

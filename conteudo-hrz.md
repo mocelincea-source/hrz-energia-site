@@ -41,7 +41,7 @@ Sustentabilidade não é um pilar adicional — é o nosso modelo operacional. D
 10 — Comunidades atendidas. Diálogo, presença e geração de oportunidades.
 5 — Projetos ativos. Capacitação, sustentabilidade, geração de renda e infraestrutura comunitária.
 Criação de valor — Mais do que transmitir, é fazer chegar, sempre
-Construímos uma plataforma escalável e certificável — pronta para monetização via IPO ou venda estratégica. Crescimento por aquisições disciplinadas de ativos brownfield, com governança ativa da Actis em cada etapa.
+Construímos uma plataforma escalável e certificável. Crescimento por aquisições disciplinadas de ativos brownfield, com governança ativa em cada etapa.
 Fase I · 2025–2027 — Estruturação e ramp-up. Integração transmissão + geração, refinanciamento EDIFY/SP-MG (R$ 428m), eficiência fiscal.
 Fase II · 2028–2030 — Consolidação e monetização. Expansão Endurance (5 novos estados), plataforma auditável e investível.
 
@@ -52,12 +52,12 @@ A HRZ Energia é uma plataforma integrada de energia controlada pela Actis, gest
 Nosso modelo — Uma síntese de capital e técnica
 Operamos ativos de transmissão e geração renovável no Brasil, com foco em excelência operacional, governança robusta e criação de valor de longo prazo.
 Nosso modelo combina a disciplina de um investidor institucional com a especialização técnica de operadores de classe mundial, entregando infraestrutura crítica ao sistema elétrico brasileiro com disponibilidade acima dos padrões regulatórios.
-Crescemos por aquisições disciplinadas de ativos brownfield, com governança ativa da Actis em cada etapa — preparando uma plataforma auditável, escalável e investível.
+Crescemos por aquisições disciplinadas de ativos brownfield, com governança ativa em cada etapa.
 O que é uma plataforma integrada de transmissão e geração
 A HRZ combina dois negócios complementares sob governança única: transmissão de alta tensão, com receita previsível indexada à inflação (RAP), e geração eólica renovável, com exposição estratégica à matriz energética brasileira. A integração entrega disciplina de capital, ganhos operacionais e otimização entre perfis distintos de risco-retorno.
 Transmissão — Receita regulada de longo prazo (RAP) com baixa volatilidade, indexada à inflação e independente de despacho.
 Geração eólica — Exposição à matriz renovável com PPAs de longo prazo, fator de capacidade elevado e baixa pegada operacional.
-Governança única — Plataforma auditável e escalável, com gestão técnica unificada e supervisão ativa da Actis em cada decisão.
+Governança única — Plataforma auditável e escalável, com gestão técnica unificada e supervisão ativa em cada decisão.
 Evolução corporativa — Plataforma construída com disciplina e escala
 2019 · Início — Geração
 Nasce a geração renovável
@@ -91,7 +91,7 @@ Mais de 20 anos em engenharia e gestão de projetos. Especialista em transmissã
 Tiago Cacozzi — QHSE
 Mais de 18 anos em Qualidade, Segurança, Saúde e Meio Ambiente. Foco em gestão de riscos, prevenção e melhoria contínua.
 Governança
-Controlada pela Actis · supervisão ativa pelo Global Sustainability Committee, com reporte trimestral entre Londres e São Paulo.
+Controlada pela Actis.
 
 Nossas Empresas (/empresas)
 Hero: Duas frentes operacionais. Uma só plataforma.
@@ -163,7 +163,7 @@ Melhoria contínua — Resolução ativa de passivos herdados de proprietários 
 
 Investidores (/investidores)
 Hero: Receita previsível. Capital disciplinado.
-Plataforma escalável e certificável, pronta para monetização via IPO ou venda estratégica. Governança ativa da Actis em cada etapa.
+Plataforma escalável e certificável, pronta para monetização via IPO ou venda estratégica. Governança ativa em cada etapa.
 KPIs
 R$ 1,0bi+ — Receita Total (RAP + Geração)
 AAA.br — Rating Edify / SP-MG

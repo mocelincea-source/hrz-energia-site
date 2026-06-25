@@ -133,14 +133,10 @@ function EsgPage() {
         <BoltDecor variant="solid" opacity={0.08} className="-right-24 top-10 h-[500px] w-auto" />
         <div className="container-hrz relative">
           <p className="eyebrow text-white/80">{t("esg.values.eyebrow")}</p>
-          <h2 className="display-mega mt-3 max-w-3xl text-4xl sm:text-5xl">
-            {t("esg.values.heading1")}{" "}
-            <span className="font-normal text-white/90">{t("esg.values.heading2")}</span>
-          </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/85">
             {t("esg.values.tagline")}
           </p>
-          <Stagger className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {valueItems.map((v, i) => {
               const ValueIcon = VALUE_ICONS[i];
               return (
