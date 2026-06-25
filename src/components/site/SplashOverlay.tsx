@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "motion/react";
 import logoWhite from "@/assets/logo-hrz-white.png";
+import { SPLASH_EXIT_DURATION, SPLASH_HOLD_S } from "./heroTiming";
 import { easeOut } from "./motion";
 
 interface SplashOverlayProps {
@@ -12,9 +13,10 @@ interface SplashOverlayProps {
  * Timeline:
  *   0ms      → overlay fades in (0.25s), logo starts entering
  *   0–1100ms → logo rises from scale 0.88, opacity 0 → 1
+ *   0–2000ms → energy transmission bar grows scaleX 0→1 (linear)
  *   1100ms+  → logo breathes with a subtle pulse (scale loop)
- *   1600ms   → onDone() fires → AnimatePresence triggers exit
- *   exit     → logo: scale↑ + blur + fade (0.7s); overlay: fade (0.85s)
+ *   2000ms   → onDone() fires → AnimatePresence triggers exit
+ *   exit     → backdrop + logo fade (0.5s) over the hero video already visible below
  *
  * Match-Cut layout: the inner DOM mirrors the Hero section exactly so the
  * logo occupies the same pixel position when the overlay dissolves.
@@ -28,21 +30,29 @@ interface SplashOverlayProps {
  */
 export function SplashOverlay({ onDone }: SplashOverlayProps) {
   useEffect(() => {
-    const timer = setTimeout(onDone, 1600);
+    const timer = setTimeout(onDone, SPLASH_HOLD_S * 1000);
     return () => clearTimeout(timer);
   }, [onDone]);
 
   return (
     <motion.div
-      className="fixed inset-0 z-[60]"
-      style={{ backgroundColor: "#060c1a" }}
+      className="fixed inset-0 z-50 bg-transparent"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.85, ease: easeOut } }}
+      exit={{ opacity: 0, transition: { duration: SPLASH_EXIT_DURATION, ease: easeOut } }}
       transition={{ duration: 0.2 }}
     >
+      {/* Opaque backdrop — static; parent opacity fade reveals hero video underneath. */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at center, #112254 0%, #00040f 100%)",
+        }}
+        aria-hidden
+      />
       {/* Mirrors: relative z-20 flex h-full flex-col */}
-      <div className="flex h-full flex-col">
+      <div className="relative flex h-full flex-col">
 
         {/* Mirrors: container-hrz flex flex-1 items-center pt-20 */}
         <div className="container-hrz flex flex-1 items-center pt-20">
@@ -58,29 +68,57 @@ export function SplashOverlay({ onDone }: SplashOverlayProps) {
               <motion.div
                 initial={{ opacity: 0, scale: 0.88, y: 14 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.85, ease: easeOut },
-                }}
                 transition={{ duration: 1.1, ease: easeOut }}
               >
                 {/* Breathing pulse — starts after logo is fully visible */}
                 <motion.div
-                  animate={{ scale: [1, 1.032, 1] }}
+                  className="flex flex-col items-center"
+                  animate={{ scale: [1, 1.03, 1] }}
                   transition={{
-                    duration: 2.6,
+                    duration: 3.6,
                     repeat: Infinity,
                     ease: "easeInOut",
                     delay: 1.15,
                   }}
                 >
-                  {/* Exact same size classes as the Hero <img> */}
-                  <img
+                  {/* Bolt glow — animated drop-shadow respects PNG alpha,
+                      pulsing around the lightning bolt shape */}
+                  <motion.img
                     src={logoWhite}
                     alt="HRZ Energia"
                     className="h-28 w-auto select-none sm:h-32 lg:h-40"
                     draggable={false}
+                    animate={{
+                      filter: [
+                        "drop-shadow(0 0 3px rgba(96,165,250,0.15))",
+                        "drop-shadow(0 0 12px rgba(96,165,250,0.70)) drop-shadow(0 0 26px rgba(59,130,246,0.40))",
+                        "drop-shadow(0 0 3px rgba(96,165,250,0.15))",
+                      ],
+                    }}
+                    transition={{
+                      duration: 3.6,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1.15,
+                    }}
                   />
+
+                  {/* Energy transmission track — fades out with parent on exit */}
+                  <div className="relative mt-4 h-[1px] w-full max-w-[200px] overflow-hidden bg-white/10">
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400 via-white to-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.8),0_0_30px_rgba(34,211,238,0.4)]"
+                      initial={{ scaleX: 0, originX: 0, opacity: 0.6 }}
+                      animate={{ scaleX: 1, opacity: [0.6, 1, 0.6] }}
+                      transition={{
+                        scaleX: { duration: 2, ease: "linear" },
+                        opacity: {
+                          duration: 1.5,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        },
+                      }}
+                    />
+                  </div>
                 </motion.div>
               </motion.div>
             </div>

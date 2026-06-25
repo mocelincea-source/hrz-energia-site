@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import logoBlue from "@/assets/logo-hrz-blue.png";
 import logoWhite from "@/assets/logo-hrz-white.png";
 import { LanguageToggle } from "./LanguageToggle";
+import { HERO_BASE, HERO_DURATION, HERO_STAGGER } from "./heroTiming";
 import { easeOut } from "./motion";
 
 /**
@@ -15,11 +16,11 @@ import { easeOut } from "./motion";
  */
 let _headerHasRendered = false;
 
-/** Seconds: matches the moment the SplashOverlay fires onDone and starts its exit fade. */
-const LOGO_REVEAL_DELAY = 1.6;
+/** Seconds: navbar descends after the splash fully dissolves. */
+const LOGO_REVEAL_DELAY = HERO_BASE;
 
-/** Seconds: when the first nav link starts pinging in. */
-const NAV_STAGGER_START = 1.8;
+/** Seconds: first nav link — slightly after the header begins moving. */
+const NAV_STAGGER_START = HERO_BASE + 0.25;
 
 type NavItem = {
   to: string;
@@ -50,7 +51,7 @@ const navListVariants = {
   show: {
     transition: {
       delayChildren: NAV_STAGGER_START,
-      staggerChildren: 0.1,
+      staggerChildren: HERO_STAGGER,
     },
   },
 };
@@ -58,7 +59,7 @@ const navListVariants = {
 /** Each nav item drops in from slightly above with a fade. */
 const navItemVariants = {
   hidden: { opacity: 0, y: -10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
+  show: { opacity: 1, y: 0, transition: { duration: HERO_DURATION, ease: easeOut } },
 };
 
 export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
@@ -101,7 +102,7 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{
         delay: isPageLoad.current ? LOGO_REVEAL_DELAY : 0,
-        duration: 0.65,
+        duration: HERO_DURATION,
         ease: easeOut,
       }}
     >

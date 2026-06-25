@@ -120,14 +120,24 @@ function RootComponent() {
     meta.content = url;
   }, [pathname]);
 
+  /** Match hero navy so no neutral flash shows through during splash exit. */
+  useEffect(() => {
+    if (!showSplash) return;
+    const prev = document.body.style.backgroundColor;
+    document.body.style.backgroundColor = "#060c1a";
+    return () => {
+      document.body.style.backgroundColor = prev;
+    };
+  }, [showSplash]);
+
   return (
     <>
-      <AnimatePresence mode="wait">
+      <Outlet />
+      <AnimatePresence>
         {showSplash && (
           <SplashOverlay key="splash" onDone={() => setShowSplash(false)} />
         )}
       </AnimatePresence>
-      <Outlet />
     </>
   );
 }

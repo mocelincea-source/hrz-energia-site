@@ -36,6 +36,12 @@ import raioBrand from "@/assets/raio-hrz.png";
 import logoWhite from "@/assets/logo-hrz-white.png";
 import babiloniaImg from "@/assets/babilonia-aerial.jpg";
 import heroVideo from "@/assets/hero-hrz.mp4";
+import {
+  HERO_BASE,
+  HERO_DURATION,
+  HERO_STAGGER,
+  HERO_VIDEO_REVEAL,
+} from "@/components/site/heroTiming";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -91,8 +97,8 @@ function HomePage() {
   return (
     <SiteShell headerVariant="dark">
       {/* HERO */}
-      <section className="relative h-screen overflow-hidden text-white">
-        {/* Z-0 — Video de fundo */}
+      <section className="relative h-screen overflow-hidden bg-[#060c1a] text-white">
+        {/* Z-0 — Video de fundo (visível desde frame 0 via poster; ken-burn inicia com exit do splash) */}
         <motion.video
           src={heroVideo}
           poster={heroImg}
@@ -101,9 +107,9 @@ function HomePage() {
           muted
           playsInline
           preload="auto"
-          initial={{ scale: 1.05, opacity: 0 }}
+          initial={{ scale: 1.05, opacity: 1 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 1.6, ease: easeOut }}
+          transition={{ duration: 1.5, delay: HERO_VIDEO_REVEAL, ease: easeOut }}
           className="absolute inset-0 z-0 h-full w-full object-cover"
         />
 
@@ -115,7 +121,6 @@ function HomePage() {
           {/* Conteúdo central: Logo (âncora estática) + Textos (fade-up) */}
           <div className="container-hrz flex flex-1 items-center pt-20">
             <div className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16">
-
               {/* Coluna esquerda — Logo: sem animação de entrada.
                   Âncora do match-cut: visível a 100% desde o frame 0 para que
                   o SplashOverlay dissolva sobre ela sem causar pulo visual. */}
@@ -131,18 +136,18 @@ function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, delay: 2.0, ease: easeOut }}
+                transition={{ duration: HERO_DURATION, delay: HERO_BASE + 0.45, ease: easeOut }}
                 className="flex flex-col items-start text-left"
               >
                 <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-                  <TextEffect per="word" as="span" preset="slide" delay={2.05} className="block">
+                  <TextEffect per="word" as="span" preset="slide" delay={HERO_BASE + 0.5} className="block">
                     {t("home.hero.headline1")}
                   </TextEffect>
                   <TextEffect
                     per="word"
                     as="span"
                     preset="slide"
-                    delay={2.45}
+                    delay={HERO_BASE + 0.95}
                     className="text-gradient-electric block whitespace-nowrap font-normal"
                   >
                     {t("home.hero.headline2")}
@@ -181,7 +186,7 @@ function HomePage() {
             className="border-t border-white/10 bg-black/30 backdrop-blur-md"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 2.0, ease: easeOut }}
+            transition={{ duration: HERO_DURATION, delay: HERO_BASE + 1.1, ease: easeOut }}
           >
             {/* Cada indicador brota do chão em cascata */}
             <motion.div
@@ -191,7 +196,10 @@ function HomePage() {
               variants={{
                 hidden: {},
                 show: {
-                  transition: { delayChildren: 2.05, staggerChildren: 0.15 },
+                  transition: {
+                    delayChildren: HERO_BASE + 1.15,
+                    staggerChildren: HERO_STAGGER,
+                  },
                 },
               }}
             >
@@ -201,7 +209,7 @@ function HomePage() {
                   className="flex flex-col items-center border-l border-white/10 px-6 text-center first:border-l-0"
                   variants={{
                     hidden: { opacity: 0, y: 30 },
-                    show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: easeOut } },
+                    show: { opacity: 1, y: 0, transition: { duration: HERO_DURATION, ease: easeOut } },
                   }}
                 >
                   <p className="font-display text-4xl font-light tracking-tight text-hrz-electric sm:text-5xl">
@@ -210,7 +218,7 @@ function HomePage() {
                       prefix={s.prefix}
                       suffix={s.suffix}
                       decimals={s.decimals}
-                      fallbackDelay={2200 + i * 150}
+                      fallbackDelay={(HERO_BASE + 1.15) * 1000 + i * HERO_STAGGER * 1000}
                     />
                   </p>
                   <p className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.label}</p>
