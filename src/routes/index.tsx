@@ -112,15 +112,13 @@ function HomePage() {
 
         {/* Z-20 — Conteúdo da página */}
         <div className="relative z-20 flex h-full flex-col">
-          {/* Conteúdo central: Logo + Textos com Fade-Up */}
+          {/* Conteúdo central: Logo (âncora estática) + Textos (fade-up) */}
           <div className="container-hrz flex flex-1 items-center pt-20">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, delay: 2.0, ease: easeOut }}
-              className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16"
-            >
-              {/* Coluna esquerda — Logo */}
+            <div className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16">
+
+              {/* Coluna esquerda — Logo: sem animação de entrada.
+                  Âncora do match-cut: visível a 100% desde o frame 0 para que
+                  o SplashOverlay dissolva sobre ela sem causar pulo visual. */}
               <div className="flex items-center justify-center lg:justify-end lg:pr-6">
                 <img
                   src={logoWhite}
@@ -129,8 +127,13 @@ function HomePage() {
                 />
               </div>
 
-              {/* Coluna direita — Título + Botões */}
-              <div className="flex flex-col items-start text-left">
+              {/* Coluna direita — Título + Botões: fade-up normal */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, delay: 2.0, ease: easeOut }}
+                className="flex flex-col items-start text-left"
+              >
                 <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
                   <TextEffect per="word" as="span" preset="slide" delay={2.05} className="block">
                     {t("home.hero.headline1")}
@@ -168,25 +171,38 @@ function HomePage() {
                     />
                   </Link>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
 
           {/* StatsBar — ancorada na base da tela */}
+          {/* O container desliza para revelar o fundo */}
           <motion.div
             className="border-t border-white/10 bg-black/30 backdrop-blur-md"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 2.3, ease: easeOut }}
+            transition={{ duration: 0.55, delay: 2.0, ease: easeOut }}
           >
-            <div className="container-hrz grid grid-cols-2 gap-y-6 py-5 lg:grid-cols-4">
+            {/* Cada indicador brota do chão em cascata */}
+            <motion.div
+              className="container-hrz grid grid-cols-2 gap-y-6 py-5 lg:grid-cols-4"
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: {},
+                show: {
+                  transition: { delayChildren: 2.05, staggerChildren: 0.15 },
+                },
+              }}
+            >
               {STATS.map((s, i) => (
                 <motion.div
                   key={s.label}
                   className="flex flex-col items-center border-l border-white/10 px-6 text-center first:border-l-0"
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 2.4 + i * 0.1, ease: easeOut }}
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: easeOut } },
+                  }}
                 >
                   <p className="font-display text-4xl font-light tracking-tight text-hrz-electric sm:text-5xl">
                     <Counter
@@ -194,13 +210,13 @@ function HomePage() {
                       prefix={s.prefix}
                       suffix={s.suffix}
                       decimals={s.decimals}
-                      fallbackDelay={2400 + i * 100}
+                      fallbackDelay={2200 + i * 150}
                     />
                   </p>
                   <p className="mt-1 text-xs uppercase tracking-wider text-white/60">{s.label}</p>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

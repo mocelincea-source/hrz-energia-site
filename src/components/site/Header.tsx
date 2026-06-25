@@ -11,12 +11,15 @@ import { easeOut } from "./motion";
 /**
  * Module-level flag — resets to false on every page load / F5 (JS re-evaluation),
  * but stays true across client-side navigations (no module re-evaluation).
- * This ensures the splash-coordinated logo animation only fires on hard load.
+ * This ensures the splash-coordinated animations only fire on hard load.
  */
 let _headerHasRendered = false;
 
 /** Seconds: matches the moment the SplashOverlay fires onDone and starts its exit fade. */
 const LOGO_REVEAL_DELAY = 1.6;
+
+/** Seconds: when the first nav link starts pinging in. */
+const NAV_STAGGER_START = 1.8;
 
 type NavItem = {
   to: string;
@@ -40,6 +43,23 @@ const NAV: NavItem[] = [
   { to: "/investidores", labelKey: "nav.investors" },
   { to: "/contato", labelKey: "nav.contact" },
 ];
+
+/** Stagger container: orchestrates the children sequence. */
+const navListVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      delayChildren: NAV_STAGGER_START,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+/** Each nav item drops in from slightly above with a fade. */
+const navItemVariants = {
+  hidden: { opacity: 0, y: -10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: easeOut } },
+};
 
 export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [open, setOpen] = useState(false);
@@ -75,96 +95,104 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
     : "border-b border-transparent bg-transparent text-white";
 
   return (
-    <header className={`${base} ${isDark ? darkChrome : lightChrome}`}>
+    <motion.header
+      className={`${base} ${isDark ? darkChrome : lightChrome}`}
+      initial={isPageLoad.current ? { opacity: 0, y: -20 } : false}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: isPageLoad.current ? LOGO_REVEAL_DELAY : 0,
+        duration: 0.65,
+        ease: easeOut,
+      }}
+    >
       <div className="container-hrz flex h-20 items-center justify-between">
+        {/* Logo — visibility carried by the header's own entry animation */}
         <Link to="/" className="flex items-center gap-2" aria-label="HRZ energia início">
-          <motion.img
+          <img
             src={isDark ? logoWhite : logoBlue}
             alt="HRZ energia"
             width={160}
             height={48}
             className="h-9 w-auto"
-            initial={isPageLoad.current ? { opacity: 0 } : false}
-            animate={{ opacity: 1 }}
-            transition={{
-              delay: isPageLoad.current ? LOGO_REVEAL_DELAY : 0,
-              duration: 0.65,
-              ease: easeOut,
-            }}
           />
         </Link>
 
-        <motion.nav
-          className="hidden items-center gap-8 lg:flex"
-          initial={isPageLoad.current ? { opacity: 0, y: -12 } : false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: isPageLoad.current ? 1.8 : 0,
-            duration: 0.8,
-            ease: easeOut,
-          }}
-        >
-          {NAV.map((item) => {
-            const active =
-              location.pathname === item.to ||
-              item.children?.some((c) => location.pathname === c.to);
-            const linkClass =
-              "text-sm font-medium transition-colors " +
-              (active
-                ? "text-hrz-electric"
-                : isDark
-                  ? "text-white/85 hover:text-white"
-                  : "text-foreground/75 hover:text-foreground");
-
-            if (item.children) {
-              return (
-                <div key={item.to} className="group relative">
-                  <Link to={item.to} className={`${linkClass} inline-flex items-center gap-1`}>
-                    {t(item.labelKey)}
-                    <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
-                  </Link>
-                  <div className="absolute left-1/2 top-full z-50 hidden -translate-x-1/2 pt-3 group-hover:block">
-                    <div className="min-w-[200px] overflow-hidden rounded-xl border border-border/60 bg-background shadow-xl ring-1 ring-black/5">
-                      {item.children.map((c) => (
-                        <Link
-                          key={c.to}
-                          to={c.to}
-                          className="block px-4 py-3 text-sm font-medium text-foreground/85 transition-colors hover:bg-secondary hover:text-hrz-electric"
-                        >
-                          {t(c.labelKey)}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              );
-            }
-
-            return (
-              <Link key={item.to} to={item.to} className={linkClass}>
-                {t(item.labelKey)}
-              </Link>
-            );
-          })}
-          <LanguageToggle variant={isDark ? "dark" : "light"} />
-          <Link
-            to="/contato"
-            className="ml-2 inline-flex items-center justify-center rounded-full bg-hrz-electric px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.03]"
+        {/* Desktop nav — links "ping" in one by one after the header descends */}
+        <nav className="hidden lg:flex" aria-label="Navegação principal">
+          <motion.ul
+            className="m-0 flex list-none items-center gap-8 p-0"
+            variants={navListVariants}
+            initial={isPageLoad.current ? "hidden" : false}
+            animate="show"
           >
-            {t("nav.cta")}
-          </Link>
-        </motion.nav>
+            {NAV.map((item) => {
+              const active =
+                location.pathname === item.to ||
+                item.children?.some((c) => location.pathname === c.to);
+              const linkClass =
+                "text-sm font-medium transition-colors " +
+                (active
+                  ? "text-hrz-electric"
+                  : isDark
+                    ? "text-white/85 hover:text-white"
+                    : "text-foreground/75 hover:text-foreground");
 
-        <motion.div
-          className="flex items-center gap-2 lg:hidden"
-          initial={isPageLoad.current ? { opacity: 0, y: -12 } : false}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: isPageLoad.current ? 1.8 : 0,
-            duration: 0.8,
-            ease: easeOut,
-          }}
-        >
+              if (item.children) {
+                return (
+                  <motion.li key={item.to} variants={navItemVariants} className="group relative">
+                    <Link
+                      to={item.to}
+                      className={`${linkClass} inline-flex items-center gap-1`}
+                    >
+                      {t(item.labelKey)}
+                      <ChevronDown
+                        size={14}
+                        className="transition-transform group-hover:rotate-180"
+                      />
+                    </Link>
+                    <div className="absolute left-1/2 top-full z-50 hidden -translate-x-1/2 pt-3 group-hover:block">
+                      <div className="min-w-[200px] overflow-hidden rounded-xl border border-border/60 bg-background shadow-xl ring-1 ring-black/5">
+                        {item.children.map((c) => (
+                          <Link
+                            key={c.to}
+                            to={c.to}
+                            className="block px-4 py-3 text-sm font-medium text-foreground/85 transition-colors hover:bg-secondary hover:text-hrz-electric"
+                          >
+                            {t(c.labelKey)}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.li>
+                );
+              }
+
+              return (
+                <motion.li key={item.to} variants={navItemVariants}>
+                  <Link to={item.to} className={linkClass}>
+                    {t(item.labelKey)}
+                  </Link>
+                </motion.li>
+              );
+            })}
+
+            <motion.li variants={navItemVariants}>
+              <LanguageToggle variant={isDark ? "dark" : "light"} />
+            </motion.li>
+
+            <motion.li variants={navItemVariants}>
+              <Link
+                to="/contato"
+                className="ml-2 inline-flex items-center justify-center rounded-full bg-hrz-electric px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.03]"
+              >
+                {t("nav.cta")}
+              </Link>
+            </motion.li>
+          </motion.ul>
+        </nav>
+
+        {/* Mobile toggle — visible when header descends */}
+        <div className="flex items-center gap-2 lg:hidden">
           <LanguageToggle variant={isDark ? "dark" : "light"} />
           <button
             type="button"
@@ -177,7 +205,7 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
-        </motion.div>
+        </div>
       </div>
 
       {open && (
@@ -207,6 +235,6 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
           </div>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
