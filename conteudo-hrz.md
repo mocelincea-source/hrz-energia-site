@@ -27,7 +27,7 @@ OHTL 500/230 kV com 29 subestações interligadas, disponibilidade superior a 99
 Geração
 Babilônia · 136 MW · 65 aerogeradores
 Cinco parques adquiridos em 2019 na Bahia, fator de capacidade de 57% e R$ 202m de receita anual.
-Acesso rápido — As duas empresas do grupo
+Acesso rápido — Os 2 segmentos do grupo
 HRZ Transmissoras — 9 concessões · 2.403 ckm de OHTL 500/230 kV · R$ 935m de RAP em 2026.
 Eólicas Babilônia — 136 MW · 65 aerogeradores · fator de capacidade de 57% na Bahia.
 Quem controla — Controlada pela Actis

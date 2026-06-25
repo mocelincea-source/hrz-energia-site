@@ -38,10 +38,10 @@ type OrgNode = {
 };
 
 const ORG_NODE_CONFIGS: Pick<OrgNode, "id" | "title" | "tone" | "icon">[] = [
-  { id: "actis",        title: "Actis LLP",        tone: "electric", icon: Globe2   },
-  { id: "hrz",          title: "HRZ Energia",       tone: "white",    icon: Building2 },
-  { id: "transmissoras", title: "Transmissoras",    tone: "card",     icon: Zap      },
-  { id: "babilonia",    title: "Eólicas Babilônia", tone: "card",     icon: Wind     },
+  { id: "actis", title: "Actis LLP", tone: "electric", icon: Globe2 },
+  { id: "hrz", title: "HRZ Energia", tone: "white", icon: Building2 },
+  { id: "transmissoras", title: "Transmissoras", tone: "card", icon: Zap },
+  { id: "babilonia", title: "Eólicas Babilônia", tone: "card", icon: Wind },
 ];
 
 function EmpresasPage() {
@@ -49,9 +49,9 @@ function EmpresasPage() {
 
   const orgNodes: OrgNode[] = ORG_NODE_CONFIGS.map((cfg) => ({
     ...cfg,
-    subtitle:    t(`companies.orgNodes.${cfg.id}.subtitle`),
+    subtitle: t(`companies.orgNodes.${cfg.id}.subtitle`),
     description: t(`companies.orgNodes.${cfg.id}.description`),
-    details:     t(`companies.orgNodes.${cfg.id}.details`, { returnObjects: true }) as OrgDetail[],
+    details: t(`companies.orgNodes.${cfg.id}.details`, { returnObjects: true }) as OrgDetail[],
   }));
 
   return (
@@ -102,8 +102,12 @@ function EmpresasPage() {
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-hrz-electric">
                   <Zap size={20} />
                 </div>
-                <p className="mt-4 eyebrow text-hrz-electric">{t("companies.cards.transmission.eyebrow")}</p>
-                <h3 className="font-display mt-2 text-3xl font-bold">{t("companies.cards.transmission.name")}</h3>
+                <p className="mt-4 eyebrow text-hrz-electric">
+                  {t("companies.cards.transmission.eyebrow")}
+                </p>
+                <h3 className="font-display mt-2 text-3xl font-bold">
+                  {t("companies.cards.transmission.name")}
+                </h3>
               </div>
             </div>
             <div className="flex flex-1 flex-col p-8">
@@ -111,8 +115,8 @@ function EmpresasPage() {
                 {t("companies.cards.transmission.description")}
               </p>
               <div className="mt-6 grid grid-cols-3 gap-4">
-                <Metric value="9"       label={t("companies.cards.transmission.metricLabel1")} />
-                <Metric value="2.403"   label={t("companies.cards.transmission.metricLabel2")} />
+                <Metric value="9" label={t("companies.cards.transmission.metricLabel1")} />
+                <Metric value="2.403" label={t("companies.cards.transmission.metricLabel2")} />
                 <Metric value="R$ 935m" label={t("companies.cards.transmission.metricLabel3")} />
               </div>
               <a
@@ -140,7 +144,9 @@ function EmpresasPage() {
                   <Wind size={20} />
                 </div>
                 <p className="mt-4 eyebrow text-white">{t("companies.cards.wind.eyebrow")}</p>
-                <h3 className="font-display mt-2 text-3xl font-bold">{t("companies.cards.wind.name")}</h3>
+                <h3 className="font-display mt-2 text-3xl font-bold">
+                  {t("companies.cards.wind.name")}
+                </h3>
               </div>
             </div>
             <div className="flex flex-1 flex-col p-8">
@@ -149,8 +155,8 @@ function EmpresasPage() {
               </p>
               <div className="mt-6 grid grid-cols-3 gap-4">
                 <Metric value="136,5 MW" label={t("companies.cards.wind.metricLabel1")} />
-                <Metric value="65"       label={t("companies.cards.wind.metricLabel2")} />
-                <Metric value="57%"      label={t("companies.cards.wind.metricLabel3")} />
+                <Metric value="65" label={t("companies.cards.wind.metricLabel2")} />
+                <Metric value="57%" label={t("companies.cards.wind.metricLabel3")} />
               </div>
               <a
                 href="https://www.eolicasbabilonia.com.br/"
@@ -192,7 +198,9 @@ function EmpresasPage() {
             <h2 className="display-mega mt-4 text-4xl font-light text-foreground sm:text-5xl lg:text-6xl">
               {t("companies.footprint.heading1")}
               <br />
-              <span className="text-hrz-electric font-normal">{t("companies.footprint.heading2")}</span>
+              <span className="text-hrz-electric font-normal">
+                {t("companies.footprint.heading2")}
+              </span>
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
               {t("companies.footprint.body")}
@@ -247,9 +255,16 @@ function OrgChart({ nodes, exploreHint }: { nodes: OrgNode[]; exploreHint: strin
         <AnimatedConnector />
         <div className="relative grid w-full gap-6 sm:grid-cols-2">
           {/* horizontal branch */}
-          <span className="pointer-events-none absolute left-1/4 right-1/4 top-0 hidden h-px -translate-y-3 bg-white/25 sm:block" aria-hidden />
-          <OrgBox node={trans} active={activeId === trans.id} onClick={() => setActiveId(trans.id)} />
-          <OrgBox node={bab}   active={activeId === bab.id}   onClick={() => setActiveId(bab.id)}   />
+          <span
+            className="pointer-events-none absolute left-1/4 right-1/4 top-0 hidden h-px -translate-y-3 bg-white/25 sm:block"
+            aria-hidden
+          />
+          <OrgBox
+            node={trans}
+            active={activeId === trans.id}
+            onClick={() => setActiveId(trans.id)}
+          />
+          <OrgBox node={bab} active={activeId === bab.id} onClick={() => setActiveId(bab.id)} />
         </div>
       </div>
 
@@ -270,7 +285,9 @@ function OrgChart({ nodes, exploreHint }: { nodes: OrgNode[]; exploreHint: strin
               </div>
               <div>
                 <p className="font-display text-2xl font-bold text-white">{active.title}</p>
-                <p className="text-xs uppercase tracking-wider text-hrz-electric">{active.subtitle}</p>
+                <p className="text-xs uppercase tracking-wider text-hrz-electric">
+                  {active.subtitle}
+                </p>
               </div>
             </div>
             <p className="mt-6 text-sm leading-relaxed text-white/80">{active.description}</p>

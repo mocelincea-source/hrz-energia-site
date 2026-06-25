@@ -74,7 +74,7 @@
     },
     "quickAccess": {
       "eyebrow": "Quick access",
-      "heading": "The two group companies.",
+      "heading": "The two group segments.",
       "transmission": {
         "name": "HRZ Transmissoras",
         "description": "9 concessions · 2,403 ckm of OHTL 500/230 kV · R$935m in RAP in 2026.",
@@ -521,11 +521,7 @@
           "nome": "Ourolândia Complex",
           "municipio": "Ourolândia — BA",
           "descricao": "Parks positioned in a favored wind corridor, with state-of-the-art turbines and remote operation.",
-          "destaques": [
-            "High-power wind turbines",
-            "Real-time monitoring",
-            "Long-term PPA"
-          ]
+          "destaques": ["High-power wind turbines", "Real-time monitoring", "Long-term PPA"]
         },
         {
           "id": "varzea",
@@ -615,7 +611,11 @@
         { "code": "SP-MG", "name": "500 kV SP-MG OHTL", "info": "Transmission line" },
         { "code": "ALSC", "name": "Aliança SC", "info": "Transmission line" },
         { "code": "LSUL", "name": "Litoral Sul", "info": "Transmission line" },
-        { "code": "VYRD", "name": "Vineyards", "info": "3rd Transformer Lajeado 3 (under construction)" }
+        {
+          "code": "VYRD",
+          "name": "Vineyards",
+          "info": "3rd Transformer Lajeado 3 (under construction)"
+        }
       ]
     }
   },
@@ -686,8 +686,14 @@
       "items": [
         { "title": "Respect", "text": "We value people and diversity." },
         { "title": "Integrity", "text": "We act with ethics, transparency and accountability." },
-        { "title": "Sustainability", "text": "We promote actions that generate lasting positive impact." },
-        { "title": "Collaboration", "text": "We believe in working together to transform realities." }
+        {
+          "title": "Sustainability",
+          "text": "We promote actions that generate lasting positive impact."
+        },
+        {
+          "title": "Collaboration",
+          "text": "We believe in working together to transform realities."
+        }
       ]
     },
     "highlights": {
@@ -843,11 +849,36 @@
       "phoneLabel": "Phone",
       "emailLabel": "E-mail",
       "items": [
-        { "name": "Eduardo Brito",      "role": "CEO",  "phone": "+55 11 99881-5236", "email": "eduardo.brito@hrztransmissoras.com.br" },
-        { "name": "Fernando Oliveira",  "role": "CFO",  "phone": "+55 11 98702-0349", "email": "fernando.oliveira@hrztransmissoras.com.br" },
-        { "name": "Ítalo Augusto David","role": "COO",  "phone": "+55 11 93289-8090", "email": "italo.david@hrztransmissoras.com.br" },
-        { "name": "Tiago Cacozzi",      "role": "QHSE", "phone": "+55 11 97470-4633", "email": "tiago.cacozzi@hrztransmissoras.com.br" },
-        { "name": "Juliana Scalzo",     "role": "CLO",  "phone": "+55 11 96199-3569", "email": "juliana.scalzo@hrztransmissoras.com.br" }
+        {
+          "name": "Eduardo Brito",
+          "role": "CEO",
+          "phone": "+55 11 99881-5236",
+          "email": "eduardo.brito@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Fernando Oliveira",
+          "role": "CFO",
+          "phone": "+55 11 98702-0349",
+          "email": "fernando.oliveira@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Ítalo Augusto David",
+          "role": "COO",
+          "phone": "+55 11 93289-8090",
+          "email": "italo.david@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Tiago Cacozzi",
+          "role": "QHSE",
+          "phone": "+55 11 97470-4633",
+          "email": "tiago.cacozzi@hrztransmissoras.com.br"
+        },
+        {
+          "name": "Juliana Scalzo",
+          "role": "CLO",
+          "phone": "+55 11 96199-3569",
+          "email": "juliana.scalzo@hrztransmissoras.com.br"
+        }
       ]
     },
     "careers": {
