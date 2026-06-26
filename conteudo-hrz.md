@@ -194,7 +194,7 @@ Documentos Societários — Estatuto, atas, atos societários e estrutura de cap
 Materiais para Investidores — Apresentações institucionais, relatórios de gestão e materiais de governança.
 
 Portfólio (/portfolio)
-Hero: 14 SPVs. Escala nacional.
+Hero: 14 Concessões. Escala nacional.
 Plataforma integrada com transmissão de alta tensão e geração eólica renovável, distribuída em ativos brownfield adquiridos com disciplina entre 2019 e 2025.
 Pegada nacional — Presença estratégica em todo o Brasil
 Operamos ativos críticos em estados-chave do Sistema Interligado Nacional — do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul.

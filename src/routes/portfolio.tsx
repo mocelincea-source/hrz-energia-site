@@ -75,7 +75,7 @@ function PortfolioPage() {
               <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
                 {t("segments.portfolio.footprint.body")}
               </p>
-              <Stagger className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+              <Stagger className="mt-8 grid w-full grid-cols-2 gap-4 lg:gap-6">
                 {footprintStats.map((s) => (
                   <StaggerItem key={s.label}>
                     <StatCard value={s.value} label={s.label} />
@@ -150,7 +150,7 @@ function PortfolioPage() {
               <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80">
                 {t("segments.portfolio.generation.body")}
               </p>
-              <Stagger className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+              <Stagger className="mt-6 grid w-full grid-cols-2 gap-4">
                 {generationStats.map((s) => (
                   <StaggerItem key={s.label}>
                     <DarkStatCard value={s.value} label={s.label} />
@@ -175,18 +175,18 @@ function PortfolioPage() {
 
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
-    <div className="h-full rounded-2xl border border-border/60 bg-card p-6 transition duration-300 hover:border-foreground/20">
-      <p className="font-display text-3xl font-light tracking-tight text-hrz-deep sm:text-4xl">{value}</p>
-      <p className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">{label}</p>
+    <div className="flex w-full flex-col items-start justify-center rounded-2xl border border-gray-200 bg-white p-5 shadow-sm xl:p-6">
+      <p className="text-3xl font-bold leading-tight text-gray-900 xl:text-4xl">{value}</p>
+      <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-gray-500 xl:text-sm">{label}</p>
     </div>
   );
 }
 
 function DarkStatCard({ value, label }: { value: string; label: string }) {
   return (
-    <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition duration-300 hover:border-white/20">
-      <p className="font-display text-3xl font-light tracking-tight text-white sm:text-4xl">{value}</p>
-      <p className="mt-2 text-xs uppercase tracking-wider text-white/60">{label}</p>
+    <div className="flex flex-col items-start justify-center rounded-2xl border border-white/10 bg-white/5 p-5 xl:p-6">
+      <p className="text-2xl font-bold leading-tight text-white xl:text-3xl">{value}</p>
+      <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-gray-400 xl:text-sm">{label}</p>
     </div>
   );
 }

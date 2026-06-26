@@ -14,14 +14,14 @@ type MapPoint = {
 const MAP_POINTS: MapPoint[] = [
   { name: "TMA 1", dotX: 53.0, dotY: 27.0, labelX: 72, labelY: 16, side: "right", delay: 0.0 },
   { name: "TMA 2", dotX: 54.5, dotY: 29.5, labelX: 72, labelY: 22, side: "right", delay: 0.06 },
-  { name: "MGTE", dotX: 52.0, dotY: 32.5, labelX: 72, labelY: 30, side: "right", delay: 0.12 },
+  { name: "MGTE", dotX: 52.0, dotY: 32.5, labelX: 74, labelY: 27, side: "right", delay: 0.12 },
   { name: "Babilônia", dotX: 55.5, dotY: 44.5, labelX: 22, labelY: 42, side: "left", delay: 0.18 },
-  { name: "AVT", dotX: 56.0, dotY: 56.0, labelX: 74, labelY: 46, side: "right", delay: 0.24 },
+  { name: "AVT", dotX: 56.0, dotY: 56.0, labelX: 82, labelY: 43, side: "right", delay: 0.24 },
   { name: "TES", dotX: 64.0, dotY: 57.5, labelX: 80, labelY: 56, side: "right", delay: 0.3 },
   { name: "SP-MG", dotX: 58.5, dotY: 62.5, labelX: 76, labelY: 66, side: "right", delay: 0.36 },
   { name: "Aliança", dotX: 55.0, dotY: 72.0, labelX: 74, labelY: 74, side: "right", delay: 0.42 },
-  { name: "Litoral Sul Transmissão", dotX: 50.0, dotY: 75.0, labelX: 22, labelY: 88, side: "left", delay: 0.48 },
-  { name: "Vineyards", dotX: 46.0, dotY: 77.5, labelX: 22, labelY: 78, side: "left", delay: 0.54 },
+  { name: "Litoral Sul Transmissão", dotX: 50.0, dotY: 75.0, labelX: 36, labelY: 71, side: "left", delay: 0.48 },
+  { name: "Vineyards", dotX: 46.0, dotY: 77.5, labelX: 36, labelY: 84, side: "left", delay: 0.54 },
 ];
 
 const getLabelCenterX = (p: MapPoint) => {

@@ -564,13 +564,13 @@
     "portfolio": {
       "meta": {
         "title": "Portfólio HRZ Energia",
-        "description": "14 SPVs em operação: 9 ativos de transmissão (2.403 ckm · 5.228 MVA) e 5 SPVs do Complexo Eólico Babilônia (136,5 MW).",
+        "description": "14 Concessões em operação: 9 ativos de transmissão (2.403 ckm · 5.228 MVA) e 5 SPVs do Complexo Eólico Babilônia (136,5 MW).",
         "ogTitle": "Portfólio HRZ Transmissão e Geração",
         "ogDescription": "Ativos críticos do SIN em quatro estados, com disponibilidade superior a 99,8%."
       },
       "hero": {
         "eyebrow": "Portfólio de ativos",
-        "titleLine1": "14 SPVs.",
+        "titleLine1": "14 Concessões.",
         "titleLine2": "Escala nacional.",
         "subtitle": "Plataforma integrada com transmissão de alta tensão e geração eólica renovável, distribuída em ativos brownfield adquiridos com disciplina entre 2019 e 2025."
       },
@@ -596,10 +596,10 @@
       },
       "generation": {
         "heading": "Geração — Eólicas Babilônia",
-        "body": "5 parques adquiridos em 2019 com 65 aerogeradores e 136,5 MW de capacidade instalada na Bahia. Operação consistente com fator de capacidade de 57% e PPA de longo prazo.",
+        "body": "5 parques adquiridos em 2019 com 65 aerogeradores e 136,5 MW de capacidade instalada na Bahia. Operação consistente com fator de capacidade de 57% e CER de longo prazo.",
         "imgAlt": "Parque eólico Babilônia",
         "stats": [
-          { "value": "136 MW", "label": "Capacidade" },
+          { "value": "136,5 MW", "label": "Capacidade" },
           { "value": "65", "label": "Aerogeradores" },
           { "value": ">98%", "label": "Disponibilidade" },
           { "value": "R$ 202m", "label": "Renda" }

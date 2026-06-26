@@ -560,13 +560,13 @@
     "portfolio": {
       "meta": {
         "title": "Portfolio — HRZ Energia",
-        "description": "14 SPVs in operation: 9 transmission assets (2,403 ckm · 5,228 MVA) and 5 SPVs from the Babilônia Wind Complex (136.5 MW).",
+        "description": "14 concessions in operation: 9 transmission assets (2,403 ckm · 5,228 MVA) and 5 SPVs from the Babilônia Wind Complex (136.5 MW).",
         "ogTitle": "Transmission and Generation Portfolio",
         "ogDescription": "Critical SIN assets across four states, with availability above 99.8%."
       },
       "hero": {
         "eyebrow": "Asset portfolio",
-        "titleLine1": "14 SPVs.",
+        "titleLine1": "14 concessions.",
         "titleLine2": "National scale.",
         "subtitle": "An integrated platform with high-voltage transmission and renewable wind generation, distributed across brownfield assets acquired with discipline between 2019 and 2025."
       },
@@ -595,7 +595,7 @@
         "body": "5 parks acquired in 2019 with 65 turbines and 136.5 MW of installed capacity in Bahia. Consistent operation with a 57% capacity factor and long-term PPA.",
         "imgAlt": "Babilônia wind farm",
         "stats": [
-          { "value": "136 MW", "label": "Capacity" },
+          { "value": "136.5 MW", "label": "Capacity" },
           { "value": "65", "label": "Turbines" },
           { "value": ">98%", "label": "Availability" },
           { "value": "R$202m", "label": "Revenue" }
