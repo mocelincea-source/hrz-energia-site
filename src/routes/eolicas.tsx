@@ -20,9 +20,9 @@ import { Reveal, Stagger, StaggerItem, HoverLift, Parallax } from "@/components/
 import i18n from "@/i18n/config";
 import raioBrand from "@/assets/raio-hrz.png";
 import babiloniaDayImg from "@/assets/babilonia-aerial-day.jpg";
-import aerialRow from "@/assets/babilonia/babilonia-aerial-row.jpg.asset.json";
-import aerialDusk from "@/assets/babilonia/babilonia-aerial-dusk.jpg.asset.json";
-import aerialSunset from "@/assets/babilonia/babilonia-aerial-sunset.jpg.asset.json";
+import complexMorroImg from "@/assets/Complexo-Morro-do-Chapéu.jpeg";
+import complexOurolandiaImg from "@/assets/Complexo-Ourolândia.jpeg";
+import complexVarzeaImg from "@/assets/Complexo-Várzea-Nova.jpeg";
 
 type KpiItem = { value: string; label: string };
 type ComplexItem = {
@@ -32,11 +32,17 @@ type ComplexItem = {
   descricao: string;
   destaques: string[];
 };
+type ComplexWithImage = ComplexItem & { image: string };
 type PilarItem = { title: string; text: string };
 
 const KPIS_ICONS = [Wind, Activity, Gauge, Sun, Leaf, ShieldCheck];
 const PILARES_ICONS = [Leaf, Sprout, Users, ShieldCheck];
-const COMPLEX_IMAGES = [aerialRow.url, aerialDusk.url, aerialSunset.url];
+
+const COMPLEX_IMAGES: Record<ComplexItem["id"], string> = {
+  morro: complexMorroImg,
+  ourolandia: complexOurolandiaImg,
+  varzea: complexVarzeaImg,
+};
 
 export const Route = createFileRoute("/eolicas")({
   head: () => ({
@@ -57,7 +63,10 @@ function EolicasPage() {
   const KPIS = kpisData.map((item, i) => ({ ...item, icon: KPIS_ICONS[i] }));
 
   const complexesData = t("segments.wind.complexesItems", { returnObjects: true }) as ComplexItem[];
-  const COMPLEXOS = complexesData.map((item, i) => ({ ...item, img: COMPLEX_IMAGES[i] }));
+  const COMPLEXOS: ComplexWithImage[] = complexesData.map((item) => ({
+    ...item,
+    image: COMPLEX_IMAGES[item.id] ?? complexMorroImg,
+  }));
 
   const pilaresData = t("segments.wind.pilaresItems", { returnObjects: true }) as PilarItem[];
   const PILARES = pilaresData.map((item, i) => ({ ...item, icon: PILARES_ICONS[i] }));
@@ -211,26 +220,36 @@ function EolicasPage() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="overflow-hidden rounded-3xl border border-border bg-card"
+                className="relative min-h-[480px] overflow-hidden rounded-3xl border border-white/10 shadow-xl"
               >
-                <div className="relative h-56 overflow-hidden">
-                  <img src={sel.img} alt={sel.nome} className="h-full w-full object-cover object-center" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-hrz-green-dark/95 via-hrz-green-dark/30 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-                    <p className="eyebrow text-white/90">{sel.municipio}</p>
-                    <h3 className="font-display mt-2 text-3xl font-bold">{sel.nome}</h3>
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: `url(${sel.image})` }}
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/50 to-black/40"
+                />
+                <div className="relative flex min-h-[480px] flex-col justify-between p-7 lg:p-8">
+                  <div>
+                    <p className="eyebrow text-white/90">
+                      <MapPin size={11} className="mr-1 inline" />
+                      {sel.municipio}
+                    </p>
+                    <h3 className="font-display mt-2 text-3xl font-bold text-white">{sel.nome}</h3>
                   </div>
-                </div>
-                <div className="space-y-5 p-7">
-                  <p className="text-sm leading-relaxed text-muted-foreground">{sel.descricao}</p>
-                  <ul className="space-y-2">
-                    {sel.destaques.map((d) => (
-                      <li key={d} className="flex items-start gap-3 text-sm text-foreground">
-                        <span className="mt-1 flex h-2 w-2 flex-none rounded-full bg-hrz-green" />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mt-8 space-y-5">
+                    <p className="text-sm leading-relaxed text-white/90">{sel.descricao}</p>
+                    <ul className="space-y-2">
+                      {sel.destaques.map((d) => (
+                        <li key={d} className="flex items-start gap-3 text-sm text-white/95">
+                          <span className="mt-1.5 flex h-2 w-2 flex-none rounded-full bg-hrz-green-vivid" />
+                          {d}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </motion.div>
             )}
