@@ -6,7 +6,7 @@ Meta título: HRZ Energia — Plataforma integrada de transmissão e geração
 Meta descrição: A HRZ Energia opera 2.403 ckm de linhas de transmissão e 136 MW de geração eólica no Brasil. Plataforma integrada controlada pela Actis.
 Hero
 Rigor na gestão. Consistência no retorno.
-CTAs: HRZ Transmissoras · Eólicas Babilônia
+CTAs: Transmissoras · Eólicas Babilônia
 Indicadores
 R$ 1bi+ — Receita anual combinada
 2.403 — ckm de linhas de transmissão
@@ -28,7 +28,7 @@ Geração
 Babilônia · 136 MW · 65 aerogeradores
 Cinco parques adquiridos em 2019 na Bahia, fator de capacidade de 57% e R$ 202m de receita anual.
 Acesso rápido — Os 2 segmentos do grupo
-HRZ Transmissoras — 9 concessões · 2.403 ckm de OHTL 500/230 kV · R$ 935m de RAP em 2026.
+Transmissoras — 9 concessões · 2.403 ckm de OHTL 500/230 kV · R$ 935m de RAP em 2026.
 Eólicas Babilônia — 136 MW · 65 aerogeradores · fator de capacidade de 57% na Bahia.
 Quem controla — Controlada pela Actis
 A Actis é uma gestora global de investimentos especializada em infraestrutura sustentável, com presença em mercados emergentes e foco em ativos de energia, infraestrutura digital e imobiliário de longo prazo.
@@ -73,7 +73,7 @@ Consolidação nacional
 Adição de duas novas concessões, reforçando a posição da HRZ como plataforma integrada e disciplinada no setor de transmissão brasileiro.
 2026 · Expansão — Transmissão
 Nona concessão e R$ 935m de RAP
-Com mais uma concessão, a HRZ Transmissoras alcança 9 SPEs, 2.403 ckm e R$ 935 milhões de RAP em 2026.
+Com mais uma concessão, a Transmissoras alcança 9 SPEs, 2.403 ckm e R$ 935 milhões de RAP em 2026.
 Missão
 Desenvolver e operar ativos de infraestrutura de energia com excelência operacional e disciplina de capital, gerando valor sustentável para acionistas, parceiros e sociedade.
 Visão
@@ -117,7 +117,7 @@ Estrutura societária — Controle Actis · Plataforma HRZ
 A HRZ Energia é controlada pela Actis, gestora global de investimentos em infraestrutura sustentável, com supervisão ativa do Global Sustainability Committee em Londres.
 Actis LLP — Controladora (Londres). AUM US$ 12,5 bi. Foco em infraestrutura sustentável.
 HRZ Energia — Holding (São Paulo). Plataforma Transmissão + Geração. Governança com conselho Actis.
-HRZ Transmissoras — 9 SPEs · 2.403 ckm · R$ 935m RAP 2026.
+Transmissoras — 9 SPEs · 2.403 ckm · R$ 935m RAP 2026.
 Eólicas Babilônia — 5 SPEs · 136 MW · 65 aerogeradores · 57% fator de capacidade.
 
 ESG (/esg)
