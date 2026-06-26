@@ -592,7 +592,8 @@
           { "value": "29", "label": "Subestações" },
           { "value": "2.403", "label": "ckm de linhas" },
           { "value": "R$ 935m", "label": "RAP 2026" }
-        ]
+        ],
+        "cta": "Explorar ativos de Transmissão"
       },
       "generation": {
         "heading": "Geração — Eólicas Babilônia",
@@ -603,7 +604,8 @@
           { "value": "65", "label": "Aerogeradores" },
           { "value": ">98%", "label": "Disponibilidade" },
           { "value": "R$ 202m", "label": "Renda" }
-        ]
+        ],
+        "cta": "Explorar ativos de Geração"
       },
       "transmissionAssets": [
         { "code": "MGTE", "name": "Horizon MG / SP", "info": "OHTL 500 kV" },
@@ -842,12 +844,7 @@
     "mascoteAlt": "Mascote HRZ acenando",
     "leadership": {
       "eyebrow": "Liderança HRZ",
-      "heading": "Fale diretamente com a liderança da HRZ.",
-      "channel": {
-        "title": "Contato HRZ",
-        "phone": "+55 11 99922-3631",
-        "email": "contato@hrztransmissoras.com.br"
-      }
+      "heading": "Fale diretamente com a liderança da HRZ."
     },
     "careers": {
       "eyebrow": "Carreiras",

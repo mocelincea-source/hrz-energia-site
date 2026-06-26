@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
@@ -82,6 +83,13 @@ function PortfolioPage() {
                   </StaggerItem>
                 ))}
               </Stagger>
+              <Link
+                to="/transmissoras"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-50"
+              >
+                {t("segments.portfolio.transmission.cta")}
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </Link>
             </Reveal>
             <div className="p-2">
               <BrazilMapAnimated />
@@ -157,6 +165,13 @@ function PortfolioPage() {
                   </StaggerItem>
                 ))}
               </Stagger>
+              <Link
+                to="/eolicas"
+                className="group mt-8 inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-medium text-white transition-colors hover:bg-white/10"
+              >
+                {t("segments.portfolio.generation.cta")}
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </Link>
             </Reveal>
             <HoverLift className="relative h-[420px] overflow-hidden rounded-3xl">
               <img

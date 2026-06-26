@@ -588,7 +588,8 @@
           { "value": "29", "label": "Substations" },
           { "value": "2,403", "label": "ckm of lines" },
           { "value": "R$935m", "label": "RAP 2026" }
-        ]
+        ],
+        "cta": "Explore transmission assets"
       },
       "generation": {
         "heading": "Generation — Babilônia Wind",
@@ -599,7 +600,8 @@
           { "value": "65", "label": "Turbines" },
           { "value": ">98%", "label": "Availability" },
           { "value": "R$202m", "label": "Revenue" }
-        ]
+        ],
+        "cta": "Explore generation assets"
       },
       "transmissionAssets": [
         { "code": "MGTE", "name": "Horizon MG / SP", "info": "500 kV OHTL" },
@@ -842,12 +844,7 @@
     "mascoteAlt": "HRZ mascot waving",
     "leadership": {
       "eyebrow": "HRZ Leadership",
-      "heading": "Speak directly with HRZ leadership.",
-      "channel": {
-        "title": "HRZ Contact",
-        "phone": "+55 11 99922-3631",
-        "email": "contato@hrztransmissoras.com.br"
-      }
+      "heading": "Speak directly with HRZ leadership."
     },
     "careers": {
       "eyebrow": "Careers",

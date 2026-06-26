@@ -9,13 +9,10 @@ import { BoltDecor } from "@/components/site/BoltDecor";
 import { Reveal, Stagger, StaggerItem, easeOut } from "@/components/site/motion";
 import i18n from "@/i18n/config";
 import raioSolid from "@/assets/raio-solid-gradient.png";
-import eduardoImg from "@/assets/team/eduardo-brito.webp";
-import fernandoImg from "@/assets/team/fernando-oliveira.webp";
-import italoImg from "@/assets/team/italo-david.webp";
-import julianaImg from "@/assets/team/juliana-scalzo.webp";
-import tiagoImg from "@/assets/team/tiago-cacozzi.webp";
-
-const LEADERSHIP_IMAGES = [eduardoImg, fernandoImg, julianaImg, italoImg, tiagoImg];
+import {
+  LEADERSHIP_PORTRAITS,
+  LEADERSHIP_PORTRAIT_SIZES,
+} from "@/assets/team/leadership-portraits";
 
 type TimelineItem = {
   year: string;
@@ -53,7 +50,7 @@ function SobrePage() {
   const leaderItems = t("about.leadership.items", { returnObjects: true }) as LeaderItem[];
   const LEADERSHIP = leaderItems.map((item, i) => ({
     ...item,
-    img: LEADERSHIP_IMAGES[i],
+    portrait: LEADERSHIP_PORTRAITS[i],
   }));
 
   return (
@@ -194,11 +191,23 @@ function SobrePage() {
             {LEADERSHIP.map((l) => (
               <StaggerItem key={l.name}>
                 <div className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-hrz-electric">
-                  <div className="overflow-hidden">
+                  <div
+                    className="overflow-hidden bg-slate-50"
+                    style={{
+                      backgroundImage: `url(${l.portrait.blurSrc})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center top",
+                    }}
+                  >
                     <img
-                      src={l.img}
+                      src={l.portrait.src}
+                      srcSet={l.portrait.srcSet}
+                      sizes={LEADERSHIP_PORTRAIT_SIZES}
+                      width={l.portrait.width}
+                      height={l.portrait.height}
                       alt={t("about.leadership.portraitAlt", { name: l.name })}
                       loading="lazy"
+                      decoding="async"
                       className="aspect-[3/4] w-full rounded-t-2xl rounded-b-none object-cover object-center"
                     />
                   </div>

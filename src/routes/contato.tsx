@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Mail, MapPin, Briefcase, Upload, Linkedin, CheckCircle2, Phone } from "lucide-react";
+import { Mail, MapPin, Briefcase, Upload, Linkedin, CheckCircle2, Phone, User } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
 import i18n from "@/i18n/config";
 import mascoteOi from "@/assets/mascote/oi.png";
-import { Float, Reveal } from "@/components/site/motion";
+import { Float, Reveal, Stagger, StaggerItem } from "@/components/site/motion";
 import { BoltDecor } from "@/components/site/BoltDecor";
 
 export const Route = createFileRoute("/contato")({
@@ -150,11 +150,29 @@ function ContatoPage() {
   );
 }
 
-type LeadershipChannel = { title: string; phone: string; email: string };
+type LeadershipContact = {
+  name: string;
+  role: string;
+  email: string;
+  phone?: string;
+};
+
+const LEADERSHIP_CONTACTS: LeadershipContact[] = [
+  {
+    name: "Contato HRZ",
+    role: "Canal Institucional",
+    email: "contato@hrztransmissoras.com.br",
+    phone: "+55 11 99922-3631",
+  },
+  { name: "Eduardo Brito", role: "CEO", email: "eduardo.brito@hrztransmissoras.com.br" },
+  { name: "Fernando Oliveira", role: "CFO", email: "fernando.oliveira@hrztransmissoras.com.br" },
+  { name: "Ítalo Augusto David", role: "COO", email: "italo.david@hrztransmissoras.com.br" },
+  { name: "Tiago Cacozzi", role: "QHSE", email: "tiago.cacozzi@hrztransmissoras.com.br" },
+  { name: "Juliana Scalzo", role: "CLO", email: "juliana.scalzo@hrztransmissoras.com.br" },
+];
 
 function LiderancaSection() {
   const { t } = useTranslation();
-  const channel = t("contact.leadership.channel", { returnObjects: true }) as LeadershipChannel;
 
   return (
     <section className="relative overflow-hidden py-24">
@@ -167,41 +185,56 @@ function LiderancaSection() {
           </h2>
         </Reveal>
 
-        <Reveal className="mx-auto mt-10 max-w-md">
-          <div className="group relative flex flex-col overflow-hidden rounded-2xl border border-border/60 bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-hrz-electric/40 hover:shadow-xl">
-            <span className="pointer-events-none absolute inset-y-0 left-0 w-[3px] origin-top scale-y-0 bg-gradient-to-b from-hrz-electric to-hrz-deep transition-transform duration-500 group-hover:scale-y-100" />
-
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-hrz-deep to-hrz-electric text-white shadow-md ring-1 ring-hrz-electric/30">
-                <Phone size={20} />
-              </div>
-              <div>
-                <p className="font-display text-base font-bold leading-tight text-foreground">
-                  {channel.title}
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 space-y-3">
-              <a
-                href={`tel:${channel.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-3 text-sm text-muted-foreground transition hover:text-foreground"
-              >
-                <Phone size={14} className="shrink-0 text-hrz-electric" />
-                {channel.phone}
-              </a>
-              <a
-                href={`mailto:${channel.email}`}
-                className="flex items-center gap-3 break-all text-sm text-muted-foreground transition hover:text-foreground"
-              >
-                <Mail size={14} className="shrink-0 text-hrz-electric" />
-                {channel.email}
-              </a>
-            </div>
-          </div>
-        </Reveal>
+        <Stagger className="mx-auto mt-10 grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {LEADERSHIP_CONTACTS.map((contact) => (
+            <StaggerItem key={contact.email}>
+              <LeadershipContactCard contact={contact} />
+            </StaggerItem>
+          ))}
+        </Stagger>
       </div>
     </section>
+  );
+}
+
+function LeadershipContactCard({ contact }: { contact: LeadershipContact }) {
+  const AvatarIcon = contact.phone ? Phone : User;
+
+  return (
+    <div className="group relative flex w-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-hrz-electric/40 hover:shadow-xl">
+      <span className="pointer-events-none absolute inset-y-0 left-0 w-[3px] origin-top scale-y-0 bg-gradient-to-b from-hrz-electric to-hrz-deep transition-transform duration-500 group-hover:scale-y-100" />
+
+      <div className="flex items-center gap-4">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-hrz-deep to-hrz-electric text-white shadow-md ring-1 ring-hrz-electric/30 transition-transform duration-300 group-hover:scale-110">
+          <AvatarIcon size={22} />
+        </div>
+        <div className="min-w-0 flex flex-col">
+          <p className="font-display text-base font-bold leading-tight text-foreground">{contact.name}</p>
+          <p className="mt-0.5 text-xs font-semibold uppercase tracking-wider text-hrz-electric">
+            {contact.role}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-6 space-y-3">
+        {contact.phone && (
+          <a
+            href={`tel:${contact.phone.replace(/\s/g, "")}`}
+            className="flex min-w-0 items-center gap-3 text-sm text-muted-foreground transition hover:text-foreground"
+          >
+            <Phone size={14} className="shrink-0 text-hrz-electric" />
+            <span>{contact.phone}</span>
+          </a>
+        )}
+        <a
+          href={`mailto:${contact.email}`}
+          className="flex min-w-0 items-center gap-3 text-sm text-muted-foreground transition hover:text-foreground"
+        >
+          <Mail size={14} className="shrink-0 text-hrz-electric" />
+          <span className="truncate">{contact.email}</span>
+        </a>
+      </div>
+    </div>
   );
 }
 
