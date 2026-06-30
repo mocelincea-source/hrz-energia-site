@@ -261,4 +261,4 @@ Mensagem
 
 Rodapé
 Plataforma integrada de energia controlada pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica.
-© HRZ Energia. Todos os direitos reservados. Controlada pela Actis · Global Sustainability Committee.!!
+© HRZ Energia. Todos os direitos reservados. Controlada pela Actis · Global Sustainability Committee.!!!!
