@@ -19,21 +19,24 @@ export function Reveal({
   y = 30,
   className,
   as = "div",
+  viewportMargin,
 }: {
   children: React.ReactNode;
   delay?: number;
   y?: number;
   className?: string;
   as?: "div" | "section" | "span" | "li" | "header";
+  viewportMargin?: string;
 }) {
   const MotionTag = motion[as] as typeof motion.div;
   return (
     <MotionTag
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.15, margin: viewportMargin ?? "0px" }}
       transition={{ duration: 0.85, delay, ease: easeOut }}
       className={className}
+      style={{ willChange: "opacity, transform" }}
     >
       {children}
     </MotionTag>
@@ -48,15 +51,17 @@ export function Stagger({
   delayChildren = 0.08,
   staggerChildren = 0.11,
   fallbackDelay,
+  viewportMargin,
 }: {
   children: React.ReactNode;
   className?: string;
   delayChildren?: number;
   staggerChildren?: number;
   fallbackDelay?: number;
+  viewportMargin?: string;
 }) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const inView = useInView(ref, { once: true, amount: 0.15 });
+  const inView = useInView(ref, { once: true, amount: 0.15, margin: viewportMargin ?? "0px" });
   const [forced, setForced] = useState(false);
 
   useEffect(() => {
@@ -96,7 +101,7 @@ export function StaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div variants={staggerItem} className={className}>
+    <motion.div variants={staggerItem} className={className ? `will-change-transform will-change-opacity ${className}` : "will-change-transform will-change-opacity"}>
       {children}
     </motion.div>
   );

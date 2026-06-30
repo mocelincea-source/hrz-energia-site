@@ -629,64 +629,121 @@
     },
     "hero": {
       "eyebrow": "Estratégia ESG",
-      "titleLine1": "Mais que energia,",
-      "titleLine2": "geramos transformação.",
-      "subtitle": "Estamos presentes onde importa: perto das comunidades, ouvindo, colaborando e gerando impacto positivo."
+      "title": "Infraestrutura responsável. Valor para as próximas gerações.",
+      "subtitle": "Na HRZ, sustentabilidade é a forma como planejamos, operamos e evoluímos nossos ativos todos os dias.",
+      "cta": "Conheça nossa atuação"
+    },
+    "valueChain": {
+      "eyebrow": "Como criamos valor",
+      "title": "Nossa forma de criar valor sustentável.",
+      "description": "Integramos pessoas, processos, tecnologia e relacionamento para gerar impacto positivo e valor de longo prazo.",
+      "link": "Saiba mais sobre nossa estratégia",
+      "steps": [
+        { "label": "Ativos de infraestrutura" },
+        { "label": "Excelência operacional" },
+        { "label": "Segurança e qualidade" },
+        { "label": "Resiliência climática" },
+        { "label": "Relacionamento com comunidades" },
+        { "label": "Governança e compliance" },
+        { "label": "Valor sustentável" }
+      ]
     },
     "metrics": {
       "people": "pessoas impactadas",
       "communities": "comunidades atendidas",
       "projects": "projetos ativos"
     },
-    "social": {
-      "eyebrow": "Responsabilidade Social",
-      "heading": "Impacto real nas comunidades onde operamos."
+    "socialProjects": {
+      "eyebrow": "Projetos sociais",
+      "heading": "Transformamos energia em desenvolvimento.",
+      "description": "Nossos projetos fortalecem comunidades, geram oportunidades e deixam um legado positivo por onde operamos.",
+      "cta": "Conheça todos os projetos",
+      "link": "Ver detalhes",
+      "items": [
+        {
+          "tag": "Infraestrutura",
+          "title": "Projeto Mutura",
+          "description": "Melhorias de infraestrutura comunitária nas regiões onde operamos, ampliando acesso a serviços essenciais e qualidade de vida."
+        },
+        {
+          "tag": "Desenvolvimento",
+          "title": "Projeto Laranjeiras",
+          "description": "Programas de capacitação e desenvolvimento local que fortalecem vínculos com as comunidades ao longo das nossas linhas."
+        },
+        {
+          "tag": "Geração de Renda",
+          "title": "Casa de Farinha",
+          "description": "Iniciativa de geração de renda que promove autonomia econômica e oportunidades sustentáveis para famílias locais."
+        }
+      ]
     },
-    "gallery": [
-      { "label": "Infraestrutura" },
-      { "label": "Comunidade" },
-      { "label": "Capacitação e Educação" },
-      { "label": "Geração de Renda" },
-      { "label": "Sustentabilidade" },
-      { "label": "Juntos Somos Mais Fortes" }
-    ],
-    "pillars": [
-      {
-        "title": "Ambiental",
-        "items": [
-          "Geração 100% eólica 136,5 MW de energia renovável",
-          "Transmissão de baixo impacto, sem emissões operacionais",
-          "Planos de contingência climática e monitoramento 24/7",
-          "Programas de prevenção de incêndios nas faixas de servidão"
-        ]
-      },
-      {
-        "title": "Social",
-        "items": [
-          "Zero acidentes com afastamento (LTI = 0) em todos os ativos",
-          "Engajamento com comunidades ao longo das linhas",
-          "Programas de outreach social e desenvolvimento local",
-          "Cadeia de fornecedores com requisitos de segurança e conduta"
-        ]
-      },
-      {
-        "title": "Governança",
-        "items": [
-          "Supervisão pelo Global Sustainability Committee da Actis",
-          "Comitê ESG com reporte trimestral Londres / São Paulo",
-          "Comunicação proativa com ANEEL e ONS",
-          "Compliance, risk management e transparência de decisão"
-        ]
-      }
-    ],
+    "pillars": {
+      "eyebrow": "Nossos pilares",
+      "heading": "Atuamos hoje para construir o amanhã.",
+      "link": "Saiba mais",
+      "items": [
+        {
+          "title": "Meio Ambiente",
+          "description": "Geração 100% eólica, transmissão de baixo impacto e planos de contingência climática com monitoramento contínuo dos nossos ativos."
+        },
+        {
+          "title": "Social",
+          "description": "Engajamento com comunidades, programas de desenvolvimento local e cadeia de fornecedores com requisitos rigorosos de segurança e conduta."
+        },
+        {
+          "title": "Governança",
+          "description": "Supervisão pelo Global Sustainability Committee da Actis, comitê ESG com reporte trimestral e comunicação proativa com reguladores."
+        },
+        {
+          "title": "Excelência Operacional",
+          "description": "Disponibilidade acima dos padrões regulatórios, gestão rigorosa de passivos e melhoria contínua em todos os ativos da plataforma."
+        }
+      ]
+    },
+    "smartEsg": {
+      "eyebrow": "ESG Inteligente",
+      "title": "Tecnologia e dados para decisões mais seguras e sustentáveis.",
+      "description": "Nossa plataforma digital integra informações em tempo real para uma gestão mais eficiente, preditiva e transparente.",
+      "cta": "Conheça nossa plataforma digital",
+      "dashboardAlt": "Painel integrado de indicadores ESG",
+      "cards": [
+        {
+          "title": "Monitoramento Climático",
+          "description": "Acompanhamento em tempo real de condições meteorológicas e riscos climáticos nos ativos."
+        },
+        {
+          "title": "Gestão Ambiental",
+          "description": "Controle de impactos, licenças e programas de mitigação ambiental integrados."
+        },
+        {
+          "title": "Indicadores Integrados",
+          "description": "KPIs ESG consolidados em um único painel para decisões baseadas em dados."
+        },
+        {
+          "title": "Segurança",
+          "description": "Monitoramento de incidentes, conformidade e cultura de segurança operacional."
+        },
+        {
+          "title": "Gestão de Documentos",
+          "description": "Repositório centralizado de relatórios, licenças e evidências de compliance."
+        },
+        {
+          "title": "Gestão de Ativos",
+          "description": "Visibilidade completa do ciclo de vida e desempenho de cada ativo da plataforma."
+        }
+      ]
+    },
     "values": {
       "eyebrow": "Nossos Valores",
-      "heading1": "Mais que projetos,",
-      "heading2": "construímos relações.",
-      "tagline": "Mais que presença, deixamos legado.",
+      "taglineLine1": "Mais que presença,",
+      "taglineLine2": "deixamos legado.",
       "items": [
         { "title": "Respeito", "text": "Valorizamos as pessoas e a diversidade." },
         { "title": "Integridade", "text": "Agimos com ética, transparência e responsabilidade." },
+        {
+          "title": "Segurança",
+          "text": "A vida em primeiro lugar. Nenhum resultado é mais importante."
+        },
         {
           "title": "Sustentabilidade",
           "text": "Promovemos ações que geram impacto positivo e duradouro."
@@ -694,26 +751,63 @@
         {
           "title": "Colaboração",
           "text": "Acreditamos no trabalho conjunto para transformar realidades."
+        },
+        {
+          "title": "Excelência",
+          "text": "Buscamos evolução contínua e entregamos o nosso melhor."
         }
       ]
     },
-    "highlights": {
-      "eyebrow": "Destaques operacionais",
-      "heading": "Resiliência, segurança e melhoria contínua.",
+    "indicators": {
+      "eyebrow": "Indicadores ESG",
+      "heading": "Números que refletem nosso compromisso.",
+      "link": "Ver todos os indicadores",
       "items": [
         {
-          "title": "Resiliência climática",
-          "text": "Balancins da OHTL SP-MG 500 kV integralmente substituídos. Monitoramento 24/7 de condições meteorológicas e incêndios. Revisão completa de planos de contingência."
+          "category": "Meio Ambiente",
+          "value": "136,5 MW",
+          "label": "Geração 100% renovável"
         },
         {
-          "title": "Segurança das instalações",
-          "text": "Membro do Comitê ABRATE. Coordenação com forças de segurança federais para prevenção de ataques. Engajamento comunitário e prevenção de incêndios."
+          "category": "Meio Ambiente",
+          "value": "24/7",
+          "label": "Monitoramento climático"
         },
         {
-          "title": "Melhoria contínua",
-          "text": "Resolução ativa de passivos herdados de proprietários anteriores. Gestão operacional rigorosa, rastreabilidade e supervisão de equipes de campo."
+          "category": "Pessoas",
+          "value": "Zero",
+          "label": "Acidentes com afastamento"
+        },
+        {
+          "category": "Pessoas",
+          "value": "+500",
+          "label": "Pessoas impactadas pelos projetos"
+        },
+        {
+          "category": "Governança",
+          "value": "100%",
+          "label": "Conformidade monitorada"
+        },
+        {
+          "category": "Governança",
+          "value": "Comitê ESG",
+          "label": "Reuniões trimestrais"
         }
       ]
+    },
+    "engagement": {
+      "opportunities": {
+        "eyebrow": "Oportunidades",
+        "title": "Tem um projeto? Vamos construir juntos.",
+        "description": "Possui um ativo de transmissão, geração renovável ou outra oportunidade? Fale conosco.",
+        "cta": "Enviar projeto"
+      },
+      "innovation": {
+        "eyebrow": "Inovação",
+        "title": "Tem uma solução inovadora?",
+        "description": "Compartilhe sua tecnologia ou solução para tornar o setor elétrico mais eficiente, seguro e sustentável.",
+        "cta": "Compartilhar solução"
+      }
     }
   },
   "investors": {
@@ -992,28 +1086,26 @@
   },
   "footer": {
     "logoAlt": "HRZ energia",
-    "tagline": "Plataforma integrada de energia controlada pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica.",
     "linkedinLabel": "LinkedIn HRZ Energia",
-    "companyCol": {
-      "title": "Empresa",
-      "about": "Quem somos",
-      "segments": "Segmentos",
-      "transmission": "Transmissoras",
-      "wind": "Eólicas",
-      "esg": "Estratégia ESG",
-      "ethics": "Ética e Conduta"
+    "socialLabel": "Compartilhar HRZ Energia",
+    "cta": {
+      "title": "Juntos, construímos um futuro mais sustentável.",
+      "subtitle": "Fale com nosso time e saiba como a HRZ pode ser parceira da sua próxima oportunidade.",
+      "button": "Fale com a HRZ"
     },
-    "investorsCol": {
-      "title": "Investidores",
-      "overview": "Visão geral",
-      "performance": "Desempenho",
-      "governance": "Governança"
+    "brand": {
+      "title": "HRZ Energia",
+      "description": "Plataforma integrada de energia controlada pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica."
     },
-    "contactCol": {
+    "navigation": {
+      "title": "Navegação"
+    },
+    "contact": {
       "title": "Contato",
-      "location": "São Paulo · Brasil",
+      "location": "São Paulo - Brasil",
       "email": "contato@hrzenergia.com.br",
-      "cta": "Fale com a HRZ"
+      "phone": "+55 11 99922-3631",
+      "button": "Fale com a HRZ"
     },
     "copyright": "© {{year}} HRZ Energia. Todos os direitos reservados.",
     "controlled": "Controlada pela Actis · Global Sustainability Committee"
