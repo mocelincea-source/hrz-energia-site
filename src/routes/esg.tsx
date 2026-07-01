@@ -191,13 +191,13 @@ function EsgPage() {
             <Stagger
               fallbackDelay={500}
               viewportMargin={VIEWPORT_TRIGGER}
-              className="lg:col-span-8 xl:col-span-9 w-full flex flex-wrap lg:flex-nowrap justify-start lg:justify-between items-start gap-y-10 lg:gap-x-1"
+              className="lg:col-span-8 xl:col-span-9 w-full grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-4 lg:flex lg:flex-nowrap lg:justify-between lg:gap-x-1"
             >
               {valueChainSteps.map((step, i) => {
                 const StepIcon = VALUE_CHAIN_ICONS[i];
                 return (
                   <Fragment key={step.label}>
-                    <StaggerItem className="flex-1 min-w-0 max-w-[140px]">
+                    <StaggerItem className="w-full">
                       <ValueChainItem icon={StepIcon} label={step.label} />
                     </StaggerItem>
                     {i < valueChainSteps.length - 1 && (
@@ -725,11 +725,11 @@ function SmartEsgCard({
 
 function ValueChainItem({ icon: Icon, label }: { icon: LucideIcon; label: string }) {
   return (
-    <div className="group flex max-w-[150px] flex-1 flex-col items-center text-center min-w-[110px] lg:min-w-0">
+    <div className="group flex flex-col items-center text-center mx-auto w-full lg:w-auto lg:flex-1 lg:min-w-0 lg:max-w-[140px]">
       <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-slate-100 bg-slate-50 text-hrz-deep shadow-sm transition-transform duration-300 group-hover:-translate-y-1 lg:h-20 lg:w-20">
         <Icon className="h-6 w-6 lg:h-7 lg:w-7" strokeWidth={1.5} />
       </div>
-      <p className="text-xs font-semibold leading-tight text-slate-700 lg:text-sm">{label}</p>
+      <p className="break-words hyphens-auto w-full px-1 text-xs font-semibold leading-tight text-slate-700 lg:text-sm">{label}</p>
     </div>
   );
 }
