@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { ArrowRight, Linkedin, Share2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import footerBg from "@/assets/nuvens-footer.jpg";
@@ -7,7 +7,9 @@ const NAV_LINKS = [
   { to: "/", labelKey: "nav.home" },
   { to: "/sobre", labelKey: "nav.about" },
   { to: "/empresas", labelKey: "nav.segments" },
-  { to: "/esg", labelKey: "nav.esg", highlight: true },
+  { to: "/esg", labelKey: "nav.esg" },
+  { to: "/etica", labelKey: "nav.ethics" },
+  { to: "/investidores", labelKey: "nav.investors" },
   { to: "/portfolio", labelKey: "nav.portfolio" },
   { to: "/contato", labelKey: "nav.contact" },
 ] as const;
@@ -67,11 +69,7 @@ export function Footer() {
             <h3 className="text-base font-bold text-white">{t("footer.navigation.title")}</h3>
             <nav className="mt-4 flex flex-col gap-3 text-xs text-slate-400">
               {NAV_LINKS.map((item) => (
-                <FooterNavLink
-                  key={item.to}
-                  to={item.to}
-                  highlight={"highlight" in item && item.highlight}
-                >
+                <FooterNavLink key={item.to} to={item.to}>
                   {t(item.labelKey)}
                 </FooterNavLink>
               ))}
@@ -124,23 +122,18 @@ function FooterCtaButton({ label, className = "mt-6" }: { label: string; classNa
   );
 }
 
-function FooterNavLink({
-  to,
-  children,
-  highlight = false,
-}: {
-  to: string;
-  children: React.ReactNode;
-  highlight?: boolean;
-}) {
+function FooterNavLink({ to, children }: { to: string; children: React.ReactNode }) {
+  const { location } = useRouterState();
+  const isActive = location.pathname === to;
+
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <Link
       to={to as any}
       className={
-        highlight
-          ? "font-medium text-blue-400 transition hover:text-blue-300"
-          : "transition hover:text-white"
+        isActive
+          ? "font-semibold text-hrz-electric transition-colors"
+          : "text-white/70 transition-colors hover:text-white"
       }
     >
       {children}
