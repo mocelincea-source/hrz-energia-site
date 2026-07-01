@@ -160,20 +160,18 @@ function EsgPage() {
       {/* Como criamos valor — value chain */}
       <section id="como-criamos-valor" className="bg-slate-50">
         <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mb-16 grid grid-cols-1 items-end gap-8 lg:grid-cols-2 lg:gap-12">
-            <div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center w-full">
+            <div className="lg:col-span-4 xl:col-span-3 flex flex-col items-start text-left gap-5">
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
                 <p className="eyebrow text-hrz-green">{t("esg.valueChain.eyebrow")}</p>
               </Reveal>
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
-                <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
+                <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
                   {t("esg.valueChain.title")}
                 </h2>
               </Reveal>
-            </div>
-            <div>
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
-                <p className="mb-6 text-lg text-slate-600">{t("esg.valueChain.description")}</p>
+                <p className="text-sm lg:text-base text-slate-600">{t("esg.valueChain.description")}</p>
               </Reveal>
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
                 <a
@@ -189,32 +187,32 @@ function EsgPage() {
                 </a>
               </Reveal>
             </div>
-          </div>
 
-          <Stagger
-            fallbackDelay={500}
-            viewportMargin={VIEWPORT_TRIGGER}
-            className="flex w-full flex-wrap items-start justify-center gap-y-10 lg:flex-nowrap lg:justify-between lg:gap-x-2"
-          >
-            {valueChainSteps.map((step, i) => {
-              const StepIcon = VALUE_CHAIN_ICONS[i];
-              return (
-                <Fragment key={step.label}>
-                  <StaggerItem className="flex min-w-[110px] flex-1 lg:min-w-0">
-                    <ValueChainItem icon={StepIcon} label={step.label} />
-                  </StaggerItem>
-                  {i < valueChainSteps.length - 1 && (
-                    <span
-                      aria-hidden
-                      className="hidden flex-shrink-0 items-start justify-center px-1 pt-8 text-slate-300 lg:flex"
-                    >
-                      <ChevronRight size={16} strokeWidth={1.5} />
-                    </span>
-                  )}
-                </Fragment>
-              );
-            })}
-          </Stagger>
+            <Stagger
+              fallbackDelay={500}
+              viewportMargin={VIEWPORT_TRIGGER}
+              className="lg:col-span-8 xl:col-span-9 w-full flex flex-wrap lg:flex-nowrap justify-start lg:justify-between items-start gap-y-10 lg:gap-x-1"
+            >
+              {valueChainSteps.map((step, i) => {
+                const StepIcon = VALUE_CHAIN_ICONS[i];
+                return (
+                  <Fragment key={step.label}>
+                    <StaggerItem className="flex-1 min-w-0 max-w-[140px]">
+                      <ValueChainItem icon={StepIcon} label={step.label} />
+                    </StaggerItem>
+                    {i < valueChainSteps.length - 1 && (
+                      <span
+                        aria-hidden
+                        className="hidden flex-shrink-0 items-start justify-center px-1 pt-8 text-slate-300 lg:flex"
+                      >
+                        <ChevronRight size={16} strokeWidth={1.5} />
+                      </span>
+                    )}
+                  </Fragment>
+                );
+              })}
+            </Stagger>
+          </div>
         </div>
       </section>
 
