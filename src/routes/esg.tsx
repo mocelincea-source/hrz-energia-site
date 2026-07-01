@@ -118,9 +118,12 @@ function EsgPage() {
           aria-hidden
           fetchPriority="high"
           decoding="sync"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-right-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-gradient-to-r from-hrz-deep/90 via-hrz-deep/50 to-transparent"
+        />
 
         <div className="container-hrz relative z-10 py-32 lg:py-40">
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
@@ -155,54 +158,58 @@ function EsgPage() {
       </section>
 
       {/* Como criamos valor — value chain */}
-      <section id="como-criamos-valor" className="bg-slate-50 py-24">
-        <div className="container-hrz grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center lg:gap-16">
-          <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
-            <p className="eyebrow text-hrz-green">{t("esg.valueChain.eyebrow")}</p>
-          </Reveal>
-          <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
-            <h2 className="font-display mt-4 text-3xl leading-tight tracking-tight text-foreground lg:text-4xl">
-              {t("esg.valueChain.title")}
-            </h2>
-          </Reveal>
-          <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">
-              {t("esg.valueChain.description")}
-            </p>
-          </Reveal>
-          <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
-            <a
-              href="#esg-pillars"
-              className="group mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-hrz-green transition-colors hover:underline"
-            >
-              {t("esg.valueChain.link")}
-              <ArrowRight
-                size={14}
-                strokeWidth={1.75}
-                className={`transition-transform duration-300 ease-out ${GPU_LAYER} group-hover:translate-x-0.5`}
-              />
-            </a>
-          </Reveal>
+      <section id="como-criamos-valor" className="bg-slate-50">
+        <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <div className="mb-16 grid grid-cols-1 items-end gap-8 lg:grid-cols-2 lg:gap-12">
+            <div>
+              <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
+                <p className="eyebrow text-hrz-green">{t("esg.valueChain.eyebrow")}</p>
+              </Reveal>
+              <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
+                <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
+                  {t("esg.valueChain.title")}
+                </h2>
+              </Reveal>
+            </div>
+            <div>
+              <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
+                <p className="mb-6 text-lg text-slate-600">{t("esg.valueChain.description")}</p>
+              </Reveal>
+              <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
+                <a
+                  href="#esg-pillars"
+                  className="group inline-flex items-center gap-1.5 text-sm font-medium text-hrz-green transition-colors hover:underline"
+                >
+                  {t("esg.valueChain.link")}
+                  <ArrowRight
+                    size={14}
+                    strokeWidth={1.75}
+                    className={`transition-transform duration-300 ease-out ${GPU_LAYER} group-hover:translate-x-0.5`}
+                  />
+                </a>
+              </Reveal>
+            </div>
+          </div>
 
           <Stagger
             fallbackDelay={500}
             viewportMargin={VIEWPORT_TRIGGER}
-            className="flex flex-wrap items-start justify-center gap-4 lg:flex-nowrap lg:justify-end lg:gap-6"
+            className="flex w-full flex-wrap items-start justify-center gap-y-10 lg:flex-nowrap lg:justify-between lg:gap-x-2"
           >
             {valueChainSteps.map((step, i) => {
               const StepIcon = VALUE_CHAIN_ICONS[i];
               return (
                 <Fragment key={step.label}>
-                  <StaggerItem>
+                  <StaggerItem className="flex min-w-[110px] flex-1 lg:min-w-0">
                     <ValueChainItem icon={StepIcon} label={step.label} />
                   </StaggerItem>
                   {i < valueChainSteps.length - 1 && (
-                    <ChevronRight
-                      size={16}
-                      strokeWidth={1.5}
+                    <span
                       aria-hidden
-                      className="mt-3 hidden shrink-0 text-gray-300 lg:block"
-                    />
+                      className="hidden flex-shrink-0 items-start justify-center px-1 pt-8 text-slate-300 lg:flex"
+                    >
+                      <ChevronRight size={16} strokeWidth={1.5} />
+                    </span>
                   )}
                 </Fragment>
               );
@@ -291,7 +298,7 @@ function EsgPage() {
             </StaggerItem>
 
             {/* Bloco 2 — Dashboard */}
-            <StaggerItem className="relative col-span-1 flex w-full items-center justify-center lg:col-span-5">
+            <StaggerItem className="relative col-span-1 flex w-full items-center justify-center lg:col-span-4">
               <img
                 src={dashboardEsgImg}
                 alt={t("esg.smartEsg.dashboardAlt")}
@@ -302,12 +309,12 @@ function EsgPage() {
             </StaggerItem>
 
             {/* Bloco 3 — Grid de cartões menores */}
-            <StaggerItem className="col-span-1 lg:col-span-4">
+            <StaggerItem className="col-span-1 lg:col-span-5">
               <Stagger
                 fallbackDelay={500}
                 viewportMargin={VIEWPORT_TRIGGER}
                 staggerChildren={STAGGER_RHYTHM}
-                className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+                className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
               >
                 {smartEsgCards.map((card, i) => {
                   const CardIcon = SMART_ESG_CARD_ICONS[i];
@@ -710,23 +717,21 @@ function SmartEsgCard({
   description: string;
 }) {
   return (
-    <div className={`flex h-full flex-col rounded-xl border border-white/5 bg-white/[0.02] p-5 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05] ${GPU_LAYER}`}>
+    <div className={`flex h-full flex-col rounded-xl border border-white/5 bg-white/[0.02] p-4 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05] lg:p-5 ${GPU_LAYER}`}>
       <Icon size={22} strokeWidth={1.5} className="text-hrz-green" />
-      <h3 className="mb-2 font-semibold text-white">{title}</h3>
-      <p className="text-xs leading-relaxed text-slate-400">{description}</p>
+      <h3 className="mb-2 text-sm font-semibold leading-tight text-white lg:text-base">{title}</h3>
+      <p className="text-[11px] leading-relaxed text-slate-400 lg:text-xs">{description}</p>
     </div>
   );
 }
 
 function ValueChainItem({ icon: Icon, label }: { icon: LucideIcon; label: string }) {
   return (
-    <div className="group flex w-[88px] flex-col items-center gap-2.5 sm:w-[100px]">
-      <div className={`flex h-10 w-10 items-center justify-center rounded-full border border-foreground/20 text-foreground transition-all duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-hrz-green group-hover:text-hrz-green ${GPU_LAYER}`}>
-        <Icon size={20} strokeWidth={1.5} />
+    <div className="group flex max-w-[150px] flex-1 flex-col items-center text-center min-w-[110px] lg:min-w-0">
+      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-slate-100 bg-slate-50 text-hrz-deep shadow-sm transition-transform duration-300 group-hover:-translate-y-1 lg:h-20 lg:w-20">
+        <Icon className="h-6 w-6 lg:h-7 lg:w-7" strokeWidth={1.5} />
       </div>
-      <p className="max-w-[100px] text-center text-[10px] font-semibold leading-tight text-gray-700 md:text-xs">
-        {label}
-      </p>
+      <p className="text-xs font-semibold leading-tight text-slate-700 lg:text-sm">{label}</p>
     </div>
   );
 }
