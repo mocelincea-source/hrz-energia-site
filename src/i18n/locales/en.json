@@ -709,27 +709,27 @@
       "cards": [
         {
           "title": "Climate Monitoring",
-          "description": "Real-time tracking of weather conditions and climate risks across assets."
+          "description": "24/7 monitoring of weather conditions and alerts."
         },
         {
           "title": "Environmental Management",
-          "description": "Integrated control of impacts, permits and environmental mitigation programs."
-        },
-        {
-          "title": "Integrated Indicators",
-          "description": "Consolidated ESG KPIs in a single dashboard for data-driven decisions."
-        },
-        {
-          "title": "Safety",
-          "description": "Incident monitoring, compliance and operational safety culture."
+          "description": "Control of permits, conditions and environmental obligations."
         },
         {
           "title": "Document Management",
-          "description": "Centralized repository for reports, permits and compliance evidence."
+          "description": "Digital, organized and centralized processes."
+        },
+        {
+          "title": "Integrated Indicators",
+          "description": "Real-time dashboards and KPIs for strategic decisions."
+        },
+        {
+          "title": "Safety",
+          "description": "Safety indicators, Safety Walks and field leadership."
         },
         {
           "title": "Asset Management",
-          "description": "Full visibility into the lifecycle and performance of every platform asset."
+          "description": "Monitoring of asset performance and maintenance plans."
         }
       ]
     },

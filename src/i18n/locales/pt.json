@@ -643,7 +643,7 @@
         { "label": "Excelência operacional" },
         { "label": "Segurança e qualidade" },
         { "label": "Resiliência climática" },
-        { "label": "Relacionamento com comunidades" },
+        { "label": "Relacionamento\ncom comunidades" },
         { "label": "Governança e compliance" },
         { "label": "Valor sustentável" }
       ]
@@ -663,17 +663,17 @@
         {
           "tag": "Infraestrutura",
           "title": "Projeto Mutura",
-          "description": "Melhorias de infraestrutura comunitária nas regiões onde operamos, ampliando acesso a serviços essenciais e qualidade de vida."
+          "description": "Construção de casa de farinha comunitária para fortalecer a produção local e gerar renda."
         },
         {
           "tag": "Desenvolvimento",
           "title": "Projeto Laranjeiras",
-          "description": "Programas de capacitação e desenvolvimento local que fortalecem vínculos com as comunidades ao longo das nossas linhas."
+          "description": "Ações de capacitação, educação e geração de oportunidade para a comunidade."
         },
         {
           "tag": "Geração de Renda",
           "title": "Casa de Farinha",
-          "description": "Iniciativa de geração de renda que promove autonomia econômica e oportunidades sustentáveis para famílias locais."
+          "description": "Iniciativa para geração de renda e valorização da cultura local."
         }
       ]
     },
@@ -684,19 +684,19 @@
       "items": [
         {
           "title": "Meio Ambiente",
-          "description": "Geração 100% eólica, transmissão de baixo impacto e planos de contingência climática com monitoramento contínuo dos nossos ativos."
+          "description": "Gestão ambiental responsável\ne resiliência climática para\nproteger o planeta."
         },
         {
           "title": "Social",
-          "description": "Engajamento com comunidades, programas de desenvolvimento local e cadeia de fornecedores com requisitos rigorosos de segurança e conduta."
+          "description": "Desenvolvimento das comunidades,\ngeração de oportunidades e respeito\nàs pessoas."
         },
         {
           "title": "Governança",
-          "description": "Supervisão pelo Global Sustainability Committee da Actis, comitê ESG com reporte trimestral e comunicação proativa com reguladores."
+          "description": "Transparência, ética e gestão de\nriscos para decisões sólidas e\nresponsáveis."
         },
         {
           "title": "Excelência Operacional",
-          "description": "Disponibilidade acima dos padrões regulatórios, gestão rigorosa de passivos e melhoria contínua em todos os ativos da plataforma."
+          "description": "Processos eficientes, segurança\nem primeiro lugar e melhoria\ncontínua."
         }
       ]
     },
@@ -709,27 +709,27 @@
       "cards": [
         {
           "title": "Monitoramento Climático",
-          "description": "Acompanhamento em tempo real de condições meteorológicas e riscos climáticos nos ativos."
+          "description": "Acompanhamento 24/7 de condições meteorológicas e alertas."
         },
         {
           "title": "Gestão Ambiental",
-          "description": "Controle de impactos, licenças e programas de mitigação ambiental integrados."
-        },
-        {
-          "title": "Indicadores Integrados",
-          "description": "KPIs ESG consolidados em um único painel para decisões baseadas em dados."
-        },
-        {
-          "title": "Segurança",
-          "description": "Monitoramento de incidentes, conformidade e cultura de segurança operacional."
+          "description": "Controle de licenças, condicionantes e obrigações ambientais."
         },
         {
           "title": "Gestão de Documentos",
-          "description": "Repositório centralizado de relatórios, licenças e evidências de compliance."
+          "description": "Processos digitais, organizados e centralizados."
+        },
+        {
+          "title": "Indicadores Integrados",
+          "description": "Dashboards e KPIs em tempo real para decisões estratégicas."
+        },
+        {
+          "title": "Segurança",
+          "description": "Indicadores de segurança, Safety Walks e liderança em campo."
         },
         {
           "title": "Gestão de Ativos",
-          "description": "Visibilidade completa do ciclo de vida e desempenho de cada ativo da plataforma."
+          "description": "Monitoramento da performance dos ativos e planos de manutenção."
         }
       ]
     },
