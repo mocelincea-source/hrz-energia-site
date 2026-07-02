@@ -459,7 +459,7 @@ function EsgPage() {
                   </h2>
                 </Reveal>
                 <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
-                  <p className="mt-2 text-base leading-relaxed text-slate-400">
+                  <p className="mt-2 text-base leading-relaxed text-white">
                     {t("esg.engagement.opportunities.description")}
                   </p>
                 </Reveal>
@@ -501,7 +501,7 @@ function EsgPage() {
                   </h2>
                 </Reveal>
                 <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
-                  <p className="mt-2 text-base leading-relaxed text-slate-400">
+                  <p className="mt-2 text-base leading-relaxed text-white">
                     {t("esg.engagement.innovation.description")}
                   </p>
                 </Reveal>
@@ -716,7 +716,7 @@ function SmartEsgCard({
 }) {
   return (
     <div className={`flex h-full flex-col rounded-xl border border-white/5 bg-white/[0.02] p-4 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05] lg:p-5 ${GPU_LAYER}`}>
-      <Icon size={22} strokeWidth={1.5} className="text-hrz-green" />
+      <Icon size={22} strokeWidth={1.5} className="mb-4 text-hrz-green" />
       <h3 className="mb-2 text-sm font-semibold leading-tight text-white lg:text-base">{title}</h3>
       <p className="text-[11px] leading-relaxed text-slate-400 lg:text-xs">{description}</p>
     </div>
