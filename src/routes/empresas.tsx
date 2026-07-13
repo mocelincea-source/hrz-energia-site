@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Zap, Wind } from "lucide-react";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
@@ -84,7 +84,7 @@ function EmpresasPage() {
               </div>
             </div>
             <div className="flex flex-1 flex-col p-8">
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
                 {t("companies.cards.transmission.description")}
               </p>
               <div className="mt-6 grid grid-cols-3 gap-4">
@@ -92,6 +92,12 @@ function EmpresasPage() {
                 <Metric value="2.403" label={t("companies.cards.transmission.metricLabel2")} />
                 <Metric value="R$ 935m" label={t("companies.cards.transmission.metricLabel3")} />
               </div>
+              <Link
+                to="/transmissoras"
+                className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-hrz-electric px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+              >
+                {t("companies.cards.transmission.cta")} <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
 
@@ -115,7 +121,7 @@ function EmpresasPage() {
               </div>
             </div>
             <div className="flex flex-1 flex-col p-8">
-              <p className="text-sm leading-relaxed text-muted-foreground">
+              <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
                 {t("companies.cards.wind.description")}
               </p>
               <div className="mt-6 grid grid-cols-3 gap-4">

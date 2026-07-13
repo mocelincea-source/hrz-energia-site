@@ -118,12 +118,12 @@ function HomePage() {
         {/* Z-20 — Conteúdo da página */}
         <div className="relative z-20 flex h-full flex-col">
           {/* Conteúdo central: Logo (âncora estática) + Textos (fade-up) */}
-          <div className="container-hrz flex flex-1 items-center pt-20">
-            <div className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16">
-              {/* Coluna esquerda — Logo: sem animação de entrada.
+          <div className="container-hrz flex flex-1 items-center justify-center pt-20">
+            <div className="mx-auto flex w-fit flex-col items-center gap-10 lg:flex-row lg:gap-16">
+              {/* Logo: sem animação de entrada.
                   Âncora do match-cut: visível a 100% desde o frame 0 para que
                   o SplashOverlay dissolva sobre ela sem causar pulo visual. */}
-              <div className="flex items-center justify-center lg:justify-end lg:pr-6">
+              <div className="shrink-0">
                 <img
                   src={logoWhite}
                   alt={t("home.hero.logoAlt")}
@@ -131,7 +131,7 @@ function HomePage() {
                 />
               </div>
 
-              {/* Coluna direita — Título + Botões: fade-up normal */}
+              {/* Título + Botões: fade-up normal */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -139,7 +139,13 @@ function HomePage() {
                 className="flex flex-col items-start text-left"
               >
                 <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
-                  <TextEffect per="word" as="span" preset="slide" delay={HERO_BASE + 0.5} className="block">
+                  <TextEffect
+                    per="word"
+                    as="span"
+                    preset="slide"
+                    delay={HERO_BASE + 0.5}
+                    className="block"
+                  >
                     {t("home.hero.headline1")}
                   </TextEffect>
                   <TextEffect
@@ -208,7 +214,11 @@ function HomePage() {
                   className="flex flex-col items-center border-l border-white/10 px-6 text-center first:border-l-0"
                   variants={{
                     hidden: { opacity: 0, y: 30 },
-                    show: { opacity: 1, y: 0, transition: { duration: HERO_DURATION, ease: easeOut } },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: HERO_DURATION, ease: easeOut },
+                    },
                   }}
                 >
                   <p className="font-display text-4xl font-light tracking-tight text-hrz-electric sm:text-5xl">

@@ -19,6 +19,11 @@ import { Route as EolicasRouteImport } from './routes/eolicas'
 import { Route as EmpresasRouteImport } from './routes/empresas'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as InvestidoresIndexRouteImport } from './routes/investidores/index'
+import { Route as InvestidoresTransmissoraSpmgSARouteImport } from './routes/investidores/transmissora-spmg-s-a'
+import { Route as InvestidoresRelatoriosAgenteFiduciarioRouteImport } from './routes/investidores/relatorios-agente-fiduciario'
+import { Route as InvestidoresOutrosDocumentosRouteImport } from './routes/investidores/outros-documentos'
+import { Route as InvestidoresDemonstracoesFinanceirasRouteImport } from './routes/investidores/demonstracoes-financeiras'
 
 const TransmissorasRoute = TransmissorasRouteImport.update({
   id: '/transmissoras',
@@ -70,6 +75,35 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InvestidoresIndexRoute = InvestidoresIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => InvestidoresRoute,
+} as any)
+const InvestidoresTransmissoraSpmgSARoute =
+  InvestidoresTransmissoraSpmgSARouteImport.update({
+    id: '/transmissora-spmg-s-a',
+    path: '/transmissora-spmg-s-a',
+    getParentRoute: () => InvestidoresRoute,
+  } as any)
+const InvestidoresRelatoriosAgenteFiduciarioRoute =
+  InvestidoresRelatoriosAgenteFiduciarioRouteImport.update({
+    id: '/relatorios-agente-fiduciario',
+    path: '/relatorios-agente-fiduciario',
+    getParentRoute: () => InvestidoresRoute,
+  } as any)
+const InvestidoresOutrosDocumentosRoute =
+  InvestidoresOutrosDocumentosRouteImport.update({
+    id: '/outros-documentos',
+    path: '/outros-documentos',
+    getParentRoute: () => InvestidoresRoute,
+  } as any)
+const InvestidoresDemonstracoesFinanceirasRoute =
+  InvestidoresDemonstracoesFinanceirasRouteImport.update({
+    id: '/demonstracoes-financeiras',
+    path: '/demonstracoes-financeiras',
+    getParentRoute: () => InvestidoresRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -78,10 +112,15 @@ export interface FileRoutesByFullPath {
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRoute
-  '/investidores': typeof InvestidoresRoute
+  '/investidores': typeof InvestidoresRouteWithChildren
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
   '/transmissoras': typeof TransmissorasRoute
+  '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
+  '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
+  '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
+  '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
+  '/investidores/': typeof InvestidoresIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -90,10 +129,14 @@ export interface FileRoutesByTo {
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRoute
-  '/investidores': typeof InvestidoresRoute
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
   '/transmissoras': typeof TransmissorasRoute
+  '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
+  '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
+  '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
+  '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
+  '/investidores': typeof InvestidoresIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -103,10 +146,15 @@ export interface FileRoutesById {
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRoute
-  '/investidores': typeof InvestidoresRoute
+  '/investidores': typeof InvestidoresRouteWithChildren
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
   '/transmissoras': typeof TransmissorasRoute
+  '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
+  '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
+  '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
+  '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
+  '/investidores/': typeof InvestidoresIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -121,6 +169,11 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/sobre'
     | '/transmissoras'
+    | '/investidores/demonstracoes-financeiras'
+    | '/investidores/outros-documentos'
+    | '/investidores/relatorios-agente-fiduciario'
+    | '/investidores/transmissora-spmg-s-a'
+    | '/investidores/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -129,10 +182,14 @@ export interface FileRouteTypes {
     | '/eolicas'
     | '/esg'
     | '/etica'
-    | '/investidores'
     | '/portfolio'
     | '/sobre'
     | '/transmissoras'
+    | '/investidores/demonstracoes-financeiras'
+    | '/investidores/outros-documentos'
+    | '/investidores/relatorios-agente-fiduciario'
+    | '/investidores/transmissora-spmg-s-a'
+    | '/investidores'
   id:
     | '__root__'
     | '/'
@@ -145,6 +202,11 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/sobre'
     | '/transmissoras'
+    | '/investidores/demonstracoes-financeiras'
+    | '/investidores/outros-documentos'
+    | '/investidores/relatorios-agente-fiduciario'
+    | '/investidores/transmissora-spmg-s-a'
+    | '/investidores/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -154,7 +216,7 @@ export interface RootRouteChildren {
   EolicasRoute: typeof EolicasRoute
   EsgRoute: typeof EsgRoute
   EticaRoute: typeof EticaRoute
-  InvestidoresRoute: typeof InvestidoresRoute
+  InvestidoresRoute: typeof InvestidoresRouteWithChildren
   PortfolioRoute: typeof PortfolioRoute
   SobreRoute: typeof SobreRoute
   TransmissorasRoute: typeof TransmissorasRoute
@@ -232,8 +294,65 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/investidores/': {
+      id: '/investidores/'
+      path: '/'
+      fullPath: '/investidores/'
+      preLoaderRoute: typeof InvestidoresIndexRouteImport
+      parentRoute: typeof InvestidoresRoute
+    }
+    '/investidores/transmissora-spmg-s-a': {
+      id: '/investidores/transmissora-spmg-s-a'
+      path: '/transmissora-spmg-s-a'
+      fullPath: '/investidores/transmissora-spmg-s-a'
+      preLoaderRoute: typeof InvestidoresTransmissoraSpmgSARouteImport
+      parentRoute: typeof InvestidoresRoute
+    }
+    '/investidores/relatorios-agente-fiduciario': {
+      id: '/investidores/relatorios-agente-fiduciario'
+      path: '/relatorios-agente-fiduciario'
+      fullPath: '/investidores/relatorios-agente-fiduciario'
+      preLoaderRoute: typeof InvestidoresRelatoriosAgenteFiduciarioRouteImport
+      parentRoute: typeof InvestidoresRoute
+    }
+    '/investidores/outros-documentos': {
+      id: '/investidores/outros-documentos'
+      path: '/outros-documentos'
+      fullPath: '/investidores/outros-documentos'
+      preLoaderRoute: typeof InvestidoresOutrosDocumentosRouteImport
+      parentRoute: typeof InvestidoresRoute
+    }
+    '/investidores/demonstracoes-financeiras': {
+      id: '/investidores/demonstracoes-financeiras'
+      path: '/demonstracoes-financeiras'
+      fullPath: '/investidores/demonstracoes-financeiras'
+      preLoaderRoute: typeof InvestidoresDemonstracoesFinanceirasRouteImport
+      parentRoute: typeof InvestidoresRoute
+    }
   }
 }
+
+interface InvestidoresRouteChildren {
+  InvestidoresDemonstracoesFinanceirasRoute: typeof InvestidoresDemonstracoesFinanceirasRoute
+  InvestidoresOutrosDocumentosRoute: typeof InvestidoresOutrosDocumentosRoute
+  InvestidoresRelatoriosAgenteFiduciarioRoute: typeof InvestidoresRelatoriosAgenteFiduciarioRoute
+  InvestidoresTransmissoraSpmgSARoute: typeof InvestidoresTransmissoraSpmgSARoute
+  InvestidoresIndexRoute: typeof InvestidoresIndexRoute
+}
+
+const InvestidoresRouteChildren: InvestidoresRouteChildren = {
+  InvestidoresDemonstracoesFinanceirasRoute:
+    InvestidoresDemonstracoesFinanceirasRoute,
+  InvestidoresOutrosDocumentosRoute: InvestidoresOutrosDocumentosRoute,
+  InvestidoresRelatoriosAgenteFiduciarioRoute:
+    InvestidoresRelatoriosAgenteFiduciarioRoute,
+  InvestidoresTransmissoraSpmgSARoute: InvestidoresTransmissoraSpmgSARoute,
+  InvestidoresIndexRoute: InvestidoresIndexRoute,
+}
+
+const InvestidoresRouteWithChildren = InvestidoresRoute._addFileChildren(
+  InvestidoresRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -242,7 +361,7 @@ const rootRouteChildren: RootRouteChildren = {
   EolicasRoute: EolicasRoute,
   EsgRoute: EsgRoute,
   EticaRoute: EticaRoute,
-  InvestidoresRoute: InvestidoresRoute,
+  InvestidoresRoute: InvestidoresRouteWithChildren,
   PortfolioRoute: PortfolioRoute,
   SobreRoute: SobreRoute,
   TransmissorasRoute: TransmissorasRoute,

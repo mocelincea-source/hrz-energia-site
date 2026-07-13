@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import logoWhite from "@/assets/logo-hrz-white.png";
 import { SPLASH_EXIT_DURATION, SPLASH_HOLD_S } from "./heroTiming";
@@ -20,8 +22,8 @@ interface SplashOverlayProps {
  *
  * Match-Cut layout: the inner DOM mirrors the Hero section exactly so the
  * logo occupies the same pixel position when the overlay dissolves.
- * Structure mirrors: flex h-full flex-col → container-hrz flex-1 pt-20 →
- * grid lg:grid-cols-2 → left col (justify-center lg:justify-end lg:pr-6).
+ * Structure mirrors: flex h-full flex-col → container-hrz flex-1 justify-center pt-20 →
+ * w-fit mx-auto flex gap-10 lg:gap-16 → logo (shrink-0) + ghost text block.
  * A ghost stats-bar at the bottom ensures flex-1 shrinks by the same amount.
  *
  * Silent exit: on exit the logo only fades (opacity → 0, scale stays at 1,
@@ -29,6 +31,8 @@ interface SplashOverlayProps {
  * opacity from frame 0, so the dissolve reveals it with zero pixel movement.
  */
 export function SplashOverlay({ onDone }: SplashOverlayProps) {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const timer = setTimeout(onDone, SPLASH_HOLD_S * 1000);
     return () => clearTimeout(timer);
@@ -54,14 +58,12 @@ export function SplashOverlay({ onDone }: SplashOverlayProps) {
       {/* Mirrors: relative z-20 flex h-full flex-col */}
       <div className="relative flex h-full flex-col">
 
-        {/* Mirrors: container-hrz flex flex-1 items-center pt-20 */}
-        <div className="container-hrz flex flex-1 items-center pt-20">
-
-          {/* Mirrors: grid w-full gap-10 lg:grid-cols-2 lg:gap-16 */}
-          <div className="grid w-full gap-10 lg:grid-cols-2 lg:gap-16">
-
-            {/* Left column — same alignment as Hero logo column */}
-            <div className="flex items-center justify-center lg:justify-end lg:pr-6">
+        {/* Mirrors: container-hrz flex flex-1 items-center justify-center pt-20 */}
+        <div className="container-hrz flex flex-1 items-center justify-center pt-20">
+          {/* Mirrors: mx-auto flex w-fit flex-col items-center gap-10 lg:flex-row lg:gap-16 */}
+          <div className="mx-auto flex w-fit flex-col items-center gap-10 lg:flex-row lg:gap-16">
+            {/* Logo — same shrink-0 wrapper and img classes as Hero */}
+            <div className="shrink-0">
               {/* Entry: rises from scale 0.88 + y offset.
                   Exit: silent fade only — scale stays at 1, no blur, no y
                   shift, so the logo dissolves exactly over the Hero anchor. */}
@@ -123,8 +125,29 @@ export function SplashOverlay({ onDone }: SplashOverlayProps) {
               </motion.div>
             </div>
 
-            {/* Right column — intentionally empty */}
-            <div aria-hidden />
+            {/* Ghost text block — mirrors Hero headline + CTAs for identical flex math */}
+            <div
+              aria-hidden
+              className="pointer-events-none invisible flex select-none flex-col items-start text-left opacity-0"
+            >
+              <h1 className="display-mega max-w-3xl text-left text-3xl font-light text-white sm:text-4xl lg:text-5xl">
+                <span className="block">{t("home.hero.headline1")}</span>
+                <span className="text-gradient-electric block whitespace-nowrap font-normal">
+                  {t("home.hero.headline2")}
+                </span>
+              </h1>
+
+              <div className="mt-8 flex flex-wrap justify-start gap-4">
+                <span className="group inline-flex items-center gap-2 rounded-full bg-hrz-electric px-7 py-3.5 text-sm font-semibold text-white">
+                  {t("home.hero.ctaTransmission")}{" "}
+                  <ArrowRight size={16} />
+                </span>
+                <span className="group inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white">
+                  {t("home.hero.ctaWind")}{" "}
+                  <ArrowRight size={16} />
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
