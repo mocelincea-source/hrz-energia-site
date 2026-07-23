@@ -29,7 +29,6 @@ import { BrazilMapAnimated } from "@/components/site/BrazilMapAnimated";
 import { PlatformTag } from "@/components/site/PlatformTag";
 import i18n from "@/i18n/config";
 import heroImg from "@/assets/hero-transmission.jpg";
-import windImg from "@/assets/wind-babilonia.jpg";
 import substationImg from "@/assets/substation.jpg";
 import raioBrand from "@/assets/raio-hrz.png";
 import logoWhite from "@/assets/logo-hrz-white.png";
@@ -319,16 +318,6 @@ function HomePage() {
             </Reveal>
           </div>
           <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
-            <motion.img
-              src={windImg}
-              alt={t("home.portfolio.windImgAlt")}
-              loading="lazy"
-              initial={{ scale: 1.12 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.4, ease: easeOut }}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
             <div className="absolute inset-0 bg-gradient-to-t from-hrz-green-dark/90 to-hrz-green/20" />
             <Reveal delay={0.15} className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
               <p className="eyebrow text-white">{t("home.portfolio.windEyebrow")}</p>

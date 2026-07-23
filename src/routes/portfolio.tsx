@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
@@ -8,7 +9,10 @@ import { BrazilMapAnimated } from "@/components/site/BrazilMapAnimated";
 import { Reveal, Stagger, StaggerItem, HoverLift } from "@/components/site/motion";
 import i18n from "@/i18n/config";
 import substationImg from "@/assets/substation.jpg";
-import windImg from "@/assets/wind-babilonia.jpg";
+import windImg01 from "@/assets/wind-babilionia-01.jpeg";
+import windImg02 from "@/assets/wind-babilionia-02.jpeg";
+
+const windImages = [windImg01, windImg02];
 
 type AssetItem = { code: string; name: string; info: string };
 type StatItem = { value: string; label: string };
@@ -153,7 +157,8 @@ function PortfolioPage() {
           <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
             <Reveal>
               <h2 className="display-mega text-4xl sm:text-5xl">
-                {t("segments.portfolio.generation.heading")}
+                <span className="block">{t("segments.portfolio.generation.headingLine1")}</span>
+                <span className="block">{t("segments.portfolio.generation.headingLine2")}</span>
               </h2>
               <p className="mt-5 max-w-lg text-base leading-relaxed text-white/80">
                 {t("segments.portfolio.generation.body")}
@@ -173,18 +178,38 @@ function PortfolioPage() {
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </Link>
             </Reveal>
-            <HoverLift className="relative h-[420px] overflow-hidden rounded-3xl">
-              <img
-                src={windImg}
-                alt={t("segments.portfolio.generation.imgAlt")}
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </HoverLift>
+            <WindCarousel imgAlt={t("segments.portfolio.generation.imgAlt")} />
           </div>
         </div>
       </section>
     </SiteShell>
+  );
+}
+
+function WindCarousel({ imgAlt }: { imgAlt: string }) {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % windImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <HoverLift className="relative h-[420px] overflow-hidden rounded-3xl">
+      {windImages.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt={imgAlt}
+          loading="lazy"
+          className={`absolute inset-0 h-full w-full object-cover object-[20%_center] transition-opacity duration-500 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+    </HoverLift>
   );
 }
 

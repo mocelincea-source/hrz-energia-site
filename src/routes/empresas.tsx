@@ -9,7 +9,7 @@ import { BrazilMapAnimated } from "@/components/site/BrazilMapAnimated";
 import { Reveal, Parallax } from "@/components/site/motion";
 import i18n from "@/i18n/config";
 import substationImg from "@/assets/substation.jpg";
-import windImg from "@/assets/wind-babilonia.jpg";
+import windImg from "@/assets/wind-babilionia-01.jpeg";
 import raioBrand from "@/assets/raio-hrz.png";
 
 export const Route = createFileRoute("/empresas")({
@@ -52,7 +52,7 @@ function EmpresasPage() {
               {t("companies.logic.heading2")}
             </h2>
           </div>
-          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+          <div className="space-y-5 text-base md:text-lg leading-loose text-muted-foreground">
             <p>{t("companies.logic.body1")}</p>
             <p>{t("companies.logic.body2")}</p>
           </div>

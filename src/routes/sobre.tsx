@@ -189,8 +189,8 @@ function SobrePage() {
           </Reveal>
           <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {LEADERSHIP.map((l) => (
-              <StaggerItem key={l.name}>
-                <div className="overflow-hidden rounded-2xl border border-border bg-card transition hover:border-hrz-electric">
+              <StaggerItem key={l.name} className="h-full">
+                <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition hover:border-hrz-electric">
                   <div
                     className="overflow-hidden bg-slate-50"
                     style={{
@@ -211,7 +211,7 @@ function SobrePage() {
                       className="aspect-[3/4] w-full rounded-t-2xl rounded-b-none object-cover object-center"
                     />
                   </div>
-                  <div className="p-5">
+                  <div className="flex flex-1 flex-col p-5">
                     <p className="font-display text-lg font-bold text-foreground">{l.name}</p>
                     <p className="text-sm text-hrz-electric">{l.role}</p>
                     <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{l.bio}</p>

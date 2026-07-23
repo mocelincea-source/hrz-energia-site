@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "Who We Are",
     "segments": "Segments",
+    "companies": "Companies",
     "transmission": "Transmissoras",
     "wind": "Eólicas",
     "esg": "ESG",
@@ -592,7 +593,8 @@
         "cta": "Explore transmission assets"
       },
       "generation": {
-        "heading": "Generation — Babilônia Wind",
+        "headingLine1": "Generation",
+        "headingLine2": "Babilônia Wind",
         "body": "5 parks acquired in 2019 with 65 turbines and 136.5 MW of installed capacity in Bahia. Consistent operation with a 57% capacity factor and long-term PPA.",
         "imgAlt": "Babilônia wind farm",
         "stats": [
