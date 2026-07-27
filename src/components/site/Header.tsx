@@ -31,10 +31,7 @@ type NavItem = {
 const NAV: NavItem[] = [
   { to: "/", labelKey: "nav.home" },
   { to: "/sobre", labelKey: "nav.about" },
-  { to: "/empresas", labelKey: "nav.companies" },
-  { to: "/esg", labelKey: "nav.esg" },
-  { to: "/etica", labelKey: "nav.ethics" },
-  { to: "/investidores", labelKey: "nav.investors" },
+  { to: "/empresas", labelKey: "nav.segments" },
   {
     to: "/portfolio",
     labelKey: "nav.portfolio",
@@ -44,6 +41,9 @@ const NAV: NavItem[] = [
       { to: "/eolicas", labelKey: "nav.wind" },
     ],
   },
+  { to: "/esg", labelKey: "nav.esg" },
+  { to: "/etica", labelKey: "nav.ethics" },
+  { to: "/investidores", labelKey: "nav.investors" },
   { to: "/contato", labelKey: "nav.contact" },
 ];
 

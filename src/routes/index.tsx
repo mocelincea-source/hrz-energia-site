@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
@@ -28,11 +29,13 @@ import { BoltDecor } from "@/components/site/BoltDecor";
 import { BrazilMapAnimated } from "@/components/site/BrazilMapAnimated";
 import { PlatformTag } from "@/components/site/PlatformTag";
 import i18n from "@/i18n/config";
-import heroImg from "@/assets/hero-transmission.jpg";
-import substationImg from "@/assets/substation.jpg";
 import raioBrand from "@/assets/raio-hrz.png";
 import logoWhite from "@/assets/logo-hrz-white.png";
-import babiloniaImg from "@/assets/babilonia-aerial.jpg";
+import droneImg1 from "@/assets/Imagen-drone-1.jpeg";
+import droneImg2 from "@/assets/Imagen-drone-2.jpeg";
+import droneImg3 from "@/assets/Imagen-drone-3.jpeg";
+import droneImg4 from "@/assets/Imagen-drone-4.jpeg";
+import windBabiloniaImg from "@/assets/wind-babilionia-01.jpeg";
 import heroVideo from "@/assets/hero-hrz.mp4";
 import {
   HERO_BASE,
@@ -61,6 +64,41 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const { t } = useTranslation();
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const playCount = useRef(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleVideoEnd = () => {
+    if (videoRef.current && playCount.current < 1) {
+      playCount.current += 1;
+      setIsTransitioning(true);
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.currentTime = 0;
+          videoRef.current.play().catch(() => {});
+        }
+        setIsTransitioning(false);
+      }, 600);
+    }
+  };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      videoRef.current?.play().catch(() => {});
+    }, HERO_VIDEO_REVEAL * 1000);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const droneImages = [droneImg1, droneImg2, droneImg3, droneImg4];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % droneImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [droneImages.length]);
 
   const STATS = [
     { to: 1, prefix: "R$ ", suffix: "bi+", decimals: 0, label: t("home.stats.revenue") },
@@ -96,20 +134,25 @@ function HomePage() {
     <SiteShell headerVariant="dark">
       {/* HERO */}
       <section className="relative h-screen overflow-hidden bg-[#060c1a] text-white">
-        {/* Z-0 — Video de fundo (visível desde frame 0 via poster; ken-burn inicia com exit do splash) */}
-        <motion.video
-          src={heroVideo}
-          poster={heroImg}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          initial={{ scale: 1.05, opacity: 1 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: HERO_VIDEO_REVEAL, ease: easeOut }}
-          className="absolute inset-0 z-0 h-full w-full object-cover"
-        />
+        {/* Z-0 — Wrapper de crossfade: opacity transiciona via CSS; motion.video cuida do ken-burn */}
+        <div
+          className={`absolute inset-0 z-0 transition-opacity duration-700 ease-in-out ${
+            isTransitioning ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <motion.video
+            ref={videoRef}
+            src={heroVideo}
+            muted
+            playsInline
+            preload="auto"
+            onEnded={handleVideoEnd}
+            initial={{ scale: 1.05, opacity: 1 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.5, delay: HERO_VIDEO_REVEAL, ease: easeOut }}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
 
         {/* Z-10 — Overlay escuro navy para contraste */}
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#060c1a]/80 via-[#0a1328]/70 to-[#040810]/92" />
@@ -297,7 +340,7 @@ function HomePage() {
         <div className="container-hrz grid gap-6 py-16 lg:grid-cols-2 lg:py-20">
           <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
             <motion.img
-              src={substationImg}
+              src={droneImg4}
               alt={t("home.portfolio.transmissionImgAlt")}
               loading="lazy"
               initial={{ scale: 1.12 }}
@@ -318,8 +361,18 @@ function HomePage() {
             </Reveal>
           </div>
           <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 bg-gradient-to-t from-hrz-green-dark/90 to-hrz-green/20" />
-            <Reveal delay={0.15} className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
+            <motion.img
+              src={windBabiloniaImg}
+              alt={t("home.portfolio.windHeading")}
+              loading="lazy"
+              initial={{ scale: 1.12 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.4, ease: easeOut }}
+              className="absolute inset-0 z-0 h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-hrz-green-dark/90 to-hrz-green-dark/40" />
+            <Reveal delay={0.15} className="relative z-20 absolute inset-x-0 bottom-0 p-8 lg:p-10">
               <p className="eyebrow text-white">{t("home.portfolio.windEyebrow")}</p>
               <h3 className="font-display mt-3 text-3xl font-bold lg:text-4xl">
                 {t("home.portfolio.windHeading")}
@@ -620,13 +673,18 @@ function HomePage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 1, ease: easeOut }}
-              className="relative overflow-hidden rounded-3xl"
+              className="relative aspect-[4/3] overflow-hidden rounded-3xl"
             >
-              <img
-                src={babiloniaImg}
-                alt={t("home.value.windImgAlt")}
-                className="aspect-[4/3] h-auto w-full object-cover"
-              />
+              {droneImages.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={t("home.value.windImgAlt")}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                    i === currentIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
               <div className="absolute inset-0 bg-gradient-to-tr from-hrz-deep/25 via-transparent to-transparent" />
             </motion.div>
           </div>

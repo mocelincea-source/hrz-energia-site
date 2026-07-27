@@ -20,8 +20,18 @@ import { BoltDecor } from "@/components/site/BoltDecor";
 import { BrazilMapAnimated } from "@/components/site/BrazilMapAnimated";
 import { Reveal, Parallax, Stagger, StaggerItem, HoverLift } from "@/components/site/motion";
 import i18n from "@/i18n/config";
-import substationImg from "@/assets/substation.jpg";
 import raioBrand from "@/assets/raio-hrz.png";
+import droneImg1 from "@/assets/Imagen-drone-1.jpeg";
+import droneImg2 from "@/assets/Imagen-drone-2.jpeg";
+import droneImg3 from "@/assets/Imagen-drone-3.jpeg";
+import droneImg4 from "@/assets/Imagen-drone-4.jpeg";
+
+const CONCESSION_IMAGES: Record<string, string> = {
+  es: droneImg1,
+  ma1: droneImg2,
+  ma2: droneImg3,
+  spmg: droneImg4,
+};
 
 type KpiItem = { value: string; label: string };
 type ConcessionItem = {
@@ -217,7 +227,7 @@ function TransmissorasPage() {
                 className="overflow-hidden rounded-3xl border border-border bg-card"
               >
                 <div className="relative h-56 overflow-hidden">
-                  <img src={substationImg} alt={sel.nome} className="h-full w-full object-cover" />
+                  <img src={CONCESSION_IMAGES[sel.id] ?? droneImg1} alt={sel.nome} className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/95 via-hrz-deep/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-7 text-white">
                     <p className="eyebrow text-hrz-electric">{sel.estado}</p>

@@ -266,27 +266,23 @@ function EsgPage() {
 
       {/* ESG Inteligente */}
       <section id="esg-inteligente" className="bg-hrz-deep py-24 text-white">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8 items-center w-full max-w-[1440px] mx-auto px-6 lg:px-8">
-          {/* COLUNA 1: BLOCO DE TEXTO (Esquerda) */}
-          <div className="lg:col-span-4 w-full relative z-10">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-stretch w-full max-w-7xl mx-auto px-6 lg:px-8">
+
+          {/* COLUNA 1: Texto + Botão (Esquerda) */}
+          <div className="col-span-1 xl:col-span-3 min-w-0 flex flex-col justify-center gap-5">
             <span className="text-xs font-semibold tracking-wider text-green-500 uppercase">
               {t("esg.smartEsg.eyebrow")}
             </span>
 
-            <h2 className="font-display mt-4 text-3xl font-bold tracking-tight text-white lg:text-[2rem] lg:leading-[1.2] w-full">
-              <span className="lg:whitespace-nowrap">Tecnologia e dados para</span>{" "}
-              <br className="hidden lg:block" />
-              <span className="lg:whitespace-nowrap">decisões mais seguras</span>{" "}
-              <br className="hidden lg:block" />e sustentáveis.
+            <h2 className="font-display text-3xl font-bold tracking-tight text-white lg:text-[2rem] lg:leading-[1.2]">
+              Tecnologia e dados para decisões mais seguras e sustentáveis.
             </h2>
 
-            <p className="mt-4 text-sm text-slate-300 lg:text-[15px] lg:tracking-tight lg:leading-relaxed lg:w-max">
-              Nossa plataforma digital integra informações em <br className="hidden lg:block" />
-              tempo real para uma gestão mais eficiente, preditiva{" "}
-              <br className="hidden lg:block" />e transparente.
+            <p className="text-sm text-slate-300 lg:text-[15px] lg:leading-relaxed">
+              Nossa plataforma digital integra informações em tempo real para uma gestão mais eficiente, preditiva e transparente.
             </p>
 
-            <div className="mt-6 w-fit">
+            <div className="w-fit">
               <a
                 href="#esg-inteligente"
                 className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-green-500/30 bg-green-500/10 px-5 py-2.5 text-sm font-medium text-green-400 hover:bg-green-500/20 transition-all"
@@ -297,22 +293,22 @@ function EsgPage() {
             </div>
           </div>
 
-          {/* COLUNA 2: DASHBOARD (Centro) */}
-          <div className="lg:col-span-3 w-full flex justify-end">
-            <div className="w-full max-w-[320px]">
+          {/* COLUNA 2: Frame corporativo + Imagem (Centro) */}
+          <div className="col-span-1 xl:col-span-4 min-w-0 h-full">
+            <div className="relative h-full w-full overflow-hidden flex flex-col rounded-2xl border border-white/5 bg-white/[0.02] shadow-lg backdrop-blur-sm">
               <img
                 src={dashboardEsgImg}
                 alt={t("esg.smartEsg.dashboardAlt")}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto object-contain"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
           </div>
 
-          {/* COLUNA 3: BLOCO DE CARTÕES (Direita) */}
-          <div className="lg:col-span-5 w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-5 w-full">
+          {/* COLUNA 3: Grid de Cards (Direita) */}
+          <div className="col-span-1 xl:col-span-5 min-w-0 h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 h-full content-start">
               {smartEsgCards.map((card, i) => {
                 const CardIcon = SMART_ESG_CARD_ICONS[i];
                 return (
@@ -326,6 +322,7 @@ function EsgPage() {
               })}
             </div>
           </div>
+
         </div>
       </section>
 
@@ -389,7 +386,7 @@ function EsgPage() {
       {/* Indicadores ESG */}
       <section id="esg-indicadores" className="bg-slate-50 py-24">
         <div className="container-hrz grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
-          <div className="flex flex-col items-start lg:col-span-3">
+          <div className="flex h-full flex-col items-start justify-center lg:col-span-3">
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
               <p className="text-sm font-semibold uppercase tracking-widest text-hrz-green">
                 {t("esg.indicators.eyebrow")}
@@ -418,7 +415,7 @@ function EsgPage() {
           <Stagger
             fallbackDelay={500}
             viewportMargin={VIEWPORT_TRIGGER}
-            className="grid w-full grid-cols-1 items-stretch gap-4 md:grid-cols-6 lg:col-span-9"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:col-span-9"
           >
             {indicators.map((indicator, i) => (
               <StaggerItem key={`${indicator.category}-${indicator.value}`} className="h-full">
@@ -632,7 +629,7 @@ function SocialProjectCard({
     <article
       className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm ${CARD_HOVER}`}
     >
-      <div className="relative h-[170px] overflow-hidden">
+      <div className="relative h-56 overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -675,12 +672,12 @@ function IndicatorCard({
   label: string;
 }) {
   return (
-    <div className="flex h-full flex-col items-start rounded-2xl border border-slate-100 bg-white p-6 text-left">
+    <div className="flex h-full w-full flex-col items-start rounded-2xl border border-slate-100 bg-white p-6 text-left">
       <Icon size={18} strokeWidth={1.5} className="text-hrz-green" />
       <p className="mt-2 text-[9px] font-bold uppercase tracking-wider text-slate-400">
         {category}
       </p>
-      <p className="mb-3 mt-2 text-lg font-semibold leading-none tracking-tight text-hrz-green lg:text-xl xl:text-[22px]">
+      <p className="mb-3 mt-2 whitespace-nowrap text-base font-semibold leading-none tracking-tight text-hrz-green lg:text-lg xl:text-xl">
         {value}
       </p>
       {category === "Pessoas" && value === "+500" ? (

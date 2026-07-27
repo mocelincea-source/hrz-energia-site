@@ -161,14 +161,14 @@ const LEADERSHIP_CONTACTS: LeadershipContact[] = [
   {
     name: "Contato HRZ",
     role: "Canal Institucional",
-    email: "contato@hrztransmissoras.com.br",
+    email: "contato@hrzenergia.com.br",
     phone: "+55 11 99922-3631",
   },
-  { name: "Eduardo Brito", role: "CEO", email: "eduardo.brito@hrztransmissoras.com.br" },
-  { name: "Fernando Oliveira", role: "CFO", email: "fernando.oliveira@hrztransmissoras.com.br" },
-  { name: "Ítalo Augusto David", role: "COO", email: "italo.david@hrztransmissoras.com.br" },
-  { name: "Tiago Cacozzi", role: "QHSE", email: "tiago.cacozzi@hrztransmissoras.com.br" },
-  { name: "Juliana Scalzo", role: "CLO", email: "juliana.scalzo@hrztransmissoras.com.br" },
+  { name: "Eduardo Brito", role: "CEO", email: "eduardo.brito@hrzenergia.com.br" },
+  { name: "Fernando Oliveira", role: "CFO", email: "fernando.oliveira@hrzenergia.com.br" },
+  { name: "Ítalo Augusto David", role: "COO", email: "italo.david@hrzenergia.com.br" },
+  { name: "Tiago Cacozzi", role: "QHSE", email: "tiago.cacozzi@hrzenergia.com.br" },
+  { name: "Juliana Scalzo", role: "CLO", email: "juliana.scalzo@hrzenergia.com.br" },
 ];
 
 function LiderancaSection() {
