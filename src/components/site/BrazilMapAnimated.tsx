@@ -11,17 +11,31 @@ type MapPoint = {
   delay?: number;
 };
 
+// dotX / dotY: % do container aspect-square.
+// Imagem outline.png (986×1027 px) renderizada com w-[65%] centralizada:
+//   X: 17.5–82.5 %  |  Y: 16.15–83.85 %
+// Fórmula verificada com pixels costeiros reais da imagem:
+//   dotX = 17.5 + (74 + lon) / 39.2 × 65      (lon em graus W negativos)
+//   dotY = 16.15 + (5.27 − lat) / 39.02 × 67.7 (lat em graus, negativo = Sul)
 const MAP_POINTS: MapPoint[] = [
-  { name: "TMA 1", dotX: 53.0, dotY: 27.0, labelX: 72, labelY: 16, side: "right", delay: 0.0 },
-  { name: "TMA 2", dotX: 54.5, dotY: 29.5, labelX: 72, labelY: 22, side: "right", delay: 0.06 },
-  { name: "MGTE", dotX: 52.0, dotY: 32.5, labelX: 74, labelY: 27, side: "right", delay: 0.12 },
-  { name: "Babilônia", dotX: 55.5, dotY: 44.5, labelX: 22, labelY: 42, side: "left", delay: 0.18 },
-  { name: "AVT", dotX: 56.0, dotY: 56.0, labelX: 82, labelY: 43, side: "right", delay: 0.24 },
-  { name: "TES", dotX: 64.0, dotY: 57.5, labelX: 80, labelY: 56, side: "right", delay: 0.3 },
-  { name: "SP-MG", dotX: 58.5, dotY: 62.5, labelX: 76, labelY: 66, side: "right", delay: 0.36 },
-  { name: "Aliança", dotX: 55.0, dotY: 72.0, labelX: 74, labelY: 74, side: "right", delay: 0.42 },
-  { name: "Litoral Sul Transmissão", dotX: 50.0, dotY: 75.0, labelX: 36, labelY: 71, side: "left", delay: 0.48 },
-  { name: "Vineyards", dotX: 46.0, dotY: 77.5, labelX: 36, labelY: 84, side: "left", delay: 0.54 },
+  // Maranhão (MA) — TMA 1/2 litoral NE (~−3/−4 °S, −44/−43.5 °W); MGTE centro-oeste (~−5 °S, −46 °W)
+  { name: "TMA 1",                   dotX: 67.2, dotY: 30.5, labelX: 78, labelY: 24, side: "right", delay: 0.0  },
+  { name: "TMA 2",                   dotX: 68.1, dotY: 32.2, labelX: 78, labelY: 30, side: "right", delay: 0.06 },
+  { name: "MGTE",                    dotX: 63.9, dotY: 34.0, labelX: 78, labelY: 38, side: "right", delay: 0.12 },
+  // Bahia (BA) — centro-leste (~−12.5 °S, −41.5 °W); label fora do mapa à direita (oceano)
+  { name: "Babilônia",               dotX: 71.4, dotY: 47.0, labelX: 73, labelY: 44, side: "right", delay: 0.18 },
+  // Minas Gerais (MG) — norte do estado (~−16.5 °S, −44.5 °W)
+  { name: "AVT",                     dotX: 66.4, dotY: 53.9, labelX: 76, labelY: 51, side: "right", delay: 0.24 },
+  // Espírito Santo (ES) — litoral (~−20 °S, −40.5 °W); label sobre o oceano à direita
+  { name: "TES",                     dotX: 73.0, dotY: 60.0, labelX: 80, labelY: 60, side: "right", delay: 0.3  },
+  // Divisa SP / MG (~−22 °S, −47 °W)
+  { name: "SP-MG",                   dotX: 62.3, dotY: 63.5, labelX: 73, labelY: 67, side: "right", delay: 0.36 },
+  // Santa Catarina (SC) — centro-leste (~−27.5 °S, −50 °W)
+  { name: "Aliança",                 dotX: 57.3, dotY: 73.0, labelX: 68, labelY: 73, side: "right", delay: 0.42 },
+  // Divisa SC / RS — litoral (~−28.8 °S, −49.5 °W)
+  { name: "Litoral Sul Transmissão", dotX: 58.1, dotY: 75.3, labelX: 42, labelY: 70, side: "left",  delay: 0.48 },
+  // Rio Grande do Sul (RS) — centro (~−29.5 °S, −52 °W)
+  { name: "Vineyards",               dotX: 54.0, dotY: 76.5, labelX: 36, labelY: 83, side: "left",  delay: 0.54 },
 ];
 
 const getLabelCenterX = (p: MapPoint) => {
