@@ -31,7 +31,6 @@ type NavItem = {
 const NAV: NavItem[] = [
   { to: "/", labelKey: "nav.home" },
   { to: "/sobre", labelKey: "nav.about" },
-  { to: "/empresas", labelKey: "nav.segments" },
   {
     to: "/portfolio",
     labelKey: "nav.portfolio",
@@ -108,22 +107,24 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
         ease: easeOut,
       }}
     >
-      <div className="container-hrz flex h-20 items-center justify-between">
-        {/* Logo — visibility carried by the header's own entry animation */}
-        <Link to="/" className="flex items-center gap-2" aria-label="HRZ energia início">
-          <img
-            src={isDark ? logoWhite : logoBlue}
-            alt="HRZ energia"
-            width={160}
-            height={48}
-            className="h-9 w-auto"
-          />
-        </Link>
+      <div className="container-hrz flex h-20 items-center">
+        {/* Left wing — flex-1 keeps logo anchored to the left */}
+        <div className="flex flex-1 items-center justify-start">
+          <Link to="/" className="flex items-center gap-2" aria-label="HRZ energia início">
+            <img
+              src={isDark ? logoWhite : logoBlue}
+              alt="HRZ energia"
+              width={160}
+              height={48}
+              className="h-9 w-auto"
+            />
+          </Link>
+        </div>
 
-        {/* Desktop nav — links "ping" in one by one after the header descends */}
+        {/* Center — nav links, perfectly centered between the two flex-1 wings */}
         <nav className="hidden lg:flex" aria-label="Navegação principal">
           <motion.ul
-            className="m-0 flex list-none items-center gap-8 p-0"
+            className="m-0 flex list-none items-center gap-7 p-0"
             variants={navListVariants}
             initial={isPageLoad.current ? "hidden" : false}
             animate="show"
@@ -178,36 +179,46 @@ export function Header({ variant = "light" }: { variant?: "light" | "dark" }) {
                 </motion.li>
               );
             })}
+          </motion.ul>
+        </nav>
 
+        {/* Right wing — flex-1 keeps actions anchored to the right */}
+        <div className="flex flex-1 items-center justify-end gap-3">
+          {/* Desktop actions */}
+          <motion.ul
+            className="hidden lg:flex list-none items-center gap-3 m-0 p-0"
+            variants={navListVariants}
+            initial={isPageLoad.current ? "hidden" : false}
+            animate="show"
+          >
             <motion.li variants={navItemVariants}>
               <LanguageToggle variant={isDark ? "dark" : "light"} />
             </motion.li>
-
             <motion.li variants={navItemVariants}>
               <Link
                 to="/contato"
-                className="ml-2 inline-flex items-center justify-center rounded-full bg-hrz-electric px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center justify-center rounded-full bg-hrz-electric px-5 py-2 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.03]"
               >
                 {t("nav.cta")}
               </Link>
             </motion.li>
           </motion.ul>
-        </nav>
 
-        {/* Mobile toggle — visible when header descends */}
-        <div className="flex items-center gap-2 lg:hidden">
-          <LanguageToggle variant={isDark ? "dark" : "light"} />
-          <button
-            type="button"
-            aria-label="Abrir menu"
-            onClick={() => setOpen((v) => !v)}
-            className={
-              "inline-flex h-10 w-10 items-center justify-center rounded-md " +
-              (isDark ? "text-white" : "text-foreground")
-            }
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          {/* Mobile toggle */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <LanguageToggle variant={isDark ? "dark" : "light"} />
+            <button
+              type="button"
+              aria-label="Abrir menu"
+              onClick={() => setOpen((v) => !v)}
+              className={
+                "inline-flex h-10 w-10 items-center justify-center rounded-md " +
+                (isDark ? "text-white" : "text-foreground")
+              }
+            >
+              {open ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </div>
 

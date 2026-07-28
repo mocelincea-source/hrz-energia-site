@@ -66,22 +66,6 @@ function HomePage() {
   const { t } = useTranslation();
 
   const videoRef = useRef<HTMLVideoElement>(null);
-  const playCount = useRef(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const handleVideoEnd = () => {
-    if (videoRef.current && playCount.current < 1) {
-      playCount.current += 1;
-      setIsTransitioning(true);
-      setTimeout(() => {
-        if (videoRef.current) {
-          videoRef.current.currentTime = 0;
-          videoRef.current.play().catch(() => {});
-        }
-        setIsTransitioning(false);
-      }, 600);
-    }
-  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -134,19 +118,14 @@ function HomePage() {
     <SiteShell headerVariant="dark">
       {/* HERO */}
       <section className="relative h-screen overflow-hidden bg-[#060c1a] text-white">
-        {/* Z-0 — Wrapper de crossfade: opacity transiciona via CSS; motion.video cuida do ken-burn */}
-        <div
-          className={`absolute inset-0 z-0 transition-opacity duration-700 ease-in-out ${
-            isTransitioning ? "opacity-0" : "opacity-100"
-          }`}
-        >
+        {/* Z-0 — Vídeo de background: roda uma vez e congela no último frame */}
+        <div className="absolute inset-0 z-0">
           <motion.video
             ref={videoRef}
             src={heroVideo}
             muted
             playsInline
             preload="auto"
-            onEnded={handleVideoEnd}
             initial={{ scale: 1.05, opacity: 1 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1.5, delay: HERO_VIDEO_REVEAL, ease: easeOut }}
@@ -381,14 +360,6 @@ function HomePage() {
             </Reveal>
           </div>
         </div>
-        <div className="container-hrz pb-16 text-center">
-          <Link
-            to="/empresas"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric hover:gap-3 transition-all"
-          >
-            {t("home.portfolio.cta")} <ArrowRight size={16} />
-          </Link>
-        </div>
       </section>
 
       {/* ACESSO RÁPIDO */}
@@ -505,12 +476,6 @@ function HomePage() {
                 className="opacity-70 transition-opacity duration-300 group-hover:opacity-100"
               />
             </a>
-            <Link
-              to="/empresas"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric transition-all hover:gap-3"
-            >
-              {t("home.actis.cta")} <ArrowRight size={16} />
-            </Link>
           </div>
         </div>
       </section>

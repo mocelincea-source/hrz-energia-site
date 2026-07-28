@@ -16,7 +16,6 @@ import { Route as InvestidoresRouteImport } from './routes/investidores'
 import { Route as EticaRouteImport } from './routes/etica'
 import { Route as EsgRouteImport } from './routes/esg'
 import { Route as EolicasRouteImport } from './routes/eolicas'
-import { Route as EmpresasRouteImport } from './routes/empresas'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as InvestidoresIndexRouteImport } from './routes/investidores/index'
@@ -58,11 +57,6 @@ const EsgRoute = EsgRouteImport.update({
 const EolicasRoute = EolicasRouteImport.update({
   id: '/eolicas',
   path: '/eolicas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EmpresasRoute = EmpresasRouteImport.update({
-  id: '/empresas',
-  path: '/empresas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -108,7 +102,6 @@ const InvestidoresDemonstracoesFinanceirasRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/empresas': typeof EmpresasRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRoute
@@ -125,7 +118,6 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/empresas': typeof EmpresasRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRoute
@@ -142,7 +134,6 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contato': typeof ContatoRoute
-  '/empresas': typeof EmpresasRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRoute
@@ -161,7 +152,6 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contato'
-    | '/empresas'
     | '/eolicas'
     | '/esg'
     | '/etica'
@@ -178,7 +168,6 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contato'
-    | '/empresas'
     | '/eolicas'
     | '/esg'
     | '/etica'
@@ -194,7 +183,6 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contato'
-    | '/empresas'
     | '/eolicas'
     | '/esg'
     | '/etica'
@@ -212,7 +200,6 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContatoRoute: typeof ContatoRoute
-  EmpresasRoute: typeof EmpresasRoute
   EolicasRoute: typeof EolicasRoute
   EsgRoute: typeof EsgRoute
   EticaRoute: typeof EticaRoute
@@ -271,13 +258,6 @@ declare module '@tanstack/react-router' {
       path: '/eolicas'
       fullPath: '/eolicas'
       preLoaderRoute: typeof EolicasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/empresas': {
-      id: '/empresas'
-      path: '/empresas'
-      fullPath: '/empresas'
-      preLoaderRoute: typeof EmpresasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -357,7 +337,6 @@ const InvestidoresRouteWithChildren = InvestidoresRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContatoRoute: ContatoRoute,
-  EmpresasRoute: EmpresasRoute,
   EolicasRoute: EolicasRoute,
   EsgRoute: EsgRoute,
   EticaRoute: EticaRoute,
