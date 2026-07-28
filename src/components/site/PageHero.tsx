@@ -8,12 +8,19 @@ export function PageHero({
   title,
   subtitle,
   variant = "deep",
+  videoSrc,
+  imageSrc,
+  imageAlt = "",
 }: {
   eyebrow: string;
   title: React.ReactNode;
   subtitle?: string;
   variant?: "deep" | "green";
+  videoSrc?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }) {
+  const hasMedia = !!(videoSrc || imageSrc);
   const bg =
     variant === "green"
       ? "bg-gradient-to-br from-hrz-green-dark via-hrz-green to-hrz-green-vivid"
@@ -21,6 +28,26 @@ export function PageHero({
   const eyebrowColor = variant === "green" ? "text-white/85" : "text-hrz-electric";
   return (
     <section className={`relative isolate overflow-hidden ${bg} pt-32 pb-20 text-white lg:pt-40 lg:pb-28`}>
+      {videoSrc && (
+        <video
+          src={videoSrc}
+          autoPlay
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      )}
+      {imageSrc && (
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          aria-hidden={!imageAlt}
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      )}
+      {hasMedia && (
+        <div className="absolute inset-0 bg-gradient-to-br from-hrz-deep/85 via-hrz-deep/70 to-slate-900/80 z-10" />
+      )}
       <motion.img
         src={raio}
         alt=""
@@ -28,16 +55,16 @@ export function PageHero({
         initial={{ opacity: 0, scale: 1.1, rotate: -4 }}
         animate={{ opacity: 0.08, scale: 1, rotate: 0 }}
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none absolute -right-28 -top-10 hidden h-[135%] w-auto md:block"
+        className="pointer-events-none absolute -right-28 -top-10 hidden h-[135%] w-auto md:block z-20"
       />
       <img
         src={raioSolid}
         alt=""
         aria-hidden
         style={{ opacity: 0.12 }}
-        className="pointer-events-none absolute -left-12 bottom-[-60px] hidden h-[62%] w-auto md:block"
+        className="pointer-events-none absolute -left-12 bottom-[-60px] hidden h-[62%] w-auto md:block z-20"
       />
-      <div className="container-hrz relative">
+      <div className="container-hrz relative z-20">
         <PlatformTag variant="dark" className="mb-6" />
         <motion.p
           initial={{ opacity: 0, y: 14 }}

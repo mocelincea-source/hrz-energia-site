@@ -21,6 +21,7 @@ import { BrazilMapAnimated } from "@/components/site/BrazilMapAnimated";
 import { Reveal, Parallax, Stagger, StaggerItem, HoverLift } from "@/components/site/motion";
 import i18n from "@/i18n/config";
 import raioBrand from "@/assets/raio-hrz.png";
+import videoHeader from "@/assets/VideoHeader-01.mp4";
 import droneImg1 from "@/assets/Imagen-drone-1.jpeg";
 import droneImg2 from "@/assets/Imagen-drone-2.jpeg";
 import droneImg3 from "@/assets/Imagen-drone-3.jpeg";
@@ -90,6 +91,7 @@ function TransmissorasPage() {
           </>
         }
         subtitle={t("segments.transmission.hero.subtitle")}
+        videoSrc={videoHeader}
       />
 
       {/* Sobre */}

@@ -11,6 +11,7 @@ import i18n from "@/i18n/config";
 import substationImg from "@/assets/substation.jpg";
 import windImg01 from "@/assets/wind-babilionia-01.jpeg";
 import windImg02 from "@/assets/wind-babilionia-02.jpeg";
+import videoHeader from "@/assets/VideoHeader-02.mp4";
 
 const windImages = [windImg01, windImg02];
 
@@ -63,6 +64,7 @@ function PortfolioPage() {
           </>
         }
         subtitle={t("segments.portfolio.hero.subtitle")}
+        videoSrc={videoHeader}
       />
 
       {/* Pegada Nacional */}

@@ -19,6 +19,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal, Stagger, StaggerItem, HoverLift, Parallax } from "@/components/site/motion";
 import i18n from "@/i18n/config";
 import raioBrand from "@/assets/raio-hrz.png";
+import windHeroImg from "@/assets/wind-babilionia-01.jpeg";
 import babiloniaDayImg from "@/assets/babilonia-aerial-day.jpg";
 import complexMorroImg from "@/assets/Complexo-Morro-do-Chapéu.jpeg";
 import complexOurolandiaImg from "@/assets/Complexo-Ourolândia.jpeg";
@@ -88,6 +89,8 @@ function EolicasPage() {
           </>
         }
         subtitle={t("segments.wind.hero.subtitle")}
+        imageSrc={windHeroImg}
+        imageAlt="Complexo Eólico Babilônia"
       />
 
       {/* Visão geral com imagem */}
