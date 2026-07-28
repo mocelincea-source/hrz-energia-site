@@ -9,54 +9,24 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TransmissorasRouteImport } from './routes/transmissoras'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as PortfolioRouteImport } from './routes/portfolio'
-import { Route as InvestidoresRouteImport } from './routes/investidores'
-import { Route as EticaRouteImport } from './routes/etica'
-import { Route as EsgRouteImport } from './routes/esg'
-import { Route as EolicasRouteImport } from './routes/eolicas'
-import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as EolicasRouteImport } from './routes/eolicas'
+import { Route as EsgRouteImport } from './routes/esg'
+import { Route as EticaRouteImport } from './routes/etica'
+import { Route as InvestidoresRouteImport } from './routes/investidores'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as TransmissorasRouteImport } from './routes/transmissoras'
 import { Route as InvestidoresIndexRouteImport } from './routes/investidores/index'
-import { Route as InvestidoresTransmissoraSpmgSARouteImport } from './routes/investidores/transmissora-spmg-s-a'
-import { Route as InvestidoresRelatoriosAgenteFiduciarioRouteImport } from './routes/investidores/relatorios-agente-fiduciario'
-import { Route as InvestidoresOutrosDocumentosRouteImport } from './routes/investidores/outros-documentos'
 import { Route as InvestidoresDemonstracoesFinanceirasRouteImport } from './routes/investidores/demonstracoes-financeiras'
+import { Route as InvestidoresOutrosDocumentosRouteImport } from './routes/investidores/outros-documentos'
+import { Route as InvestidoresRelatoriosAgenteFiduciarioRouteImport } from './routes/investidores/relatorios-agente-fiduciario'
+import { Route as InvestidoresTransmissoraSpmgSARouteImport } from './routes/investidores/transmissora-spmg-s-a'
 
-const TransmissorasRoute = TransmissorasRouteImport.update({
-  id: '/transmissoras',
-  path: '/transmissoras',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PortfolioRoute = PortfolioRouteImport.update({
-  id: '/portfolio',
-  path: '/portfolio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InvestidoresRoute = InvestidoresRouteImport.update({
-  id: '/investidores',
-  path: '/investidores',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EticaRoute = EticaRouteImport.update({
-  id: '/etica',
-  path: '/etica',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsgRoute = EsgRouteImport.update({
-  id: '/esg',
-  path: '/esg',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EolicasRoute = EolicasRouteImport.update({
-  id: '/eolicas',
-  path: '/eolicas',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -64,9 +34,39 @@ const ContatoRoute = ContatoRouteImport.update({
   path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const EolicasRoute = EolicasRouteImport.update({
+  id: '/eolicas',
+  path: '/eolicas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EsgRoute = EsgRouteImport.update({
+  id: '/esg',
+  path: '/esg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EticaRoute = EticaRouteImport.update({
+  id: '/etica',
+  path: '/etica',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvestidoresRoute = InvestidoresRouteImport.update({
+  id: '/investidores',
+  path: '/investidores',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransmissorasRoute = TransmissorasRouteImport.update({
+  id: '/transmissoras',
+  path: '/transmissoras',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InvestidoresIndexRoute = InvestidoresIndexRouteImport.update({
@@ -74,16 +74,10 @@ const InvestidoresIndexRoute = InvestidoresIndexRouteImport.update({
   path: '/',
   getParentRoute: () => InvestidoresRoute,
 } as any)
-const InvestidoresTransmissoraSpmgSARoute =
-  InvestidoresTransmissoraSpmgSARouteImport.update({
-    id: '/transmissora-spmg-s-a',
-    path: '/transmissora-spmg-s-a',
-    getParentRoute: () => InvestidoresRoute,
-  } as any)
-const InvestidoresRelatoriosAgenteFiduciarioRoute =
-  InvestidoresRelatoriosAgenteFiduciarioRouteImport.update({
-    id: '/relatorios-agente-fiduciario',
-    path: '/relatorios-agente-fiduciario',
+const InvestidoresDemonstracoesFinanceirasRoute =
+  InvestidoresDemonstracoesFinanceirasRouteImport.update({
+    id: '/demonstracoes-financeiras',
+    path: '/demonstracoes-financeiras',
     getParentRoute: () => InvestidoresRoute,
   } as any)
 const InvestidoresOutrosDocumentosRoute =
@@ -92,10 +86,16 @@ const InvestidoresOutrosDocumentosRoute =
     path: '/outros-documentos',
     getParentRoute: () => InvestidoresRoute,
   } as any)
-const InvestidoresDemonstracoesFinanceirasRoute =
-  InvestidoresDemonstracoesFinanceirasRouteImport.update({
-    id: '/demonstracoes-financeiras',
-    path: '/demonstracoes-financeiras',
+const InvestidoresRelatoriosAgenteFiduciarioRoute =
+  InvestidoresRelatoriosAgenteFiduciarioRouteImport.update({
+    id: '/relatorios-agente-fiduciario',
+    path: '/relatorios-agente-fiduciario',
+    getParentRoute: () => InvestidoresRoute,
+  } as any)
+const InvestidoresTransmissoraSpmgSARoute =
+  InvestidoresTransmissoraSpmgSARouteImport.update({
+    id: '/transmissora-spmg-s-a',
+    path: '/transmissora-spmg-s-a',
     getParentRoute: () => InvestidoresRoute,
   } as any)
 
@@ -211,53 +211,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/transmissoras': {
-      id: '/transmissoras'
-      path: '/transmissoras'
-      fullPath: '/transmissoras'
-      preLoaderRoute: typeof TransmissorasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/portfolio': {
-      id: '/portfolio'
-      path: '/portfolio'
-      fullPath: '/portfolio'
-      preLoaderRoute: typeof PortfolioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/investidores': {
-      id: '/investidores'
-      path: '/investidores'
-      fullPath: '/investidores'
-      preLoaderRoute: typeof InvestidoresRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/etica': {
-      id: '/etica'
-      path: '/etica'
-      fullPath: '/etica'
-      preLoaderRoute: typeof EticaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/esg': {
-      id: '/esg'
-      path: '/esg'
-      fullPath: '/esg'
-      preLoaderRoute: typeof EsgRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/eolicas': {
-      id: '/eolicas'
-      path: '/eolicas'
-      fullPath: '/eolicas'
-      preLoaderRoute: typeof EolicasRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -267,11 +225,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/eolicas': {
+      id: '/eolicas'
+      path: '/eolicas'
+      fullPath: '/eolicas'
+      preLoaderRoute: typeof EolicasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/esg': {
+      id: '/esg'
+      path: '/esg'
+      fullPath: '/esg'
+      preLoaderRoute: typeof EsgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/etica': {
+      id: '/etica'
+      path: '/etica'
+      fullPath: '/etica'
+      preLoaderRoute: typeof EticaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/investidores': {
+      id: '/investidores'
+      path: '/investidores'
+      fullPath: '/investidores'
+      preLoaderRoute: typeof InvestidoresRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transmissoras': {
+      id: '/transmissoras'
+      path: '/transmissoras'
+      fullPath: '/transmissoras'
+      preLoaderRoute: typeof TransmissorasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/investidores/': {
@@ -281,18 +281,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InvestidoresIndexRouteImport
       parentRoute: typeof InvestidoresRoute
     }
-    '/investidores/transmissora-spmg-s-a': {
-      id: '/investidores/transmissora-spmg-s-a'
-      path: '/transmissora-spmg-s-a'
-      fullPath: '/investidores/transmissora-spmg-s-a'
-      preLoaderRoute: typeof InvestidoresTransmissoraSpmgSARouteImport
-      parentRoute: typeof InvestidoresRoute
-    }
-    '/investidores/relatorios-agente-fiduciario': {
-      id: '/investidores/relatorios-agente-fiduciario'
-      path: '/relatorios-agente-fiduciario'
-      fullPath: '/investidores/relatorios-agente-fiduciario'
-      preLoaderRoute: typeof InvestidoresRelatoriosAgenteFiduciarioRouteImport
+    '/investidores/demonstracoes-financeiras': {
+      id: '/investidores/demonstracoes-financeiras'
+      path: '/demonstracoes-financeiras'
+      fullPath: '/investidores/demonstracoes-financeiras'
+      preLoaderRoute: typeof InvestidoresDemonstracoesFinanceirasRouteImport
       parentRoute: typeof InvestidoresRoute
     }
     '/investidores/outros-documentos': {
@@ -302,11 +295,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InvestidoresOutrosDocumentosRouteImport
       parentRoute: typeof InvestidoresRoute
     }
-    '/investidores/demonstracoes-financeiras': {
-      id: '/investidores/demonstracoes-financeiras'
-      path: '/demonstracoes-financeiras'
-      fullPath: '/investidores/demonstracoes-financeiras'
-      preLoaderRoute: typeof InvestidoresDemonstracoesFinanceirasRouteImport
+    '/investidores/relatorios-agente-fiduciario': {
+      id: '/investidores/relatorios-agente-fiduciario'
+      path: '/relatorios-agente-fiduciario'
+      fullPath: '/investidores/relatorios-agente-fiduciario'
+      preLoaderRoute: typeof InvestidoresRelatoriosAgenteFiduciarioRouteImport
+      parentRoute: typeof InvestidoresRoute
+    }
+    '/investidores/transmissora-spmg-s-a': {
+      id: '/investidores/transmissora-spmg-s-a'
+      path: '/transmissora-spmg-s-a'
+      fullPath: '/investidores/transmissora-spmg-s-a'
+      preLoaderRoute: typeof InvestidoresTransmissoraSpmgSARouteImport
       parentRoute: typeof InvestidoresRoute
     }
   }

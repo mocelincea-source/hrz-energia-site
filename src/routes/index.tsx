@@ -316,48 +316,59 @@ function HomePage() {
 
       {/* PORTFOLIO SPLIT */}
       <section className="bg-hrz-deep text-white">
-        <div className="container-hrz grid gap-6 py-16 lg:grid-cols-2 lg:py-20">
-          <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
-            <motion.img
-              src={droneImg4}
-              alt={t("home.portfolio.transmissionImgAlt")}
-              loading="lazy"
-              initial={{ scale: 1.12 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.4, ease: easeOut }}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/90 to-hrz-deep/20" />
-            <Reveal className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
-              <p className="eyebrow text-hrz-electric">{t("home.portfolio.transmissionEyebrow")}</p>
-              <h3 className="font-display mt-3 text-3xl font-bold lg:text-4xl">
-                {t("home.portfolio.transmissionHeading")}
-              </h3>
-              <p className="mt-3 max-w-md text-sm text-white/80">
-                {t("home.portfolio.transmissionBody")}
-              </p>
-            </Reveal>
+        <div className="container-hrz py-16 lg:py-20">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
+              <motion.img
+                src={droneImg4}
+                alt={t("home.portfolio.transmissionImgAlt")}
+                loading="lazy"
+                initial={{ scale: 1.12 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.4, ease: easeOut }}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/90 to-hrz-deep/20" />
+              <Reveal className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
+                <p className="eyebrow text-hrz-electric">{t("home.portfolio.transmissionEyebrow")}</p>
+                <h3 className="font-display mt-3 text-3xl font-bold lg:text-4xl">
+                  {t("home.portfolio.transmissionHeading")}
+                </h3>
+                <p className="mt-3 max-w-md text-sm text-white/80">
+                  {t("home.portfolio.transmissionBody")}
+                </p>
+              </Reveal>
+            </div>
+            <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
+              <motion.img
+                src={windBabiloniaImg}
+                alt={t("home.portfolio.windHeading")}
+                loading="lazy"
+                initial={{ scale: 1.12 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.4, ease: easeOut }}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-hrz-green-dark/90 to-hrz-green-dark/40" />
+              <Reveal delay={0.15} className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
+                <p className="eyebrow text-white">{t("home.portfolio.windEyebrow")}</p>
+                <h3 className="font-display mt-3 text-3xl font-bold lg:text-4xl">
+                  {t("home.portfolio.windHeading")}
+                </h3>
+                <p className="mt-3 max-w-md text-sm text-white/85">{t("home.portfolio.windBody")}</p>
+              </Reveal>
+            </div>
           </div>
-          <div className="relative min-h-[480px] overflow-hidden rounded-2xl">
-            <motion.img
-              src={windBabiloniaImg}
-              alt={t("home.portfolio.windHeading")}
-              loading="lazy"
-              initial={{ scale: 1.12 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.4, ease: easeOut }}
-              className="absolute inset-0 z-0 h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 z-10 bg-gradient-to-t from-hrz-green-dark/90 to-hrz-green-dark/40" />
-            <Reveal delay={0.15} className="relative z-20 absolute inset-x-0 bottom-0 p-8 lg:p-10">
-              <p className="eyebrow text-white">{t("home.portfolio.windEyebrow")}</p>
-              <h3 className="font-display mt-3 text-3xl font-bold lg:text-4xl">
-                {t("home.portfolio.windHeading")}
-              </h3>
-              <p className="mt-3 max-w-md text-sm text-white/85">{t("home.portfolio.windBody")}</p>
-            </Reveal>
+          <div className="mt-8 flex items-center justify-center">
+            <Link
+              to="/portfolio"
+              className="group inline-flex items-center gap-2 font-semibold text-hrz-electric transition-opacity duration-300 hover:opacity-80"
+            >
+              {t("home.portfolio.cta")}
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </div>
         </div>
       </section>
@@ -462,7 +473,7 @@ function HomePage() {
               {t("home.actis.body1")}
             </p>
           </Reveal>
-          <div className="mt-10 flex flex-col items-center justify-center gap-5 sm:flex-row sm:gap-8">
+          <div className="mt-10 flex flex-col items-center justify-center gap-6 md:flex-row md:gap-8">
             <a
               href="https://www.act.is/"
               target="_blank"
@@ -476,6 +487,16 @@ function HomePage() {
                 className="opacity-70 transition-opacity duration-300 group-hover:opacity-100"
               />
             </a>
+            <Link
+              to="/investidores"
+              className="group inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric transition-opacity duration-300 hover:opacity-80"
+            >
+              {t("home.actis.investorsCta")}
+              <ArrowRight
+                size={15}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
           </div>
         </div>
       </section>
