@@ -133,8 +133,8 @@ function HomePage() {
           />
         </div>
 
-        {/* Z-10 — Overlay escuro navy para contraste */}
-        <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#060c1a]/80 via-[#0a1328]/70 to-[#040810]/92" />
+        {/* Z-10 — Overlay preto semi-transparente (sem navy/azul antes do 1º frame do vídeo) */}
+        <div className="absolute inset-0 z-10 bg-black/55" />
 
         {/* Z-20 — Conteúdo da página */}
         <div className="relative z-20 flex h-full flex-col">
