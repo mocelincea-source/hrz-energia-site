@@ -21,8 +21,11 @@ export function PageHero({
   imageAlt?: string;
 }) {
   const hasMedia = !!(videoSrc || imageSrc);
-  const bg =
-    variant === "green"
+  // Com vídeo: fundo preto evita o flash azul do gradient antes do 1º frame.
+  // Sem vídeo: mantém os fundos de marca (deep / green).
+  const bg = videoSrc
+    ? "bg-black"
+    : variant === "green"
       ? "bg-gradient-to-br from-hrz-green-dark via-hrz-green to-hrz-green-vivid"
       : "bg-hrz-deep-radial";
   const eyebrowColor = variant === "green" ? "text-white/85" : "text-hrz-electric";
@@ -34,19 +37,21 @@ export function PageHero({
           autoPlay
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          preload="auto"
+          className="absolute inset-0 z-0 h-full w-full object-cover"
         />
       )}
-      {imageSrc && (
+      {/* Imagem estática só quando não há vídeo — evita fallback azul/imagem antiga por cima */}
+      {imageSrc && !videoSrc && (
         <img
           src={imageSrc}
           alt={imageAlt}
           aria-hidden={!imageAlt}
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 z-0 h-full w-full object-cover"
         />
       )}
       {hasMedia && (
-        <div className="absolute inset-0 bg-gradient-to-br from-hrz-deep/85 via-hrz-deep/70 to-slate-900/80 z-10" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-br from-hrz-deep/85 via-hrz-deep/70 to-slate-900/80" />
       )}
       <motion.img
         src={raio}
@@ -55,14 +60,14 @@ export function PageHero({
         initial={{ opacity: 0, scale: 1.1, rotate: -4 }}
         animate={{ opacity: 0.08, scale: 1, rotate: 0 }}
         transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        className="pointer-events-none absolute -right-28 -top-10 hidden h-[135%] w-auto md:block z-20"
+        className="pointer-events-none absolute -right-28 -top-10 z-20 hidden h-[135%] w-auto md:block"
       />
       <img
         src={raioSolid}
         alt=""
         aria-hidden
         style={{ opacity: 0.12 }}
-        className="pointer-events-none absolute -left-12 bottom-[-60px] hidden h-[62%] w-auto md:block z-20"
+        className="pointer-events-none absolute -left-12 bottom-[-60px] z-20 hidden h-[62%] w-auto md:block"
       />
       <div className="container-hrz relative z-20">
         <PlatformTag variant="dark" className="mb-6" />

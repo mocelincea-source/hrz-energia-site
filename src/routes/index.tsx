@@ -117,9 +117,9 @@ function HomePage() {
   return (
     <SiteShell headerVariant="dark">
       {/* HERO */}
-      <section className="relative h-screen overflow-hidden bg-[#060c1a] text-white">
+      <section className="relative h-screen overflow-hidden bg-black text-white">
         {/* Z-0 — Vídeo de background: roda uma vez e congela no último frame */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           <motion.video
             ref={videoRef}
             src={heroVideo}
