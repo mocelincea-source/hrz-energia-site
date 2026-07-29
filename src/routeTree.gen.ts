@@ -18,6 +18,17 @@ import { Route as InvestidoresRouteImport } from './routes/investidores'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TransmissorasRouteImport } from './routes/transmissoras'
+import { Route as EticaIndexRouteImport } from './routes/etica/index'
+import { Route as EticaAcompanharRelatoRouteImport } from './routes/etica/acompanhar-relato'
+import { Route as EticaCanalDeDenunciasRouteImport } from './routes/etica/canal-de-denuncias'
+import { Route as EticaDadosIncidenteRouteImport } from './routes/etica/dados-incidente'
+import { Route as EticaDetalhesRelatoRouteImport } from './routes/etica/detalhes-relato'
+import { Route as EticaIdentificacaoRelatoRouteImport } from './routes/etica/identificacao-relato'
+import { Route as EticaPoliticaAnticorrupcaoRouteImport } from './routes/etica/politica-anticorrupcao'
+import { Route as EticaProtecaoDadosRouteImport } from './routes/etica/protecao-dados'
+import { Route as EticaRealizarRelatoRouteImport } from './routes/etica/realizar-relato'
+import { Route as EticaRelatoSucessoRouteImport } from './routes/etica/relato-sucesso'
+import { Route as EticaRelatoriosSustentabilidadeRouteImport } from './routes/etica/relatorios-sustentabilidade'
 import { Route as InvestidoresIndexRouteImport } from './routes/investidores/index'
 import { Route as InvestidoresDemonstracoesFinanceirasRouteImport } from './routes/investidores/demonstracoes-financeiras'
 import { Route as InvestidoresOutrosDocumentosRouteImport } from './routes/investidores/outros-documentos'
@@ -69,6 +80,64 @@ const TransmissorasRoute = TransmissorasRouteImport.update({
   path: '/transmissoras',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EticaIndexRoute = EticaIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaAcompanharRelatoRoute = EticaAcompanharRelatoRouteImport.update({
+  id: '/acompanhar-relato',
+  path: '/acompanhar-relato',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaCanalDeDenunciasRoute = EticaCanalDeDenunciasRouteImport.update({
+  id: '/canal-de-denuncias',
+  path: '/canal-de-denuncias',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaDadosIncidenteRoute = EticaDadosIncidenteRouteImport.update({
+  id: '/dados-incidente',
+  path: '/dados-incidente',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaDetalhesRelatoRoute = EticaDetalhesRelatoRouteImport.update({
+  id: '/detalhes-relato',
+  path: '/detalhes-relato',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaIdentificacaoRelatoRoute =
+  EticaIdentificacaoRelatoRouteImport.update({
+    id: '/identificacao-relato',
+    path: '/identificacao-relato',
+    getParentRoute: () => EticaRoute,
+  } as any)
+const EticaPoliticaAnticorrupcaoRoute =
+  EticaPoliticaAnticorrupcaoRouteImport.update({
+    id: '/politica-anticorrupcao',
+    path: '/politica-anticorrupcao',
+    getParentRoute: () => EticaRoute,
+  } as any)
+const EticaProtecaoDadosRoute = EticaProtecaoDadosRouteImport.update({
+  id: '/protecao-dados',
+  path: '/protecao-dados',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaRealizarRelatoRoute = EticaRealizarRelatoRouteImport.update({
+  id: '/realizar-relato',
+  path: '/realizar-relato',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaRelatoSucessoRoute = EticaRelatoSucessoRouteImport.update({
+  id: '/relato-sucesso',
+  path: '/relato-sucesso',
+  getParentRoute: () => EticaRoute,
+} as any)
+const EticaRelatoriosSustentabilidadeRoute =
+  EticaRelatoriosSustentabilidadeRouteImport.update({
+    id: '/relatorios-sustentabilidade',
+    path: '/relatorios-sustentabilidade',
+    getParentRoute: () => EticaRoute,
+  } as any)
 const InvestidoresIndexRoute = InvestidoresIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -104,15 +173,26 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
-  '/etica': typeof EticaRoute
+  '/etica': typeof EticaRouteWithChildren
   '/investidores': typeof InvestidoresRouteWithChildren
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
   '/transmissoras': typeof TransmissorasRoute
+  '/etica/acompanhar-relato': typeof EticaAcompanharRelatoRoute
+  '/etica/canal-de-denuncias': typeof EticaCanalDeDenunciasRoute
+  '/etica/dados-incidente': typeof EticaDadosIncidenteRoute
+  '/etica/detalhes-relato': typeof EticaDetalhesRelatoRoute
+  '/etica/identificacao-relato': typeof EticaIdentificacaoRelatoRoute
+  '/etica/politica-anticorrupcao': typeof EticaPoliticaAnticorrupcaoRoute
+  '/etica/protecao-dados': typeof EticaProtecaoDadosRoute
+  '/etica/realizar-relato': typeof EticaRealizarRelatoRoute
+  '/etica/relato-sucesso': typeof EticaRelatoSucessoRoute
+  '/etica/relatorios-sustentabilidade': typeof EticaRelatoriosSustentabilidadeRoute
   '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
   '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
   '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
   '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
+  '/etica/': typeof EticaIndexRoute
   '/investidores/': typeof InvestidoresIndexRoute
 }
 export interface FileRoutesByTo {
@@ -120,14 +200,24 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
-  '/etica': typeof EticaRoute
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
   '/transmissoras': typeof TransmissorasRoute
+  '/etica/acompanhar-relato': typeof EticaAcompanharRelatoRoute
+  '/etica/canal-de-denuncias': typeof EticaCanalDeDenunciasRoute
+  '/etica/dados-incidente': typeof EticaDadosIncidenteRoute
+  '/etica/detalhes-relato': typeof EticaDetalhesRelatoRoute
+  '/etica/identificacao-relato': typeof EticaIdentificacaoRelatoRoute
+  '/etica/politica-anticorrupcao': typeof EticaPoliticaAnticorrupcaoRoute
+  '/etica/protecao-dados': typeof EticaProtecaoDadosRoute
+  '/etica/realizar-relato': typeof EticaRealizarRelatoRoute
+  '/etica/relato-sucesso': typeof EticaRelatoSucessoRoute
+  '/etica/relatorios-sustentabilidade': typeof EticaRelatoriosSustentabilidadeRoute
   '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
   '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
   '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
   '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
+  '/etica': typeof EticaIndexRoute
   '/investidores': typeof InvestidoresIndexRoute
 }
 export interface FileRoutesById {
@@ -136,15 +226,26 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
-  '/etica': typeof EticaRoute
+  '/etica': typeof EticaRouteWithChildren
   '/investidores': typeof InvestidoresRouteWithChildren
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
   '/transmissoras': typeof TransmissorasRoute
+  '/etica/acompanhar-relato': typeof EticaAcompanharRelatoRoute
+  '/etica/canal-de-denuncias': typeof EticaCanalDeDenunciasRoute
+  '/etica/dados-incidente': typeof EticaDadosIncidenteRoute
+  '/etica/detalhes-relato': typeof EticaDetalhesRelatoRoute
+  '/etica/identificacao-relato': typeof EticaIdentificacaoRelatoRoute
+  '/etica/politica-anticorrupcao': typeof EticaPoliticaAnticorrupcaoRoute
+  '/etica/protecao-dados': typeof EticaProtecaoDadosRoute
+  '/etica/realizar-relato': typeof EticaRealizarRelatoRoute
+  '/etica/relato-sucesso': typeof EticaRelatoSucessoRoute
+  '/etica/relatorios-sustentabilidade': typeof EticaRelatoriosSustentabilidadeRoute
   '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
   '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
   '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
   '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
+  '/etica/': typeof EticaIndexRoute
   '/investidores/': typeof InvestidoresIndexRoute
 }
 export interface FileRouteTypes {
@@ -159,10 +260,21 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/sobre'
     | '/transmissoras'
+    | '/etica/acompanhar-relato'
+    | '/etica/canal-de-denuncias'
+    | '/etica/dados-incidente'
+    | '/etica/detalhes-relato'
+    | '/etica/identificacao-relato'
+    | '/etica/politica-anticorrupcao'
+    | '/etica/protecao-dados'
+    | '/etica/realizar-relato'
+    | '/etica/relato-sucesso'
+    | '/etica/relatorios-sustentabilidade'
     | '/investidores/demonstracoes-financeiras'
     | '/investidores/outros-documentos'
     | '/investidores/relatorios-agente-fiduciario'
     | '/investidores/transmissora-spmg-s-a'
+    | '/etica/'
     | '/investidores/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -170,14 +282,24 @@ export interface FileRouteTypes {
     | '/contato'
     | '/eolicas'
     | '/esg'
-    | '/etica'
     | '/portfolio'
     | '/sobre'
     | '/transmissoras'
+    | '/etica/acompanhar-relato'
+    | '/etica/canal-de-denuncias'
+    | '/etica/dados-incidente'
+    | '/etica/detalhes-relato'
+    | '/etica/identificacao-relato'
+    | '/etica/politica-anticorrupcao'
+    | '/etica/protecao-dados'
+    | '/etica/realizar-relato'
+    | '/etica/relato-sucesso'
+    | '/etica/relatorios-sustentabilidade'
     | '/investidores/demonstracoes-financeiras'
     | '/investidores/outros-documentos'
     | '/investidores/relatorios-agente-fiduciario'
     | '/investidores/transmissora-spmg-s-a'
+    | '/etica'
     | '/investidores'
   id:
     | '__root__'
@@ -190,10 +312,21 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/sobre'
     | '/transmissoras'
+    | '/etica/acompanhar-relato'
+    | '/etica/canal-de-denuncias'
+    | '/etica/dados-incidente'
+    | '/etica/detalhes-relato'
+    | '/etica/identificacao-relato'
+    | '/etica/politica-anticorrupcao'
+    | '/etica/protecao-dados'
+    | '/etica/realizar-relato'
+    | '/etica/relato-sucesso'
+    | '/etica/relatorios-sustentabilidade'
     | '/investidores/demonstracoes-financeiras'
     | '/investidores/outros-documentos'
     | '/investidores/relatorios-agente-fiduciario'
     | '/investidores/transmissora-spmg-s-a'
+    | '/etica/'
     | '/investidores/'
   fileRoutesById: FileRoutesById
 }
@@ -202,7 +335,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   EolicasRoute: typeof EolicasRoute
   EsgRoute: typeof EsgRoute
-  EticaRoute: typeof EticaRoute
+  EticaRoute: typeof EticaRouteWithChildren
   InvestidoresRoute: typeof InvestidoresRouteWithChildren
   PortfolioRoute: typeof PortfolioRoute
   SobreRoute: typeof SobreRoute
@@ -274,6 +407,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TransmissorasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/etica/': {
+      id: '/etica/'
+      path: '/'
+      fullPath: '/etica/'
+      preLoaderRoute: typeof EticaIndexRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/acompanhar-relato': {
+      id: '/etica/acompanhar-relato'
+      path: '/acompanhar-relato'
+      fullPath: '/etica/acompanhar-relato'
+      preLoaderRoute: typeof EticaAcompanharRelatoRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/canal-de-denuncias': {
+      id: '/etica/canal-de-denuncias'
+      path: '/canal-de-denuncias'
+      fullPath: '/etica/canal-de-denuncias'
+      preLoaderRoute: typeof EticaCanalDeDenunciasRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/dados-incidente': {
+      id: '/etica/dados-incidente'
+      path: '/dados-incidente'
+      fullPath: '/etica/dados-incidente'
+      preLoaderRoute: typeof EticaDadosIncidenteRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/detalhes-relato': {
+      id: '/etica/detalhes-relato'
+      path: '/detalhes-relato'
+      fullPath: '/etica/detalhes-relato'
+      preLoaderRoute: typeof EticaDetalhesRelatoRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/identificacao-relato': {
+      id: '/etica/identificacao-relato'
+      path: '/identificacao-relato'
+      fullPath: '/etica/identificacao-relato'
+      preLoaderRoute: typeof EticaIdentificacaoRelatoRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/politica-anticorrupcao': {
+      id: '/etica/politica-anticorrupcao'
+      path: '/politica-anticorrupcao'
+      fullPath: '/etica/politica-anticorrupcao'
+      preLoaderRoute: typeof EticaPoliticaAnticorrupcaoRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/protecao-dados': {
+      id: '/etica/protecao-dados'
+      path: '/protecao-dados'
+      fullPath: '/etica/protecao-dados'
+      preLoaderRoute: typeof EticaProtecaoDadosRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/realizar-relato': {
+      id: '/etica/realizar-relato'
+      path: '/realizar-relato'
+      fullPath: '/etica/realizar-relato'
+      preLoaderRoute: typeof EticaRealizarRelatoRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/relato-sucesso': {
+      id: '/etica/relato-sucesso'
+      path: '/relato-sucesso'
+      fullPath: '/etica/relato-sucesso'
+      preLoaderRoute: typeof EticaRelatoSucessoRouteImport
+      parentRoute: typeof EticaRoute
+    }
+    '/etica/relatorios-sustentabilidade': {
+      id: '/etica/relatorios-sustentabilidade'
+      path: '/relatorios-sustentabilidade'
+      fullPath: '/etica/relatorios-sustentabilidade'
+      preLoaderRoute: typeof EticaRelatoriosSustentabilidadeRouteImport
+      parentRoute: typeof EticaRoute
+    }
     '/investidores/': {
       id: '/investidores/'
       path: '/'
@@ -312,6 +522,36 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface EticaRouteChildren {
+  EticaAcompanharRelatoRoute: typeof EticaAcompanharRelatoRoute
+  EticaCanalDeDenunciasRoute: typeof EticaCanalDeDenunciasRoute
+  EticaDadosIncidenteRoute: typeof EticaDadosIncidenteRoute
+  EticaDetalhesRelatoRoute: typeof EticaDetalhesRelatoRoute
+  EticaIdentificacaoRelatoRoute: typeof EticaIdentificacaoRelatoRoute
+  EticaPoliticaAnticorrupcaoRoute: typeof EticaPoliticaAnticorrupcaoRoute
+  EticaProtecaoDadosRoute: typeof EticaProtecaoDadosRoute
+  EticaRealizarRelatoRoute: typeof EticaRealizarRelatoRoute
+  EticaRelatoSucessoRoute: typeof EticaRelatoSucessoRoute
+  EticaRelatoriosSustentabilidadeRoute: typeof EticaRelatoriosSustentabilidadeRoute
+  EticaIndexRoute: typeof EticaIndexRoute
+}
+
+const EticaRouteChildren: EticaRouteChildren = {
+  EticaAcompanharRelatoRoute: EticaAcompanharRelatoRoute,
+  EticaCanalDeDenunciasRoute: EticaCanalDeDenunciasRoute,
+  EticaDadosIncidenteRoute: EticaDadosIncidenteRoute,
+  EticaDetalhesRelatoRoute: EticaDetalhesRelatoRoute,
+  EticaIdentificacaoRelatoRoute: EticaIdentificacaoRelatoRoute,
+  EticaPoliticaAnticorrupcaoRoute: EticaPoliticaAnticorrupcaoRoute,
+  EticaProtecaoDadosRoute: EticaProtecaoDadosRoute,
+  EticaRealizarRelatoRoute: EticaRealizarRelatoRoute,
+  EticaRelatoSucessoRoute: EticaRelatoSucessoRoute,
+  EticaRelatoriosSustentabilidadeRoute: EticaRelatoriosSustentabilidadeRoute,
+  EticaIndexRoute: EticaIndexRoute,
+}
+
+const EticaRouteWithChildren = EticaRoute._addFileChildren(EticaRouteChildren)
+
 interface InvestidoresRouteChildren {
   InvestidoresDemonstracoesFinanceirasRoute: typeof InvestidoresDemonstracoesFinanceirasRoute
   InvestidoresOutrosDocumentosRoute: typeof InvestidoresOutrosDocumentosRoute
@@ -339,7 +579,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   EolicasRoute: EolicasRoute,
   EsgRoute: EsgRoute,
-  EticaRoute: EticaRoute,
+  EticaRoute: EticaRouteWithChildren,
   InvestidoresRoute: InvestidoresRouteWithChildren,
   PortfolioRoute: PortfolioRoute,
   SobreRoute: SobreRoute,

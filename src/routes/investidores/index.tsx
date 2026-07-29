@@ -5,6 +5,7 @@ import { BoltDecor } from "@/components/site/BoltDecor";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/motion";
 import { BarChart3, FileText, FolderOpen, Building2, ArrowRight } from "lucide-react";
 import i18n from "@/i18n/config";
+import videoHeader from "@/assets/VideoHeader-03.mp4";
 
 export const Route = createFileRoute("/investidores/")({
   head: () => ({
@@ -70,6 +71,7 @@ function InvestidoresIndexPage() {
             <span className="text-gradient-electric">{t("investors.hero.titleLine2")}</span>
           </>
         }
+        videoSrc={videoHeader}
       />
 
       {/* KPIs */}
