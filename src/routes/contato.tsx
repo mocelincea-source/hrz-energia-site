@@ -126,13 +126,6 @@ function ContatoPage() {
               </div>
             </a>
 
-            <div className="rounded-3xl bg-hrz-deep p-8 text-white">
-              <p className="eyebrow text-hrz-electric">{t("contact.investorsBox.eyebrow")}</p>
-              <p className="mt-3 text-base leading-relaxed text-white/85">
-                {t("contact.investorsBox.body")}
-              </p>
-            </div>
-
             <Float className="flex justify-center pt-4" amplitude={12} duration={4.5}>
               <img
                 src={mascoteOi}

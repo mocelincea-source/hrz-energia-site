@@ -33,7 +33,6 @@ import { Route as InvestidoresIndexRouteImport } from './routes/investidores/ind
 import { Route as InvestidoresDemonstracoesFinanceirasRouteImport } from './routes/investidores/demonstracoes-financeiras'
 import { Route as InvestidoresOutrosDocumentosRouteImport } from './routes/investidores/outros-documentos'
 import { Route as InvestidoresRelatoriosAgenteFiduciarioRouteImport } from './routes/investidores/relatorios-agente-fiduciario'
-import { Route as InvestidoresTransmissoraSpmgSARouteImport } from './routes/investidores/transmissora-spmg-s-a'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -161,12 +160,6 @@ const InvestidoresRelatoriosAgenteFiduciarioRoute =
     path: '/relatorios-agente-fiduciario',
     getParentRoute: () => InvestidoresRoute,
   } as any)
-const InvestidoresTransmissoraSpmgSARoute =
-  InvestidoresTransmissoraSpmgSARouteImport.update({
-    id: '/transmissora-spmg-s-a',
-    path: '/transmissora-spmg-s-a',
-    getParentRoute: () => InvestidoresRoute,
-  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -191,7 +184,6 @@ export interface FileRoutesByFullPath {
   '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
   '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
   '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
-  '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
   '/etica/': typeof EticaIndexRoute
   '/investidores/': typeof InvestidoresIndexRoute
 }
@@ -216,7 +208,6 @@ export interface FileRoutesByTo {
   '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
   '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
   '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
-  '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
   '/etica': typeof EticaIndexRoute
   '/investidores': typeof InvestidoresIndexRoute
 }
@@ -244,7 +235,6 @@ export interface FileRoutesById {
   '/investidores/demonstracoes-financeiras': typeof InvestidoresDemonstracoesFinanceirasRoute
   '/investidores/outros-documentos': typeof InvestidoresOutrosDocumentosRoute
   '/investidores/relatorios-agente-fiduciario': typeof InvestidoresRelatoriosAgenteFiduciarioRoute
-  '/investidores/transmissora-spmg-s-a': typeof InvestidoresTransmissoraSpmgSARoute
   '/etica/': typeof EticaIndexRoute
   '/investidores/': typeof InvestidoresIndexRoute
 }
@@ -273,7 +263,6 @@ export interface FileRouteTypes {
     | '/investidores/demonstracoes-financeiras'
     | '/investidores/outros-documentos'
     | '/investidores/relatorios-agente-fiduciario'
-    | '/investidores/transmissora-spmg-s-a'
     | '/etica/'
     | '/investidores/'
   fileRoutesByTo: FileRoutesByTo
@@ -298,7 +287,6 @@ export interface FileRouteTypes {
     | '/investidores/demonstracoes-financeiras'
     | '/investidores/outros-documentos'
     | '/investidores/relatorios-agente-fiduciario'
-    | '/investidores/transmissora-spmg-s-a'
     | '/etica'
     | '/investidores'
   id:
@@ -325,7 +313,6 @@ export interface FileRouteTypes {
     | '/investidores/demonstracoes-financeiras'
     | '/investidores/outros-documentos'
     | '/investidores/relatorios-agente-fiduciario'
-    | '/investidores/transmissora-spmg-s-a'
     | '/etica/'
     | '/investidores/'
   fileRoutesById: FileRoutesById
@@ -512,13 +499,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InvestidoresRelatoriosAgenteFiduciarioRouteImport
       parentRoute: typeof InvestidoresRoute
     }
-    '/investidores/transmissora-spmg-s-a': {
-      id: '/investidores/transmissora-spmg-s-a'
-      path: '/transmissora-spmg-s-a'
-      fullPath: '/investidores/transmissora-spmg-s-a'
-      preLoaderRoute: typeof InvestidoresTransmissoraSpmgSARouteImport
-      parentRoute: typeof InvestidoresRoute
-    }
   }
 }
 
@@ -556,7 +536,6 @@ interface InvestidoresRouteChildren {
   InvestidoresDemonstracoesFinanceirasRoute: typeof InvestidoresDemonstracoesFinanceirasRoute
   InvestidoresOutrosDocumentosRoute: typeof InvestidoresOutrosDocumentosRoute
   InvestidoresRelatoriosAgenteFiduciarioRoute: typeof InvestidoresRelatoriosAgenteFiduciarioRoute
-  InvestidoresTransmissoraSpmgSARoute: typeof InvestidoresTransmissoraSpmgSARoute
   InvestidoresIndexRoute: typeof InvestidoresIndexRoute
 }
 
@@ -566,7 +545,6 @@ const InvestidoresRouteChildren: InvestidoresRouteChildren = {
   InvestidoresOutrosDocumentosRoute: InvestidoresOutrosDocumentosRoute,
   InvestidoresRelatoriosAgenteFiduciarioRoute:
     InvestidoresRelatoriosAgenteFiduciarioRoute,
-  InvestidoresTransmissoraSpmgSARoute: InvestidoresTransmissoraSpmgSARoute,
   InvestidoresIndexRoute: InvestidoresIndexRoute,
 }
 

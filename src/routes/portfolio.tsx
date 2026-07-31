@@ -113,8 +113,9 @@ function PortfolioPage() {
               {t("segments.portfolio.transmission.heading")}
             </h2>
             <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              {t("segments.portfolio.transmission.subtitle")}
-            </p>
+                <span className="block">{t("segments.portfolio.transmission.subtitle1")}</span>
+                <span className="block">{t("segments.portfolio.transmission.subtitle2")}</span>
+              </p>
           </Reveal>
 
           <Stagger className="mt-10 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">

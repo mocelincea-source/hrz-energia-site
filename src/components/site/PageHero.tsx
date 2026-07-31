@@ -11,6 +11,7 @@ export function PageHero({
   videoSrc,
   imageSrc,
   imageAlt = "",
+  compact = false,
 }: {
   eyebrow: string;
   title: React.ReactNode;
@@ -19,6 +20,7 @@ export function PageHero({
   videoSrc?: string;
   imageSrc?: string;
   imageAlt?: string;
+  compact?: boolean;
 }) {
   const hasMedia = !!(videoSrc || imageSrc);
   // Com vídeo: fundo preto evita o flash azul do gradient antes do 1º frame.
@@ -30,7 +32,7 @@ export function PageHero({
       : "bg-hrz-deep-radial";
   const eyebrowColor = variant === "green" ? "text-white/85" : "text-hrz-electric";
   return (
-    <section className={`relative isolate overflow-hidden ${bg} pt-32 pb-20 text-white lg:pt-40 lg:pb-28`}>
+    <section className={`relative isolate overflow-hidden ${bg} ${compact ? "pt-24 pb-8 lg:pt-28 lg:pb-10" : "pt-32 pb-20 lg:pt-40 lg:pb-28"} text-white`}>
       {videoSrc && (
         <div className="absolute inset-0 z-0 bg-black">
           <video

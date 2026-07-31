@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/site/PageHero";
 import { BoltDecor } from "@/components/site/BoltDecor";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/motion";
-import { BarChart3, FileText, FolderOpen, Building2, ArrowRight } from "lucide-react";
+import { BarChart3, FileText, FolderOpen, ArrowRight } from "lucide-react";
 import i18n from "@/i18n/config";
 import videoHeader from "@/assets/VideoHeader-03.mp4";
+
 
 export const Route = createFileRoute("/investidores/")({
   head: () => ({
@@ -18,8 +19,6 @@ export const Route = createFileRoute("/investidores/")({
   }),
   component: InvestidoresIndexPage,
 });
-
-type KpiItem = { value: string; label: string };
 
 const NAV_CARDS = [
   {
@@ -46,19 +45,10 @@ const NAV_CARDS = [
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     to: "/investidores/outros-documentos" as any,
   },
-  {
-    icon: Building2,
-    title: "Transmissora SPMG S.A.",
-    description:
-      "Documentação financeira e regulatória específica da Transmissora SPMG S.A.",
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    to: "/investidores/transmissora-spmg-s-a" as any,
-  },
 ];
 
 function InvestidoresIndexPage() {
   const { t } = useTranslation();
-  const kpis = t("investors.kpis", { returnObjects: true }) as KpiItem[];
 
   return (
     <>
@@ -72,37 +62,11 @@ function InvestidoresIndexPage() {
           </>
         }
         videoSrc={videoHeader}
+        compact
       />
 
-      {/* KPIs */}
-      <section className="relative overflow-hidden py-24">
-        <BoltDecor variant="outline" opacity={0.05} className="-left-24 top-10 h-[480px] w-auto" />
-        <BoltDecor
-          variant="solid"
-          opacity={0.04}
-          className="-right-20 bottom-10 h-[420px] w-auto"
-        />
-        <div className="container-hrz relative">
-          <Stagger className="grid gap-5 sm:grid-cols-2 md:grid-cols-4">
-            {kpis.map((k) => (
-              <StaggerItem
-                key={k.label}
-                className="h-full rounded-2xl border border-border/60 bg-card p-7 transition duration-300 hover:border-foreground/25 hover:shadow-md"
-              >
-                <p className="font-display text-3xl font-light tracking-tight text-hrz-deep sm:text-4xl">
-                  {k.value}
-                </p>
-                <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">
-                  {k.label}
-                </p>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
       {/* Navigation Cards */}
-      <section className="relative overflow-hidden bg-secondary py-24">
+      <section className="relative overflow-hidden bg-secondary pt-8 pb-14 lg:pt-10 lg:pb-16">
         <BoltDecor
           variant="outline"
           opacity={0.04}
@@ -119,7 +83,7 @@ function InvestidoresIndexPage() {
             </p>
           </Reveal>
 
-          <Stagger className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {NAV_CARDS.map((card) => {
               const Icon = card.icon;
               return (

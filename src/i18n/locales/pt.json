@@ -173,14 +173,14 @@
     "business": {
       "eyebrow": "Modelo de negócio",
       "heading": "O que é uma plataforma integrada de transmissão e geração.",
-      "body": "A HRZ combina dois segmentos complementares sob governança única: transmissão de alta tensão, com receita previsível indexada à inflação (RAP), e geração eólica renovável, com exposição estratégica à matriz energética brasileira. A integração entrega disciplina de capital, ganhos operacionais e otimização entre perfis distintos de risco-retorno.",
+      "body": "A HRZ combina dois segmentos complementares sob governança única: transmissão de alta tensão, com receita previsível indexada à inflação (RAP), e geração eólica renovável, fornecendo energia através de leilão de energia reserva (LER) com exposição estratégica à matriz energética brasileira. A integração entrega disciplina de capital, ganhos operacionais e otimização entre perfis distintos de risco-retorno.",
       "card1": {
         "title": "Transmissão",
         "text": "Receita regulada de longo prazo (RAP) com baixa volatilidade, indexada à inflação e independente de despacho."
       },
       "card2": {
         "title": "Geração eólica",
-        "text": "Exposição à matriz renovável com PPAs de longo prazo, fator de capacidade elevado e baixa pegada operacional."
+        "text": "100% contratada através de leilão de energia de reserva (LER), fator de capacidade elevado e baixa pegada operacional."
       },
       "card3": {
         "title": "Governança única",
@@ -578,7 +578,7 @@
         "eyebrow": "Portfólio de ativos",
         "titleLine1": "14 Concessões.",
         "titleLine2": "Escala nacional.",
-        "subtitle": "Plataforma integrada com transmissão de alta tensão e geração eólica renovável, distribuída em ativos brownfield adquiridos com disciplina entre 2019 e 2025."
+        "subtitle": "Plataforma integrada com transmissão de alta tensão e geração eólica renovável, distribuída em ativos operacionais brownfield adquiridos com disciplina entre 2019 e 2025."
       },
       "footprint": {
         "eyebrow": "Pegada nacional",
@@ -591,7 +591,8 @@
       },
       "transmission": {
         "heading": "Transmissão",
-        "subtitle": "9 concessões adquiridas entre 2021 e 2025 · 2.403 ckm de OHTL 500/230 kV · 5.228 MVA de capacidade instalada · 29 subestações interligadas.",
+        "subtitle1": "9 concessões adquiridas entre 2021 e 2026",
+        "subtitle2": "2.403 ckm de OHTL 500/230 kV · 5.228 MVA de capacidade instalada · 29 subestações interligadas.",
         "imgAlt": "Subestação ao entardecer",
         "stats": [
           { "value": ">99,8%", "label": "Disponibilidade" },
@@ -885,7 +886,7 @@
     "docs": {
       "eyebrow": "Documentos",
       "heading": "DFs e documentos societários.",
-      "body": "Demonstrações financeiras auditadas, atos societários, relatórios de gestão e materiais complementares disponíveis sob solicitação para investidores, contrapartes e analistas.",
+      "body": "Demonstrações financeiras auditadas e atos societários. Caso necessite de informações adicionais entre em contato conosco.",
       "mascoteAlt": "Mascote HRZ apontando",
       "requestCta": "Solicitar documentos",
       "items": [
@@ -961,6 +962,7 @@
       "formEyebrow": "Cadastro de currículo",
       "formHeading": "Faça parte da HRZ.",
       "fieldFullName": "Nome completo",
+      "fieldEmail": "E-mail",
       "fieldPhone": "Telefone",
       "fieldAreaLabel": "Área desejada",
       "fieldAreaPlaceholder": "Selecione uma área",
