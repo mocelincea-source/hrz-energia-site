@@ -78,10 +78,32 @@ const SECTIONS: CompanySection[] = [
           },
         ],
       },
+      {
+        id: "horizon-ma1-dcr",
+        label: "Demonstrações Contábeis Regulatórias",
+        items: [], // TODO: PDF pendente
+      },
     ],
   },
 
   // 3 ─────────────────────────────────────────────────────────────────────────
+  {
+    company: "Horizon Transmissão MA II S.A.",
+    groups: [
+      {
+        id: "horizon-ma2-dem-fin",
+        label: "Demonstrações financeiras",
+        items: [], // TODO: PDF pendente
+      },
+      {
+        id: "horizon-ma2-dcr",
+        label: "Demonstrações Contábeis Regulatórias",
+        items: [], // TODO: PDF pendente
+      },
+    ],
+  },
+
+  // 4 ─────────────────────────────────────────────────────────────────────────
   {
     // Typo preservado do legado: "Tranmissão"
     company: "Horizon Tranmissão ES S.A.",
@@ -117,10 +139,15 @@ const SECTIONS: CompanySection[] = [
           },
         ],
       },
+      {
+        id: "horizon-es-dcr",
+        label: "Demonstrações Contábeis Regulatórias",
+        items: [], // TODO: PDF pendente
+      },
     ],
   },
 
-  // 4 ─────────────────────────────────────────────────────────────────────────
+  // 5 ─────────────────────────────────────────────────────────────────────────
   {
     company: "Edify Empreendimentos e Participações S.A.",
     groups: [
@@ -138,7 +165,7 @@ const SECTIONS: CompanySection[] = [
     ],
   },
 
-  // 5 ─────────────────────────────────────────────────────────────────────────
+  // 6 ─────────────────────────────────────────────────────────────────────────
   {
     company: "Transmissora SPMG S.A.",
     groups: [
@@ -158,10 +185,32 @@ const SECTIONS: CompanySection[] = [
           },
         ],
       },
+      {
+        id: "spmg-dcr",
+        label: "Demonstrações Contábeis Regulatórias",
+        items: [], // TODO: PDF pendente
+      },
     ],
   },
 
-  // 6 ─────────────────────────────────────────────────────────────────────────
+  // 7 ─────────────────────────────────────────────────────────────────────────
+  {
+    company: "Mata Grande Transmissora S.A.",
+    groups: [
+      {
+        id: "mata-grande-dem-fin",
+        label: "Demonstrações financeiras",
+        items: [], // TODO: PDF pendente
+      },
+      {
+        id: "mata-grande-dcr",
+        label: "Demonstrações Contábeis Regulatórias",
+        items: [], // TODO: PDF pendente
+      },
+    ],
+  },
+
+  // 8 ─────────────────────────────────────────────────────────────────────────
   {
     company: "Edge Empreendimentos e Participações S.A.",
     groups: [
@@ -179,7 +228,7 @@ const SECTIONS: CompanySection[] = [
     ],
   },
 
-  // 7 ─────────────────────────────────────────────────────────────────────────
+  // 9 ─────────────────────────────────────────────────────────────────────────
   {
     company: "Aliança Transmissora de Energia S.A.",
     groups: [
@@ -207,7 +256,7 @@ const SECTIONS: CompanySection[] = [
     ],
   },
 
-  // 8 ─────────────────────────────────────────────────────────────────────────
+  // 10 ────────────────────────────────────────────────────────────────────────
   {
     company: "Victory Empreendimentos e Participações S.A.",
     groups: [
@@ -225,7 +274,7 @@ const SECTIONS: CompanySection[] = [
     ],
   },
 
-  // 9 ─────────────────────────────────────────────────────────────────────────
+  // 11 ────────────────────────────────────────────────────────────────────────
   {
     company: "SE Vineyards Transmissão de Energia S.A.",
     groups: [
@@ -349,7 +398,7 @@ const SECTIONS: CompanySection[] = [
     ],
   },
 
-  // 10 ────────────────────────────────────────────────────────────────────────
+  // 12 ────────────────────────────────────────────────────────────────────────
   {
     company: "Água Vermelha Transmissora de Energia S.A.",
     groups: [
@@ -408,7 +457,7 @@ const SECTIONS: CompanySection[] = [
     ],
   },
 
-  // 11 ────────────────────────────────────────────────────────────────────────
+  // 13 ────────────────────────────────────────────────────────────────────────
   {
     company: "Transmissão Litoral Sul S.A.",
     groups: [
@@ -422,6 +471,23 @@ const SECTIONS: CompanySection[] = [
             href: "/documentos/demonstracoes-financeiras/Transmissão Litoral Sul S.A/Demonstrações financeiras/Demonstrações financeiras 2025 - Litoral Sul.pdf",
           },
         ],
+      },
+      {
+        id: "litoral-sul-dcr",
+        label: "Demonstrações Contábeis Regulatórias",
+        items: [], // TODO: PDF pendente
+      },
+    ],
+  },
+
+  // 14 ────────────────────────────────────────────────────────────────────────
+  {
+    company: "Babilônia Holding S.A.",
+    groups: [
+      {
+        id: "babilonia-dem-fin",
+        label: "Demonstrações financeiras",
+        items: [], // TODO: PDF pendente
       },
     ],
   },

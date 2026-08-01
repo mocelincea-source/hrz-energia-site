@@ -25,6 +25,8 @@ export type CompanySection = {
   /** Subtitle displayed above each accordion block */
   company: string;
   groups: DocumentGroup[];
+  /** When true, renders as an indented sub-company (SPE) below its parent */
+  indent?: boolean;
 };
 
 // ─── Internal components ──────────────────────────────────────────────────────
@@ -138,10 +140,17 @@ export function CompanyDocumentList({
     <div className="space-y-14">
       {sections.map((section, sIdx) => (
         <Reveal key={section.company} delay={sIdx * 0.08}>
-          <section aria-labelledby={`company-${sIdx}`}>
+          <section
+            aria-labelledby={`company-${sIdx}`}
+            className={section.indent ? "ml-6 border-l-2 border-hrz-mid/30 pl-5 -mt-8" : ""}
+          >
             <h2
               id={`company-${sIdx}`}
-              className="mb-5 font-display text-lg font-semibold tracking-tight text-foreground"
+              className={
+                section.indent
+                  ? "mb-5 font-display text-base font-medium tracking-tight text-foreground/75"
+                  : "mb-5 font-display text-lg font-semibold tracking-tight text-foreground"
+              }
             >
               {section.company}
             </h2>
