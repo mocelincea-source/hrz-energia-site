@@ -389,7 +389,7 @@
       "concessionsItems": [
         {
           "id": "es",
-          "nome": "HRZ ES",
+          "nome": "HRZ TES",
           "estado": "Espírito Santo",
           "tensao": "230 kV",
           "linhas": "106 km",
@@ -399,7 +399,7 @@
         },
         {
           "id": "ma1",
-          "nome": "HRZ MA I",
+          "nome": "HRZ TMA 1",
           "estado": "Maranhão",
           "tensao": "500 / 230 kV",
           "linhas": "120.2 km (500 kV) + 4.8 km (230 kV)",
@@ -409,7 +409,7 @@
         },
         {
           "id": "ma2",
-          "nome": "HRZ MA II",
+          "nome": "HRZ TMA 2",
           "estado": "Maranhão",
           "tensao": "230 kV",
           "linhas": "201.9 km",
@@ -419,13 +419,73 @@
         },
         {
           "id": "spmg",
-          "nome": "HRZ SPMG",
+          "nome": "HRZ SP-MG",
           "estado": "São Paulo · Minas Gerais",
           "tensao": "500 kV",
           "linhas": "743 km",
           "subestacoes": "—",
           "acessadas": "SE Cachoeira Paulista · SE Estreito",
           "aquisicao": "2024 · Belo Monte offtake"
+        },
+        {
+          "id": "mgte",
+          "nome": "HRZ MGTE",
+          "estado": "Maranhão",
+          "tensao": "To be defined",
+          "linhas": "To be defined",
+          "subestacoes": "To be defined",
+          "acessadas": "-",
+          "aquisicao": "To be defined"
+        },
+        {
+          "id": "babilonia",
+          "nome": "HRZ Babilônia",
+          "estado": "Bahia",
+          "tensao": "To be defined",
+          "linhas": "To be defined",
+          "subestacoes": "To be defined",
+          "acessadas": "-",
+          "aquisicao": "To be defined"
+        },
+        {
+          "id": "avt",
+          "nome": "HRZ AVT",
+          "estado": "Minas Gerais",
+          "tensao": "To be defined",
+          "linhas": "To be defined",
+          "subestacoes": "To be defined",
+          "acessadas": "-",
+          "aquisicao": "To be defined"
+        },
+        {
+          "id": "alianca",
+          "nome": "HRZ Aliança",
+          "estado": "Santa Catarina",
+          "tensao": "To be defined",
+          "linhas": "To be defined",
+          "subestacoes": "To be defined",
+          "acessadas": "-",
+          "aquisicao": "To be defined"
+        },
+        {
+          "id": "litoralsul",
+          "nome": "HRZ Litoral Sul Transmissão",
+          "estado": "Santa Catarina · Rio Grande do Sul",
+          "tensao": "To be defined",
+          "linhas": "To be defined",
+          "subestacoes": "To be defined",
+          "acessadas": "-",
+          "aquisicao": "To be defined"
+        },
+        {
+          "id": "vineyards",
+          "nome": "HRZ Vineyards",
+          "estado": "Rio Grande do Sul",
+          "tensao": "To be defined",
+          "linhas": "To be defined",
+          "subestacoes": "To be defined",
+          "acessadas": "-",
+          "aquisicao": "To be defined"
         }
       ],
       "differentialsItems": [
@@ -930,6 +990,7 @@
       "subjectPress": "Press",
       "subjectPartner": "Partner",
       "subjectCommunity": "Community",
+      "subjectEthicsCommittee": "Ethics Committee",
       "fieldMessage": "Message",
       "submitBtn": "Send message"
     },

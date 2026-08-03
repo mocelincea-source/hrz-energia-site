@@ -32,6 +32,12 @@ const CONCESSION_IMAGES: Record<string, string> = {
   ma1: droneImg2,
   ma2: droneImg3,
   spmg: droneImg4,
+  mgte: droneImg1,
+  babilonia: droneImg1,
+  avt: droneImg1,
+  alianca: droneImg1,
+  litoralsul: droneImg1,
+  vineyards: droneImg1,
 };
 
 type KpiItem = { value: string; label: string };
@@ -228,7 +234,7 @@ function TransmissorasPage() {
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 className="overflow-hidden rounded-3xl border border-border bg-card"
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   <img src={CONCESSION_IMAGES[sel.id] ?? droneImg1} alt={sel.nome} className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/95 via-hrz-deep/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-7 text-white">

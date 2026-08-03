@@ -1,21 +1,21 @@
-import eduardoMeta from "./eduardo-brito.webp?w=480&as=metadata";
-import eduardoSrcSet from "./eduardo-brito.webp?w=320;480;640&as=srcset";
+import eduardoMeta from "./eduardo-brito.webp?w=800&as=metadata";
+import eduardoSrcSet from "./eduardo-brito.webp?w=320;480;640;800&as=srcset";
 import eduardoBlur from "./eduardo-brito.webp?w=16&blur=10";
 
-import fernandoMeta from "./fernando-oliveira.webp?w=480&as=metadata";
-import fernandoSrcSet from "./fernando-oliveira.webp?w=320;480;640&as=srcset";
+import fernandoMeta from "./fernando-oliveira.webp?w=800&as=metadata";
+import fernandoSrcSet from "./fernando-oliveira.webp?w=320;480;640;800&as=srcset";
 import fernandoBlur from "./fernando-oliveira.webp?w=16&blur=10";
 
-import julianaMeta from "./juliana-scalzo.webp?w=480&as=metadata";
-import julianaSrcSet from "./juliana-scalzo.webp?w=320;480;640&as=srcset";
+import julianaMeta from "./juliana-scalzo.webp?w=800&as=metadata";
+import julianaSrcSet from "./juliana-scalzo.webp?w=320;480;640;800&as=srcset";
 import julianaBlur from "./juliana-scalzo.webp?w=16&blur=10";
 
-import italoMeta from "./italo-david.webp?w=480&as=metadata";
-import italoSrcSet from "./italo-david.webp?w=320;480;640&as=srcset";
+import italoMeta from "./italo-david.webp?w=800&as=metadata";
+import italoSrcSet from "./italo-david.webp?w=320;480;640;800&as=srcset";
 import italoBlur from "./italo-david.webp?w=16&blur=10";
 
-import tiagoMeta from "./tiago-cacozzi.webp?w=480&as=metadata";
-import tiagoSrcSet from "./tiago-cacozzi.webp?w=320;480;640&as=srcset";
+import tiagoMeta from "./tiago-cacozzi.webp?w=800&as=metadata";
+import tiagoSrcSet from "./tiago-cacozzi.webp?w=320;480;640;800&as=srcset";
 import tiagoBlur from "./tiago-cacozzi.webp?w=16&blur=10";
 
 export type LeadershipPortrait = {
@@ -34,4 +34,6 @@ export const LEADERSHIP_PORTRAITS: LeadershipPortrait[] = [
   { src: tiagoMeta.src, srcSet: tiagoSrcSet, width: tiagoMeta.width, height: tiagoMeta.height, blurSrc: tiagoBlur },
 ];
 
-export const LEADERSHIP_PORTRAIT_SIZES = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
+// Matches the actual grid: 1 col mobile / 2 cols sm / 5 cols lg
+export const LEADERSHIP_PORTRAIT_SIZES =
+  "(max-width: 639px) calc(100vw - 2rem), (max-width: 1023px) calc(50vw - 1.5rem), 280px";

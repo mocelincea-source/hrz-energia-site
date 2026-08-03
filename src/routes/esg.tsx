@@ -28,7 +28,7 @@ import { SiteShell } from "@/components/site/SiteShell";
 import { BoltDecor } from "@/components/site/BoltDecor";
 import { Stagger, StaggerItem, Reveal } from "@/components/site/motion";
 import i18n from "@/i18n/config";
-import heroEsgImg from "@/assets/Header-ESG.jpeg";
+import heroEsgVideo from "@/assets/VideoHeader-04.mp4";
 import meioAmbienteImg from "@/assets/Meio-Ambiente.jpg";
 import socialImg from "@/assets/Social.jpg";
 import governancaImg from "@/assets/Governança.jpg";
@@ -107,14 +107,13 @@ function EsgPage() {
 
   return (
     <SiteShell headerVariant="dark">
-      {/* Hero — background image */}
+      {/* Hero — background video */}
       <section className="relative flex min-h-[75vh] items-center overflow-hidden">
-        <img
-          src={heroEsgImg}
-          alt=""
-          aria-hidden
-          fetchPriority="high"
-          decoding="sync"
+        <video
+          src={heroEsgVideo}
+          autoPlay
+          muted
+          playsInline
           className="absolute inset-0 h-full w-full object-cover object-right-bottom"
         />
         <div
@@ -457,7 +456,7 @@ function EsgPage() {
                 </Reveal>
                 <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
                   <h2 className="text-3xl font-bold tracking-tight text-white">
-                    Tem um projeto? <br className="hidden lg:block" />
+                    Tem um projeto social? <br className="hidden lg:block" />
                     Vamos construir juntos.
                   </h2>
                 </Reveal>
