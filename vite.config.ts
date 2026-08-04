@@ -8,7 +8,11 @@ export default defineConfig({
   },
   vite: {
     server: {
-      allowedHosts: ["homolog.hrzenergia.com.br"],
+      allowedHosts: [
+          "homolog.hrzenergia.com.br",
+          "dev.hrzenergia.com.br",
+          "hrzenergia.com.br"
+        ],  
     },
   },
 });
