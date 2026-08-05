@@ -51,7 +51,7 @@ echo "Build das imagens..."
 docker compose \
     -p "$COMPOSE_PROJECT_NAME" \
     -f "$COMPOSE_FILE" \
-    build --pull
+    build --no-cache --pull
 
 
 echo "Subindo aplicação..."
