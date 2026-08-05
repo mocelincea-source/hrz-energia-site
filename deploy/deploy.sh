@@ -51,7 +51,7 @@ echo "Subindo aplicação..."
 docker compose \
     -p "$COMPOSE_PROJECT_NAME" \
     -f "$COMPOSE_FILE" \
-    up -d --force-recriate
+    up -d --force-recreate
 
 
 echo "Limpando imagens antigas..."
