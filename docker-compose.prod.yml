@@ -6,6 +6,3 @@ services:
     container_name: prod-hrz-energia-site
     ports:
       - "3002:3000"
-    volumes:
-      - .:/app
-      - /app/node_modules

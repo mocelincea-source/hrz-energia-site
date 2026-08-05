@@ -38,14 +38,6 @@ cd "$BASE_DIR"
 
 
 
-echo "Parando containers antigos..."
-
-docker compose \
-    -p "$COMPOSE_PROJECT_NAME" \
-    -f "$COMPOSE_FILE" \
-    down
-
-
 echo "Build das imagens..."
 
 docker compose \
@@ -59,7 +51,7 @@ echo "Subindo aplicação..."
 docker compose \
     -p "$COMPOSE_PROJECT_NAME" \
     -f "$COMPOSE_FILE" \
-    up -d
+    up -d --force-recriate
 
 
 echo "Limpando imagens antigas..."

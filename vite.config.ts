@@ -4,7 +4,7 @@ import { imagetools } from "vite-imagetools";
 export default defineConfig({
   plugins: [imagetools()],
   nitro: {
-    preset: "vercel",
+    preset: "node-server",
   },
   vite: {
     server: {
