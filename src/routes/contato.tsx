@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Mail, MapPin, Briefcase, Upload, Linkedin, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Briefcase, Linkedin, CheckCircle2 } from "lucide-react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
 import i18n from "@/i18n/config";
@@ -145,7 +145,6 @@ function ContatoPage() {
 
 function TrabalheConosco() {
   const { t } = useTranslation();
-  const [fileName, setFileName] = useState<string>("");
   const [submitted, setSubmitted] = useState(false);
 
   const areas = t("contact.careers.areas", { returnObjects: true }) as string[];
@@ -198,7 +197,6 @@ function TrabalheConosco() {
                 type="button"
                 onClick={() => {
                   setSubmitted(false);
-                  setFileName("");
                 }}
                 className="mt-6 inline-flex items-center justify-center rounded-full border border-foreground/20 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-foreground transition hover:border-hrz-electric hover:text-hrz-electric"
               >
@@ -245,36 +243,6 @@ function TrabalheConosco() {
                       </option>
                     ))}
                   </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="career-cv"
-                    className="text-xs font-semibold uppercase tracking-wider text-muted-foreground"
-                  >
-                    {t("contact.careers.fieldCvLabel")}
-                  </label>
-                  <label
-                    htmlFor="career-cv"
-                    className="mt-2 flex cursor-pointer items-center justify-between gap-4 rounded-xl border border-dashed border-input bg-background px-4 py-4 text-sm text-muted-foreground transition hover:border-hrz-electric hover:text-foreground"
-                  >
-                    <span className="flex items-center gap-3">
-                      <Upload size={16} />
-                      {fileName || t("contact.careers.fieldCvPlaceholder")}
-                    </span>
-                    <span className="rounded-full bg-hrz-deep px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
-                      {t("contact.careers.fieldCvAttach")}
-                    </span>
-                  </label>
-                  <input
-                    id="career-cv"
-                    name="career-cv"
-                    type="file"
-                    required
-                    accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                    className="sr-only"
-                    onChange={(e) => setFileName(e.target.files?.[0]?.name ?? "")}
-                  />
                 </div>
 
                 <div>

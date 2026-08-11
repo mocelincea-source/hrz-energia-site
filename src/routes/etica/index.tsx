@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, BookOpen, TrendingUp, MessageSquareWarning, ArrowRight } from "lucide-react";
+import { ShieldCheck, BookOpen, MessageSquareWarning, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { PageHero } from "@/components/site/PageHero";
 import { BoltDecor } from "@/components/site/BoltDecor";
@@ -26,14 +26,13 @@ export const Route = createFileRoute("/etica/")({
 
 const CARD_LINKS: Record<number, string> = {
   0: "/etica/politica-anticorrupcao",
-  2: "/etica/relatorios-sustentabilidade",
-  3: "/etica/canal-de-denuncias",
+  2: "/etica/canal-de-denuncias",
 };
 
 function EticaIndexPage() {
   const { t } = useTranslation();
 
-  const DOCS_ICONS = [ShieldCheck, BookOpen, TrendingUp, MessageSquareWarning];
+  const DOCS_ICONS = [ShieldCheck, BookOpen, MessageSquareWarning];
   const docItems = t("about.docs.items", { returnObjects: true }) as DocItem[];
   const DOCS = docItems.map((item, i) => ({
     icon: DOCS_ICONS[i],
@@ -98,8 +97,8 @@ function EticaIndexPage() {
             {t("about.docs.heading")}
           </h2>
           <Stagger className="mt-12 grid gap-6 lg:grid-cols-3">
-            {DOCS.map((d, i) => (
-              <StaggerItem key={d.title} className={i === 3 ? "lg:col-start-2" : undefined}>
+            {DOCS.map((d) => (
+              <StaggerItem key={d.title}>
                 {d.to ? (
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   <Link to={d.to as any} className={cardClassName}>

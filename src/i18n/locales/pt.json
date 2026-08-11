@@ -253,7 +253,7 @@
       "portraitAlt": "Retrato de {{name}}",
       "governance": {
         "eyebrow": "Governança",
-        "body": "Controlada pela Actis."
+        "body": "Adquirida por fundos geridos pela ACTIS."
       },
       "items": [
         {
@@ -308,10 +308,6 @@
         {
           "title": "Código de Ética",
           "text": "Princípios e regras de conduta aplicáveis a colaboradores, fornecedores e parceiros."
-        },
-        {
-          "title": "Relatórios de Sustentabilidade",
-          "text": "Acesse nossos relatórios anuais de desempenho ESG e sustentabilidade."
         },
         {
           "title": "Canal de Denúncias",
@@ -863,10 +859,22 @@
         }
       ]
     },
+    "reportsSection": {
+      "eyebrow": "Relatórios e Documentos",
+      "heading": "Transparência em cada publicação.",
+      "accessDoc": "Acessar documento",
+      "viewAllReports": "Ver todos os relatórios de sustentabilidade",
+      "items": [
+        {
+          "title": "Relatórios de Sustentabilidade",
+          "text": "Acesse nossos relatórios anuais de desempenho ESG e sustentabilidade."
+        }
+      ]
+    },
     "engagement": {
       "opportunities": {
         "eyebrow": "Oportunidades",
-        "title": "Tem um projeto? Vamos construir juntos.",
+        "title": "Tem um projeto social? Vamos construir juntos.",
         "description": "Possui um ativo de transmissão, geração renovável ou outra oportunidade? Fale conosco.",
         "cta": "Enviar projeto"
       },

@@ -52,7 +52,7 @@
       "logoAlt": "HRZ Energia",
       "headline1": "Rigorous management.",
       "headline2": "Consistent returns.",
-      "ctaTransmission": "Transmissoras",
+      "ctaTransmission": "Transmissions",
       "ctaWind": "Babilônia Wind Farm"
     },
     "about": {
@@ -253,7 +253,7 @@
       "portraitAlt": "Portrait of {{name}}",
       "governance": {
         "eyebrow": "Governance",
-        "body": "Controlled by Actis."
+        "body": "Acquired by funds managed by ACTIS."
       },
       "items": [
         {
@@ -308,10 +308,6 @@
         {
           "title": "Code of Ethics",
           "text": "Principles and rules of conduct applicable to employees, suppliers, and partners."
-        },
-        {
-          "title": "Sustainability Reports",
-          "text": "Access our annual ESG performance and sustainability reports."
         },
         {
           "title": "Whistleblower Channel",
@@ -740,7 +736,7 @@
         },
         {
           "tag": "Income Generation",
-          "title": "Casa de Farinha",
+          "title": "Flour House",
           "description": "An income-generation initiative that promotes economic autonomy and sustainable opportunities for local families."
         }
       ]
@@ -863,10 +859,22 @@
         }
       ]
     },
+    "reportsSection": {
+      "eyebrow": "Reports & Documents",
+      "heading": "Transparency in every publication.",
+      "accessDoc": "Access document",
+      "viewAllReports": "View all sustainability reports",
+      "items": [
+        {
+          "title": "Sustainability Reports",
+          "text": "Access our annual ESG performance and sustainability reports."
+        }
+      ]
+    },
     "engagement": {
       "opportunities": {
         "eyebrow": "Opportunities",
-        "title": "Have a project? Let's build together.",
+        "title": "Do you have a social project? Let's build together.",
         "description": "Do you have a transmission asset, renewable generation or other opportunity? Get in touch.",
         "cta": "Submit project"
       },

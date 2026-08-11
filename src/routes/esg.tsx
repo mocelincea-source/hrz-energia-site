@@ -92,6 +92,7 @@ type ValueChainStep = { label: string };
 type SmartEsgCard = { title: string; description: string };
 type SocialProjectItem = { tag: string; title: string; description: string };
 type IndicatorItem = { category: string; value: string; label: string };
+type ReportItem = { title: string; text: string };
 
 function EsgPage() {
   const { t } = useTranslation();
@@ -104,6 +105,7 @@ function EsgPage() {
     returnObjects: true,
   }) as SocialProjectItem[];
   const indicators = t("esg.indicators.items", { returnObjects: true }) as IndicatorItem[];
+  const reportItems = t("esg.reportsSection.items", { returnObjects: true }) as ReportItem[];
 
   return (
     <SiteShell headerVariant="dark">
@@ -129,16 +131,12 @@ function EsgPage() {
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
             <h1 className="font-display mt-5 max-w-4xl text-5xl leading-tight text-white lg:text-7xl">
-              Infraestrutura <br />
-              responsável. <br />
-              Valor para as <br />
-              próximas gerações.
+              {t("esg.hero.title")}
             </h1>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
-              Na HRZ, sustentabilidade é a forma como planejamos, <br />
-              operamos e evoluímos nossos ativos todos os dias.
+              {t("esg.hero.subtitle")}
             </p>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
@@ -167,19 +165,12 @@ function EsgPage() {
               </Reveal>
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
                 <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl">
-                  <span className="block lg:whitespace-nowrap">Nossa forma de</span>
-                  <span className="block lg:whitespace-nowrap">criar valor sustentável.</span>
+                  {t("esg.valueChain.title")}
                 </h2>
               </Reveal>
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
                 <p className="mt-5 text-sm text-slate-600 lg:text-base">
-                  <span className="block lg:whitespace-nowrap">
-                    Integramos pessoas, processos, tecnologia e
-                  </span>
-                  <span className="block lg:whitespace-nowrap">
-                    relacionamento para gerar impacto positivo
-                  </span>
-                  <span className="block lg:whitespace-nowrap">e valor de longo prazo.</span>
+                  {t("esg.valueChain.description")}
                 </p>
               </Reveal>
               <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
@@ -274,11 +265,11 @@ function EsgPage() {
             </span>
 
             <h2 className="font-display text-3xl font-bold tracking-tight text-white lg:text-[2rem] lg:leading-[1.2]">
-              Tecnologia e dados para decisões mais seguras e sustentáveis.
+              {t("esg.smartEsg.title")}
             </h2>
 
             <p className="text-sm text-slate-300 lg:text-[15px] lg:leading-relaxed">
-              Nossa plataforma digital integra informações em tempo real para uma gestão mais eficiente, preditiva e transparente.
+              {t("esg.smartEsg.description")}
             </p>
 
             <div className="w-fit">
@@ -336,15 +327,12 @@ function EsgPage() {
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
             <h2 className="font-display mt-4 max-w-2xl text-3xl text-foreground lg:text-4xl">
-              Transformamos energia <br className="hidden lg:block" />
-              em desenvolvimento.
+              {t("esg.socialProjects.heading")}
             </h2>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Nossos projetos fortalecem comunidades, geram <br className="hidden lg:block" />
-              oportunidades e deixam um legado positivo por <br className="hidden lg:block" />
-              onde operamos.
+              {t("esg.socialProjects.description")}
             </p>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
@@ -393,11 +381,10 @@ function EsgPage() {
             </Reveal>
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
               <h2
-                className="mt-4 flex flex-col items-start font-bold text-slate-900 w-full"
+                className="mt-4 font-bold text-slate-900 w-full"
                 style={{ fontSize: "1.8rem", lineHeight: "1.2" }}
               >
-                <span className="block whitespace-nowrap">Números que refletem</span>
-                <span className="block whitespace-nowrap">nosso compromisso.</span>
+                {t("esg.indicators.heading")}
               </h2>
             </Reveal>
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
@@ -430,6 +417,56 @@ function EsgPage() {
         </div>
       </section>
 
+      {/* Relatórios e Documentos */}
+      <section className="bg-white py-24">
+        <div className="container-hrz grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
+          <div className="flex h-full flex-col items-start justify-center lg:col-span-3">
+            <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
+              <p className="eyebrow text-hrz-electric">{t("esg.reportsSection.eyebrow")}</p>
+            </Reveal>
+            <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
+              <h2 className="mt-4 font-bold text-slate-900 w-full" style={{ fontSize: "1.8rem", lineHeight: "1.2" }}>
+                {t("esg.reportsSection.heading")}
+              </h2>
+            </Reveal>
+            <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
+              <Link
+                to="/etica/relatorios-sustentabilidade"
+                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:underline"
+              >
+                {t("esg.reportsSection.viewAllReports")}
+                <ArrowRight size={14} strokeWidth={1.75} />
+              </Link>
+            </Reveal>
+          </div>
+
+          <Stagger
+            fallbackDelay={500}
+            viewportMargin={VIEWPORT_TRIGGER}
+            staggerChildren={STAGGER_RHYTHM}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:col-span-9"
+          >
+            {reportItems.map((item) => (
+              <StaggerItem key={item.title}>
+                <a
+                  href="/etica/relatorios-sustentabilidade"
+                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-hrz-electric hover:shadow-xl"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-hrz-deep text-white transition group-hover:bg-hrz-electric">
+                    <TrendingUp size={22} />
+                  </div>
+                  <h3 className="mt-6 font-display text-2xl font-bold text-foreground">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric">
+                    {t("esg.reportsSection.accessDoc")} <ArrowRight size={16} />
+                  </span>
+                </a>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </div>
+      </section>
+
       {/* CTAs divididos */}
       <section className="bg-hrz-deep text-white">
         <Stagger
@@ -456,14 +493,12 @@ function EsgPage() {
                 </Reveal>
                 <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
                   <h2 className="text-3xl font-bold tracking-tight text-white">
-                    Tem um projeto social? <br className="hidden lg:block" />
-                    Vamos construir juntos.
+                    {t("esg.engagement.opportunities.title")}
                   </h2>
                 </Reveal>
                 <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
                   <p className="mt-4 text-white/90">
-                    Possui um ativo de transmissão, geração renovável ou <br className="hidden lg:block" />
-                    outra oportunidade? Fale conosco.
+                    {t("esg.engagement.opportunities.description")}
                   </p>
                 </Reveal>
                 <Link
@@ -505,8 +540,7 @@ function EsgPage() {
                 </Reveal>
                 <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
                   <p className="mt-4 text-white/90">
-                    Compartilhe sua tecnologia ou solução para tornar o <br className="hidden lg:block" />
-                    setor elétrico mais eficiente, seguro e sustentável.
+                    {t("esg.engagement.innovation.description")}
                   </p>
                 </Reveal>
                 <Link
@@ -581,32 +615,7 @@ function ValueItemCard({
         <Icon size={22} strokeWidth={1.5} />
       </div>
       <h3 className="text-base font-semibold text-white">{title}</h3>
-      {title === "Respeito" ? (
-        <div className="flex flex-col items-center text-center text-xs leading-relaxed text-white/80">
-          <span className="block whitespace-nowrap">Valorizamos as pessoas</span>
-          <span className="block whitespace-nowrap">e a diversidade.</span>
-        </div>
-      ) : title === "Segurança" ? (
-        <div className="flex flex-col items-center text-center text-xs leading-relaxed text-white/80">
-          <span className="block whitespace-nowrap">A vida em primeiro lugar.</span>
-          <span className="block whitespace-nowrap">Nenhum resultado é mais</span>
-          <span className="block whitespace-nowrap">importante.</span>
-        </div>
-      ) : title === "Sustentabilidade" ? (
-        <div className="flex flex-col items-center text-center text-xs leading-relaxed text-white/80">
-          <span className="block whitespace-nowrap">Promovemos ações que</span>
-          <span className="block whitespace-nowrap">geram impacto positivo</span>
-          <span className="block whitespace-nowrap">e duradouro.</span>
-        </div>
-      ) : title === "Colaboração" ? (
-        <div className="flex flex-col items-center text-center text-xs leading-relaxed text-white/80">
-          <span className="block whitespace-nowrap">Acreditamos no trabalho</span>
-          <span className="block whitespace-nowrap">conjunto para transformar</span>
-          <span className="block whitespace-nowrap">realidades.</span>
-        </div>
-      ) : (
-        <p className="text-center text-xs leading-relaxed text-white/80">{text}</p>
-      )}
+      <p className="text-center text-xs leading-relaxed text-white/80">{text}</p>
     </div>
   );
 }
@@ -679,21 +688,7 @@ function IndicatorCard({
       <p className="mb-3 mt-2 whitespace-nowrap text-base font-semibold leading-none tracking-tight text-hrz-green lg:text-lg xl:text-xl">
         {value}
       </p>
-      {category === "Pessoas" && value === "+500" ? (
-        <p className="text-xs leading-relaxed text-slate-500">
-          Pessoas impactadas
-          <br />
-          pelos projetos
-        </p>
-      ) : category === "Governança" && value === "Comitê ESG" ? (
-        <p className="text-xs leading-relaxed text-slate-500">
-          Reuniões
-          <br />
-          trimestrais
-        </p>
-      ) : (
-        <p className="text-xs leading-relaxed text-slate-500">{label}</p>
-      )}
+      <p className="text-xs leading-relaxed text-slate-500">{label}</p>
     </div>
   );
 }

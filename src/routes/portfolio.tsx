@@ -118,9 +118,9 @@ function PortfolioPage() {
               </p>
           </Reveal>
 
-          <Stagger className="mt-10 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <Stagger className="mt-10 grid gap-y-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {transmissionAssets.map((a) => (
-              <StaggerItem key={a.code} className="bg-card p-6 transition hover:bg-background">
+              <StaggerItem key={a.code} className="bg-card p-6 transition hover:bg-background border-border sm:[&:nth-child(2n)]:border-l lg:[&:nth-child(3n+2)]:border-l lg:[&:nth-child(3n)]:border-l lg:[&:nth-child(3n+1)]:border-l-0">
                 <p className="font-display text-xs font-bold uppercase tracking-widest text-hrz-electric">
                   {a.code}
                 </p>

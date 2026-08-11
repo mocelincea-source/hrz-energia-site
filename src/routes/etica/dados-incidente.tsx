@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { ArrowRight, Home, Search, Lock, Paperclip } from "lucide-react";
+import { ArrowRight, Home, Search, Lock } from "lucide-react";
 import i18n from "@/i18n/config";
 import { BoltDecor } from "@/components/site/BoltDecor";
 import LogoHRZ from "@/assets/logo-hrz-white.png";
@@ -218,19 +218,6 @@ function DadosIncidentePage() {
                 </label>
                 <textarea id="descricao" rows={5} className={inputClassName} />
               </div>
-
-              <p className="mb-4 mt-2 text-sm text-gray-700">
-                Se você quiser anexar arquivos como fotos e documentos, adicione-os aqui. O tamanho
-                máximo do conjunto de arquivos é de 100 MB.
-              </p>
-
-              <button
-                type="button"
-                className="flex w-fit items-center gap-2 rounded-lg bg-blue-900 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-800"
-              >
-                <Paperclip className="h-4 w-4" />
-                Anexar arquivo
-              </button>
 
               <div>
                 <label htmlFor="nivel-confianca" className="text-sm text-gray-700">
