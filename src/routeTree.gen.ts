@@ -38,22 +38,22 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/contato.lazy').then((d) => d.Route))
 const EolicasRoute = EolicasRouteImport.update({
   id: '/eolicas',
   path: '/eolicas',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/eolicas.lazy').then((d) => d.Route))
 const EsgRoute = EsgRouteImport.update({
   id: '/esg',
   path: '/esg',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/esg.lazy').then((d) => d.Route))
 const EticaRoute = EticaRouteImport.update({
   id: '/etica',
   path: '/etica',
@@ -68,22 +68,22 @@ const PortfolioRoute = PortfolioRouteImport.update({
   id: '/portfolio',
   path: '/portfolio',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/portfolio.lazy').then((d) => d.Route))
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/sobre.lazy').then((d) => d.Route))
 const TransmissorasRoute = TransmissorasRouteImport.update({
   id: '/transmissoras',
   path: '/transmissoras',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any).lazy(() => import('./routes/transmissoras.lazy').then((d) => d.Route))
 const EticaIndexRoute = EticaIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => EticaRoute,
-} as any)
+} as any).lazy(() => import('./routes/etica/index.lazy').then((d) => d.Route))
 const EticaAcompanharRelatoRoute = EticaAcompanharRelatoRouteImport.update({
   id: '/acompanhar-relato',
   path: '/acompanhar-relato',
@@ -141,7 +141,9 @@ const InvestidoresIndexRoute = InvestidoresIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => InvestidoresRoute,
-} as any)
+} as any).lazy(() =>
+  import('./routes/investidores/index.lazy').then((d) => d.Route),
+)
 const InvestidoresDemonstracoesFinanceirasRoute =
   InvestidoresDemonstracoesFinanceirasRouteImport.update({
     id: '/demonstracoes-financeiras',
