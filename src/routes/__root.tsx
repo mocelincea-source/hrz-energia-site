@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } f
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "motion/react";
 import { SplashOverlay } from "@/components/site/SplashOverlay";
+import { SplashContext } from "@/contexts/SplashContext";
 
 import appCss from "../styles.css?url";
 import faviconUrl from "@/assets/favicon.svg?url";
@@ -131,13 +132,13 @@ function RootComponent() {
   }, [showSplash]);
 
   return (
-    <>
+    <SplashContext.Provider value={!showSplash}>
       <Outlet />
       <AnimatePresence>
         {showSplash && (
           <SplashOverlay key="splash" onDone={() => setShowSplash(false)} />
         )}
       </AnimatePresence>
-    </>
+    </SplashContext.Provider>
   );
 }

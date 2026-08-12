@@ -9,6 +9,7 @@ export function PageHero({
   subtitle,
   variant = "deep",
   videoSrc,
+  posterSrc,
   imageSrc,
   imageAlt = "",
   compact = false,
@@ -18,6 +19,7 @@ export function PageHero({
   subtitle?: string;
   variant?: "deep" | "green";
   videoSrc?: string;
+  posterSrc?: string;
   imageSrc?: string;
   imageAlt?: string;
   compact?: boolean;
@@ -37,10 +39,12 @@ export function PageHero({
         <div className="absolute inset-0 z-0 bg-black">
           <video
             src={videoSrc}
+            poster={posterSrc}
             autoPlay
             muted
             playsInline
-            preload="auto"
+            loop
+            preload="metadata"
             className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
