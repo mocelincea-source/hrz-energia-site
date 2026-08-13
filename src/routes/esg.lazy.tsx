@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import {
@@ -24,10 +24,15 @@ import {
   Award,
   type LucideIcon,
 } from "lucide-react";
+import { motion } from "motion/react";
 import { SiteShell } from "@/components/site/SiteShell";
 import { BoltDecor } from "@/components/site/BoltDecor";
 import { Stagger, StaggerItem, Reveal } from "@/components/site/motion";
 import heroEsgVideo from "@/assets/VideoHeader-04.mp4";
+import droneCarousel1 from "@/assets/Imagen-drone-1.jpeg";
+import droneCarousel2 from "@/assets/Imagen-drone-2.jpeg";
+import droneCarousel3 from "@/assets/Imagen-drone-3.jpeg";
+import droneCarousel4 from "@/assets/Imagen-drone-4.jpeg";
 import esgPoster from "@/assets/posters/esg-poster.jpg";
 import meioAmbienteImg from "@/assets/Meio-Ambiente.jpg";
 import socialImg from "@/assets/Social.jpg";
@@ -87,6 +92,16 @@ type ReportItem = { title: string; text: string };
 
 function EsgPage() {
   const { t } = useTranslation();
+
+  const carouselImages = [droneCarousel1, droneCarousel2, droneCarousel3, droneCarousel4];
+  const [carouselIndex, setCarouselIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCarouselIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
 
   const pillarItems = t("esg.pillars.items", { returnObjects: true }) as PillarCardItem[];
   const valueItems = t("esg.values.items", { returnObjects: true }) as ValueItem[];
@@ -376,10 +391,10 @@ function EsgPage() {
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
               <a
                 href="#esg-indicadores"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:underline"
+                className="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-hrz-green transition-opacity hover:opacity-80"
               >
                 {t("esg.indicators.link")}
-                <ArrowRight size={14} strokeWidth={1.75} />
+                <ArrowRight size={14} strokeWidth={1.75} className="transition-transform duration-300 group-hover:translate-x-0.5" />
               </a>
             </Reveal>
           </div>
@@ -404,11 +419,19 @@ function EsgPage() {
       </section>
 
       {/* Relatórios e Documentos */}
-      <section className="bg-white py-24">
-        <div className="container-hrz grid grid-cols-1 items-start gap-12 lg:grid-cols-12">
+      <section className="relative overflow-hidden bg-white py-24">
+        <BoltDecor
+          variant="solid"
+          rotate={0}
+          opacity={0.05}
+          duration={9}
+          className="hidden md:block absolute right-10 bottom-10 h-[380px] w-auto"
+        />
+        <div className="container-hrz relative grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
+          {/* Coluna de texto — 3 colunas */}
           <div className="flex h-full flex-col items-start justify-center lg:col-span-3">
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
-              <p className="eyebrow text-hrz-electric">{t("esg.reportsSection.eyebrow")}</p>
+              <p className="eyebrow text-hrz-green">{t("esg.reportsSection.eyebrow")}</p>
             </Reveal>
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
               <h2 className="mt-4 font-bold text-slate-900 w-full" style={{ fontSize: "1.8rem", lineHeight: "1.2" }}>
@@ -418,38 +441,62 @@ function EsgPage() {
             <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
               <Link
                 to="/etica/relatorios-sustentabilidade"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600 hover:underline"
+                className="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-hrz-green transition-opacity hover:opacity-80"
               >
                 {t("esg.reportsSection.viewAllReports")}
-                <ArrowRight size={14} strokeWidth={1.75} />
+                <ArrowRight size={14} strokeWidth={1.75} className="transition-transform duration-300 group-hover:translate-x-0.5" />
               </Link>
             </Reveal>
           </div>
 
+          {/* Card de relatório — 4 colunas */}
           <Stagger
             fallbackDelay={500}
             viewportMargin={VIEWPORT_TRIGGER}
             staggerChildren={STAGGER_RHYTHM}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:col-span-9"
+            className="grid grid-cols-1 gap-4 lg:col-span-4"
           >
             {reportItems.map((item) => (
-              <StaggerItem key={item.title}>
+              <StaggerItem key={item.title} className="h-full">
                 <a
                   href="/etica/relatorios-sustentabilidade"
-                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-hrz-electric hover:shadow-xl"
+                  className="group flex h-full flex-col rounded-3xl border border-border bg-card p-8 transition hover:-translate-y-1 hover:border-hrz-green hover:shadow-xl"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-hrz-deep text-white transition group-hover:bg-hrz-electric">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-hrz-deep text-white transition group-hover:bg-hrz-green">
                     <TrendingUp size={22} />
                   </div>
                   <h3 className="mt-6 font-display text-2xl font-bold text-foreground">{item.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-hrz-electric">
+                  <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-hrz-green transition-transform duration-300 group-hover:translate-x-0.5">
                     {t("esg.reportsSection.accessDoc")} <ArrowRight size={16} />
                   </span>
                 </a>
               </StaggerItem>
             ))}
           </Stagger>
+
+          {/* Carrossel de imagens — 5 colunas */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+            className="relative hidden aspect-[4/3] overflow-hidden rounded-3xl lg:col-span-5 lg:block"
+          >
+            {carouselImages.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${
+                  i === carouselIndex ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-tr from-hrz-deep/25 via-transparent to-transparent" />
+          </motion.div>
         </div>
       </section>
 

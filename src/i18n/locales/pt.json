@@ -20,9 +20,9 @@
   "home": {
     "meta": {
       "title": "HRZ Energia — Plataforma integrada de transmissão e geração",
-      "description": "A HRZ Energia opera 2.403 ckm de linhas de transmissão e 136,5 MW de geração eólica no Brasil. Plataforma integrada controlada pela Actis.",
+      "description": "A HRZ Energia opera 2.403 ckm de linhas de transmissão e 136,5 MW de geração eólica no Brasil. Plataforma integrada adquirida por fundos geridos pela Actis.",
       "ogTitle": "HRZ Energia Plataforma integrada de energia",
-      "ogDescription": "Transmissão e geração renovável com disponibilidade acima de 99,8%. R$ 1bi+ de receita anual. Controlada pela Actis."
+      "ogDescription": "Transmissão e geração renovável com disponibilidade acima de 99,8%. R$ 1bi+ de receita anual. Adquirida por fundos geridos pela Actis."
     },
     "stats": {
       "revenue": "Receita anual combinada",
@@ -45,7 +45,7 @@
       },
       "responsible": {
         "title": "Responsável",
-        "text": "ESG intrínseco ao modelo de negócio. Geração 100% eólica."
+        "text": "ESG intrínseco ao modelo de negócio. Compromisso com a geração de valor sustentável."
       }
     },
     "hero": {
@@ -59,7 +59,7 @@
       "eyebrow": "Quem somos",
       "heading1": "Uma plataforma integrada",
       "heading2": "de energia.",
-      "body1": "A HRZ Energia opera ativos de transmissão e geração renovável no Brasil, controlada pela Actis, gestora global de investimentos em infraestrutura sustentável. Nosso modelo combina disciplina institucional com excelência operacional.",
+      "body1": "A HRZ Energia opera ativos de transmissão e geração renovável no Brasil, adquirida por fundos geridos pela Actis, gestora global de investimentos em infraestrutura sustentável. Nosso modelo combina disciplina institucional com excelência operacional.",
       "body2": "Somos uma Plataforma integrada de transmissão e geração renovável que entrega infraestrutura crítica ao Sistema Interligado Nacional, com a disciplina de um investidor institucional e a especialização de operadores de classe mundial.",
       "cta": "Ver a história completa"
     },
@@ -150,7 +150,7 @@
   "about": {
     "meta": {
       "title": "Sobre — HRZ Energia",
-      "description": "Conheça a HRZ Energia: plataforma integrada de transmissão e geração renovável no Brasil, controlada pela Actis.",
+      "description": "Conheça a HRZ Energia: plataforma integrada de transmissão e geração renovável no Brasil, adquirida por fundos geridos pela Actis.",
       "ogTitle": "Sobre a HRZ Energia",
       "ogDescription": "Disciplina institucional, especialização técnica e governança ativa em infraestrutura crítica do SIN."
     },
@@ -158,7 +158,7 @@
       "eyebrow": "Quem somos",
       "titleLine1": "Disciplina institucional.",
       "titleLine2": "Excelência operacional.",
-      "subtitle": "A HRZ Energia é uma plataforma integrada de energia controlada pela Actis, gestora global de investimentos em infraestrutura sustentável."
+      "subtitle": "A HRZ Energia é uma plataforma integrada de energia adquirida por fundos geridos pela Actis, gestora global de investimentos em infraestrutura sustentável."
     },
     "model": {
       "eyebrow": "Nosso modelo",
@@ -322,20 +322,20 @@
         "title": "Transmissoras — HRZ Energia",
         "description": "Transmissoras: 9 concessões integradas ao SIN, 2.403 ckm de OHTL 500/230 kV, 29 subestações e R$ 935 milhões de RAP em 2026.",
         "ogTitle": "Transmissoras — HRZ Energia",
-        "ogDescription": "Plataforma de transmissão de alta tensão da HRZ Energia em 7 estados brasileiros, controlada pela Actis."
+        "ogDescription": "Plataforma de transmissão de alta tensão da HRZ Energia em 7 estados brasileiros, adquirida por fundos geridos pela Actis."
       },
       "hero": {
         "eyebrow": "Transmissoras",
         "titleLine1": "Energia de alta tensão",
         "titleLine2": "com previsibilidade institucional.",
-        "subtitle": "Plataforma de transmissão de energia da HRZ Energia, controlada pela Actis, com 9 concessões integradas ao SIN em 7 estados brasileiros."
+        "subtitle": "Plataforma de transmissão de energia da HRZ Energia, adquirida por fundos geridos pela Actis, com 9 concessões integradas ao SIN em 7 estados brasileiros."
       },
       "about": {
         "eyebrow": "Quem somos",
         "heading1": "Grupo de concessões",
         "heading2": "integradas ao SIN.",
-        "body1": "A Transmissoras é a plataforma de transmissão de energia da HRZ Energia, controlada pelo fundo de investimento britânico Actis. Operamos concessões da rede básica do Sistema Interligado Nacional em sete estados brasileiros, lidando com níveis de tensão entre 230 kV e 500 kV.",
-        "body2": "Iniciamos a operação no Brasil em outubro de 2021 com a aquisição de três concessionárias no Maranhão e no Espírito Santo. Em fevereiro de 2024, ampliamos o portfólio com a concessão SPMG, que escoa a energia da Usina de Belo Monte ao Sudeste do país, totalizando cerca de R$ 4,3 bilhões de investimentos em infraestrutura.",
+        "body1": "A Transmissoras é a plataforma de transmissão de energia da HRZ Energia, adquirida por fundos geridos pela Actis. Operamos concessões da rede básica do Sistema Interligado Nacional em sete estados brasileiros, lidando com níveis de tensão entre 230 kV e 500 kV.",
+        "body2": "Iniciamos a operação no Brasil em outubro de 2021 com a aquisição de três concessionárias no Maranhão e no Espírito Santo. Em fevereiro de 2024, ampliamos o portfólio com a concessão SPMG, que escoa a energia da Usina de Belo Monte ao Sudeste do país.",
         "body3": "Atuamos em conformidade com contratos, regulação e legislação aplicáveis, aplicando as melhores práticas de engenharia para entregar disponibilidade, confiabilidade e sustentabilidade no longo prazo."
       },
       "kpis": {
@@ -491,7 +491,7 @@
         },
         {
           "title": "Receita previsível (RAP)",
-          "text": "RAP indexada à inflação, com R$ 935 milhões previstos para o ciclo 2026, gerando previsibilidade de longo prazo."
+          "text": "Receita regulada, com mecanismos de atualização definidos e contratos de longo prazo, proporcionando previsibilidade ao negócio."
         },
         {
           "title": "Sustentabilidade IFC",
@@ -538,7 +538,7 @@
         "heading1": "Fontes renováveis promovendo",
         "heading2": "o desenvolvimento.",
         "body1": "Sustentável e inesgotável — essas são algumas características da energia eólica, fonte limpa e renovável em ampla ascensão que gera empregos e contribui para minimizar impactos ambientais no planeta.",
-        "body2": "A Babilônia opera cinco complexos eólicos no semiárido baiano, em municípios com regime de ventos privilegiado, entregando um fator de capacidade entre os mais altos do Brasil. A operação é controlada pela Actis e integrada à plataforma HRZ Energia.",
+        "body2": "A Babilônia opera cinco complexos eólicos no semiárido baiano, em municípios com regime de ventos privilegiado, entregando um fator de capacidade entre os mais altos do Brasil. A operação faz parte de ativos adquiridos por fundos geridos pela Actis e está integrada à plataforma HRZ Energia.",
         "imgAlt": "Vista aérea do parque eólico Babilônia"
       },
       "kpis": {
@@ -1060,7 +1060,7 @@
       "title": "Segmentos HRZ Energia",
       "description": "Transmissoras (9 concessões · 2.403 ckm · R$ 935m RAP) e Eólicas Babilônia (136,5 MW · 65 aerogeradores). Plataforma integrada de transmissão e geração.",
       "ogTitle": "Segmentos HRZ Energia",
-      "ogDescription": "Transmissão e geração renovável em uma única plataforma controlada pela Actis."
+      "ogDescription": "Transmissão e geração renovável em uma única plataforma adquirida por fundos geridos pela Actis."
     },
     "hero": {
       "eyebrow": "Segmentos",
@@ -1106,7 +1106,7 @@
     "corporate": {
       "eyebrow": "Estrutura Societária",
       "heading": "Controle Actis · Plataforma HRZ.",
-      "body": "A HRZ Energia é controlada pela Actis, gestora global de investimentos em infraestrutura sustentável, com supervisão ativa do Global Sustainability Committee em Londres.",
+      "body": "A HRZ Energia foi adquirida por fundos geridos pela Actis, gestora global de investimentos em infraestrutura sustentável, com supervisão ativa do Global Sustainability Committee em Londres.",
       "exploreHint": "Clique nos cards para explorar"
     },
     "orgNodes": {
@@ -1162,6 +1162,10 @@
       "subtitle": "Conduta ética, transparência e responsabilidade orientam todas as decisões da HRZ Energia de cada colaborador à alta administração."
     }
   },
+  "platformTag": {
+    "platform": "Plataforma Integrada de Energia",
+    "transmission": "Transmissão & Geração"
+  },
   "footer": {
     "logoAlt": "HRZ energia",
     "linkedinLabel": "LinkedIn HRZ Energia",
@@ -1173,7 +1177,7 @@
     },
     "brand": {
       "title": "HRZ Energia",
-      "description": "Plataforma integrada de energia controlada pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica."
+      "description": "Plataforma integrada de energia adquirida por fundos geridos pela Actis. Operamos ativos críticos de transmissão e geração renovável no Brasil com disciplina, governança e excelência técnica."
     },
     "navigation": {
       "title": "Navegação"
@@ -1186,6 +1190,6 @@
       "button": "Fale com a HRZ"
     },
     "copyright": "© {{year}} HRZ Energia. Todos os direitos reservados.",
-    "controlled": "Controlada pela Actis · Global Sustainability Committee"
+    "controlled": "Adquirida por fundos geridos pela Actis · Global Sustainability Committee"
   }
 }

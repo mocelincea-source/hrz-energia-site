@@ -1,5 +1,6 @@
 import { Zap } from "lucide-react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function PlatformTag({
   variant = "dark",
@@ -8,6 +9,7 @@ export function PlatformTag({
   variant?: "dark" | "light";
   className?: string;
 }) {
+  const { t } = useTranslation();
   const isDark = variant === "dark";
   return (
     <motion.span
@@ -20,10 +22,10 @@ export function PlatformTag({
           : "border border-hrz-electric/20 bg-hrz-electric/10 text-hrz-deep"
       } ${className}`}
     >
-      Plataforma Integrada de Energia
+      {t("platformTag.platform")}
       <Zap size={12} className="text-hrz-electric" fill="currentColor" />
       <span className={isDark ? "text-white/70" : "text-hrz-mid"}>
-        Transmissão &amp; Geração
+        {t("platformTag.transmission")}
       </span>
     </motion.span>
   );

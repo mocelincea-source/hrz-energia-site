@@ -4,7 +4,7 @@
     "about": "Who We Are",
     "segments": "Segments",
     "companies": "Companies",
-    "transmission": "Transmissoras",
+    "transmission": "Transmissions",
     "wind": "Eólicas",
     "esg": "ESG",
     "investors": "Investors",
@@ -20,9 +20,9 @@
   "home": {
     "meta": {
       "title": "HRZ Energia — Integrated Transmission and Generation Platform",
-      "description": "HRZ Energia operates 2,403 ckm of transmission lines and 136.5 MW of wind generation in Brazil. Integrated platform controlled by Actis.",
+      "description": "HRZ Energia operates 2,403 ckm of transmission lines and 136.5 MW of wind generation in Brazil. Integrated platform acquired by funds managed by Actis.",
       "ogTitle": "HRZ Energia — Integrated Energy Platform",
-      "ogDescription": "Renewable transmission and generation with availability above 99.8%. R$1bn+ in annual revenue. Controlled by Actis."
+      "ogDescription": "Renewable transmission and generation with availability above 99.8%. R$1bn+ in annual revenue. Acquired by funds managed by Actis."
     },
     "stats": {
       "revenue": "Combined annual revenue",
@@ -45,7 +45,7 @@
       },
       "responsible": {
         "title": "Responsible",
-        "text": "ESG intrinsic to the business model. 100% wind-powered generation."
+        "text": "ESG intrinsic to the business model. Commitment to generating sustainable value."
       }
     },
     "hero": {
@@ -59,7 +59,7 @@
       "eyebrow": "Who we are",
       "heading1": "An integrated energy",
       "heading2": "platform.",
-      "body1": "HRZ Energia operates transmission and renewable generation assets in Brazil, controlled by Actis, a global investment manager focused on sustainable infrastructure. Our model combines institutional discipline with operational excellence.",
+      "body1": "HRZ Energia operates transmission and renewable generation assets in Brazil, acquired by funds managed by Actis, a global investment manager focused on sustainable infrastructure. Our model combines institutional discipline with operational excellence.",
       "body2": "We are an integrated transmission and renewable generation platform delivering critical infrastructure to Brazil's National Interconnected System, with the discipline of an institutional investor and the expertise of world-class operators.",
       "cta": "Read our full story"
     },
@@ -78,9 +78,9 @@
       "eyebrow": "Quick access",
       "heading": "The two group segments.",
       "transmission": {
-        "name": "Transmissoras",
+        "name": "Transmissions",
         "description": "9 concessions · 2,403 ckm of OHTL 500/230 kV · R$935m in RAP in 2026.",
-        "cta": "View Transmissoras"
+        "cta": "View Transmissions"
       },
       "wind": {
         "name": "Eólicas Babilônia",
@@ -150,7 +150,7 @@
   "about": {
     "meta": {
       "title": "About — HRZ Energia",
-      "description": "Learn about HRZ Energia: an integrated transmission and renewable generation platform in Brazil, controlled by Actis.",
+      "description": "Learn about HRZ Energia: an integrated transmission and renewable generation platform in Brazil, acquired by funds managed by Actis.",
       "ogTitle": "About — HRZ Energia",
       "ogDescription": "Institutional discipline, technical expertise, and active governance over critical SIN infrastructure."
     },
@@ -158,7 +158,7 @@
       "eyebrow": "Who we are",
       "titleLine1": "Institutional discipline.",
       "titleLine2": "Operational excellence.",
-      "subtitle": "HRZ Energia is an integrated energy platform controlled by Actis, a global investment manager focused on sustainable infrastructure."
+      "subtitle": "HRZ Energia is an integrated energy platform acquired by funds managed by Actis, a global investment manager focused on sustainable infrastructure."
     },
     "model": {
       "eyebrow": "Our model",
@@ -322,20 +322,20 @@
         "title": "Transmission — HRZ Energia",
         "description": "Transmission: 9 concessions integrated into the SIN, 2,403 ckm of 500/230 kV OHTL, 29 substations, and R$935 million in RAP for 2026.",
         "ogTitle": "Transmission — HRZ Energia",
-        "ogDescription": "HRZ Energia's high-voltage transmission platform across 7 Brazilian states, controlled by Actis."
+        "ogDescription": "HRZ Energia's high-voltage transmission platform across 7 Brazilian states, acquired by funds managed by Actis."
       },
       "hero": {
         "eyebrow": "Transmission",
         "titleLine1": "High-voltage energy",
         "titleLine2": "with institutional predictability.",
-        "subtitle": "HRZ Energia's energy transmission platform, controlled by Actis, with 9 concessions integrated into the SIN across 7 Brazilian states."
+        "subtitle": "HRZ Energia's energy transmission platform, acquired by funds managed by Actis, with 9 concessions integrated into the SIN across 7 Brazilian states."
       },
       "about": {
         "eyebrow": "Who we are",
         "heading1": "A group of concessions",
         "heading2": "integrated into the SIN.",
-        "body1": "Transmissoras is HRZ Energia's energy transmission platform, controlled by the British investment fund Actis. We operate basic grid concessions of the National Interconnected System across seven Brazilian states, handling voltage levels between 230 kV and 500 kV.",
-        "body2": "We began operations in Brazil in October 2021 with the acquisition of three concessionaires in Maranhão and Espírito Santo. In February 2024, we expanded the portfolio with the SPMG concession, which transmits power from the Belo Monte plant to the Southeast, totaling approximately R$4.3 billion in infrastructure investment.",
+        "body1": "Transmissoras is HRZ Energia's energy transmission platform, acquired by funds managed by Actis. We operate basic grid concessions of the National Interconnected System across seven Brazilian states, handling voltage levels between 230 kV and 500 kV.",
+        "body2": "We began operations in Brazil in October 2021 with the acquisition of three concessionaires in Maranhão and Espírito Santo. In February 2024, we expanded the portfolio with the SPMG concession, which transmits power from the Belo Monte plant to the Southeast.",
         "body3": "We operate in compliance with applicable contracts, regulations, and legislation, applying best engineering practices to deliver availability, reliability, and long-term sustainability."
       },
       "kpis": {
@@ -491,7 +491,7 @@
         },
         {
           "title": "Predictable revenue (RAP)",
-          "text": "Inflation-linked RAP with R$935 million projected for the 2026 cycle, providing long-term revenue visibility."
+          "text": "Regulated revenue, with defined update mechanisms and long-term contracts, providing predictability to the business."
         },
         {
           "title": "IFC sustainability",
@@ -538,7 +538,7 @@
         "heading1": "Renewable sources driving",
         "heading2": "development.",
         "body1": "Sustainable and inexhaustible — these are some characteristics of wind energy, a clean and renewable source on the rise that creates jobs and helps minimize environmental impacts.",
-        "body2": "Babilônia operates five wind complexes in the Bahian semi-arid, in municipalities with favorable wind regimes, delivering one of Brazil's highest capacity factors. Operations are controlled by Actis and integrated into the HRZ Energia platform.",
+        "body2": "Babilônia operates five wind complexes in the Bahian semi-arid, in municipalities with favorable wind regimes, delivering one of Brazil's highest capacity factors. Operations are part of assets acquired by funds managed by Actis and integrated into the HRZ Energia platform.",
         "imgAlt": "Aerial view of the Babilônia wind farm"
       },
       "kpis": {
@@ -1060,7 +1060,7 @@
       "title": "HRZ Energia Segments",
       "description": "Transmissoras (9 concessions · 2,403 ckm · R$935m RAP) and Eólicas Babilônia (136.5 MW · 65 turbines). Integrated transmission and generation platform.",
       "ogTitle": "HRZ Energia Segments",
-      "ogDescription": "Transmission and renewable generation on a single platform controlled by Actis."
+      "ogDescription": "Transmission and renewable generation on a single platform acquired by funds managed by Actis."
     },
     "hero": {
       "eyebrow": "Segments",
@@ -1106,7 +1106,7 @@
     "corporate": {
       "eyebrow": "Corporate Structure",
       "heading": "Actis Control · HRZ Platform.",
-      "body": "HRZ Energia is controlled by Actis, a global investment manager focused on sustainable infrastructure, with active oversight by the Global Sustainability Committee in London.",
+      "body": "HRZ Energia was acquired by funds managed by Actis, a global investment manager focused on sustainable infrastructure, with active oversight by the Global Sustainability Committee in London.",
       "exploreHint": "Click on cards to explore"
     },
     "orgNodes": {
@@ -1162,6 +1162,10 @@
       "subtitle": "Ethical conduct, transparency, and accountability guide every decision at HRZ Energia — from every employee to senior management."
     }
   },
+  "platformTag": {
+    "platform": "Integrated Energy Platform",
+    "transmission": "Transmission & Generation"
+  },
   "footer": {
     "logoAlt": "HRZ Energia",
     "linkedinLabel": "LinkedIn HRZ Energia",
@@ -1173,7 +1177,7 @@
     },
     "brand": {
       "title": "HRZ Energia",
-      "description": "An integrated energy platform controlled by Actis. We operate critical transmission and renewable generation assets in Brazil with discipline, governance, and technical excellence."
+      "description": "An integrated energy platform acquired by funds managed by Actis. We operate critical transmission and renewable generation assets in Brazil with discipline, governance, and technical excellence."
     },
     "navigation": {
       "title": "Navigation"
@@ -1186,6 +1190,6 @@
       "button": "Contact HRZ"
     },
     "copyright": "© {{year}} HRZ Energia. All rights reserved.",
-    "controlled": "Controlled by Actis · Global Sustainability Committee"
+    "controlled": "Acquired by funds managed by Actis · Global Sustainability Committee"
   }
 }

@@ -39,7 +39,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Plataforma integrada de transmissão e geração renovável no Brasil. Controlada pela Actis.",
+          "Plataforma integrada de transmissão e geração renovável no Brasil. Adquirida por fundos geridos pela Actis.",
       },
       { name: "author", content: "HRZ Energia" },
       {
@@ -49,7 +49,7 @@ export const Route = createRootRoute({
       {
         property: "og:description",
         content:
-          "Plataforma integrada de transmissão e geração renovável no Brasil. Controlada pela Actis.",
+          "Plataforma integrada de transmissão e geração renovável no Brasil. Adquirida por fundos geridos pela Actis.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "HRZ Energia" },
@@ -63,7 +63,7 @@ export const Route = createRootRoute({
       {
         name: "twitter:description",
         content:
-          "Plataforma integrada de transmissão e geração renovável no Brasil. Controlada pela Actis.",
+          "Plataforma integrada de transmissão e geração renovável no Brasil. Adquirida por fundos geridos pela Actis.",
       },
       { name: "twitter:image", content: "/og-image.jpg" },
     ],

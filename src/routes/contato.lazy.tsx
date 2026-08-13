@@ -98,7 +98,7 @@ function ContatoPage() {
               text={t("contact.cards.locationValue")}
             />
             <a
-              href="https://www.linkedin.com/company/hrz-energia/"
+              href="https://br.linkedin.com/company/hrz-energia"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative flex items-start gap-5 overflow-hidden rounded-2xl border border-border/60 bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-hrz-electric/40 hover:shadow-xl"
