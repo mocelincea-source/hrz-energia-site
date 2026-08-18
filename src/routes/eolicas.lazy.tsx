@@ -18,7 +18,8 @@ import { SiteShell } from "@/components/site/SiteShell";
 import { PageHero } from "@/components/site/PageHero";
 import { Reveal, Stagger, StaggerItem, HoverLift, Parallax } from "@/components/site/motion";
 import raioBrand from "@/assets/raio-hrz.png";
-import windHeroImg from "@/assets/wind-babilionia-01.jpeg";
+import eolicasHeroVideo from "@/assets/VideoHeader-05.mp4";
+import eolicasPoster from "@/assets/posters/eolicas-poster.jpg";
 import babiloniaDayImg from "@/assets/babilonia-aerial-day.jpg";
 import complexMorroImg from "@/assets/Complexo-Morro-do-Chapéu.jpeg";
 import complexOurolandiaImg from "@/assets/Complexo-Ourolândia.jpeg";
@@ -80,8 +81,8 @@ function EolicasPage() {
           </>
         }
         subtitle={t("segments.wind.hero.subtitle")}
-        imageSrc={windHeroImg}
-        imageAlt="Complexo Eólico Babilônia"
+        videoSrc={eolicasHeroVideo}
+        posterSrc={eolicasPoster}
       />
 
       <section className="relative overflow-hidden bg-secondary py-24">

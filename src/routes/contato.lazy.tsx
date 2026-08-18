@@ -236,6 +236,23 @@ function TrabalheConosco() {
 
                 <div>
                   <label
+                    htmlFor="career-linkedin"
+                    className="text-xs font-semibold uppercase tracking-wider text-muted-foreground"
+                  >
+                    {t("contact.careers.fieldLinkedinLabel")}
+                  </label>
+                  <input
+                    id="career-linkedin"
+                    name="career-linkedin"
+                    type="url"
+                    pattern="https?://.*"
+                    placeholder={t("contact.careers.fieldLinkedinPlaceholder")}
+                    className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground outline-none transition focus:border-hrz-electric"
+                  />
+                </div>
+
+                <div>
+                  <label
                     htmlFor="career-message"
                     className="text-xs font-semibold uppercase tracking-wider text-muted-foreground"
                   >
