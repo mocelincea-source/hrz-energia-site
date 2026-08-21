@@ -354,11 +354,10 @@
         "hint": "Click on a concession to explore voltage, extension, owned and accessed substations."
       },
       "infoLabels": {
-        "voltage": "Voltage",
-        "lines": "Transmission lines",
-        "ownSubstations": "Owned substations",
-        "accessedSubstations": "Accessed substations",
-        "acquisition": "Acquisition"
+        "closing": "Closing",
+        "concession": "Concession",
+        "transmissionLines": "Transmission Lines (TL)",
+        "substations": "Substations (SS)"
       },
       "differentials": {
         "eyebrow": "Differentials",
@@ -384,104 +383,158 @@
       ],
       "concessionsItems": [
         {
-          "id": "es",
-          "nome": "HRZ TES",
-          "estado": "Espírito Santo",
-          "tensao": "230 kV",
-          "linhas": "106 km",
-          "subestacoes": "SE São Mateus 2 — 150 MVA",
-          "acessadas": "SE Linhares",
-          "aquisicao": "2021"
-        },
-        {
           "id": "ma1",
           "nome": "HRZ TMA 1",
           "estado": "Maranhão",
-          "tensao": "500 / 230 kV",
-          "linhas": "120.2 km (500 kV) + 4.8 km (230 kV)",
-          "subestacoes": "SE São Luís IV — 1,600 MVA",
-          "acessadas": "SE Miranda II · SE São Luís II",
-          "aquisicao": "2021"
+          "group": "HORIZON",
+          "closing": "Apr-22",
+          "concessao": "028/2017",
+          "lt": [
+            "TL 500kV São Luís II - Miranda II C3 — 120km",
+            "TL 500kV São Luís II - São Luís IV CD C1 & C2 — 5.1km",
+            "TL 230kV São Luís II - São Luís IV C1 — 4.8km"
+          ],
+          "se": [
+            "SS 500/230/69kV São Luís IV *",
+            "SS 500kV São Luís II",
+            "SS 500kV Miranda II"
+          ]
         },
         {
           "id": "ma2",
           "nome": "HRZ TMA 2",
           "estado": "Maranhão",
-          "tensao": "230 kV",
-          "linhas": "201.9 km",
-          "subestacoes": "SE Chapadinha 2 — 200 MVA",
-          "acessadas": "SE Coelho Neto",
-          "aquisicao": "2021"
+          "group": "HORIZON",
+          "closing": "Apr-22",
+          "concessao": "032/2017",
+          "lt": [
+            "TL 230kV Coelho Neto - Chapadinha II C1 — 74km",
+            "TL 230kV Miranda II - Chapadinha II C1 — 129km"
+          ],
+          "se": [
+            "SS 230kV Miranda II",
+            "SS 230kV Coelho Neto",
+            "SS 230/69kV Chapadinha II *"
+          ]
+        },
+        {
+          "id": "es",
+          "nome": "HRZ TES",
+          "estado": "Espírito Santo",
+          "group": "HORIZON",
+          "closing": "Apr-22",
+          "concessao": "021/2017",
+          "lt": [
+            "TL 230kV Linhares II - São Mateus II C1 — 106km"
+          ],
+          "se": [
+            "SS 230/138kV São Matheus II *",
+            "SS 230kV Linhares II"
+          ]
         },
         {
           "id": "spmg",
           "nome": "HRZ SP-MG",
           "estado": "São Paulo · Minas Gerais",
-          "tensao": "500 kV",
-          "linhas": "743 km",
-          "subestacoes": "—",
-          "acessadas": "SE Cachoeira Paulista · SE Estreito",
-          "aquisicao": "2024 · Belo Monte offtake"
+          "group": "EDIFY",
+          "closing": "Feb-24",
+          "concessao": "036/2017",
+          "lt": [
+            "TL 500kV Estreito - Cachoeira Paulista C1 — 375km",
+            "TL 500kV Estreito - Cachoeira Paulista C2 — 375km"
+          ],
+          "se": [
+            "SS 500kV Estreito",
+            "SS 500kV Cachoeira Paulista"
+          ]
         },
         {
           "id": "mgte",
           "nome": "HRZ MGTE",
           "estado": "Maranhão",
-          "tensao": "To be defined",
-          "linhas": "To be defined",
-          "subestacoes": "To be defined",
-          "acessadas": "-",
-          "aquisicao": "To be defined"
-        },
-        {
-          "id": "babilonia",
-          "nome": "HRZ Babilônia",
-          "estado": "Bahia",
-          "tensao": "To be defined",
-          "linhas": "To be defined",
-          "subestacoes": "To be defined",
-          "acessadas": "-",
-          "aquisicao": "To be defined"
-        },
-        {
-          "id": "avt",
-          "nome": "HRZ AVT",
-          "estado": "Minas Gerais",
-          "tensao": "To be defined",
-          "linhas": "To be defined",
-          "subestacoes": "To be defined",
-          "acessadas": "-",
-          "aquisicao": "To be defined"
+          "group": "EDIFY",
+          "closing": "Jun-24",
+          "concessao": "029/2018",
+          "lt": [
+            "TL 230kV Imperatriz – Porto Franco C1 — 112km"
+          ],
+          "se": [
+            "SS 230kV Imperatriz",
+            "SS 230kV Porto Franco"
+          ]
         },
         {
           "id": "alianca",
           "nome": "HRZ Aliança",
           "estado": "Santa Catarina",
-          "tensao": "To be defined",
-          "linhas": "To be defined",
-          "subestacoes": "To be defined",
-          "acessadas": "-",
-          "aquisicao": "To be defined"
-        },
-        {
-          "id": "litoralsul",
-          "nome": "HRZ Litoral Sul Transmissão",
-          "estado": "Santa Catarina · Rio Grande do Sul",
-          "tensao": "To be defined",
-          "linhas": "To be defined",
-          "subestacoes": "To be defined",
-          "acessadas": "-",
-          "aquisicao": "To be defined"
+          "group": "EDGE",
+          "closing": "Apr-25",
+          "concessao": "039/2017",
+          "lt": [
+            "TL 525kV Abdon Batista – Siderópolis II CD C1 & C2 — 261km",
+            "TL 525kV Biguaçu – Siderópolis II C1 — 149km",
+            "TL 525kV Campos Novos – Abdon Batista C2 — 39km",
+            "TL 230kV Siderópolis II – Forquilhinha C1",
+            "TL 230kV Siderópolis II – Siderópolis I CD C1 & C2 — 7.5km"
+          ],
+          "se": [
+            "SS 500/230kV Siderópolis II *",
+            "SS 500kV Biguaçu",
+            "SS 500kV Abdon Batista",
+            "SS 500kV Campos Novos",
+            "SS 230kV Siderópolis I",
+            "SS 230kV Forquilhinha"
+          ]
         },
         {
           "id": "vineyards",
           "nome": "HRZ Vineyards",
           "estado": "Rio Grande do Sul",
-          "tensao": "To be defined",
-          "linhas": "To be defined",
-          "subestacoes": "To be defined",
-          "acessadas": "-",
-          "aquisicao": "To be defined"
+          "group": "VICTORY",
+          "closing": "May-25",
+          "concessao": "031/2017",
+          "lt": [
+            "TL 230kV Lajeado II – Lajeado II C1 — 16km",
+            "TL 230kV Lajeado III – Garibaldi C1 — 47km",
+            "TL 230kV Bagé II – Candiota II C1 — 49km"
+          ],
+          "se": [
+            "SS 230/69kV Lajeado III *",
+            "SS 230/69kV Vinhedos *",
+            "SS 230kV Lajeado II",
+            "SS 230kV Bagé II",
+            "SS 230kV Candiota II"
+          ]
+        },
+        {
+          "id": "avt",
+          "nome": "HRZ AVT",
+          "estado": "Minas Gerais",
+          "group": "VICTORY",
+          "closing": "May-25",
+          "concessao": "005/2017",
+          "lt": [],
+          "se": [
+            "SS 500/34.5kV Padre Paraíso — Static Reactive Compensator"
+          ]
+        },
+        {
+          "id": "litoralsul",
+          "nome": "HRZ Litoral Sul Transmissão",
+          "estado": "Santa Catarina · Rio Grande do Sul",
+          "group": "EDEN",
+          "closing": "Jan-26",
+          "concessao": "018/2016",
+          "lt": [
+            "TL 230kV Forquilhinha - Torres II — 65km",
+            "TL 230kV Torres II - Atlântida — 69km"
+          ],
+          "se": [
+            "SS 230/18/69kV Tubarão Sul *",
+            "SS 230/69kV Torres II *",
+            "SS 230kV Forquilhinha",
+            "SS 230kV Atlântida"
+          ]
         }
       ],
       "differentialsItems": [
@@ -511,7 +564,7 @@
         {
           "ano": "2024",
           "titulo": "Southeast expansion",
-          "texto": "Acquisition of the SPMG concession, responsible for transmitting Belo Monte's power to the Southeast, totaling R$4.3bn in infrastructure."
+          "texto": "Acquisition of the SPMG concession, responsible for transmitting Belo Monte's power to the Southeast."
         },
         {
           "ano": "2026",
@@ -719,25 +772,94 @@
     },
     "socialProjects": {
       "eyebrow": "Social projects",
-      "heading": "We transform energy into development.",
-      "description": "Our projects strengthen communities, create opportunities and leave a positive legacy wherever we operate.",
+      "heading": "Social projects that strengthen communities",
+      "description": "The projects developed in the communities of Laranjeiras and Murtura value family farming, community organization, and income generation. The initiatives support women and rural producers with training, infrastructure, and better conditions to produce, process, and market their products sustainably.",
       "cta": "Explore all projects",
       "link": "View details",
+      "readMore": "Learn more",
+      "modal": {
+        "close": "Close"
+      },
       "items": [
         {
+          "tag": "Social",
+          "title": "Women of Laranjeiras",
+          "description": "The Women of Laranjeiras Project strengthens the economic autonomy of rural women through agroecological gardens, poultry farming, support for small businesses, training, and access to new markets.",
+          "details": {
+            "subtitle": "Autonomy, sustainable production and new opportunities",
+            "intro": [
+              "The Women of Laranjeiras Project seeks to strengthen the productive capacity and economic autonomy of women in the community. The initiative brings together activities linked to family farming, poultry raising, family agribusinesses, beauty, crafts, and other small enterprises.",
+              "Structured to serve 21 women, the project recognizes the diversity of knowledge and activities already present in the territory. The proposal is to offer better working conditions, expand production, and facilitate access to new markets, contributing to increased income and the empowerment of women's leadership."
+            ],
+            "objectivesTitle": "Main objectives",
+            "objectives": [
+              "Expand productive gardens with agroecological vegetable plots;",
+              "Improve structures for raising free-range chickens;",
+              "Support sanitary improvements in family agribusinesses;",
+              "Modernize small businesses, such as beauty salons and painting and customization ateliers;",
+              "Establish an integrated marketing system, with direct sales and product delivery;",
+              "Strengthen women's participation in the association and decision-making spaces."
+            ],
+            "sections": [
+              {
+                "title": "How the project works",
+                "body": [
+                  "The proposal combines the acquisition of equipment and supplies, workshops, consultancies, and technical assistance. The work is guided by the participation of the women, with planning meetings, monitoring, and activity evaluation.",
+                  "The project also plans to connect with public programs supporting family farming, such as the Food Acquisition Program — PAA — and the National School Feeding Program — PNAE. This connection can open new marketing channels and expand the presence of community products in the institutional market."
+                ]
+              },
+              {
+                "title": "Expected transformation",
+                "body": [
+                  "By investing in productive gardens and small enterprises, the Women of Laranjeiras Project aims to increase family income, stimulate sustainable production, and strengthen women's presence in the economic and social development of the community."
+                ]
+              }
+            ]
+          }
+        },
+        {
           "tag": "Infrastructure",
-          "title": "Mutura Project",
-          "description": "Community infrastructure improvements in the regions where we operate, expanding access to essential services and quality of life."
-        },
-        {
-          "tag": "Development",
-          "title": "Laranjeiras Project",
-          "description": "Training and local development programs that strengthen ties with communities along our transmission lines."
-        },
-        {
-          "tag": "Income Generation",
-          "title": "Flour House",
-          "description": "An income-generation initiative that promotes economic autonomy and sustainable opportunities for local families."
+          "title": "Murtura Flour House",
+          "description": "The Murtura Flour House combines technology, training, and community management to modernize cassava processing, add value to production, and increase the income of family farmers.",
+          "details": {
+            "subtitle": "Technology and organization at the service of family farming",
+            "intro": [
+              "The Murtura Flour House Project was designed to modernize cassava processing and strengthen family farming in the community. The initiative proposes a community agroindustrial unit capable of improving flour quality, increasing production efficiency, and adding value to the cassava grown by local producers.",
+              "Cassava holds great social and economic importance in Maranhão. However, part of production is still carried out using traditional methods, with low mechanization and limited marketing capacity. The Flour House seeks to address this challenge with infrastructure, equipment, training, and community organization."
+            ],
+            "objectivesTitle": "Main objectives",
+            "objectives": [
+              "Modernize the cassava flour production process;",
+              "Improve product quality and standardization;",
+              "Increase productivity through appropriate cultivation techniques;",
+              "Strengthen cooperativism and community management;",
+              "Train producers in rural entrepreneurship and cassava processing;",
+              "Create better conditions for commercialization and income generation."
+            ],
+            "sections": [
+              {
+                "title": "From cassava to the final product",
+                "body": [
+                  "The planned facility covers the main processing stages: receiving and weighing the roots, washing, peeling, grinding, pressing, sifting, roasting, classifying, bagging, and storage.",
+                  "In addition to constructing the unit, the project includes the acquisition of machinery, agricultural equipment, and tools. Training in cooperativism and rural entrepreneurship is also planned, along with technical instruction on cassava cultivation and processing."
+                ]
+              },
+              {
+                "title": "Community management and sustainability",
+                "body": [
+                  "The Flour House is to be managed with community participation, through an executive board and a monitoring committee. The model aims to ensure transparency, production records, sales control, and accountability.",
+                  "Part of the production may serve the community's own consumption, while the surplus can be marketed at fairs, wholesale markets, and retail establishments.",
+                  "The project also considers the environmental aspects of cassava processing. The facility includes a specific system for collecting and disposing of manipueira — a liquid byproduct that must be properly managed to prevent soil and water contamination."
+                ]
+              },
+              {
+                "title": "Expected transformation",
+                "body": [
+                  "With adequate infrastructure, technical training, and collective management, the Murtura Flour House aims to transform a traditional activity into a sustainable development opportunity. The initiative seeks to generate income, strengthen producer organization, and ensure better conditions for the continuity of cassava farming in the territory."
+                ]
+              }
+            ]
+          }
         }
       ]
     },

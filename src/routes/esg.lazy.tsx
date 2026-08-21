@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment, useState, useEffect, useCallback } from "react";
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
 import {
@@ -22,6 +22,7 @@ import {
   Activity,
   Clock,
   Award,
+  X,
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "motion/react";
@@ -40,8 +41,6 @@ import governancaImg from "@/assets/Governança.jpg";
 import excelenciaOperacionalImg from "@/assets/Excelencia-Operacional.jpg";
 import torreImg from "@/assets/Torre.jpg";
 import droneImg from "@/assets/drone.jpg";
-import infraImg from "@/assets/esg/infraestrutura.jpg";
-import comunidadeImg from "@/assets/esg/comunidade.jpg";
 import casaDaFarinhaImg from "@/assets/casa-da-farinha.png";
 import dashboardEsgImg from "@/assets/DASHBOARD.jpg";
 
@@ -49,7 +48,7 @@ export const Route = createLazyFileRoute("/esg")({
   component: EsgPage,
 });
 
-const PROJECT_IMAGES = [infraImg, comunidadeImg, casaDaFarinhaImg];
+const PROJECT_IMAGES = [socialImg, casaDaFarinhaImg];
 const PILLAR_CARD_IMAGES = [meioAmbienteImg, socialImg, governancaImg, excelenciaOperacionalImg];
 const PILLAR_CARD_ICONS: LucideIcon[] = [Leaf, Users, Scale, Settings];
 const VALUE_ICONS: LucideIcon[] = [Users, ShieldCheck, Shield, Leaf, Handshake, Zap];
@@ -86,7 +85,20 @@ type PillarCardItem = { title: string; description: string };
 type ValueItem = { title: string; text: string };
 type ValueChainStep = { label: string };
 type SmartEsgCard = { title: string; description: string };
-type SocialProjectItem = { tag: string; title: string; description: string };
+type ModalSection = { title: string; body: string[] };
+type SocialProjectDetails = {
+  subtitle: string;
+  intro: string[];
+  objectivesTitle: string;
+  objectives: string[];
+  sections: ModalSection[];
+};
+type SocialProjectItem = {
+  tag: string;
+  title: string;
+  description: string;
+  details: SocialProjectDetails;
+};
 type IndicatorItem = { category: string; value: string; label: string };
 type ReportItem = { title: string; text: string };
 
@@ -95,6 +107,11 @@ function EsgPage() {
 
   const carouselImages = [droneCarousel1, droneCarousel2, droneCarousel3, droneCarousel4];
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const [activeProject, setActiveProject] = useState<{
+    project: SocialProjectItem;
+    image: string;
+  } | null>(null);
+  const closeModal = useCallback(() => setActiveProject(null), []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -327,34 +344,21 @@ function EsgPage() {
             </p>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
-            <h2 className="font-display mt-4 max-w-2xl text-3xl text-foreground lg:text-4xl">
+            <h2 className="font-display mt-4 max-w-3xl text-3xl text-foreground lg:text-4xl">
               {t("esg.socialProjects.heading")}
             </h2>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
               {t("esg.socialProjects.description")}
             </p>
-          </Reveal>
-          <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
-            <Link
-              to="/contato"
-              className={`group mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-hrz-green px-6 py-3 text-sm font-semibold text-white hover:bg-hrz-green/90 ${BTN_PRESS}`}
-            >
-              {t("esg.socialProjects.cta")}
-              <ArrowRight
-                size={16}
-                strokeWidth={1.75}
-                className={`transition-transform duration-300 ease-out ${GPU_LAYER} group-hover:translate-x-1`}
-              />
-            </Link>
           </Reveal>
 
           <Stagger
             fallbackDelay={500}
             viewportMargin={VIEWPORT_TRIGGER}
             staggerChildren={STAGGER_RHYTHM}
-            className="mt-12 grid gap-6 lg:grid-cols-3"
+            className="mt-12 grid gap-6 md:grid-cols-2"
           >
             {socialProjects.map((project, i) => (
               <StaggerItem key={project.title} className="h-full">
@@ -363,13 +367,25 @@ function EsgPage() {
                   tag={project.tag}
                   title={project.title}
                   description={project.description}
-                  linkLabel={t("esg.socialProjects.link")}
+                  readMoreLabel={t("esg.socialProjects.readMore")}
+                  onReadMore={() =>
+                    setActiveProject({ project, image: PROJECT_IMAGES[i] })
+                  }
                 />
               </StaggerItem>
             ))}
           </Stagger>
         </div>
       </section>
+
+      {/* Modal de projeto social */}
+      {activeProject && (
+        <SocialProjectModal
+          project={activeProject.project}
+          image={activeProject.image}
+          onClose={closeModal}
+        />
+      )}
 
       {/* Indicadores ESG */}
       <section id="esg-indicadores" className="bg-slate-50 py-24">
@@ -658,19 +674,21 @@ function SocialProjectCard({
   tag,
   title,
   description,
-  linkLabel,
+  readMoreLabel,
+  onReadMore,
 }: {
   image: string;
   tag: string;
   title: string;
   description: string;
-  linkLabel: string;
+  readMoreLabel: string;
+  onReadMore: () => void;
 }) {
   return (
     <article
       className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm ${CARD_HOVER}`}
     >
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-64 overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -679,25 +697,148 @@ function SocialProjectCard({
           className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02] will-change-transform will-change-opacity"
         />
       </div>
-      <div className="flex flex-grow flex-col p-6">
+      <div className="flex flex-grow flex-col p-8">
         <span className="mb-3 inline-block rounded bg-slate-100 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">
           {tag}
         </span>
-        <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-        <p className="mt-2 line-clamp-3 flex-grow text-sm text-muted-foreground">{description}</p>
-        <a
-          href="#"
-          className="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-hrz-green hover:underline"
+        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+        <p className="mt-3 flex-grow text-sm leading-relaxed text-muted-foreground">{description}</p>
+        <button
+          onClick={onReadMore}
+          className="group/btn mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-hrz-green hover:underline"
         >
-          {linkLabel}
+          {readMoreLabel}
           <ArrowRight
             size={14}
             strokeWidth={1.75}
-            className="transition-transform duration-300 group-hover:translate-x-0.5"
+            className="transition-transform duration-300 group-hover/btn:translate-x-0.5"
           />
-        </a>
+        </button>
       </div>
     </article>
+  );
+}
+
+function SocialProjectModal({
+  project,
+  image,
+  onClose,
+}: {
+  project: SocialProjectItem;
+  image: string;
+  onClose: () => void;
+}) {
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+      onClick={onClose}
+    >
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+      />
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={project.title}
+        className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header com imagem */}
+        <div className="relative h-56 flex-shrink-0 overflow-hidden rounded-t-2xl sm:h-64">
+          <img
+            src={image}
+            alt={project.title}
+            className="h-full w-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute bottom-6 left-6 right-14">
+            <span className="mb-2 inline-block rounded bg-hrz-green px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+              {project.tag}
+            </span>
+            <h2 className="font-display text-2xl font-bold leading-tight text-white sm:text-3xl">
+              {project.title}
+            </h2>
+          </div>
+          <button
+            onClick={onClose}
+            aria-label={t("esg.socialProjects.modal.close")}
+            className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white transition-colors hover:bg-black/65"
+          >
+            <X size={16} strokeWidth={2} />
+          </button>
+        </div>
+
+        {/* Corpo */}
+        <div className="p-6 sm:p-8">
+          {/* Subtítulo do projeto */}
+          <p className="text-xs font-bold uppercase tracking-widest text-hrz-green">
+            {project.details.subtitle}
+          </p>
+
+          {/* Parágrafos introdutórios */}
+          <div className="mt-4 space-y-3">
+            {project.details.intro.map((para, i) => (
+              <p key={i} className="text-sm leading-relaxed text-slate-600">
+                {para}
+              </p>
+            ))}
+          </div>
+
+          {/* Principais objetivos */}
+          <div className="mt-7">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-hrz-green">
+              {project.details.objectivesTitle}
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              {project.details.objectives.map((obj, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-sm leading-relaxed text-slate-700">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-hrz-green" />
+                  {obj}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Seções dinâmicas (Como o projeto acontece, Transformação esperada, etc.) */}
+          {project.details.sections.map((section, si) => (
+            <div key={si} className="mt-7">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-hrz-green">
+                {section.title}
+              </h3>
+              <div className="mt-3 space-y-3">
+                {section.body.map((para, pi) => (
+                  <p key={pi} className="text-sm leading-relaxed text-slate-700">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <button
+            onClick={onClose}
+            className="mt-8 w-full rounded-full border border-slate-200 py-3 text-sm font-semibold text-slate-500 transition-colors hover:bg-slate-50"
+          >
+            {t("esg.socialProjects.modal.close")}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -354,11 +354,10 @@
         "hint": "Clique em uma concessão para explorar tensão, extensão, subestações próprias e acessadas."
       },
       "infoLabels": {
-        "voltage": "Tensão",
-        "lines": "Linhas de transmissão",
-        "ownSubstations": "Subestações próprias",
-        "accessedSubstations": "Subestações acessadas",
-        "acquisition": "Aquisição"
+        "closing": "Closing",
+        "concession": "Concessão",
+        "transmissionLines": "Linhas de Transmissão (LT)",
+        "substations": "Subestações (SE)"
       },
       "differentials": {
         "eyebrow": "Diferenciais",
@@ -384,104 +383,158 @@
       ],
       "concessionsItems": [
         {
-          "id": "es",
-          "nome": "HRZ TES",
-          "estado": "Espírito Santo",
-          "tensao": "230 kV",
-          "linhas": "106 km",
-          "subestacoes": "SE São Mateus 2 — 150 MVA",
-          "acessadas": "SE Linhares",
-          "aquisicao": "2021"
-        },
-        {
           "id": "ma1",
           "nome": "HRZ TMA 1",
           "estado": "Maranhão",
-          "tensao": "500 / 230 kV",
-          "linhas": "120,2 km (500 kV) + 4,8 km (230 kV)",
-          "subestacoes": "SE São Luís IV — 1.600 MVA",
-          "acessadas": "SE Miranda II · SE São Luís II",
-          "aquisicao": "2021"
+          "group": "HORIZON",
+          "closing": "abr-22",
+          "concessao": "028/2017",
+          "lt": [
+            "LT 500kV São Luís II - Miranda II C3 — 120km",
+            "LT 500kV São Luís II - São Luís IV CD C1 e C2 — 5,1km",
+            "LT 230kV São Luís II - São Luís IV C1 — 4,8km"
+          ],
+          "se": [
+            "SE 500/230/69kV São Luís IV *",
+            "SE 500kV São Luís II",
+            "SE 500kV Miranda II"
+          ]
         },
         {
           "id": "ma2",
           "nome": "HRZ TMA 2",
           "estado": "Maranhão",
-          "tensao": "230 kV",
-          "linhas": "201,9 km",
-          "subestacoes": "SE Chapadinha 2 — 200 MVA",
-          "acessadas": "SE Coelho Neto",
-          "aquisicao": "2021"
+          "group": "HORIZON",
+          "closing": "abr-22",
+          "concessao": "032/2017",
+          "lt": [
+            "LT 230kV Coelho Neto - Chapadinha II C1 — 74km",
+            "LT 230kV Miranda II - Chapadinha II C1 — 129km"
+          ],
+          "se": [
+            "SE 230kV Miranda II",
+            "SE 230kV Coelho Neto",
+            "SE 230/69kV Chapadinha II *"
+          ]
+        },
+        {
+          "id": "es",
+          "nome": "HRZ TES",
+          "estado": "Espírito Santo",
+          "group": "HORIZON",
+          "closing": "abr-22",
+          "concessao": "021/2017",
+          "lt": [
+            "LT 230kV Linhares II - São Mateus II C1 — 106km"
+          ],
+          "se": [
+            "SE 230/138kV São Matheus II *",
+            "SE 230kV Linhares II"
+          ]
         },
         {
           "id": "spmg",
           "nome": "HRZ SP-MG",
           "estado": "São Paulo · Minas Gerais",
-          "tensao": "500 kV",
-          "linhas": "743 km",
-          "subestacoes": "—",
-          "acessadas": "SE Cachoeira Paulista · SE Estreito",
-          "aquisicao": "2024 · escoamento de Belo Monte"
+          "group": "EDIFY",
+          "closing": "fev-24",
+          "concessao": "036/2017",
+          "lt": [
+            "LT 500kV Estreito - Cachoeira Paulista C1 — 375km",
+            "LT 500kV Estreito - Cachoeira Paulista C2 — 375km"
+          ],
+          "se": [
+            "SE 500kV Estreito",
+            "SE 500kV Cachoeira Paulista"
+          ]
         },
         {
           "id": "mgte",
           "nome": "HRZ MGTE",
           "estado": "Maranhão",
-          "tensao": "A definir",
-          "linhas": "A definir",
-          "subestacoes": "A definir",
-          "acessadas": "-",
-          "aquisicao": "A definir"
-        },
-        {
-          "id": "babilonia",
-          "nome": "HRZ Babilônia",
-          "estado": "Bahia",
-          "tensao": "A definir",
-          "linhas": "A definir",
-          "subestacoes": "A definir",
-          "acessadas": "-",
-          "aquisicao": "A definir"
-        },
-        {
-          "id": "avt",
-          "nome": "HRZ AVT",
-          "estado": "Minas Gerais",
-          "tensao": "A definir",
-          "linhas": "A definir",
-          "subestacoes": "A definir",
-          "acessadas": "-",
-          "aquisicao": "A definir"
+          "group": "EDIFY",
+          "closing": "jun-24",
+          "concessao": "029/2018",
+          "lt": [
+            "LT 230kV Imperatriz – Porto Franco C1 — 112km"
+          ],
+          "se": [
+            "SE 230kV Imperatriz",
+            "SE 230kV Porto Franco"
+          ]
         },
         {
           "id": "alianca",
           "nome": "HRZ Aliança",
           "estado": "Santa Catarina",
-          "tensao": "A definir",
-          "linhas": "A definir",
-          "subestacoes": "A definir",
-          "acessadas": "-",
-          "aquisicao": "A definir"
-        },
-        {
-          "id": "litoralsul",
-          "nome": "HRZ Litoral Sul Transmissão",
-          "estado": "Santa Catarina · Rio Grande do Sul",
-          "tensao": "A definir",
-          "linhas": "A definir",
-          "subestacoes": "A definir",
-          "acessadas": "-",
-          "aquisicao": "A definir"
+          "group": "EDGE",
+          "closing": "abr-25",
+          "concessao": "039/2017",
+          "lt": [
+            "LT 525kV Abdon Batista – Siderópolis II CD C1 e C2 — 261km",
+            "LT 525kV Biguaçu – Siderópolis II C1 — 149km",
+            "LT 525kV Campos Novos – Abdon Batista C2 — 39km",
+            "LT 230kV Siderópolis II – Forquilhinha C1",
+            "LT 230kV Siderópolis II – Siderópolis I CD C1 e C2 — 7,5km"
+          ],
+          "se": [
+            "SE 500/230kV Siderópolis II *",
+            "SE 500kV Biguaçu",
+            "SE 500kV Abdon Batista",
+            "SE 500kV Campos Novos",
+            "SE 230kV Siderópolis I",
+            "SE 230kV Forquilhinha"
+          ]
         },
         {
           "id": "vineyards",
           "nome": "HRZ Vineyards",
           "estado": "Rio Grande do Sul",
-          "tensao": "A definir",
-          "linhas": "A definir",
-          "subestacoes": "A definir",
-          "acessadas": "-",
-          "aquisicao": "A definir"
+          "group": "VICTORY",
+          "closing": "mai-25",
+          "concessao": "031/2017",
+          "lt": [
+            "LT 230kV Lajeado II – Lajeado II C1 — 16km",
+            "LT 230kV Lajeado III – Garibaldi C1 — 47km",
+            "LT 230kV Bagé II – Candiota II C1 — 49km"
+          ],
+          "se": [
+            "SE 230/69kV Lajeado III *",
+            "SE 230/69kV Vinhedos *",
+            "SE 230kV Lajeado II",
+            "SE 230kV Bagé II",
+            "SE 230kV Candiota II"
+          ]
+        },
+        {
+          "id": "avt",
+          "nome": "HRZ AVT",
+          "estado": "Minas Gerais",
+          "group": "VICTORY",
+          "closing": "mai-25",
+          "concessao": "005/2017",
+          "lt": [],
+          "se": [
+            "SE 500/34,5kV Padre Paraíso — Compensador Estático de Reativos"
+          ]
+        },
+        {
+          "id": "litoralsul",
+          "nome": "HRZ Litoral Sul Transmissão",
+          "estado": "Santa Catarina · Rio Grande do Sul",
+          "group": "EDEN",
+          "closing": "jan-26",
+          "concessao": "018/2016",
+          "lt": [
+            "LT 230kV Forquilhinha - Torres II — 65km",
+            "LT 230kV Torres II - Atlântida — 69km"
+          ],
+          "se": [
+            "SE 230/18/69kV Tubarão Sul *",
+            "SE 230/69kV Torres II *",
+            "SE 230kV Forquilhinha",
+            "SE 230kV Atlântida"
+          ]
         }
       ],
       "differentialsItems": [
@@ -511,7 +564,7 @@
         {
           "ano": "2024",
           "titulo": "Expansão para o Sudeste",
-          "texto": "Aquisição da concessão SPMG, responsável pelo escoamento da energia de Belo Monte ao Sudeste, totalizando R$ 4,3 bi em infraestrutura."
+          "texto": "Aquisição da concessão SPMG, responsável pelo escoamento da energia de Belo Monte ao Sudeste."
         },
         {
           "ano": "2026",
@@ -719,25 +772,94 @@
     },
     "socialProjects": {
       "eyebrow": "Projetos sociais",
-      "heading": "Transformamos energia em desenvolvimento.",
-      "description": "Nossos projetos fortalecem comunidades, geram oportunidades e deixam um legado positivo por onde operamos.",
+      "heading": "Projetos sociais que fortalecem comunidades",
+      "description": "Os projetos desenvolvidos nas comunidades de Laranjeiras e Murtura valorizam a agricultura familiar, a organização comunitária e a geração de renda. As iniciativas apoiam mulheres e produtores rurais com capacitação, infraestrutura e melhores condições para produzir, beneficiar e comercializar seus produtos de maneira sustentável.",
       "cta": "Conheça todos os projetos",
       "link": "Ver detalhes",
+      "readMore": "Conhecer projeto",
+      "modal": {
+        "close": "Fechar"
+      },
       "items": [
         {
+          "tag": "Social",
+          "title": "Mulheres de Laranjeiras",
+          "description": "O Projeto Mulheres de Laranjeiras fortalece a autonomia econômica de mulheres rurais por meio de quintais agroecológicos, criação de aves, apoio a pequenos negócios, capacitação e acesso a novos mercados.",
+          "details": {
+            "subtitle": "Autonomia, produção sustentável e novas oportunidades",
+            "intro": [
+              "O Projeto Mulheres de Laranjeiras busca fortalecer a capacidade produtiva e a autonomia econômica das mulheres da comunidade. A iniciativa reúne atividades ligadas à agricultura familiar, criação de aves, agroindústrias familiares, estética, artesanato e outros pequenos empreendimentos.",
+              "Estruturado para atender 21 mulheres, o projeto reconhece a diversidade de conhecimentos e atividades já existentes no território. A proposta é oferecer melhores condições de trabalho, ampliar a produção e facilitar o acesso a novos mercados, contribuindo para o aumento da renda e a valorização do protagonismo feminino."
+            ],
+            "objectivesTitle": "Principais objetivos",
+            "objectives": [
+              "Ampliar quintais produtivos com hortas agroecológicas;",
+              "Melhorar as estruturas destinadas à criação de galinhas caipiras;",
+              "Apoiar a adequação sanitária das agroindústrias familiares;",
+              "Modernizar pequenos negócios, como salões de beleza e ateliês de pintura e customização;",
+              "Estruturar um sistema integrado de comercialização, com venda direta e entrega dos produtos;",
+              "Fortalecer a participação das mulheres na associação e nos espaços de decisão."
+            ],
+            "sections": [
+              {
+                "title": "Como o projeto acontece",
+                "body": [
+                  "A proposta combina aquisição de equipamentos e insumos, oficinas, consultorias e acompanhamento técnico. O trabalho é orientado pela participação das mulheres, com reuniões de planejamento, monitoramento e avaliação das atividades.",
+                  "O projeto também prevê articulação com programas públicos de apoio à agricultura familiar, como o Programa de Aquisição de Alimentos — PAA — e o Programa Nacional de Alimentação Escolar — PNAE. Essa aproximação pode abrir novos canais de comercialização e ampliar a presença dos produtos da comunidade no mercado institucional."
+                ]
+              },
+              {
+                "title": "Transformação esperada",
+                "body": [
+                  "Ao investir nos quintais produtivos e nos pequenos empreendimentos, o Projeto Mulheres de Laranjeiras pretende ampliar a renda das famílias, estimular a produção sustentável e fortalecer a presença das mulheres no desenvolvimento econômico e social da comunidade."
+                ]
+              }
+            ]
+          }
+        },
+        {
           "tag": "Infraestrutura",
-          "title": "Projeto Mutura",
-          "description": "Construção de casa de farinha comunitária para fortalecer a produção local e gerar renda."
-        },
-        {
-          "tag": "Desenvolvimento",
-          "title": "Projeto Laranjeiras",
-          "description": "Ações de capacitação, educação e geração de oportunidade para a comunidade."
-        },
-        {
-          "tag": "Geração de Renda",
-          "title": "Casa de Farinha",
-          "description": "Iniciativa para geração de renda e valorização da cultura local."
+          "title": "Casa de Farinha de Murtura",
+          "description": "A Casa de Farinha de Murtura une tecnologia, capacitação e gestão comunitária para modernizar o beneficiamento da mandioca, agregar valor à produção e ampliar a renda dos agricultores familiares.",
+          "details": {
+            "subtitle": "Tecnologia e organização a serviço da agricultura familiar",
+            "intro": [
+              "O Projeto Casa de Farinha de Murtura foi concebido para modernizar o beneficiamento da mandioca e fortalecer a agricultura familiar da comunidade. A iniciativa propõe uma unidade agroindustrial comunitária capaz de melhorar a qualidade da farinha, aumentar a eficiência da produção e agregar valor à mandioca cultivada pelos produtores locais.",
+              "A mandioca possui grande importância social e econômica no Maranhão. Entretanto, parte da produção ainda é realizada com métodos tradicionais, baixa mecanização e pouca capacidade de comercialização. A Casa de Farinha procura responder a esse desafio com infraestrutura, equipamentos, capacitação e organização comunitária."
+            ],
+            "objectivesTitle": "Principais objetivos",
+            "objectives": [
+              "Modernizar o processo de produção da farinha de mandioca;",
+              "Melhorar a qualidade e a padronização do produto;",
+              "Ampliar a produtividade por meio de técnicas adequadas de cultivo;",
+              "Fortalecer o associativismo e a gestão comunitária;",
+              "Capacitar os produtores em empreendedorismo rural e beneficiamento da mandioca;",
+              "Criar melhores condições de comercialização e geração de renda."
+            ],
+            "sections": [
+              {
+                "title": "Da mandioca ao produto final",
+                "body": [
+                  "A estrutura projetada contempla as principais etapas do beneficiamento: recepção e pesagem das raízes, lavagem, descascamento, trituração, prensagem, peneiramento, torrefação, classificação, ensacamento e armazenamento.",
+                  "Além da construção da unidade, o projeto prevê a aquisição de máquinas, equipamentos agrícolas e ferramentas. Também estão planejadas capacitações em associativismo e empreendedorismo rural, além de formação técnica sobre cultivo e beneficiamento da mandioca."
+                ]
+              },
+              {
+                "title": "Gestão comunitária e sustentabilidade",
+                "body": [
+                  "A Casa de Farinha deverá ser administrada com participação da comunidade, por meio de uma diretoria executiva e de um comitê de acompanhamento. O modelo busca garantir transparência, registro da produção, controle das vendas e prestação de contas.",
+                  "Parte da produção poderá atender ao consumo da própria comunidade, enquanto o excedente poderá ser comercializado em feiras, mercados atacadistas e estabelecimentos varejistas.",
+                  "O projeto também considera os aspectos ambientais do processamento da mandioca. A estrutura prevê um sistema específico para coleta e destinação da manipueira, resíduo líquido que precisa ser manejado adequadamente para evitar a contaminação do solo e da água."
+                ]
+              },
+              {
+                "title": "Transformação esperada",
+                "body": [
+                  "Com infraestrutura adequada, formação técnica e gestão coletiva, a Casa de Farinha de Murtura pretende transformar uma atividade tradicional em uma oportunidade sustentável de desenvolvimento. A iniciativa busca gerar renda, fortalecer a organização dos produtores e garantir melhores condições para a continuidade da mandiocultura no território."
+                ]
+              }
+            ]
+          }
         }
       ]
     },

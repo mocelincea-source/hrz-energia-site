@@ -33,7 +33,6 @@ const CONCESSION_IMAGES: Record<string, string> = {
   ma2: droneImg3,
   spmg: droneImg4,
   mgte: droneImg1,
-  babilonia: droneImg1,
   avt: droneImg1,
   alianca: droneImg1,
   litoralsul: droneImg1,
@@ -45,12 +44,13 @@ type ConcessionItem = {
   id: string;
   nome: string;
   estado: string;
-  tensao: string;
-  linhas: string;
-  subestacoes: string;
-  acessadas: string;
-  aquisicao: string;
+  group: string;
+  closing: string;
+  concessao: string;
+  lt: string[];
+  se: string[];
 };
+
 type DifferentialItem = { title: string; text: string };
 type TimelineItem = { ano: string; titulo: string; texto: string };
 
@@ -68,6 +68,19 @@ function TransmissorasPage() {
   const KPIS = kpisData.map((item, i) => ({ ...item, icon: KPIS_ICONS[i] }));
 
   const CONCESSOES = t("segments.transmission.concessionsItems", { returnObjects: true }) as ConcessionItem[];
+
+  const CONCESSOES_GROUPED = CONCESSOES.reduce<{ group: string; items: ConcessionItem[] }[]>(
+    (acc, c) => {
+      const last = acc[acc.length - 1];
+      if (last && last.group === c.group) {
+        last.items.push(c);
+      } else {
+        acc.push({ group: c.group, items: [c] });
+      }
+      return acc;
+    },
+    [],
+  );
 
   const differentialsData = t("segments.transmission.differentialsItems", { returnObjects: true }) as DifferentialItem[];
   const DIFERENCIAIS = differentialsData.map((item, i) => ({ ...item, icon: DIFERENCIAIS_ICONS[i] }));
@@ -181,38 +194,45 @@ function TransmissorasPage() {
           </Reveal>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.4fr]">
-            <div className="flex flex-col gap-3">
-              {CONCESSOES.map((c) => {
-                const isOn = c.id === active;
-                return (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() => setActive(c.id)}
-                    className={`group rounded-2xl border p-5 text-left transition ${
-                      isOn
-                        ? "border-hrz-electric bg-hrz-deep text-white shadow-lg"
-                        : "border-border bg-card text-foreground hover:border-hrz-electric"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-display text-lg font-bold">{c.nome}</span>
-                      <ArrowRight
-                        size={16}
-                        className={isOn ? "text-hrz-electric" : "text-muted-foreground"}
-                      />
-                    </div>
-                    <p
-                      className={`mt-1 text-xs uppercase tracking-wider ${
-                        isOn ? "text-hrz-electric" : "text-muted-foreground"
-                      }`}
-                    >
-                      <MapPin size={11} className="mr-1 inline" />
-                      {c.estado}
-                    </p>
-                  </button>
-                );
-              })}
+            <div className="flex flex-col gap-5">
+              {CONCESSOES_GROUPED.map(({ group, items }) => (
+                <div key={group} className="flex flex-col gap-2">
+                  <p className="px-1 text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+                    {group}
+                  </p>
+                  {items.map((c) => {
+                    const isOn = c.id === active;
+                    return (
+                      <button
+                        key={c.id}
+                        type="button"
+                        onClick={() => setActive(c.id)}
+                        className={`group rounded-2xl border p-5 text-left transition ${
+                          isOn
+                            ? "border-hrz-electric bg-hrz-deep text-white shadow-lg"
+                            : "border-border bg-card text-foreground hover:border-hrz-electric"
+                        }`}
+                      >
+                        <div className="flex items-center justify-between">
+                          <span className="font-display text-lg font-bold">{c.nome}</span>
+                          <ArrowRight
+                            size={16}
+                            className={isOn ? "text-hrz-electric" : "text-muted-foreground"}
+                          />
+                        </div>
+                        <p
+                          className={`mt-1 text-xs uppercase tracking-wider ${
+                            isOn ? "text-hrz-electric" : "text-muted-foreground"
+                          }`}
+                        >
+                          <MapPin size={11} className="mr-1 inline" />
+                          {c.estado}
+                        </p>
+                      </button>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
 
             {sel && (
@@ -236,12 +256,25 @@ function TransmissorasPage() {
                     <h3 className="font-display mt-2 text-3xl font-bold">{sel.nome}</h3>
                   </div>
                 </div>
-                <div className="grid gap-5 p-7 sm:grid-cols-2">
-                  <InfoBlock label={t("segments.transmission.infoLabels.voltage")} value={sel.tensao} icon={Zap} />
-                  <InfoBlock label={t("segments.transmission.infoLabels.lines")} value={sel.linhas} icon={Cable} />
-                  <InfoBlock label={t("segments.transmission.infoLabels.ownSubstations")} value={sel.subestacoes} icon={Building2} />
-                  <InfoBlock label={t("segments.transmission.infoLabels.accessedSubstations")} value={sel.acessadas} icon={Activity} />
-                  <InfoBlock label={t("segments.transmission.infoLabels.acquisition")} value={sel.aquisicao} icon={Award} />
+                <div className="p-7 space-y-6">
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <InfoBlock label={t("segments.transmission.infoLabels.closing")} value={sel.closing} icon={Award} />
+                    <InfoBlock label={t("segments.transmission.infoLabels.concession")} value={sel.concessao} icon={Gauge} />
+                  </div>
+                  {sel.lt.length > 0 && (
+                    <ListBlock
+                      label={t("segments.transmission.infoLabels.transmissionLines")}
+                      items={sel.lt}
+                      icon={Cable}
+                    />
+                  )}
+                  {sel.se.length > 0 && (
+                    <ListBlock
+                      label={t("segments.transmission.infoLabels.substations")}
+                      items={sel.se}
+                      icon={Building2}
+                    />
+                  )}
                 </div>
               </motion.div>
             )}
@@ -341,6 +374,31 @@ function InfoBlock({
         <Icon size={12} /> {label}
       </p>
       <p className="mt-1 font-display text-base font-bold text-foreground">{value}</p>
+    </div>
+  );
+}
+
+function ListBlock({
+  label,
+  items,
+  icon: Icon,
+}: {
+  label: string;
+  items: string[];
+  icon: typeof Zap;
+}) {
+  return (
+    <div>
+      <p className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-muted-foreground mb-2">
+        <Icon size={12} /> {label}
+      </p>
+      <ul className="space-y-1">
+        {items.map((item) => (
+          <li key={item} className="text-sm text-foreground leading-snug pl-3 border-l-2 border-hrz-electric/40">
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
