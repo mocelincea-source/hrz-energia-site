@@ -354,7 +354,7 @@
         "hint": "Clique em uma concessão para explorar tensão, extensão, subestações próprias e acessadas."
       },
       "infoLabels": {
-        "closing": "Closing",
+        "closing": "Aquisição",
         "concession": "Concessão",
         "transmissionLines": "Linhas de Transmissão (LT)",
         "substations": "Subestações (SE)"
@@ -387,7 +387,7 @@
           "nome": "HRZ TMA 1",
           "estado": "Maranhão",
           "group": "HORIZON",
-          "closing": "abr-22",
+          "closing": "2022",
           "concessao": "028/2017",
           "lt": [
             "LT 500kV São Luís II - Miranda II C3 — 120km",
@@ -405,7 +405,7 @@
           "nome": "HRZ TMA 2",
           "estado": "Maranhão",
           "group": "HORIZON",
-          "closing": "abr-22",
+          "closing": "2022",
           "concessao": "032/2017",
           "lt": [
             "LT 230kV Coelho Neto - Chapadinha II C1 — 74km",
@@ -422,7 +422,7 @@
           "nome": "HRZ TES",
           "estado": "Espírito Santo",
           "group": "HORIZON",
-          "closing": "abr-22",
+          "closing": "2022",
           "concessao": "021/2017",
           "lt": [
             "LT 230kV Linhares II - São Mateus II C1 — 106km"
@@ -437,7 +437,7 @@
           "nome": "HRZ SP-MG",
           "estado": "São Paulo · Minas Gerais",
           "group": "EDIFY",
-          "closing": "fev-24",
+          "closing": "2024",
           "concessao": "036/2017",
           "lt": [
             "LT 500kV Estreito - Cachoeira Paulista C1 — 375km",
@@ -453,7 +453,7 @@
           "nome": "HRZ MGTE",
           "estado": "Maranhão",
           "group": "EDIFY",
-          "closing": "jun-24",
+          "closing": "2024",
           "concessao": "029/2018",
           "lt": [
             "LT 230kV Imperatriz – Porto Franco C1 — 112km"
@@ -468,7 +468,7 @@
           "nome": "HRZ Aliança",
           "estado": "Santa Catarina",
           "group": "EDGE",
-          "closing": "abr-25",
+          "closing": "2025",
           "concessao": "039/2017",
           "lt": [
             "LT 525kV Abdon Batista – Siderópolis II CD C1 e C2 — 261km",
@@ -491,7 +491,7 @@
           "nome": "HRZ Vineyards",
           "estado": "Rio Grande do Sul",
           "group": "VICTORY",
-          "closing": "mai-25",
+          "closing": "2025",
           "concessao": "031/2017",
           "lt": [
             "LT 230kV Lajeado II – Lajeado II C1 — 16km",
@@ -511,7 +511,7 @@
           "nome": "HRZ AVT",
           "estado": "Minas Gerais",
           "group": "VICTORY",
-          "closing": "mai-25",
+          "closing": "2025",
           "concessao": "005/2017",
           "lt": [],
           "se": [
@@ -523,7 +523,7 @@
           "nome": "HRZ Litoral Sul Transmissão",
           "estado": "Santa Catarina · Rio Grande do Sul",
           "group": "EDEN",
-          "closing": "jan-26",
+          "closing": "2026",
           "concessao": "018/2016",
           "lt": [
             "LT 230kV Forquilhinha - Torres II — 65km",

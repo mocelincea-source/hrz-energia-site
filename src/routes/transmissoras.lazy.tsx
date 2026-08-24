@@ -22,21 +22,27 @@ import { Reveal, Parallax, Stagger, StaggerItem, HoverLift } from "@/components/
 import raioBrand from "@/assets/raio-hrz.png";
 import videoHeader from "@/assets/VideoHeader-01.mp4";
 import transmissorasPoster from "@/assets/posters/transmissoras-poster.jpg";
+import imgTMA1 from "@/assets/HRZ-TMA-1.jpg";
+import imgTMA2 from "@/assets/HRZ-TMA-2.jpg";
+import imgTES from "@/assets/HRZ-TES.jpeg";
+import imgSPMG from "@/assets/HRZ-SPMG.jpeg";
+import imgMGTE from "@/assets/HRZ-MGTE.jpeg";
+import imgAlianca from "@/assets/HRZ-ALIANÇA.jpeg";
+import imgVineyards from "@/assets/HRZ-VINEYARDS.jpeg";
+import imgAVT from "@/assets/HRZ-AVT.jpeg";
+import imgLitoralSul from "@/assets/HRZ-Litoral-Sul-Transmissão.jpeg";
 import droneImg1 from "@/assets/Imagen-drone-1.jpeg";
-import droneImg2 from "@/assets/Imagen-drone-2.jpeg";
-import droneImg3 from "@/assets/Imagen-drone-3.jpeg";
-import droneImg4 from "@/assets/Imagen-drone-4.jpeg";
 
 const CONCESSION_IMAGES: Record<string, string> = {
-  es: droneImg1,
-  ma1: droneImg2,
-  ma2: droneImg3,
-  spmg: droneImg4,
-  mgte: droneImg1,
-  avt: droneImg1,
-  alianca: droneImg1,
-  litoralsul: droneImg1,
-  vineyards: droneImg1,
+  ma1: imgTMA1,
+  ma2: imgTMA2,
+  es: imgTES,
+  spmg: imgSPMG,
+  mgte: imgMGTE,
+  alianca: imgAlianca,
+  vineyards: imgVineyards,
+  avt: imgAVT,
+  litoralsul: imgLitoralSul,
 };
 
 type KpiItem = { value: string; label: string };
@@ -193,7 +199,7 @@ function TransmissorasPage() {
             </p>
           </Reveal>
 
-          <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.4fr]">
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start">
             <div className="flex flex-col gap-5">
               {CONCESSOES_GROUPED.map(({ group, items }) => (
                 <div key={group} className="flex flex-col gap-2">
@@ -241,9 +247,9 @@ function TransmissorasPage() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="overflow-hidden rounded-3xl border border-border bg-card"
+                className="overflow-hidden rounded-3xl border border-border bg-card lg:sticky lg:top-40 lg:self-start lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto [&::-webkit-scrollbar]:hidden"
               >
-                <div className="relative h-96 overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={CONCESSION_IMAGES[sel.id] ?? droneImg1}
                     alt={sel.nome}
@@ -251,16 +257,13 @@ function TransmissorasPage() {
                     className="h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/95 via-hrz-deep/30 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-7 text-white">
+                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
                     <p className="eyebrow text-hrz-electric">{sel.estado}</p>
-                    <h3 className="font-display mt-2 text-3xl font-bold">{sel.nome}</h3>
+                    <h3 className="font-display mt-1 text-xl font-bold">{sel.nome}</h3>
                   </div>
                 </div>
-                <div className="p-7 space-y-6">
-                  <div className="grid gap-5 sm:grid-cols-2">
-                    <InfoBlock label={t("segments.transmission.infoLabels.closing")} value={sel.closing} icon={Award} />
-                    <InfoBlock label={t("segments.transmission.infoLabels.concession")} value={sel.concessao} icon={Gauge} />
-                  </div>
+                <div className="p-5 space-y-4">
+                  <InfoBlock label={t("segments.transmission.infoLabels.closing")} value={sel.closing} icon={Award} />
                   {sel.lt.length > 0 && (
                     <ListBlock
                       label={t("segments.transmission.infoLabels.transmissionLines")}
@@ -370,10 +373,10 @@ function InfoBlock({
 }) {
   return (
     <div>
-      <p className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-muted-foreground">
+      <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
         <Icon size={12} /> {label}
       </p>
-      <p className="mt-1 font-display text-base font-bold text-foreground">{value}</p>
+      <p className="mt-1 font-display text-lg font-bold text-hrz-deep sm:text-xl">{value}</p>
     </div>
   );
 }
@@ -389,12 +392,12 @@ function ListBlock({
 }) {
   return (
     <div>
-      <p className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-muted-foreground mb-2">
-        <Icon size={12} /> {label}
+      <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">
+        <Icon size={11} /> {label}
       </p>
       <ul className="space-y-1">
         {items.map((item) => (
-          <li key={item} className="text-sm text-foreground leading-snug pl-3 border-l-2 border-hrz-electric/40">
+          <li key={item} className="text-sm font-semibold text-hrz-deep leading-snug pl-3 border-l-2 border-hrz-electric/60">
             {item}
           </li>
         ))}
