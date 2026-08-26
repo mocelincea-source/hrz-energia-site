@@ -600,7 +600,7 @@
       },
       "complexes": {
         "eyebrow": "Complexos eólicos",
-        "heading": "Três parques no semiárido baiano.",
+        "heading": "Cinco complexos eólicos localizados no Morro do Chapéu, Ourolândia e Várzea Nova - Bahia.",
         "hint": "Clique em um complexo para explorar localização, destaques e características de operação."
       },
       "esg": {
@@ -694,7 +694,7 @@
         "heading": "Presença estratégica em todo o Brasil",
         "body": "Operamos ativos críticos em estados-chave do Sistema Interligado Nacional — do Maranhão e Bahia ao Espírito Santo, São Paulo, Minas Gerais, Santa Catarina e Rio Grande do Sul.",
         "stat1": { "value": "9", "label": "Concessões de transmissão" },
-        "stat2": { "value": "5", "label": "Parques eólicos" },
+        "stat2": { "value": "5", "label": "Complexos Eólicos" },
         "stat3": { "value": "2.403 ckm", "label": "OHTL 500/230 kV" },
         "stat4": { "value": "29", "label": "Subestações" }
       },

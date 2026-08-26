@@ -249,12 +249,12 @@ function TransmissorasPage() {
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 className="overflow-hidden rounded-3xl border border-border bg-card lg:sticky lg:top-40 lg:self-start lg:max-h-[calc(100vh-12rem)] lg:overflow-y-auto [&::-webkit-scrollbar]:hidden"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative overflow-hidden h-48 sm:h-56 lg:h-64">
                   <img
                     src={CONCESSION_IMAGES[sel.id] ?? droneImg1}
                     alt={sel.nome}
                     loading="lazy"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-hrz-deep/95 via-hrz-deep/30 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-4 text-white">
@@ -262,7 +262,7 @@ function TransmissorasPage() {
                     <h3 className="font-display mt-1 text-xl font-bold">{sel.nome}</h3>
                   </div>
                 </div>
-                <div className="p-5 space-y-4">
+                <div className="p-4 space-y-3">
                   <InfoBlock label={t("segments.transmission.infoLabels.closing")} value={sel.closing} icon={Award} />
                   {sel.lt.length > 0 && (
                     <ListBlock

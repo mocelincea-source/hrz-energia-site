@@ -600,7 +600,7 @@
       },
       "complexes": {
         "eyebrow": "Wind complexes",
-        "heading": "Five parks in the Bahian semi-arid.",
+        "heading": "Five wind complexes located in Morro do Chapéu, Ourolândia, and Várzea Nova - Bahia.",
         "hint": "Click on a complex to explore location, highlights, and operational characteristics."
       },
       "esg": {
@@ -690,7 +690,7 @@
         "heading": "Strategic presence across Brazil",
         "body": "We operate critical assets in key states of the National Interconnected System — from Maranhão and Bahia to Espírito Santo, São Paulo, Minas Gerais, Santa Catarina, and Rio Grande do Sul.",
         "stat1": { "value": "9", "label": "Transmission concessions" },
-        "stat2": { "value": "5", "label": "Wind parks" },
+        "stat2": { "value": "5", "label": "Wind Complexes" },
         "stat3": { "value": "2,403 ckm", "label": "OHTL 500/230 kV" },
         "stat4": { "value": "29", "label": "Substations" }
       },
