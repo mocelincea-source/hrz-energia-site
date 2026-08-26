@@ -51,6 +51,12 @@ export const Route = createLazyFileRoute("/esg")({
 const PROJECT_IMAGES = [socialImg, casaDaFarinhaImg];
 const PILLAR_CARD_IMAGES = [meioAmbienteImg, socialImg, governancaImg, excelenciaOperacionalImg];
 const PILLAR_CARD_ICONS: LucideIcon[] = [Leaf, Users, Scale, Settings];
+const PILLAR_CARD_HREFS = [
+  "#esg-inteligente",
+  "#projetos-sociais",
+  "#esg-inteligente",
+  "#esg-inteligente",
+];
 const VALUE_ICONS: LucideIcon[] = [Users, ShieldCheck, Shield, Leaf, Handshake, Zap];
 
 const VALUE_CHAIN_ICONS: LucideIcon[] = [
@@ -272,7 +278,7 @@ function EsgPage() {
                   title={pillar.title}
                   description={pillar.description}
                   linkLabel={t("esg.pillars.link")}
-                  href="#esg-inteligente"
+                  href={PILLAR_CARD_HREFS[i]}
                 />
               </StaggerItem>
             ))}
@@ -335,7 +341,7 @@ function EsgPage() {
       </section>
 
       {/* Projetos sociais */}
-      <section className="relative overflow-hidden bg-secondary py-24">
+      <section id="projetos-sociais" className="relative overflow-hidden bg-secondary py-24">
         <BoltDecor variant="solid" opacity={0.04} className="-right-20 top-10 h-[460px] w-auto" />
         <div className="container-hrz relative">
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0}>
