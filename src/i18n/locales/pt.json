@@ -357,7 +357,8 @@
         "closing": "Aquisição",
         "concession": "Concessão",
         "transmissionLines": "Linhas de Transmissão (LT)",
-        "substations": "Subestações (SE)"
+        "substations": "Subestações (SE)",
+        "substationsNote": "Subestações Próprias *"
       },
       "differentials": {
         "eyebrow": "Diferenciais",

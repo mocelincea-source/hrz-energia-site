@@ -274,6 +274,7 @@ function TransmissorasPage() {
                   {sel.se.length > 0 && (
                     <ListBlock
                       label={t("segments.transmission.infoLabels.substations")}
+                      subtitle={t("segments.transmission.infoLabels.substationsNote")}
                       items={sel.se}
                       icon={Building2}
                     />
@@ -385,16 +386,21 @@ function ListBlock({
   label,
   items,
   icon: Icon,
+  subtitle,
 }: {
   label: string;
   items: string[];
   icon: typeof Zap;
+  subtitle?: string;
 }) {
   return (
     <div>
       <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">
         <Icon size={11} /> {label}
       </p>
+      {subtitle && (
+        <p className="text-[10px] sm:text-xs text-slate-400 font-normal italic -mt-1 ml-6 mb-1.5">{subtitle}</p>
+      )}
       <ul className="space-y-1">
         {items.map((item) => (
           <li key={item} className="text-sm font-semibold text-hrz-deep leading-snug pl-3 border-l-2 border-hrz-electric/60">

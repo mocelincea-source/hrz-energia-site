@@ -357,7 +357,8 @@
         "closing": "Closing",
         "concession": "Concession",
         "transmissionLines": "Transmission Lines (TL)",
-        "substations": "Substations (SS)"
+        "substations": "Substations (SS)",
+        "substationsNote": "Own Substations *"
       },
       "differentials": {
         "eyebrow": "Differentials",
