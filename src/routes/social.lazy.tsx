@@ -13,7 +13,6 @@ import {
   MessageSquare,
   LayoutDashboard,
   Users2,
-  ArrowRight,
   Linkedin,
   Globe,
 } from "lucide-react";
@@ -252,12 +251,6 @@ function SocialPage() {
                       <p className="text-slate-500 text-xs leading-relaxed">
                         {t(`social.programas.items.${idx}.text`)}
                       </p>
-                      <a
-                        href="#"
-                        className="text-blue-600 text-xs font-medium flex items-center gap-1 hover:text-blue-800 transition-colors mt-1"
-                      >
-                        {t("social.programas.learnMore")} <ArrowRight className="w-3 h-3" />
-                      </a>
                     </div>
                   </div>
                 ))}
@@ -274,12 +267,6 @@ function SocialPage() {
                     <p className="text-slate-500 text-xs leading-relaxed">
                       {t("social.programas.outros.text")}
                     </p>
-                    <a
-                      href="#"
-                      className="text-blue-600 text-xs font-medium flex items-center gap-1 hover:text-blue-800 transition-colors mt-1"
-                    >
-                      {t("social.programas.learnMore")} <ArrowRight className="w-3 h-3" />
-                    </a>
                   </div>
                 </div>
               </div>
