@@ -747,8 +747,8 @@
     },
     "hero": {
       "eyebrow": "ESG Strategy",
-      "title": "Responsible infrastructure. Value for future generations.",
-      "subtitle": "At HRZ, sustainability is how we plan, operate and evolve our assets every day.",
+      "title": "ESG integrated into the way we operate",
+      "subtitle": "We combine environmental responsibility, safety, social development, governance, technology and operational excellence to build a safer, more resilient and sustainable energy infrastructure.",
       "cta": "Explore our approach"
     },
     "valueChain": {
@@ -756,6 +756,20 @@
       "title": "Our approach to sustainable value creation.",
       "description": "We integrate people, processes, technology and relationships to generate positive impact and long-term value.",
       "link": "Learn more about our strategy",
+      "esgBlocks": [
+        {
+          "title": "Environmental",
+          "text": "Climate resilience, environmental compliance, biodiversity, restoration and responsible asset management."
+        },
+        {
+          "title": "Social",
+          "text": "Safety, people, communities, stakeholder engagement and shared value."
+        },
+        {
+          "title": "Governance",
+          "text": "Ethics, compliance, risk management, policies, transparency and accountability."
+        }
+      ],
       "steps": [
         { "label": "Infrastructure assets" },
         { "label": "Operational excellence" },
@@ -773,8 +787,8 @@
     },
     "socialProjects": {
       "eyebrow": "Social projects",
-      "heading": "Social projects that strengthen communities",
-      "description": "The projects developed in the communities of Laranjeiras and Murtura value family farming, community organization, and income generation. The initiatives support women and rural producers with training, infrastructure, and better conditions to produce, process, and market their products sustainably.",
+      "heading": "We turn energy into development.",
+      "description": "Our projects strengthen communities, create opportunities, and leave a positive legacy wherever we operate.",
       "cta": "Explore all projects",
       "link": "View details",
       "readMore": "Learn more",
@@ -783,44 +797,8 @@
       },
       "items": [
         {
-          "tag": "Social",
-          "title": "Women of Laranjeiras",
-          "description": "The Women of Laranjeiras Project strengthens the economic autonomy of rural women through agroecological gardens, poultry farming, support for small businesses, training, and access to new markets.",
-          "details": {
-            "subtitle": "Autonomy, sustainable production and new opportunities",
-            "intro": [
-              "The Women of Laranjeiras Project seeks to strengthen the productive capacity and economic autonomy of women in the community. The initiative brings together activities linked to family farming, poultry raising, family agribusinesses, beauty, crafts, and other small enterprises.",
-              "Structured to serve 21 women, the project recognizes the diversity of knowledge and activities already present in the territory. The proposal is to offer better working conditions, expand production, and facilitate access to new markets, contributing to increased income and the empowerment of women's leadership."
-            ],
-            "objectivesTitle": "Main objectives",
-            "objectives": [
-              "Expand productive gardens with agroecological vegetable plots;",
-              "Improve structures for raising free-range chickens;",
-              "Support sanitary improvements in family agribusinesses;",
-              "Modernize small businesses, such as beauty salons and painting and customization ateliers;",
-              "Establish an integrated marketing system, with direct sales and product delivery;",
-              "Strengthen women's participation in the association and decision-making spaces."
-            ],
-            "sections": [
-              {
-                "title": "How the project works",
-                "body": [
-                  "The proposal combines the acquisition of equipment and supplies, workshops, consultancies, and technical assistance. The work is guided by the participation of the women, with planning meetings, monitoring, and activity evaluation.",
-                  "The project also plans to connect with public programs supporting family farming, such as the Food Acquisition Program — PAA — and the National School Feeding Program — PNAE. This connection can open new marketing channels and expand the presence of community products in the institutional market."
-                ]
-              },
-              {
-                "title": "Expected transformation",
-                "body": [
-                  "By investing in productive gardens and small enterprises, the Women of Laranjeiras Project aims to increase family income, stimulate sustainable production, and strengthen women's presence in the economic and social development of the community."
-                ]
-              }
-            ]
-          }
-        },
-        {
           "tag": "Infrastructure",
-          "title": "Murtura Flour House",
+          "title": "Murtura Flour House Project",
           "description": "The Murtura Flour House combines technology, training, and community management to modernize cassava processing, add value to production, and increase the income of family farmers.",
           "details": {
             "subtitle": "Technology and organization at the service of family farming",
@@ -861,6 +839,58 @@
               }
             ]
           }
+        },
+        {
+          "tag": "Social",
+          "title": "Laranjeiras Project",
+          "description": "The Women of Laranjeiras Project strengthens the economic autonomy of rural women through agroecological gardens, poultry farming, support for small businesses, training, and access to new markets.",
+          "details": {
+            "subtitle": "Autonomy, sustainable production and new opportunities",
+            "intro": [
+              "The Women of Laranjeiras Project seeks to strengthen the productive capacity and economic autonomy of women in the community. The initiative brings together activities linked to family farming, poultry raising, family agribusinesses, beauty, crafts, and other small enterprises.",
+              "Structured to serve 21 women, the project recognizes the diversity of knowledge and activities already present in the territory. The proposal is to offer better working conditions, expand production, and facilitate access to new markets, contributing to increased income and the empowerment of women's leadership."
+            ],
+            "objectivesTitle": "Main objectives",
+            "objectives": [
+              "Expand productive gardens with agroecological vegetable plots;",
+              "Improve structures for raising free-range chickens;",
+              "Support sanitary improvements in family agribusinesses;",
+              "Modernize small businesses, such as beauty salons and painting and customization ateliers;",
+              "Establish an integrated marketing system, with direct sales and product delivery;",
+              "Strengthen women's participation in the association and decision-making spaces."
+            ],
+            "sections": [
+              {
+                "title": "How the project works",
+                "body": [
+                  "The proposal combines the acquisition of equipment and supplies, workshops, consultancies, and technical assistance. The work is guided by the participation of the women, with planning meetings, monitoring, and activity evaluation.",
+                  "The project also plans to connect with public programs supporting family farming, such as the Food Acquisition Program — PAA — and the National School Feeding Program — PNAE. This connection can open new marketing channels and expand the presence of community products in the institutional market."
+                ]
+              },
+              {
+                "title": "Expected transformation",
+                "body": [
+                  "By investing in productive gardens and small enterprises, the Women of Laranjeiras Project aims to increase family income, stimulate sustainable production, and strengthen women's presence in the economic and social development of the community."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tag": "Development",
+          "title": "Babilônia Project",
+          "description": "Details about the Babilônia Project’s initiatives and social impact will be added soon.",
+          "details": {
+            "subtitle": "Content coming soon",
+            "intro": [
+              "Details about the Babilônia Project’s initiatives and social impact will be added soon."
+            ],
+            "objectivesTitle": "Main objectives",
+            "objectives": [
+              "Information about the project’s objectives will be shared soon."
+            ],
+            "sections": []
+          }
         }
       ]
     },
@@ -868,18 +898,45 @@
       "eyebrow": "Our pillars",
       "heading": "We act today to build tomorrow.",
       "link": "Learn more",
+      "ambiental": {
+        "footerLabel": "Learn more about our environmental performance",
+        "subIcons": {
+          "resiliencia": "Climate resilience",
+          "gestaoAmbiental": "Environmental management",
+          "biodiversidade": "Biodiversity and restoration",
+          "conformidade": "Compliance and licensing"
+        }
+      },
+      "social": {
+        "footerLabel": "Learn more about our social impact",
+        "subIcons": {
+          "seguranca": "Safety first",
+          "pessoas": "People and development",
+          "comunidades": "Communities and shared value",
+          "stakeholders": "Stakeholder engagement"
+        }
+      },
+      "governanca": {
+        "footerLabel": "Learn more about governance and compliance",
+        "subIcons": {
+          "etica": "Ethics and integrity",
+          "riscos": "Risk management",
+          "compliance": "Compliance and policies",
+          "governancaEsg": "ESG governance"
+        }
+      },
       "items": [
         {
           "title": "Environment",
-          "description": "100% wind generation, low-impact transmission and climate contingency plans with continuous monitoring across our assets."
+          "description": "Caring for the environment and strengthening climate resilience."
         },
         {
           "title": "Social",
-          "description": "Community engagement, local development programs and a supply chain with rigorous safety and conduct requirements."
+          "description": "Prioritizing people's safety and generating positive impact in communities."
         },
         {
           "title": "Governance",
-          "description": "Oversight by Actis's Global Sustainability Committee, ESG Committee with quarterly reporting and proactive regulator communication."
+          "description": "Acting with ethics, transparency and responsibility in all decisions."
         },
         {
           "title": "Operational Excellence",
@@ -1315,6 +1372,285 @@
       "button": "Contact HRZ"
     },
     "copyright": "© {{year}} HRZ Energia. All rights reserved.",
-    "controlled": "Acquired by funds managed by Actis · Global Sustainability Committee"
+    "controlled": "Acquired by funds managed by Actis · Global Sustainability Committee",
+    "prefooter": {
+      "tagline": "Infrastructure that connects today, energy that transforms tomorrow.",
+      "website": "hrzenergia.com.br",
+      "logoAlt": "HRZ Energia",
+      "linkedinAriaLabel": "LinkedIn HRZ Energia"
+    }
+  },
+  "ambiental": {
+    "hero": {
+      "imgAlt": "HRZ environmental landscape",
+      "breadcrumbParent": "ESG at HRZ",
+      "breadcrumbCurrent": "Environmental",
+      "title": "Environmental",
+      "subtitle": "Caring for the environment and strengthening the climate resilience of our assets.",
+      "description": "We manage our assets with environmental responsibility, anticipate climate risks, and promote biodiversity conservation — building a more sustainable and resilient energy infrastructure."
+    },
+    "compromissos": {
+      "heading": "Our environmental commitments",
+      "items": [
+        { "title": "Operate in compliance", "text": "Rigorously fulfil all environmental licences, conditions, and applicable legislation." },
+        { "title": "Protect and restore", "text": "Promote biodiversity conservation and the recovery of degraded areas." },
+        { "title": "Strengthen climate resilience", "text": "Integrate climate data into operational decisions to prevent, mitigate, and respond to extreme weather events." },
+        { "title": "Generate sustainable value", "text": "Make responsible decisions that minimise impacts and contribute to sustainable development." }
+      ]
+    },
+    "frentes": {
+      "heading": "Our areas of action",
+      "items": [
+        {
+          "title": "Climate resilience",
+          "description": "We monitor and anticipate extreme weather events to reduce risks to our assets and ensure greater operational reliability.",
+          "items": [
+            "24/7 monitoring and climate alerts",
+            "Historical analysis of extreme weather events",
+            "Prevention and response protocols",
+            "Post-event assessment and lessons learned"
+          ]
+        },
+        {
+          "title": "Environmental management",
+          "description": "We manage our environmental impacts throughout the asset lifecycle, focusing on prevention and continuous improvement.",
+          "items": [
+            "Licence and condition control",
+            "Waste and natural resource management",
+            "Emissions and effluent monitoring",
+            "Environmental indicators and audits"
+          ]
+        },
+        {
+          "title": "Biodiversity and restoration",
+          "description": "We invest in the recovery of native areas and the conservation of biodiversity across the regions where we operate.",
+          "items": [
+            "Investments in forest restoration",
+            "Ecosystem restoration projects",
+            "Partnerships and local engagement",
+            "Results monitoring and reporting"
+          ]
+        },
+        {
+          "title": "Compliance and licensing",
+          "description": "We maintain rigorous control over environmental obligations and ensure transparency and accountability.",
+          "items": [
+            "Licence and permit management",
+            "Monitoring of environmental conditions",
+            "Environmental reports and indicators",
+            "Transparency and governance"
+          ]
+        }
+      ]
+    },
+    "tecnologias": {
+      "heading": "Technology and data for the environment",
+      "description": "Integrated platforms and tools that transform environmental and climate data into safer, more sustainable decisions.",
+      "items": [
+        { "line1": "Climate", "line2": "monitoring" },
+        { "line1": "Integrated", "line2": "environmental data" },
+        { "line1": "Dashboards", "line2": "& indicators" },
+        { "line1": "Licence &", "line2": "condition management" },
+        { "line1": "Environmental", "line2": "risk mapping" }
+      ]
+    }
+  },
+  "social": {
+    "hero": {
+      "imgAlt": "HRZ people and communities",
+      "breadcrumbParent": "ESG at HRZ",
+      "breadcrumbCurrent": "Social",
+      "title": "Social",
+      "subtitle": "Caring for people, fostering development, and building trust.",
+      "description": "We put life first and act to generate positive impact in the communities where we are present — with respect, active listening, and a long-term commitment."
+    },
+    "compromissos": {
+      "heading": "Our social commitments",
+      "items": [
+        { "title": "Safety first", "text": "Promote a culture of prevention, safeguarding the wellbeing of people across all our operations." },
+        { "title": "People who grow", "text": "Value our people by promoting health, wellbeing, diversity, inclusion, and continuous development." },
+        { "title": "Communities that thrive", "text": "Create opportunities and support projects that strengthen local development and income generation." },
+        { "title": "Relationships that create value", "text": "Maintain open and transparent dialogue with communities and stakeholders, building long-term relationships." }
+      ]
+    },
+    "frentes": {
+      "heading": "Our areas of action",
+      "items": [
+        {
+          "title": "Safety",
+          "items": [
+            "Safety and prevention culture",
+            "Third-party and partner management",
+            "Inspections, dialogues and Safety Walks",
+            "Indicators and action plans",
+            "Strong relationships and communication"
+          ]
+        },
+        {
+          "title": "People",
+          "items": [
+            "Safe and respectful environment",
+            "Development and training",
+            "Health, wellbeing and quality of life",
+            "Diversity, inclusion and equity",
+            "Recognition and engagement"
+          ]
+        },
+        {
+          "title": "Communities",
+          "items": [
+            "Long-term structural projects",
+            "Job and income generation",
+            "Education, culture and social inclusion",
+            "Prevention and community resilience",
+            "Active listening and ongoing dialogue"
+          ]
+        },
+        {
+          "title": "Stakeholders",
+          "items": [
+            "Transparent and continuous dialogue",
+            "Engagement with public authorities",
+            "Open communication channels",
+            "Demand and expectation management",
+            "Partnerships for local development"
+          ]
+        }
+      ]
+    },
+    "programas": {
+      "heading": "Social programmes and projects",
+      "description": "We invest in projects that generate real and lasting impact in the communities where we operate, focused on development, education, income generation, and local empowerment.",
+      "learnMore": "Learn more",
+      "items": [
+        { "title": "Flour House", "text": "Strengthening local production and generating sustainable income." },
+        { "title": "Women of Laranjeiras", "text": "Productive Backyard and capacity building for financial autonomy." },
+        { "title": "Education and Culture", "text": "Supporting educational and cultural initiatives in local communities." }
+      ],
+      "outros": {
+        "title": "Other initiatives",
+        "text": "Prevention campaigns, social actions, and support during emergencies."
+      }
+    },
+    "tecnologias": {
+      "heading": "Technology and data in service of people and communities",
+      "description": "Integrated platforms that ensure efficient management, communication, transparency, and continuous improvement.",
+      "items": [
+        { "line1": "Safety", "line2": "management" },
+        { "line1": "Social indicator", "line2": "monitoring" },
+        { "line1": "Listening &", "line2": "engagement channels" },
+        { "line1": "Dashboards", "line2": "& reports" },
+        { "line1": "Stakeholder", "line2": "management" }
+      ]
+    }
+  },
+  "governanca": {
+    "hero": {
+      "imgAlt": "HRZ corporate meeting — Governance",
+      "breadcrumbParent": "ESG at HRZ",
+      "breadcrumbCurrent": "Governance",
+      "title": "Governance",
+      "subtitle": "Acting with ethics, transparency, and responsibility in every decision.",
+      "description": "We strengthen a culture of integrity, risk management, and compliance to ensure responsible decisions, sustainable value creation, and the trust of our stakeholders."
+    },
+    "compromissos": {
+      "heading": "Our governance commitments",
+      "items": [
+        { "title": "Ethics and integrity", "text": "We act with honesty, respect, and integrity in all our relationships and decisions." },
+        { "title": "Risk management", "text": "We identify, assess, and manage risks to protect people, assets, and the business." },
+        { "title": "Compliance", "text": "We follow laws, regulations, and internal policies with rigour and discipline." },
+        { "title": "Transparency", "text": "We provide clear and timely accountability to our stakeholders." },
+        { "title": "ESG governance", "text": "We integrate ESG practices into our strategy, risk management, and decision-making." },
+        { "title": "Value creation", "text": "We make responsible decisions that generate long-term value for society and investors." }
+      ]
+    },
+    "pilares": {
+      "heading": "Our governance pillars",
+      "items": [
+        {
+          "title": "Ethics and integrity",
+          "subtitle": "A robust culture of ethics that guides behaviours and decisions.",
+          "items": [
+            "Code of Ethics and Conduct",
+            "Anti-Corruption Policy",
+            "Training and communications",
+            "Confidential Whistleblower Channel"
+          ]
+        },
+        {
+          "title": "Risk management",
+          "subtitle": "A structured process for handling risks and opportunities.",
+          "items": [
+            "Risk mapping and assessment",
+            "Corporate risk matrix",
+            "Mitigation plans and controls",
+            "Continuous monitoring and reporting"
+          ]
+        },
+        {
+          "title": "Compliance",
+          "subtitle": "Legal and regulatory conformity integrated into the business.",
+          "items": [
+            "Legal obligation monitoring",
+            "Internal controls and audits",
+            "Third-party and partner management",
+            "Privacy and data protection"
+          ]
+        },
+        {
+          "title": "Corporate governance",
+          "subtitle": "A robust structure for safe and responsible decision-making.",
+          "items": [
+            "Board of Directors",
+            "Advisory committees",
+            "Authority delegations",
+            "Internal policies and by-laws"
+          ]
+        },
+        {
+          "title": "ESG governance",
+          "subtitle": "ESG embedded in business strategy and management.",
+          "items": [
+            "ESG Committee and periodic meetings",
+            "ESG indicators and targets",
+            "Reports and communications",
+            "ESG integration into remuneration"
+          ]
+        }
+      ]
+    },
+    "estrutura": {
+      "heading": "Our governance structure",
+      "items": [
+        { "title": "Board of Directors", "desc": "Sets guidelines, approves strategies, and oversees management." },
+        { "title": "Advisory committees", "desc": "Support the Board on key topics: Audit, Risk, People, and ESG." },
+        { "title": "Executive Board", "desc": "Implements strategy and ensures integrated business management." },
+        { "title": "Team and processes", "desc": "Execute with discipline, control, and a focus on value creation." }
+      ]
+    },
+    "documentos": {
+      "heading": "Policies and documents",
+      "description": "Our key documents guiding conduct and management.",
+      "cta": "Access all documents under Ethics & Conduct",
+      "items": [
+        { "title": "Code of Ethics\nand Conduct" },
+        { "title": "Anti-Corruption\nPolicy" },
+        { "title": "Compliance\nPolicy" },
+        { "title": "Risk Management\nPolicy" },
+        { "title": "Privacy &\nData Protection Policy" }
+      ]
+    },
+    "canal": {
+      "heading": "Whistleblower Channel",
+      "description": "A secure, confidential, and independent channel for reporting misconduct, fraud, or violations.",
+      "cta": "Submit a report",
+      "ctaSub": "Access the Channel",
+      "features": [
+        { "title": "100%", "subtitle": "Confidentiality\nand anonymity" },
+        { "title": "Independent", "subtitle": "Operated by a\nspecialised firm" },
+        { "title": "No retaliation", "subtitle": "Non-retaliation guarantee\nfor reporters" },
+        { "title": "Prompt response", "subtitle": "Investigation and feedback\nwith transparency" }
+      ]
+    }
   }
 }

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import {
   Leaf,
   Users,
+  Users2,
   Scale,
   Sprout,
   Handshake,
@@ -23,6 +24,10 @@ import {
   Clock,
   Award,
   X,
+  HardHat,
+  ClipboardList,
+  ClipboardCheck,
+  Building2,
   type LucideIcon,
 } from "lucide-react";
 import { motion } from "motion/react";
@@ -37,26 +42,80 @@ import droneCarousel4 from "@/assets/Imagen-drone-4.jpeg";
 import esgPoster from "@/assets/posters/esg-poster.jpg";
 import meioAmbienteImg from "@/assets/Meio-Ambiente.jpg";
 import socialImg from "@/assets/Social.jpg";
+import transmissorasPosterImg from "@/assets/posters/transmissoras-poster.jpg";
 import governancaImg from "@/assets/Governança.jpg";
-import excelenciaOperacionalImg from "@/assets/Excelencia-Operacional.jpg";
 import torreImg from "@/assets/Torre.jpg";
 import droneImg from "@/assets/drone.jpg";
-import casaDaFarinhaImg from "@/assets/casa-da-farinha.png";
+import comunidadeEsgImg from "@/assets/esg/comunidade.jpg";
 import dashboardEsgImg from "@/assets/DASHBOARD.jpg";
+import babiloniaImg from "@/assets/babilonia-aerial-day.jpg";
 
 export const Route = createLazyFileRoute("/esg")({
   component: EsgPage,
 });
 
-const PROJECT_IMAGES = [socialImg, casaDaFarinhaImg];
-const PILLAR_CARD_IMAGES = [meioAmbienteImg, socialImg, governancaImg, excelenciaOperacionalImg];
-const PILLAR_CARD_ICONS: LucideIcon[] = [Leaf, Users, Scale, Settings];
-const PILLAR_CARD_HREFS = [
-  "#esg-inteligente",
-  "#projetos-sociais",
-  "#esg-inteligente",
-  "#esg-inteligente",
+const PROJECT_IMAGES = [comunidadeEsgImg, socialImg, babiloniaImg];
+
+type PillarSubIcon = { icon: LucideIcon; labelKey: string };
+type PillarDef = {
+  image: string;
+  overlayIcon: LucideIcon;
+  letter: string;
+  letterBg: string;
+  accentColor: string;
+  subIcons: PillarSubIcon[];
+  footerLabelKey: string;
+  footerHref: string;
+};
+
+const PILLAR_DATA: PillarDef[] = [
+  {
+    image: meioAmbienteImg,
+    overlayIcon: Leaf,
+    letter: "E",
+    letterBg: "flex items-center justify-center shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-400 to-emerald-700 shadow-lg shadow-emerald-600/30 border border-white/30 text-white font-black text-3xl tracking-tighter",
+    accentColor: "text-emerald-700",
+    subIcons: [
+      { icon: CloudRain, labelKey: "esg.pillars.ambiental.subIcons.resiliencia" },
+      { icon: Leaf, labelKey: "esg.pillars.ambiental.subIcons.gestaoAmbiental" },
+      { icon: Sprout, labelKey: "esg.pillars.ambiental.subIcons.biodiversidade" },
+      { icon: ClipboardList, labelKey: "esg.pillars.ambiental.subIcons.conformidade" },
+    ],
+    footerLabelKey: "esg.pillars.ambiental.footerLabel",
+    footerHref: "/ambiental",
+  },
+  {
+    image: socialImg,
+    overlayIcon: Users,
+    letter: "S",
+    letterBg: "flex items-center justify-center shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-800 shadow-lg shadow-blue-600/30 border border-white/30 text-white font-black text-3xl tracking-tighter",
+    accentColor: "text-blue-700",
+    subIcons: [
+      { icon: HardHat, labelKey: "esg.pillars.social.subIcons.seguranca" },
+      { icon: Users, labelKey: "esg.pillars.social.subIcons.pessoas" },
+      { icon: Users2, labelKey: "esg.pillars.social.subIcons.comunidades" },
+      { icon: Handshake, labelKey: "esg.pillars.social.subIcons.stakeholders" },
+    ],
+    footerLabelKey: "esg.pillars.social.footerLabel",
+    footerHref: "/social",
+  },
+  {
+    image: governancaImg,
+    overlayIcon: Scale,
+    letter: "G",
+    letterBg: "flex items-center justify-center shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-slate-600 to-slate-900 shadow-lg shadow-slate-800/30 border border-white/30 text-white font-black text-3xl tracking-tighter",
+    accentColor: "text-slate-900",
+    subIcons: [
+      { icon: Scale, labelKey: "esg.pillars.governanca.subIcons.etica" },
+      { icon: Shield, labelKey: "esg.pillars.governanca.subIcons.riscos" },
+      { icon: ClipboardCheck, labelKey: "esg.pillars.governanca.subIcons.compliance" },
+      { icon: Building2, labelKey: "esg.pillars.governanca.subIcons.governancaEsg" },
+    ],
+    footerLabelKey: "esg.pillars.governanca.footerLabel",
+    footerHref: "/governanca",
+  },
 ];
+
 const VALUE_ICONS: LucideIcon[] = [Users, ShieldCheck, Shield, Leaf, Handshake, Zap];
 
 const VALUE_CHAIN_ICONS: LucideIcon[] = [
@@ -89,6 +148,7 @@ const STAGGER_RHYTHM = 0.15;
 
 type PillarCardItem = { title: string; description: string };
 type ValueItem = { title: string; text: string };
+type EsgBlock = { title: string; text: string };
 type ValueChainStep = { label: string };
 type SmartEsgCard = { title: string; description: string };
 type ModalSection = { title: string; body: string[] };
@@ -126,6 +186,7 @@ function EsgPage() {
     return () => clearInterval(interval);
   }, [carouselImages.length]);
 
+  const esgBlocks = t("esg.valueChain.esgBlocks", { returnObjects: true }) as EsgBlock[];
   const pillarItems = t("esg.pillars.items", { returnObjects: true }) as PillarCardItem[];
   const valueItems = t("esg.values.items", { returnObjects: true }) as ValueItem[];
   const valueChainSteps = t("esg.valueChain.steps", { returnObjects: true }) as ValueChainStep[];
@@ -205,19 +266,6 @@ function EsgPage() {
                   {t("esg.valueChain.description")}
                 </p>
               </Reveal>
-              <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.3}>
-                <a
-                  href="#esg-pillars"
-                  className="group inline-flex items-center gap-1.5 text-sm font-medium text-hrz-green transition-colors hover:underline"
-                >
-                  {t("esg.valueChain.link")}
-                  <ArrowRight
-                    size={14}
-                    strokeWidth={1.75}
-                    className={`transition-transform duration-300 ease-out ${GPU_LAYER} group-hover:translate-x-0.5`}
-                  />
-                </a>
-              </Reveal>
             </div>
 
             <Stagger
@@ -245,6 +293,25 @@ function EsgPage() {
               })}
             </Stagger>
           </div>
+
+          {/* Blocos E · S · G */}
+          <Stagger
+            fallbackDelay={500}
+            viewportMargin={VIEWPORT_TRIGGER}
+            staggerChildren={STAGGER_RHYTHM}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-8 border-t border-slate-200"
+          >
+            {esgBlocks.map((block) => (
+              <StaggerItem key={block.title}>
+                <p className="text-xs font-bold uppercase tracking-widest text-hrz-green mb-2">
+                  {block.title}
+                </p>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {block.text}
+                </p>
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
       </section>
 
@@ -268,17 +335,14 @@ function EsgPage() {
             fallbackDelay={500}
             viewportMargin={VIEWPORT_TRIGGER}
             staggerChildren={STAGGER_RHYTHM}
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
           >
-            {pillarItems.map((pillar, i) => (
-              <StaggerItem key={pillar.title} className="h-full">
+            {PILLAR_DATA.map((data, i) => (
+              <StaggerItem key={data.letter} className="h-full">
                 <PillarCard
-                  image={PILLAR_CARD_IMAGES[i]}
-                  icon={PILLAR_CARD_ICONS[i]}
-                  title={pillar.title}
-                  description={pillar.description}
-                  linkLabel={t("esg.pillars.link")}
-                  href={PILLAR_CARD_HREFS[i]}
+                  data={data}
+                  title={pillarItems[i]?.title ?? ""}
+                  description={pillarItems[i]?.description ?? ""}
                 />
               </StaggerItem>
             ))}
@@ -299,15 +363,6 @@ function EsgPage() {
             <p className="text-sm text-slate-300 lg:text-[15px] lg:leading-relaxed">
               {t("esg.smartEsg.description")}
             </p>
-            <div className="w-fit">
-              <a
-                href="#esg-inteligente"
-                className="inline-flex items-center gap-2 whitespace-nowrap rounded-full border border-green-500/30 bg-green-500/10 px-5 py-2.5 text-sm font-medium text-green-400 hover:bg-green-500/20 transition-all"
-              >
-                {t("esg.smartEsg.cta")}
-                <span className="text-base">→</span>
-              </a>
-            </div>
           </div>
 
           <div className="col-span-1 xl:col-span-4 min-w-0 h-full">
@@ -350,7 +405,7 @@ function EsgPage() {
             </p>
           </Reveal>
           <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.1}>
-            <h2 className="font-display mt-4 max-w-3xl text-3xl text-foreground lg:text-4xl">
+            <h2 className="font-display mt-4 max-w-3xl text-3xl text-hrz-deep lg:text-4xl">
               {t("esg.socialProjects.heading")}
             </h2>
           </Reveal>
@@ -364,7 +419,7 @@ function EsgPage() {
             fallbackDelay={500}
             viewportMargin={VIEWPORT_TRIGGER}
             staggerChildren={STAGGER_RHYTHM}
-            className="mt-12 grid gap-6 md:grid-cols-2"
+            className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
           >
             {socialProjects.map((project, i) => (
               <StaggerItem key={project.title} className="h-full">
@@ -409,15 +464,6 @@ function EsgPage() {
               >
                 {t("esg.indicators.heading")}
               </h2>
-            </Reveal>
-            <Reveal viewportMargin={VIEWPORT_TRIGGER} delay={0.2}>
-              <a
-                href="#esg-indicadores"
-                className="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-hrz-green transition-opacity hover:opacity-80"
-              >
-                {t("esg.indicators.link")}
-                <ArrowRight size={14} strokeWidth={1.75} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-              </a>
             </Reveal>
           </div>
 
@@ -874,56 +920,92 @@ function IndicatorCard({
 }
 
 function PillarCard({
-  image,
-  icon: Icon,
+  data,
   title,
   description,
-  linkLabel,
-  href,
 }: {
-  image: string;
-  icon: LucideIcon;
+  data: PillarDef;
   title: string;
   description: string;
-  linkLabel: string;
-  href: string;
 }) {
+  const { t } = useTranslation();
+  const OverlayIcon = data.overlayIcon;
   return (
     <article
-      className={`group h-full overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm ${CARD_HOVER}`}
+      className={`group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm ${CARD_HOVER}`}
     >
-      <div className="overflow-hidden">
+      {/* Imagem de capa com ícone sobreposto na borda inferior esquerda */}
+      <div className="relative overflow-hidden">
         <img
-          src={image}
+          src={data.image}
           alt=""
           loading="lazy"
           decoding="async"
-          className="h-48 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] will-change-transform will-change-opacity"
+          className="h-52 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] will-change-transform will-change-opacity"
         />
-      </div>
-      <div className="relative p-6 pt-8">
-        <div className="absolute -top-6 left-6 flex h-12 w-12 items-center justify-center rounded-full bg-hrz-green text-white shadow-md">
-          <Icon size={22} strokeWidth={1.75} />
+        <div className="absolute bottom-3 left-4 flex h-9 w-9 items-center justify-center rounded-full bg-hrz-green text-white shadow-md">
+          <OverlayIcon size={17} strokeWidth={1.75} />
         </div>
-        <h3 className="mt-2 text-xl font-bold text-foreground">{title}</h3>
-        <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground lg:text-sm">
-          {description.split(/\\n|\n/).map((line, index) => (
-            <span key={index} className="block lg:whitespace-nowrap">
-              {line.trim()}
-            </span>
+      </div>
+
+      <div className="flex flex-1 flex-col p-6 gap-5">
+        {/* Cabeçalho: círculo-letra + título e descrição */}
+        <div className="flex flex-row items-center gap-5">
+          <span className={data.letterBg}>
+            {data.letter}
+          </span>
+          <div>
+            <h3 className={`text-sm font-bold uppercase tracking-wider ${data.accentColor}`}>
+              {title}
+            </h3>
+            <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">
+              {description}
+            </p>
+          </div>
+        </div>
+
+        {/* Grid de sub-ícones */}
+        <div className="grid grid-cols-4 gap-2">
+          {data.subIcons.map(({ icon: SubIcon, labelKey }) => (
+            <div key={labelKey} className="flex flex-col items-center gap-1.5 text-center">
+              <div className={`flex h-9 w-9 items-center justify-center rounded-lg bg-slate-50 ${data.accentColor}`}>
+                <SubIcon size={16} strokeWidth={1.5} />
+              </div>
+              <span className={`text-[10px] leading-tight text-center font-medium ${data.accentColor}/80`}>
+                {t(labelKey)}
+              </span>
+            </div>
           ))}
-        </p>
-        <a
-          href={href}
-          className="group mt-4 inline-flex items-center gap-1 text-sm font-semibold text-hrz-green hover:underline"
-        >
-          {linkLabel}
-          <ArrowRight
-            size={14}
-            strokeWidth={1.75}
-            className="transition-transform duration-300 group-hover:translate-x-0.5"
-          />
-        </a>
+        </div>
+
+        {/* Rodapé com link */}
+        <div className="mt-auto pt-2 border-t border-gray-100">
+          {data.footerHref.startsWith("/") ? (
+            <Link
+              to={data.footerHref as any}
+              className={`group/link inline-flex items-center gap-1 text-[12px] font-semibold hover:underline ${data.accentColor}`}
+            >
+              {t(data.footerLabelKey)}
+              <ArrowRight
+                size={13}
+                strokeWidth={2}
+                className="transition-transform duration-300 group-hover/link:translate-x-0.5"
+              />
+            </Link>
+          ) : (
+            <a
+              href={data.footerHref}
+              className={`group/link inline-flex items-center gap-1 text-[12px] font-semibold hover:underline ${data.accentColor}`}
+            >
+              {t(data.footerLabelKey)}
+              <ArrowRight
+                size={13}
+                strokeWidth={2}
+                className="transition-transform duration-300 group-hover/link:translate-x-0.5"
+              />
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );

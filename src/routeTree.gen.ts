@@ -10,13 +10,16 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AmbientalRouteImport } from './routes/ambiental'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as EolicasRouteImport } from './routes/eolicas'
 import { Route as EsgRouteImport } from './routes/esg'
 import { Route as EticaRouteImport } from './routes/etica'
+import { Route as GovernancaRouteImport } from './routes/governanca'
 import { Route as InvestidoresRouteImport } from './routes/investidores'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SocialRouteImport } from './routes/social'
 import { Route as TransmissorasRouteImport } from './routes/transmissoras'
 import { Route as EticaIndexRouteImport } from './routes/etica/index'
 import { Route as EticaAcompanharRelatoRouteImport } from './routes/etica/acompanhar-relato'
@@ -39,6 +42,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+const AmbientalRoute = AmbientalRouteImport.update({
+  id: '/ambiental',
+  path: '/ambiental',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/ambiental.lazy').then((d) => d.Route))
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
@@ -59,6 +67,11 @@ const EticaRoute = EticaRouteImport.update({
   path: '/etica',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GovernancaRoute = GovernancaRouteImport.update({
+  id: '/governanca',
+  path: '/governanca',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/governanca.lazy').then((d) => d.Route))
 const InvestidoresRoute = InvestidoresRouteImport.update({
   id: '/investidores',
   path: '/investidores',
@@ -74,6 +87,11 @@ const SobreRoute = SobreRouteImport.update({
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any).lazy(() => import('./routes/sobre.lazy').then((d) => d.Route))
+const SocialRoute = SocialRouteImport.update({
+  id: '/social',
+  path: '/social',
+  getParentRoute: () => rootRouteImport,
+} as any).lazy(() => import('./routes/social.lazy').then((d) => d.Route))
 const TransmissorasRoute = TransmissorasRouteImport.update({
   id: '/transmissoras',
   path: '/transmissoras',
@@ -165,13 +183,16 @@ const InvestidoresRelatoriosAgenteFiduciarioRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ambiental': typeof AmbientalRoute
   '/contato': typeof ContatoRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRouteWithChildren
+  '/governanca': typeof GovernancaRoute
   '/investidores': typeof InvestidoresRouteWithChildren
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
+  '/social': typeof SocialRoute
   '/transmissoras': typeof TransmissorasRoute
   '/etica/acompanhar-relato': typeof EticaAcompanharRelatoRoute
   '/etica/canal-de-denuncias': typeof EticaCanalDeDenunciasRoute
@@ -191,11 +212,14 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ambiental': typeof AmbientalRoute
   '/contato': typeof ContatoRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
+  '/governanca': typeof GovernancaRoute
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
+  '/social': typeof SocialRoute
   '/transmissoras': typeof TransmissorasRoute
   '/etica/acompanhar-relato': typeof EticaAcompanharRelatoRoute
   '/etica/canal-de-denuncias': typeof EticaCanalDeDenunciasRoute
@@ -216,13 +240,16 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ambiental': typeof AmbientalRoute
   '/contato': typeof ContatoRoute
   '/eolicas': typeof EolicasRoute
   '/esg': typeof EsgRoute
   '/etica': typeof EticaRouteWithChildren
+  '/governanca': typeof GovernancaRoute
   '/investidores': typeof InvestidoresRouteWithChildren
   '/portfolio': typeof PortfolioRoute
   '/sobre': typeof SobreRoute
+  '/social': typeof SocialRoute
   '/transmissoras': typeof TransmissorasRoute
   '/etica/acompanhar-relato': typeof EticaAcompanharRelatoRoute
   '/etica/canal-de-denuncias': typeof EticaCanalDeDenunciasRoute
@@ -244,13 +271,16 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ambiental'
     | '/contato'
     | '/eolicas'
     | '/esg'
     | '/etica'
+    | '/governanca'
     | '/investidores'
     | '/portfolio'
     | '/sobre'
+    | '/social'
     | '/transmissoras'
     | '/etica/acompanhar-relato'
     | '/etica/canal-de-denuncias'
@@ -270,11 +300,14 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/ambiental'
     | '/contato'
     | '/eolicas'
     | '/esg'
+    | '/governanca'
     | '/portfolio'
     | '/sobre'
+    | '/social'
     | '/transmissoras'
     | '/etica/acompanhar-relato'
     | '/etica/canal-de-denuncias'
@@ -294,13 +327,16 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/ambiental'
     | '/contato'
     | '/eolicas'
     | '/esg'
     | '/etica'
+    | '/governanca'
     | '/investidores'
     | '/portfolio'
     | '/sobre'
+    | '/social'
     | '/transmissoras'
     | '/etica/acompanhar-relato'
     | '/etica/canal-de-denuncias'
@@ -321,13 +357,16 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AmbientalRoute: typeof AmbientalRoute
   ContatoRoute: typeof ContatoRoute
   EolicasRoute: typeof EolicasRoute
   EsgRoute: typeof EsgRoute
   EticaRoute: typeof EticaRouteWithChildren
+  GovernancaRoute: typeof GovernancaRoute
   InvestidoresRoute: typeof InvestidoresRouteWithChildren
   PortfolioRoute: typeof PortfolioRoute
   SobreRoute: typeof SobreRoute
+  SocialRoute: typeof SocialRoute
   TransmissorasRoute: typeof TransmissorasRoute
 }
 
@@ -338,6 +377,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ambiental': {
+      id: '/ambiental'
+      path: '/ambiental'
+      fullPath: '/ambiental'
+      preLoaderRoute: typeof AmbientalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -368,6 +414,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EticaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/governanca': {
+      id: '/governanca'
+      path: '/governanca'
+      fullPath: '/governanca'
+      preLoaderRoute: typeof GovernancaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/investidores': {
       id: '/investidores'
       path: '/investidores'
@@ -387,6 +440,13 @@ declare module '@tanstack/react-router' {
       path: '/sobre'
       fullPath: '/sobre'
       preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/social': {
+      id: '/social'
+      path: '/social'
+      fullPath: '/social'
+      preLoaderRoute: typeof SocialRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/transmissoras': {
@@ -556,13 +616,16 @@ const InvestidoresRouteWithChildren = InvestidoresRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AmbientalRoute: AmbientalRoute,
   ContatoRoute: ContatoRoute,
   EolicasRoute: EolicasRoute,
   EsgRoute: EsgRoute,
   EticaRoute: EticaRouteWithChildren,
+  GovernancaRoute: GovernancaRoute,
   InvestidoresRoute: InvestidoresRouteWithChildren,
   PortfolioRoute: PortfolioRoute,
   SobreRoute: SobreRoute,
+  SocialRoute: SocialRoute,
   TransmissorasRoute: TransmissorasRoute,
 }
 export const routeTree = rootRouteImport

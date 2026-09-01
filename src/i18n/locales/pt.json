@@ -747,8 +747,8 @@
     },
     "hero": {
       "eyebrow": "Estratégia ESG",
-      "title": "Infraestrutura responsável. Valor para as próximas gerações.",
-      "subtitle": "Na HRZ, sustentabilidade é a forma como planejamos, operamos e evoluímos nossos ativos todos os dias.",
+      "title": "ESG integrado à forma como operamos",
+      "subtitle": "Combinamos responsabilidade ambiental, segurança, desenvolvimento social, governança, tecnologia e excelência operacional para construir uma infraestrutura energética mais segura, resiliente e sustentável.",
       "cta": "Conheça nossa atuação"
     },
     "valueChain": {
@@ -756,6 +756,20 @@
       "title": "Nossa forma de criar valor sustentável.",
       "description": "Integramos pessoas, processos, tecnologia e relacionamento para gerar impacto positivo e valor de longo prazo.",
       "link": "Saiba mais sobre nossa estratégia",
+      "esgBlocks": [
+        {
+          "title": "Ambiental",
+          "text": "Resiliência climática, conformidade ambiental, biodiversidade, restauração e gestão responsável de ativos."
+        },
+        {
+          "title": "Social",
+          "text": "Segurança, pessoas, comunidades, engajamento de stakeholders e valor compartilhado."
+        },
+        {
+          "title": "Governança",
+          "text": "Ética, conformidade, gestão de riscos, políticas, transparência e prestação de contas."
+        }
+      ],
       "steps": [
         { "label": "Ativos de infraestrutura" },
         { "label": "Excelência operacional" },
@@ -773,8 +787,8 @@
     },
     "socialProjects": {
       "eyebrow": "Projetos sociais",
-      "heading": "Projetos sociais que fortalecem comunidades",
-      "description": "Os projetos desenvolvidos nas comunidades de Laranjeiras e Murtura valorizam a agricultura familiar, a organização comunitária e a geração de renda. As iniciativas apoiam mulheres e produtores rurais com capacitação, infraestrutura e melhores condições para produzir, beneficiar e comercializar seus produtos de maneira sustentável.",
+      "heading": "Transformamos energia em desenvolvimento.",
+      "description": "Nossos projetos fortalecem comunidades, geram oportunidades e deixam um legado positivo por onde operamos.",
       "cta": "Conheça todos os projetos",
       "link": "Ver detalhes",
       "readMore": "Conhecer projeto",
@@ -783,44 +797,8 @@
       },
       "items": [
         {
-          "tag": "Social",
-          "title": "Mulheres de Laranjeiras",
-          "description": "O Projeto Mulheres de Laranjeiras fortalece a autonomia econômica de mulheres rurais por meio de quintais agroecológicos, criação de aves, apoio a pequenos negócios, capacitação e acesso a novos mercados.",
-          "details": {
-            "subtitle": "Autonomia, produção sustentável e novas oportunidades",
-            "intro": [
-              "O Projeto Mulheres de Laranjeiras busca fortalecer a capacidade produtiva e a autonomia econômica das mulheres da comunidade. A iniciativa reúne atividades ligadas à agricultura familiar, criação de aves, agroindústrias familiares, estética, artesanato e outros pequenos empreendimentos.",
-              "Estruturado para atender 21 mulheres, o projeto reconhece a diversidade de conhecimentos e atividades já existentes no território. A proposta é oferecer melhores condições de trabalho, ampliar a produção e facilitar o acesso a novos mercados, contribuindo para o aumento da renda e a valorização do protagonismo feminino."
-            ],
-            "objectivesTitle": "Principais objetivos",
-            "objectives": [
-              "Ampliar quintais produtivos com hortas agroecológicas;",
-              "Melhorar as estruturas destinadas à criação de galinhas caipiras;",
-              "Apoiar a adequação sanitária das agroindústrias familiares;",
-              "Modernizar pequenos negócios, como salões de beleza e ateliês de pintura e customização;",
-              "Estruturar um sistema integrado de comercialização, com venda direta e entrega dos produtos;",
-              "Fortalecer a participação das mulheres na associação e nos espaços de decisão."
-            ],
-            "sections": [
-              {
-                "title": "Como o projeto acontece",
-                "body": [
-                  "A proposta combina aquisição de equipamentos e insumos, oficinas, consultorias e acompanhamento técnico. O trabalho é orientado pela participação das mulheres, com reuniões de planejamento, monitoramento e avaliação das atividades.",
-                  "O projeto também prevê articulação com programas públicos de apoio à agricultura familiar, como o Programa de Aquisição de Alimentos — PAA — e o Programa Nacional de Alimentação Escolar — PNAE. Essa aproximação pode abrir novos canais de comercialização e ampliar a presença dos produtos da comunidade no mercado institucional."
-                ]
-              },
-              {
-                "title": "Transformação esperada",
-                "body": [
-                  "Ao investir nos quintais produtivos e nos pequenos empreendimentos, o Projeto Mulheres de Laranjeiras pretende ampliar a renda das famílias, estimular a produção sustentável e fortalecer a presença das mulheres no desenvolvimento econômico e social da comunidade."
-                ]
-              }
-            ]
-          }
-        },
-        {
           "tag": "Infraestrutura",
-          "title": "Casa de Farinha de Murtura",
+          "title": "Projeto da Casa de Farinha de Murtura",
           "description": "A Casa de Farinha de Murtura une tecnologia, capacitação e gestão comunitária para modernizar o beneficiamento da mandioca, agregar valor à produção e ampliar a renda dos agricultores familiares.",
           "details": {
             "subtitle": "Tecnologia e organização a serviço da agricultura familiar",
@@ -861,6 +839,58 @@
               }
             ]
           }
+        },
+        {
+          "tag": "Social",
+          "title": "Projeto Laranjeiras",
+          "description": "O Projeto Mulheres de Laranjeiras fortalece a autonomia econômica de mulheres rurais por meio de quintais agroecológicos, criação de aves, apoio a pequenos negócios, capacitação e acesso a novos mercados.",
+          "details": {
+            "subtitle": "Autonomia, produção sustentável e novas oportunidades",
+            "intro": [
+              "O Projeto Mulheres de Laranjeiras busca fortalecer a capacidade produtiva e a autonomia econômica das mulheres da comunidade. A iniciativa reúne atividades ligadas à agricultura familiar, criação de aves, agroindústrias familiares, estética, artesanato e outros pequenos empreendimentos.",
+              "Estruturado para atender 21 mulheres, o projeto reconhece a diversidade de conhecimentos e atividades já existentes no território. A proposta é oferecer melhores condições de trabalho, ampliar a produção e facilitar o acesso a novos mercados, contribuindo para o aumento da renda e a valorização do protagonismo feminino."
+            ],
+            "objectivesTitle": "Principais objetivos",
+            "objectives": [
+              "Ampliar quintais produtivos com hortas agroecológicas;",
+              "Melhorar as estruturas destinadas à criação de galinhas caipiras;",
+              "Apoiar a adequação sanitária das agroindústrias familiares;",
+              "Modernizar pequenos negócios, como salões de beleza e ateliês de pintura e customização;",
+              "Estruturar um sistema integrado de comercialização, com venda direta e entrega dos produtos;",
+              "Fortalecer a participação das mulheres na associação e nos espaços de decisão."
+            ],
+            "sections": [
+              {
+                "title": "Como o projeto acontece",
+                "body": [
+                  "A proposta combina aquisição de equipamentos e insumos, oficinas, consultorias e acompanhamento técnico. O trabalho é orientado pela participação das mulheres, com reuniões de planejamento, monitoramento e avaliação das atividades.",
+                  "O projeto também prevê articulação com programas públicos de apoio à agricultura familiar, como o Programa de Aquisição de Alimentos — PAA — e o Programa Nacional de Alimentação Escolar — PNAE. Essa aproximação pode abrir novos canais de comercialização e ampliar a presença dos produtos da comunidade no mercado institucional."
+                ]
+              },
+              {
+                "title": "Transformação esperada",
+                "body": [
+                  "Ao investir nos quintais produtivos e nos pequenos empreendimentos, o Projeto Mulheres de Laranjeiras pretende ampliar a renda das famílias, estimular a produção sustentável e fortalecer a presença das mulheres no desenvolvimento econômico e social da comunidade."
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "tag": "Desenvolvimento",
+          "title": "Projeto Babilônia",
+          "description": "Detalhes sobre as iniciativas e o impacto social do Projeto Babilônia serão adicionados em breve.",
+          "details": {
+            "subtitle": "Conteúdo em atualização",
+            "intro": [
+              "Detalhes sobre as iniciativas e o impacto social do Projeto Babilônia serão adicionados em breve."
+            ],
+            "objectivesTitle": "Principais objetivos",
+            "objectives": [
+              "Informações sobre os objetivos do projeto serão divulgadas em breve."
+            ],
+            "sections": []
+          }
         }
       ]
     },
@@ -868,18 +898,45 @@
       "eyebrow": "Nossos pilares",
       "heading": "Atuamos hoje para construir o amanhã.",
       "link": "Saiba mais",
+      "ambiental": {
+        "footerLabel": "Saiba mais sobre nosso desempenho ambiental",
+        "subIcons": {
+          "resiliencia": "Resiliência climática",
+          "gestaoAmbiental": "Gestão ambiental",
+          "biodiversidade": "Biodiversidade e recomposição",
+          "conformidade": "Conformidade e licenciamento"
+        }
+      },
+      "social": {
+        "footerLabel": "Saiba mais sobre nosso impacto social",
+        "subIcons": {
+          "seguranca": "Segurança em primeiro lugar",
+          "pessoas": "Pessoas e desenvolvimento",
+          "comunidades": "Comunidades e valor compartilhado",
+          "stakeholders": "Relacionamento com stakeholders"
+        }
+      },
+      "governanca": {
+        "footerLabel": "Saiba mais sobre governança e compliance",
+        "subIcons": {
+          "etica": "Ética e integridade",
+          "riscos": "Gestão de riscos",
+          "compliance": "Compliance e políticas",
+          "governancaEsg": "Governança ESG"
+        }
+      },
       "items": [
         {
           "title": "Meio Ambiente",
-          "description": "Gestão ambiental responsável\ne resiliência climática para\nproteger o planeta."
+          "description": "Cuidar do meio ambiente e fortalecer a resiliência climática."
         },
         {
           "title": "Social",
-          "description": "Desenvolvimento das comunidades,\ngeração de oportunidades e respeito\nàs pessoas."
+          "description": "Priorizar a segurança das pessoas e gerar impacto positivo nas comunidades."
         },
         {
           "title": "Governança",
-          "description": "Transparência, ética e gestão de\nriscos para decisões sólidas e\nresponsáveis."
+          "description": "Atuar com ética, transparência e responsabilidade em todas as decisões."
         },
         {
           "title": "Excelência Operacional",
@@ -1315,6 +1372,285 @@
       "button": "Fale com a HRZ"
     },
     "copyright": "© {{year}} HRZ Energia. Todos os direitos reservados.",
-    "controlled": "Adquirida por fundos geridos pela Actis · Global Sustainability Committee"
+    "controlled": "Adquirida por fundos geridos pela Actis · Global Sustainability Committee",
+    "prefooter": {
+      "tagline": "Infraestrutura que conecta hoje, energia que transforma o amanhã.",
+      "website": "hrzenergia.com.br",
+      "logoAlt": "HRZ Energia",
+      "linkedinAriaLabel": "LinkedIn HRZ Energia"
+    }
+  },
+  "ambiental": {
+    "hero": {
+      "imgAlt": "Paisagem ambiental HRZ",
+      "breadcrumbParent": "ESG na HRZ",
+      "breadcrumbCurrent": "Ambiental",
+      "title": "Ambiental",
+      "subtitle": "Cuidar do meio ambiente e fortalecer a resiliência climática dos nossos ativos.",
+      "description": "Gerimos nossos ativos com responsabilidade ambiental, antecipamos riscos climáticos e promovemos a conservação da biodiversidade para uma infraestrutura energética mais sustentável e resiliente."
+    },
+    "compromissos": {
+      "heading": "Nossos compromissos ambientais",
+      "items": [
+        { "title": "Atuar em conformidade", "text": "Cumprir rigorosamente licenças, condicionantes e legislação ambiental aplicável." },
+        { "title": "Proteger e restaurar", "text": "Promover a conservação da biodiversidade e a recomposição de áreas degradadas." },
+        { "title": "Fortalecer a resiliência climática", "text": "Integrar dados climáticos às decisões operacionais para prevenir, mitigar e responder a eventos extremos." },
+        { "title": "Gerar valor sustentável", "text": "Tomar decisões responsáveis que minimizem impactos e contribuam para o desenvolvimento sustentável." }
+      ]
+    },
+    "frentes": {
+      "heading": "Nossas frentes de atuação",
+      "items": [
+        {
+          "title": "Resiliência climática",
+          "description": "Monitoramos e antecipamos eventos climáticos extremos para reduzir riscos aos nossos ativos e garantir maior confiabilidade.",
+          "items": [
+            "Monitoramento 24/7 e alertas climáticos",
+            "Análise de histórico de eventos extremos",
+            "Protocolos de prevenção e resposta",
+            "Avaliação pós-evento e lições aprendidas"
+          ]
+        },
+        {
+          "title": "Gestão ambiental",
+          "description": "Gerimos nossos impactos ambientais ao longo do ciclo de vida dos ativos com foco em prevenção e melhoria contínua.",
+          "items": [
+            "Controle de licenças e condicionantes",
+            "Gestão de resíduos e recursos naturais",
+            "Monitoramento de emissões e efluentes",
+            "Indicadores e auditorias ambientais"
+          ]
+        },
+        {
+          "title": "Biodiversidade e recomposição",
+          "description": "Investimos na recuperação de áreas nativas e na conservação da biodiversidade nas regiões onde atuamos.",
+          "items": [
+            "Investimentos em recomposição florestal",
+            "Projetos de restauração de ecossistemas",
+            "Parcerias e engajamento local",
+            "Acompanhamento de resultados"
+          ]
+        },
+        {
+          "title": "Conformidade e licenciamento",
+          "description": "Mantemos controle rigoroso de obrigações ambientais e asseguramos transparência e prestação de contas.",
+          "items": [
+            "Gestão de licenças e autorizações",
+            "Acompanhamento de condicionantes",
+            "Relatórios e indicadores ambientais",
+            "Transparência e governança"
+          ]
+        }
+      ]
+    },
+    "tecnologias": {
+      "heading": "Tecnologia e dados para o meio ambiente",
+      "description": "Plataformas e ferramentas integradas que transformam dados ambientais e climáticos em decisões mais seguras e sustentáveis.",
+      "items": [
+        { "line1": "Monitoramento", "line2": "climático" },
+        { "line1": "Dados ambientais", "line2": "integrados" },
+        { "line1": "Dashboards", "line2": "e indicadores" },
+        { "line1": "Gestão de licenças", "line2": "e condicionantes" },
+        { "line1": "Mapeamento de", "line2": "riscos ambientais" }
+      ]
+    }
+  },
+  "social": {
+    "hero": {
+      "imgAlt": "Pessoas e comunidades HRZ",
+      "breadcrumbParent": "ESG na HRZ",
+      "breadcrumbCurrent": "Social",
+      "title": "Social",
+      "subtitle": "Cuidar das pessoas, promover o desenvolvimento e construir relações de confiança.",
+      "description": "Colocamos a vida em primeiro lugar e atuamos para gerar impacto positivo nas comunidades onde estamos presentes, com respeito, escuta ativa e compromisso de longo prazo."
+    },
+    "compromissos": {
+      "heading": "Nossos compromissos sociais",
+      "items": [
+        { "title": "Segurança em primeiro lugar", "text": "Promover uma cultura de prevenção, cuidando da integridade das pessoas em todas as nossas operações." },
+        { "title": "Pessoas que desenvolvem", "text": "Valorizar nossas pessoas, promovendo saúde, bem-estar, diversidade, inclusão e desenvolvimento contínuo." },
+        { "title": "Comunidades que prosperam", "text": "Gerar oportunidades e apoiar projetos que fortalecem o desenvolvimento local e a geração de renda." },
+        { "title": "Relacionamento que gera valor", "text": "Manter diálogo aberto e transparente com comunidades e stakeholders, construindo relações de longo prazo." }
+      ]
+    },
+    "frentes": {
+      "heading": "Nossas frentes de atuação",
+      "items": [
+        {
+          "title": "Segurança",
+          "items": [
+            "Cultura de segurança e prevenção",
+            "Gestão de terceiros e parceiros",
+            "Inspeções, diálogos e Safety Walks",
+            "Indicadores e planos de ação",
+            "Bom relacionamento e comunicação"
+          ]
+        },
+        {
+          "title": "Pessoas",
+          "items": [
+            "Ambiente seguro e respeitoso",
+            "Desenvolvimento e capacitação",
+            "Saúde, bem-estar e qualidade de vida",
+            "Diversidade, inclusão e equidade",
+            "Reconhecimento e engajamento"
+          ]
+        },
+        {
+          "title": "Comunidades",
+          "items": [
+            "Projetos estruturantes de longo prazo",
+            "Geração de trabalho e renda",
+            "Educação, cultura e inclusão social",
+            "Prevenção e resiliência comunitária",
+            "Escuta ativa e diálogo constante"
+          ]
+        },
+        {
+          "title": "Stakeholders",
+          "items": [
+            "Diálogo transparente e contínuo",
+            "Relacionamento com órgãos públicos",
+            "Canais de comunicação abertos",
+            "Gestão de demandas e expectativas",
+            "Parcerias para desenvolvimento local"
+          ]
+        }
+      ]
+    },
+    "programas": {
+      "heading": "Programas e projetos sociais",
+      "description": "Investimos em projetos que geram impacto real e duradouro nas comunidades onde atuamos, com foco em desenvolvimento, educação, geração de renda e fortalecimento local.",
+      "learnMore": "Saiba mais",
+      "items": [
+        { "title": "Casa de Farinha", "text": "Fortalecimento da produção local e geração de renda sustentável." },
+        { "title": "Mulheres de Laranjeiras", "text": "Quintal Produtivo e capacitação para autonomia financeira." },
+        { "title": "Educação e Cultura", "text": "Apoio a iniciativas educacionais e culturais nas comunidades." }
+      ],
+      "outros": {
+        "title": "Outras iniciativas",
+        "text": "Campanhas de prevenção, ações sociais e apoio em situações emergenciais."
+      }
+    },
+    "tecnologias": {
+      "heading": "Tecnologia e dados a serviço das pessoas e comunidades",
+      "description": "Plataformas integradas que garantem gestão eficiente, comunicação, transparência e melhoria contínua.",
+      "items": [
+        { "line1": "Gestão de", "line2": "segurança" },
+        { "line1": "Monitoramento de", "line2": "indicadores sociais" },
+        { "line1": "Canais de escuta", "line2": "e engajamento" },
+        { "line1": "Dashboards", "line2": "e relatórios" },
+        { "line1": "Gestão de", "line2": "stakeholders" }
+      ]
+    }
+  },
+  "governanca": {
+    "hero": {
+      "imgAlt": "Reunião corporativa HRZ — Governança",
+      "breadcrumbParent": "ESG na HRZ",
+      "breadcrumbCurrent": "Governança",
+      "title": "Governança",
+      "subtitle": "Atuar com ética, transparência e responsabilidade em todas as decisões.",
+      "description": "Fortalecemos uma cultura de integridade, gestão de riscos e compliance para garantir decisões responsáveis, criação de valor sustentável e confiança de nossos stakeholders."
+    },
+    "compromissos": {
+      "heading": "Nossos compromissos de governança",
+      "items": [
+        { "title": "Ética e integridade", "text": "Atuamos com honestidade, respeito e integridade em todas as relações e decisões." },
+        { "title": "Gestão de riscos", "text": "Identificamos, avaliamos e gerimos riscos para proteger pessoas, ativos e o negócio." },
+        { "title": "Compliance", "text": "Seguimos leis, regulamentos e políticas internas com rigor e disciplina." },
+        { "title": "Transparência", "text": "Prestamos contas de forma clara e tempestiva aos nossos stakeholders." },
+        { "title": "Governança ESG", "text": "Integramos práticas ESG à estratégia, gestão de riscos e tomada de decisão." },
+        { "title": "Geração de valor", "text": "Tomamos decisões responsáveis que geram valor de longo prazo para a sociedade e investidores." }
+      ]
+    },
+    "pilares": {
+      "heading": "Nossos pilares de governança",
+      "items": [
+        {
+          "title": "Ética e integridade",
+          "subtitle": "Uma cultura sólida de ética que orienta comportamentos e decisões.",
+          "items": [
+            "Código de Ética e Conduta",
+            "Política Anticorrupção",
+            "Treinamentos e comunicações",
+            "Canal de Denúncias confidencial"
+          ]
+        },
+        {
+          "title": "Gestão de riscos",
+          "subtitle": "Processo estruturado para lidar com riscos e oportunidades.",
+          "items": [
+            "Mapeamento e avaliação de riscos",
+            "Matriz de riscos corporativos",
+            "Planos de mitigação e controles",
+            "Monitoramento e reporte contínuo"
+          ]
+        },
+        {
+          "title": "Compliance",
+          "subtitle": "Conformidade legal e regulatória integrada ao negócio.",
+          "items": [
+            "Monitoramento de obrigações legais",
+            "Controles internos e auditorias",
+            "Gestão de terceiros e parceiros",
+            "Privacidade e proteção de dados"
+          ]
+        },
+        {
+          "title": "Governança corporativa",
+          "subtitle": "Estrutura robusta para decisões seguras e responsáveis.",
+          "items": [
+            "Conselho de Administração",
+            "Comitês de apoio",
+            "Alçadas e delegações",
+            "Políticas e regimentos internos"
+          ]
+        },
+        {
+          "title": "Governança ESG",
+          "subtitle": "ESG incorporado à estratégia e à gestão do negócio.",
+          "items": [
+            "Comitê ESG e reuniões periódicas",
+            "Indicadores e metas ESG",
+            "Relatórios e comunicação",
+            "Integração ESG à remuneração"
+          ]
+        }
+      ]
+    },
+    "estrutura": {
+      "heading": "Nossa estrutura de governança",
+      "items": [
+        { "title": "Conselho de Administração", "desc": "Define diretrizes, aprova estratégias e supervisiona a gestão." },
+        { "title": "Comitês de apoio", "desc": "Apoiam o Conselho em temas-chave: Auditoria, Riscos, Pessoas e ESG." },
+        { "title": "Diretoria Executiva", "desc": "Implementa a estratégia e assegura a gestão integrada do negócio." },
+        { "title": "Time e processos", "desc": "Executam com disciplina, controle e foco em geração de valor." }
+      ]
+    },
+    "documentos": {
+      "heading": "Políticas e documentos",
+      "description": "Nossos principais documentos que orientam a conduta e a gestão.",
+      "cta": "Acesse todos os documentos em Ética e Conduta",
+      "items": [
+        { "title": "Código de\nÉtica e Conduta" },
+        { "title": "Política\nAnticorrupção" },
+        { "title": "Política de\nCompliance" },
+        { "title": "Política de\nGestão de Riscos" },
+        { "title": "Política de Privacidade\ne Proteção de Dados" }
+      ]
+    },
+    "canal": {
+      "heading": "Canal de Denúncias",
+      "description": "Um canal seguro, confidencial e independente para reportar condutas inadequadas, fraudes ou violações.",
+      "cta": "Fazer uma denúncia",
+      "ctaSub": "Acesse o Canal",
+      "features": [
+        { "title": "100%", "subtitle": "Confidencialidade\ne anonimato" },
+        { "title": "Independente", "subtitle": "Operado por empresa\nespecializada" },
+        { "title": "Sem retaliação", "subtitle": "Garantia de não retaliação\na denunciantes" },
+        { "title": "Resposta ágil", "subtitle": "Apuração e retorno com\ntransparência" }
+      ]
+    }
   }
 }
